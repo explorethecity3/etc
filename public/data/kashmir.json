@@ -1,0 +1,10 @@
+{
+    "id": "kashmir",
+    "name": "Kashmir",
+    "description": "Kashmir is known for its scenic beauty, including mountains, lakes, and gardens.",
+    "places": [
+      { "id": "dal-lake", "name": "Dal Lake", "description": "A beautiful freshwater lake in Srinagar." },
+      { "id": "gulmarg", "name": "Gulmarg", "description": "A hill station famous for skiing and lush greenery." }
+    ]
+  }
+  

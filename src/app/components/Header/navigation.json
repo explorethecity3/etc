@@ -1,0 +1,14 @@
+[
+  { "title": "Home", "href": "/" },
+  { 
+    "title": "Places", 
+    "children": [
+      { "title": "Beach", "href": "/places/beach" },
+      { "title": "Mountain", "href": "/places/mountain" },
+      { "title": "City", "href": "/places/city" },
+      { "title": "Forest", "href": "/places/forest" }
+    ] 
+  },
+  { "title": "About", "href": "/about" },
+  { "title": "Contact", "href": "/contact" }
+]
