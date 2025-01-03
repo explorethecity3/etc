@@ -1,0 +1,9 @@
+{
+  "id": "goa",
+  "name": "Goa",
+  "description": "Goa is famous for its beaches, Portuguese architecture, and vibrant nightlife.",
+  "places": [
+    { "id": "beach1", "name": "Anjuna Beach", "description": "A popular beach known for its vibrant atmosphere." },
+    { "id": "fort1", "name": "Fort Aguada", "description": "A historic fort offering views of the Arabian Sea." }
+  ]
+}
