@@ -29,18 +29,14 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=G-ZTCV09D973"
           strategy="afterInteractive"
         />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-ZTCV09D973');
-            `,
-          }}
-        />
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id='G-ZTCV09D973'`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
         {/* <Header /> */}
         {children}
         {/* <Footer/> */}
