@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTCV09D973"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-      </Head>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
