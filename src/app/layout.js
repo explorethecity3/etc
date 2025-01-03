@@ -25,11 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-ZTCV09D973"
-          strategy="afterInteractive"
-        />
-                {/* <Header /> */}
+        {/* <Header /> */}
         {children}
         {/* <Footer/> */}
       </body>
