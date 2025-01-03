@@ -29,15 +29,7 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=G-ZTCV09D973"
           strategy="afterInteractive"
         />
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id='G-ZTCV09D973'`}
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
-        {/* <Header /> */}
+                {/* <Header /> */}
         {children}
         {/* <Footer/> */}
       </body>
