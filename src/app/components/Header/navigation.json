@@ -1,14 +1,13 @@
 [
   { "title": "Home", "href": "/" },
   { 
-    "title": "Places", 
+    "title": "Destinations", 
     "children": [
-      { "title": "Beach", "href": "/places/beach" },
-      { "title": "Mountain", "href": "/places/mountain" },
-      { "title": "City", "href": "/places/city" },
-      { "title": "Forest", "href": "/places/forest" }
+      { "title": "Goa", "href": "/goa" },
+      { "title": "Kashmir", "href": "/kashmir" },
+      { "title": "Ooty", "href": "/ooty" }
     ] 
   },
   { "title": "About", "href": "/about" },
-  { "title": "Contact", "href": "/contact" }
+  { "title": "Contact Us", "href": "/contact" }
 ]
