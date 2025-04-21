@@ -1,0 +1,75 @@
+{
+  "id": "goa",
+  "name": "Goa",
+  "title": "Welcome To Goa",
+  "overview": "A popular beach known for its vibrant atmosphere.",
+  "description": "Goa is located on the country's western coast and spans just 3702 km². Despite being the smallest state, it is a prominent tourist destination, popular for its beauty and year-round festive atmosphere.\n\nThe beaches and clubs attract both foreigners and Indian travelers, offering a pocket-friendly party experience. Goa is known for its affordable alcohol, drawing many young visitors.\n\nThis paradise, renowned for its scenic beaches, lush greenery, and tranquil retreats, is divided into two regions: North and South. The North is famous for its nightlife, pubs, and clubs, while the South offers a more peaceful and upscale experience.",
+  "image": "./img/goa-.jpg",
+  "placesToVisit": [
+    {
+      "id": "beach1",
+      "name": "Anjuna Beach",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Goa is located on the country's western coast and spans just 3702 km². Despite being the smallest state, it is a prominent tourist destination, popular for its beauty and year-round festive atmosphere.\n\nThe beaches and clubs attract both foreigners and Indian travelers, offering a pocket-friendly party experience. Goa is known for its affordable alcohol, drawing many young visitors.\n\nThis paradise, renowned for its scenic beaches, lush greenery, and tranquil retreats, is divided into two regions: North and South. The North is famous for its nightlife, pubs, and clubs, while the South offers a more peaceful and upscale experience.",
+      "image": "../img/Baga-beach.jpg"
+    },
+    {
+      "id": "fort1",
+      "name": "Fort Aguada",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A historic fort offering views of the Arabian Sea.",
+      "image": "../img/goa-.jpg"
+    },
+    {
+      "id": "beach2",
+      "name": "Baga Beach",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "../img/goa-.jpg"
+    },
+    {
+      "id": "beach3",
+      "name": "Anjuna Beach",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A popular beach known for its vibrant atmosphere.",
+      "image": "../img/goa-.jpg"
+    },
+    {
+      "id": "fort2",
+      "name": "Fort Aguada",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A historic fort offering views of the Arabian Sea.",
+      "image": "../img/goa-.jpg"
+    },
+    {
+      "id": "beach4",
+      "name": "Baga Beach",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "../img/goa-.jpg"
+    }
+  ],
+  "thingsToDo": [
+    {
+      "id": "activity1",
+      "name": "Scuba Diving",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "../img/goa-.jpg"
+    },
+    {
+      "id": "activity2",
+      "name": "Night Market",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Shop for souvenirs and enjoy live music.",
+      "image": "../img/goa-.jpg"
+    },
+    {
+      "id": "activity3",
+      "name": "Sunset Cruise",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Relax and enjoy the sunset on a boat.",
+      "image": "../img/goa-.jpg"
+    }
+  ]
+}

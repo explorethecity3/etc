@@ -1,0 +1,13 @@
+[
+  { "title": "Home", "href": "/" },
+  { 
+    "title": "Destinations", 
+    "children": [
+      { "title": "Goa", "href": "/goa" },
+      { "title": "Kashmir", "href": "/kashmir" },
+      { "title": "Ooty", "href": "/ooty" }
+    ] 
+  },
+  { "title": "About", "href": "/about" },
+  { "title": "Contact Us", "href": "/contact" }
+]
