@@ -18,6 +18,41 @@ async function getCityData(categoryId) {
   }
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
+//generateMetadata()
+export async function generateMetadata({ params }) {
+  const slug = params?.slug;
+
+  if (!slug || slug.length === 0) {
+    return {
+      title: "City Explorer",
+      description: "Explore beautiful cities and their hidden gems.",
+      keywords: "travel, tourism, city guide"
+    };
+  }
+
+  const fs = require("fs");
+  const path = require("path");
+
+  const categoryId = slug[0];
+  const filePath = path.join(process.cwd(), "public", "data", `${categoryId}.json`);
+
+  if (!fs.existsSync(filePath)) {
+    return {
+      title: "City Not Found",
+      description: "Sorry, the city you're looking for does not exist.",
+      keywords: "404, city not found, travel"
+    };
+  }
+
+  const cityData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+  return {
+    title: cityData.title || cityData.name,
+    description: cityData.description || `Explore ${cityData.name}`,
+    keywords: cityData.keywords || ""
+  };
+}
+
 
 // Page component
 export default async function Page({ params }) {

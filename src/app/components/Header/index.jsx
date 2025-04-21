@@ -6,8 +6,9 @@ const Header = () => (
   <header className="bg-[#122620] text-white p-4 flex flex-col md:flex-row md:items-center md:justify-between border-b border-white">
     {/* Logo Section */}
     <div className="flex items-center mb-4 md:mb-0">
-      <Image src="/logo.png" width={100} height={50} alt="Logo" />
-
+      <Link href="/">
+        <Image src="/logo.png" width={100} height={50} alt="Logo" />
+      </Link>
       <h1 className="text-lg font-bold"></h1>
     </div>
 
@@ -29,7 +30,9 @@ const Header = () => (
                   {item.children.map((child) => (
                     <li key={child.href} className="hover:bg-[#122620]">
                       <Link href={child.href || "#"}>
-                        <h1 className="block px-4 py-2 hover:text-[#b68d40] ">{child.title}</h1>
+                        <h1 className="block px-4 py-2 hover:text-[#b68d40] ">
+                          {child.title}
+                        </h1>
                       </Link>
                     </li>
                   ))}

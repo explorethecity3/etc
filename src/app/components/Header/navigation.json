@@ -1,12 +1,16 @@
 [
   { "title": "Home", "href": "/" },
-  { 
-    "title": "Destinations", 
+  {
+    "title": "Destinations",
     "children": [
       { "title": "Goa", "href": "/goa" },
       { "title": "Kashmir", "href": "/kashmir" },
-      { "title": "Ooty", "href": "/ooty" }
-    ] 
+      { "title": "Ooty", "href": "/ooty" },
+      { "title": "Delhi", "href": "/delhi" },
+      { "title": "Mumbai", "href": "/mumbai" },
+      { "title": "Bengaluru", "href": "/bengaluru" },
+      { "title": "Agra", "href": "/agra" }
+    ]
   },
   { "title": "About", "href": "/about" },
   { "title": "Contact Us", "href": "/contact" }
