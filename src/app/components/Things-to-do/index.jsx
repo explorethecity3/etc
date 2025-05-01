@@ -5,6 +5,10 @@ import { log } from "node:console";
 const ThingsToDo = ({ ThingsToDo }) => {
   return (
     <div className="div">
+      <h2 className="text-center mt-10 text-[#f4ebd0] text-2xl leading-10">
+        Things to do
+      </h2>
+
       <ol className="list-decimal px-44 py-20 space-y-16">
         {ThingsToDo.map((place) => (
           <li key={place.id} className="text-[#b68d40] text-2xl font-semibold">

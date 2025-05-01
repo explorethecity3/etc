@@ -119,7 +119,7 @@ export default async function Home() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {topPlaces.map((place) => (
-            <Link href={`/${place.city}/places`} key={place.id}>
+            <Link href={`/${place.city}/places-to-visit`} key={place.id}>
               <div className="shadow p-4 hover:shadow-lg cursor-pointer">
                 <img
                   src={place.image}

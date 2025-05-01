@@ -137,7 +137,7 @@ export default async function Page({ params }) {
     try {
       const category = await getCityData(categoryId);
 
-      if (type === "places") {
+      if (type === "places-to-visit") {
         return (
           <div>
             <PlaceToVisit PlaceToVisit={category.placesToVisit}/>

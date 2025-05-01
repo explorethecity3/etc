@@ -2,8 +2,14 @@ import React from "react";
 import Image from "next/image";
 
 const PlaceToVisit = ({ PlaceToVisit }) => {
+  console.log("PlaceToVisit", PlaceToVisit);
+
   return (
     <div className="div">
+      <h2 className="text-center mt-10 text-[#f4ebd0] text-2xl leading-10">
+        Places to Visit{" "}
+      </h2>
+
       <ol className="list-decimal px-44 py-20 space-y-16">
         {PlaceToVisit.map((place) => (
           <li key={place.id} className="text-[#b68d40] text-2xl font-semibold">
