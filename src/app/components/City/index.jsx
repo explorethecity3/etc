@@ -23,7 +23,7 @@ const City = ({ category }) => {
           {category.title}
         </h1>
       </div>
-      <h2 className="text-center mt-10">Places to Visit</h2>
+      <h2 className="text-center mt-10 text-[#f4ebd0] leading-10 text-2xl mb-5">Places to Visit in {category.name}</h2>
       <div className="flex flex-wrap gap-2">
         {shuffleArray(category.placesToVisit)
           .slice(0, 3)
@@ -60,14 +60,14 @@ const City = ({ category }) => {
       </div>
       <div className="flex justify-center items-center">
         <Link
-          href={`/${category.id}/places`}
+          href={`/${category.id}/places-to-visit`}
           className="inline-block mt-4 px-5 py-2.5 bg-blue-500 text-white no-underline rounded text-center"
         >
           See More
         </Link>
       </div>
 
-      <h2 className="text-center mt-10">Things to do</h2>
+      <h2 className="text-center mt-10 text-[#f4ebd0] text-2xl leading-10 mb-5">Things to do in {category.name}</h2>
       <div className="flex flex-wrap gap-2">
         {shuffleArray(category.thingsToDo)
           .slice(0, 3)

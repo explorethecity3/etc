@@ -5,11 +5,9 @@
     "children": [
       { "title": "Goa", "href": "/goa" },
       { "title": "Kashmir", "href": "/kashmir" },
-      { "title": "Ooty", "href": "/ooty" },
-      { "title": "Delhi", "href": "/delhi" },
+      { "title": "New Delhi", "href": "/new-delhi" },
       { "title": "Mumbai", "href": "/mumbai" },
-      { "title": "Bengaluru", "href": "/bengaluru" },
-      { "title": "Agra", "href": "/agra" }
+      { "title": "Bangalore", "href": "/bangalore" }
     ]
   },
   { "title": "About", "href": "/about" },

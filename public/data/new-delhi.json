@@ -1,0 +1,574 @@
+{
+  "id": "bangalore",
+  "name": "Bangalore",
+  "title": "Welcome To Bangalore",
+  "keywords": "Bangalore, Mountains, Valleys, Culture, Adventure, Nature",
+  "overview": "A popular beach known for its vibrant atmosphere.",
+  "description": "Bangalore is located on the country's western coast and is scattered over just 3702 km.\n\nBesides being the smallest state, the city is the most prominent tourist place, trendy for its beauty and the season all around the year. The beaches and clubs of this city are occupied by not only foreigners but also by Indian people as it's a pocket-friendly place for doing a party.\n\nThe city is known for its cheapest alcohol which attracts a lot of youngsters there. Indian heaven, known for nature's beauty of seas, greenery, and peaceful areas, is divided into two sides: North and South. The north region is most famous for the best pubs, clubs, and nightfall areas. Whereas the south part is best for the people who love peace, it's the costlier one.",
+  "image": "./img/goa-.jpg",
+  "placesToVisit": [
+    {
+      "id": "Red Fort",
+      "name": "Red Fort",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A popular beach known for its vibrant atmosphere.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "India Gate ",
+      "name": "India Gate ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Qutab Minar",
+      "name": "Qutab Minar",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Chandni Chowk",
+      "name": "Chandni Chowk",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Jantar Mantar ",
+      "name": "Jantar Mantar ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Akshardham Temple",
+      "name": "Akshardham Temple",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Hauz Khas",
+      "name": "Hauz Khas",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Humayun's Tomb",
+      "name": "Humayun's Tomb",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Bahai (Lotus) Temple ",
+      "name": "Bahai (Lotus) Temple ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Rashtrapati Bhawan",
+      "name": "Rashtrapati Bhawan",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Jama Masjid ",
+      "name": "Jama Masjid ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Connaught Place",
+      "name": "Connaught Place",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Sarojini Nagar Market",
+      "name": "Sarojini Nagar Market",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Waste to Wonder Park ",
+      "name": "Waste to Wonder Park ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Gurudwara Bangla Sahib",
+      "name": "Gurudwara Bangla Sahib",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Paranthe Wali Gali",
+      "name": "Paranthe Wali Gali",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Kingdom of Dreams",
+      "name": "Kingdom of Dreams",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Lodhi Gardens",
+      "name": "Lodhi Gardens",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Lajpat Market",
+      "name": "Lajpat Market",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Khan Market",
+      "name": "Khan Market",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Paharganj",
+      "name": "Paharganj",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Dilli Haat ",
+      "name": "Dilli Haat ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "The National Rail Museum",
+      "name": "The National Rail Museum",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Raj Ghat ",
+      "name": "Raj Ghat ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Agrasen ki Baoli",
+      "name": "Agrasen ki Baoli",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Laxminarayan Temple (Birla Mandir)",
+      "name": "Laxminarayan Temple (Birla Mandir)",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Garden of Five Senses",
+      "name": "Garden of Five Senses",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Feroz Shah Kotla Fort",
+      "name": "Feroz Shah Kotla Fort",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "The Tomb of Safdarjung",
+      "name": "The Tomb of Safdarjung",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "ISKCON Temple",
+      "name": "ISKCON Temple",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Purana Qila",
+      "name": "Purana Qila",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Pragati Maidan",
+      "name": "Pragati Maidan",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Nizamuddin Dargah",
+      "name": "Nizamuddin Dargah",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Jamali Kamli Mosque and Tomb",
+      "name": "Jamali Kamli Mosque and Tomb",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "National Museum",
+      "name": "National Museum",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Indira Gandhi Memorial Museum",
+      "name": "Indira Gandhi Memorial Museum",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "National Gallery of Modern Art",
+      "name": "National Gallery of Modern Art",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "The National Zoological Park",
+      "name": "The National Zoological Park",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Mehrauli Archaeological Park",
+      "name": "Mehrauli Archaeological Park",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Kuchesar",
+      "name": "Kuchesar",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Tughlaqabad Fort",
+      "name": "Tughlaqabad Fort",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Mughal Gardens",
+      "name": "Mughal Gardens",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Rose Cafe",
+      "name": "Rose Cafe",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Karim's",
+      "name": "Karim's",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Kunzum Travel Cafe",
+      "name": "Kunzum Travel Cafe",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Khan Chacha",
+      "name": "Khan Chacha",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Tamra - Shangri-La's",
+      "name": "Tamra - Shangri-La's",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Farzi Cafe",
+      "name": "Farzi Cafe",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Barbeque Nation",
+      "name": "Barbeque Nation",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Murthal",
+      "name": "Murthal",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Hauz Khas Social",
+      "name": "Hauz Khas Social",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Hard Rock Café",
+      "name": "Hard Rock Café",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "The Blue Bar",
+      "name": "The Blue Bar",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Club Pangaea ",
+      "name": "Club Pangaea ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    },
+    {
+      "id": "Kitty Su",
+      "name": "Kitty Su",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "A vibrant beach famous for water sports and nightlife.",
+      "image": "./img/goa-.jpg"
+    }
+  ],
+  "thingsToDo": [
+    {
+      "id": "Explore Qutub Minar",
+      "name": "Explore Qutub Minar",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Paintball In Delhi At Shootout Zone",
+      "name": "Paintball In Delhi At Shootout Zone",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Ice Skating In Delhi",
+      "name": "Ice Skating In Delhi",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Adventure Island Tickets",
+      "name": "Adventure Island Tickets",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Enjoy Segway Ride at Rajpath ",
+      "name": "Enjoy Segway Ride at Rajpath ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Touch Sky with Motorized Paragliding",
+      "name": "Touch Sky with Motorized Paragliding",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Helicopter Ride In Delhi",
+      "name": "Helicopter Ride In Delhi",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Reach the Peak with Rock Climbing",
+      "name": "Reach the Peak with Rock Climbing",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Air Safari",
+      "name": "Air Safari",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Go for F9-Go-Karting",
+      "name": "Go for F9-Go-Karting",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Play the Escape Games",
+      "name": "Play the Escape Games",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Step Back in Time at Humayun’s Tomb ",
+      "name": "SStep Back in Time at Humayun’s Tomb ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Take a Walk to India Gate ",
+      "name": "Take a Walk to India Gate ",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Witness the Serenity of Jama Masjid",
+      "name": "Witness the Serenity of Jama Masjid",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Stroll in Connaught Place",
+      "name": "Stroll in Connaught Place",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Pub Crawl in Delhi",
+      "name": "Pub Crawl in Delhi",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Take a Walk Through Chandni Chowk",
+      "name": "Take a Walk Through Chandni Chowk",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Go for a Cultural Walk",
+      "name": "Go for a Cultural Walk",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Explore the Hauz Khas Village",
+      "name": "Explore the Hauz Khas Village",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Taste the Delicacies at Paranthe Wali Gali",
+      "name": "Taste the Delicacies at Paranthe Wali Gali",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Eat at Kunzum Travel Café",
+      "name": "Eat at Kunzum Travel Café",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Take a Walk in Lodhi Gardens",
+      "name": "Take a Walk in Lodhi Gardens",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Old Delhi Street Food Tour",
+      "name": "Old Delhi Street Food Tour",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+    {
+      "id": "Delhi Shopping Tour",
+      "name": "Delhi Shopping Tour",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    },
+
+    {
+      "id": "Changing of Guard Ceremony",
+      "name": "Changing of Guard Ceremony",
+      "overview": "A popular beach known for its vibrant atmosphere.",
+      "description": "Explore the underwater world of Goa.",
+      "image": "https://example.com/images/scuba-diving.jpg"
+    }
+  ]
+}
