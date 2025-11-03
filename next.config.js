@@ -1,10 +1,8 @@
-module.exports = {
-    async rewrites() {
-        return [
-            {
-                source: '/robots.txt',
-                destination: '/api/robots',
-            },
-        ];
-    },
-};
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
+  },
+}
+
+module.exports = nextConfig

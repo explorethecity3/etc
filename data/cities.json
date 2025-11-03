@@ -1,0 +1,284 @@
+[
+  {
+    "slug": "mumbai",
+    "name": "Mumbai",
+    "state": "Maharashtra",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800",
+    "shortDescription": "The city of dreams, bustling with energy, Bollywood glamour, and stunning coastal views.",
+    "attractions": 45,
+    "description": "Mumbai, the financial capital of India, is a vibrant metropolis that never sleeps. From the iconic Gateway of India to the bustling streets of Colaba, this city offers an incredible mix of colonial architecture, modern skyscrapers, and traditional markets.",
+    "bestTimeToVisit": "November to February",
+    "topAttractions": [
+      {
+        "name": "Gateway of India",
+        "description": "Iconic monument overlooking the Arabian Sea, built during British rule"
+      },
+      {
+        "name": "Marine Drive",
+        "description": "Scenic 3.6 km long boulevard along the coast, perfect for evening walks"
+      },
+      {
+        "name": "Elephanta Caves",
+        "description": "UNESCO World Heritage Site with ancient rock-cut cave temples"
+      },
+      {
+        "name": "Chhatrapati Shivaji Terminus",
+        "description": "Historic railway station, a UNESCO World Heritage Site"
+      },
+      {
+        "name": "Haji Ali Dargah",
+        "description": "Stunning mosque located on an islet off the coast of Worli"
+      }
+    ],
+    "localFood": [
+      "Vada Pav - Mumbai's iconic street food burger",
+      "Pav Bhaji - Spicy vegetable curry with buttered bread",
+      "Bhel Puri - Tangy and crunchy street snack",
+      "Bombay Duck Fry - Local fish specialty",
+      "Misal Pav - Spicy sprouts curry"
+    ],
+    "travelTips": [
+      "Local trains are the fastest way to travel, but can be extremely crowded during rush hours",
+      "Try street food at Juhu Beach and Mohammed Ali Road",
+      "Book Elephanta Caves ferry tickets in advance during peak season",
+      "Use Uber or Ola for convenient taxi services",
+      "Keep small change handy for local purchases"
+    ],
+    "budgetEstimate": "₹2,000 - ₹5,000 per day (mid-range budget)"
+  },
+  {
+    "slug": "delhi",
+    "name": "Delhi",
+    "state": "National Capital Territory",
+    "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800",
+    "shortDescription": "India's capital city, a perfect blend of ancient heritage and modern development.",
+    "attractions": 52,
+    "description": "Delhi, the heart of India, is a city where history comes alive. From Mughal monuments to British-era buildings, bustling bazaars to modern metro, Delhi offers an unforgettable experience. The city is divided into Old Delhi with its narrow lanes and rich heritage, and New Delhi with wide roads and contemporary architecture.",
+    "bestTimeToVisit": "October to March",
+    "topAttractions": [
+      {
+        "name": "Red Fort",
+        "description": "Magnificent Mughal fort, a UNESCO World Heritage Site"
+      },
+      {
+        "name": "India Gate",
+        "description": "War memorial and iconic landmark of Delhi"
+      },
+      {
+        "name": "Qutub Minar",
+        "description": "World's tallest brick minaret, UNESCO World Heritage Site"
+      },
+      {
+        "name": "Lotus Temple",
+        "description": "Architectural marvel designed in the shape of a lotus flower"
+      },
+      {
+        "name": "Humayun's Tomb",
+        "description": "Beautiful Mughal garden tomb, inspiration for Taj Mahal"
+      }
+    ],
+    "localFood": [
+      "Chole Bhature - Spicy chickpeas with fried bread",
+      "Butter Chicken - Creamy tomato-based curry",
+      "Paranthe Wali Gali - Famous lane for stuffed parathas",
+      "Daulat Ki Chaat - Seasonal winter dessert",
+      "Kebabs at Karim's - Historic Mughlai restaurant"
+    ],
+    "travelTips": [
+      "Delhi Metro is the best way to avoid traffic",
+      "Visit monuments early morning to avoid crowds and heat",
+      "Try street food at Chandni Chowk, but choose busy stalls",
+      "Hire a guide for historical monuments to understand their significance",
+      "Be cautious of touts near tourist attractions"
+    ],
+    "budgetEstimate": "₹1,500 - ₹4,000 per day (mid-range budget)"
+  },
+  {
+    "slug": "bangalore",
+    "name": "Bangalore",
+    "state": "Karnataka",
+    "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800",
+    "shortDescription": "The Silicon Valley of India, known for its pleasant weather, parks, and vibrant culture.",
+    "attractions": 38,
+    "description": "Bangalore, officially known as Bengaluru, is India's IT hub and one of the most cosmopolitan cities. Known for its pleasant climate year-round, the city offers beautiful parks, historic palaces, modern shopping malls, and a thriving food scene. It's also the gateway to exploring Karnataka's rich heritage.",
+    "bestTimeToVisit": "Year-round (pleasant climate)",
+    "topAttractions": [
+      {
+        "name": "Lalbagh Botanical Garden",
+        "description": "Historic 240-acre garden with rare plants and glass house"
+      },
+      {
+        "name": "Bangalore Palace",
+        "description": "Tudor-style palace inspired by Windsor Castle"
+      },
+      {
+        "name": "Cubbon Park",
+        "description": "Sprawling 300-acre green space in the heart of the city"
+      },
+      {
+        "name": "ISKCON Temple",
+        "description": "Beautiful temple dedicated to Lord Krishna"
+      },
+      {
+        "name": "Vidhana Soudha",
+        "description": "Impressive legislative building showcasing Dravidian architecture"
+      }
+    ],
+    "localFood": [
+      "Masala Dosa - Crispy rice crepe with spiced potato filling",
+      "Bisi Bele Bath - Spicy rice and lentil dish",
+      "Filter Coffee - Authentic South Indian coffee",
+      "Idli Vada - Steamed rice cakes with lentil fritters",
+      "Ragi Mudde - Nutritious finger millet balls"
+    ],
+    "travelTips": [
+      "Traffic can be heavy, plan extra travel time",
+      "Use metro and app-based cabs for easy commuting",
+      "Explore the cafe culture in Koramangala and Indiranagar",
+      "Visit nearby Nandi Hills for sunrise views (60 km away)",
+      "Try local breakfast at MTR or Vidyarthi Bhavan"
+    ],
+    "budgetEstimate": "₹2,000 - ₹4,500 per day (mid-range budget)"
+  },
+  {
+    "slug": "jaipur",
+    "name": "Jaipur",
+    "state": "Rajasthan",
+    "image": "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
+    "shortDescription": "The Pink City, famous for magnificent palaces, forts, and vibrant Rajasthani culture.",
+    "attractions": 41,
+    "description": "Jaipur, the capital of Rajasthan, is famously known as the Pink City due to its distinctive pink-colored buildings. This royal city is home to magnificent forts, opulent palaces, and colorful bazaars. Jaipur forms part of the Golden Triangle tourist circuit and offers a glimpse into India's regal past.",
+    "bestTimeToVisit": "November to February",
+    "topAttractions": [
+      {
+        "name": "Amber Fort",
+        "description": "Majestic hilltop fort with elephant rides and stunning architecture"
+      },
+      {
+        "name": "Hawa Mahal",
+        "description": "Iconic five-story palace with 953 windows"
+      },
+      {
+        "name": "City Palace",
+        "description": "Royal residence with museums showcasing Rajput heritage"
+      },
+      {
+        "name": "Jantar Mantar",
+        "description": "UNESCO World Heritage Site, astronomical observatory with giant instruments"
+      },
+      {
+        "name": "Nahargarh Fort",
+        "description": "Hill fort offering panoramic views of the Pink City"
+      }
+    ],
+    "localFood": [
+      "Dal Baati Churma - Traditional Rajasthani dish",
+      "Ghewar - Sweet dessert made during festivals",
+      "Laal Maas - Spicy mutton curry",
+      "Pyaaz Kachori - Fried pastry with onion filling",
+      "Lassi - Traditional yogurt drink"
+    ],
+    "travelTips": [
+      "Book palace hotels in advance for royal experience",
+      "Hire a guide to learn about fort histories",
+      "Shop at Johari Bazaar for jewelry and textiles",
+      "Try elephant rides at Amber Fort early morning",
+      "Attend cultural shows at Chokhi Dhani village resort"
+    ],
+    "budgetEstimate": "₹1,800 - ₹4,000 per day (mid-range budget)"
+  },
+  {
+    "slug": "goa",
+    "name": "Goa",
+    "state": "Goa",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800",
+    "shortDescription": "India's beach paradise with stunning coastline, Portuguese heritage, and vibrant nightlife.",
+    "attractions": 47,
+    "description": "Goa, India's smallest state, is famous for its pristine beaches, Portuguese colonial architecture, vibrant nightlife, and laid-back atmosphere. From the party beaches of North Goa to the serene shores of South Goa, this coastal paradise offers something for everyone. Rich in history and natural beauty, Goa is a perfect blend of relaxation and adventure.",
+    "bestTimeToVisit": "November to February",
+    "topAttractions": [
+      {
+        "name": "Baga Beach",
+        "description": "Popular beach known for water sports and nightlife"
+      },
+      {
+        "name": "Basilica of Bom Jesus",
+        "description": "UNESCO World Heritage Site, 400-year-old church"
+      },
+      {
+        "name": "Fort Aguada",
+        "description": "17th-century Portuguese fort with lighthouse"
+      },
+      {
+        "name": "Dudhsagar Falls",
+        "description": "Spectacular four-tiered waterfall amidst lush forests"
+      },
+      {
+        "name": "Anjuna Flea Market",
+        "description": "Colorful Wednesday market with handicrafts and clothes"
+      }
+    ],
+    "localFood": [
+      "Fish Curry Rice - Goan staple with coconut-based curry",
+      "Vindaloo - Spicy pork curry with Portuguese influence",
+      "Bebinca - Traditional layered dessert",
+      "Xacuti - Chicken or lamb in complex curry",
+      "Sorpotel - Spicy pork dish"
+    ],
+    "travelTips": [
+      "Rent a scooter to explore at your own pace",
+      "Try fresh seafood at beach shacks",
+      "Book accommodation in advance during peak season",
+      "Visit spice plantations for unique experience",
+      "Respect local culture when visiting religious sites"
+    ],
+    "budgetEstimate": "₹2,500 - ₹6,000 per day (mid-range budget)"
+  },
+  {
+    "slug": "kolkata",
+    "name": "Kolkata",
+    "state": "West Bengal",
+    "image": "https://images.unsplash.com/photo-1558431382-27e303142255?w=800",
+    "shortDescription": "The City of Joy, rich in culture, literature, art, and colonial architecture.",
+    "attractions": 39,
+    "description": "Kolkata, formerly known as Calcutta, is the cultural capital of India. Known for its colonial architecture, art galleries, literary heritage, and intellectual atmosphere, Kolkata offers a unique blend of old-world charm and modern development. The city is famous for its festivals, especially Durga Puja, which transforms the entire city into a grand celebration.",
+    "bestTimeToVisit": "October to March",
+    "topAttractions": [
+      {
+        "name": "Victoria Memorial",
+        "description": "Iconic white marble monument with museum"
+      },
+      {
+        "name": "Howrah Bridge",
+        "description": "Iconic cantilever bridge over Hooghly River"
+      },
+      {
+        "name": "Indian Museum",
+        "description": "Oldest and largest museum in India"
+      },
+      {
+        "name": "Dakshineswar Temple",
+        "description": "Hindu temple complex on the banks of Hooghly"
+      },
+      {
+        "name": "Park Street",
+        "description": "Vibrant street known for restaurants and nightlife"
+      }
+    ],
+    "localFood": [
+      "Rosogolla - Iconic Bengali sweet",
+      "Kathi Roll - Wrapped street food with fillings",
+      "Hilsa Fish Curry - Bengali delicacy",
+      "Mishti Doi - Sweet yogurt dessert",
+      "Puchka - Bengali version of pani puri"
+    ],
+    "travelTips": [
+      "Use yellow taxis or metro for commuting",
+      "Visit during Durga Puja (September/October) for grand celebrations",
+      "Explore College Street for books and intellectual atmosphere",
+      "Try Bengali sweets at famous shops like KC Das",
+      "Take a ferry ride on Hooghly River"
+    ],
+    "budgetEstimate": "₹1,200 - ₹3,500 per day (mid-range budget)"
+  }
+]

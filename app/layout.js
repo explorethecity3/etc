@@ -1,0 +1,49 @@
+import './globals.css'
+import { Inter } from 'next/font/google'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata = {
+  title: 'Explore The City - Discover Amazing Cities Across India',
+  description: 'Your ultimate guide to exploring cities in India. Discover hidden gems, local food, travel tips, and authentic experiences.',
+  keywords: 'travel, india, cities, tourism, travel guide, explore india, city guide',
+  authors: [{ name: 'Explore The City' }],
+  creator: 'Explore The City',
+  publisher: 'Explore The City',
+  metadataBase: new URL('https://www.explorethecity.in'),
+  openGraph: {
+    title: 'Explore The City - Discover Amazing Cities Across India',
+    description: 'Your ultimate guide to exploring cities in India',
+    url: 'https://www.explorethecity.in',
+    siteName: 'Explore The City',
+    locale: 'en_IN',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className={inter.className}>
+        <Navbar />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+      </body>
+    </html>
+  )
+}
