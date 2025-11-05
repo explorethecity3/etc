@@ -4,8 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
 import cities from '@/data/cities.json'
+import { FaUtensils } from 'react-icons/fa'
 
-export default function CityPage({ params }) {
+export default function FoodPage({ params }) {
   const city = cities.find((c) => c.slug === params.slug)
 
   if (!city) {
@@ -46,7 +47,9 @@ export default function CityPage({ params }) {
             {' / '}
             <Link href="/cities" className="hover:text-primary">Cities</Link>
             {' / '}
-            <span className="text-gray-800">{city.name}</span>
+            <Link href={`/cities/${city.slug}`} className="hover:text-primary">{city.name}</Link>
+            {' / '}
+            <span className="text-gray-800">Food</span>
           </div>
         </div>
       </div>
@@ -58,17 +61,29 @@ export default function CityPage({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            {/* Description */}
+            {/* Local Food */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">About {city.name}</h2>
-              <p className="text-gray-700 text-lg leading-relaxed">{city.description}</p>
+              <div className="flex items-center mb-6">
+                <FaUtensils className="text-secondary text-3xl mr-4" />
+                <h2 className="text-3xl font-bold text-gray-800">Must-Try Local Food in {city.name}</h2>
+              </div>
+              <div className="bg-gradient-to-r from-orange-50 to-yellow-50 p-8 rounded-lg">
+                <ul className="space-y-4">
+                  {city.localFood.map((food, index) => (
+                    <li key={index} className="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                      <span className="text-orange-500 mr-4 text-2xl font-bold">{index + 1}.</span>
+                      <span className="text-gray-700 text-lg flex-1">{food}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </section>
           </div>
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
             {/* Quick Facts */}
-            <div className="bg-white p-6 rounded-lg shadow-md mb-8 sticky top-20">
+            <div className="bg-white p-6 rounded-lg shadow-md mb-8 sticky top-32">
               <h3 className="text-xl font-bold mb-4 text-gray-800">Quick Facts</h3>
               <div className="space-y-3">
                 <div>
@@ -95,9 +110,6 @@ export default function CityPage({ params }) {
                 </Link>
               </div>
             </div>
-
-            {/* AdSense Sidebar */}
-            {/* <AdSense slot="3333333333" format="vertical" /> */}
           </div>
         </div>
       </div>

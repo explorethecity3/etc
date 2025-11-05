@@ -4,8 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
 import cities from '@/data/cities.json'
+import { FaMapMarkerAlt } from 'react-icons/fa'
 
-export default function CityPage({ params }) {
+export default function AttractionsPage({ params }) {
   const city = cities.find((c) => c.slug === params.slug)
 
   if (!city) {
@@ -46,7 +47,9 @@ export default function CityPage({ params }) {
             {' / '}
             <Link href="/cities" className="hover:text-primary">Cities</Link>
             {' / '}
-            <span className="text-gray-800">{city.name}</span>
+            <Link href={`/cities/${city.slug}`} className="hover:text-primary">{city.name}</Link>
+            {' / '}
+            <span className="text-gray-800">Attractions</span>
           </div>
         </div>
       </div>
@@ -58,17 +61,32 @@ export default function CityPage({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            {/* Description */}
+            {/* Top Attractions */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">About {city.name}</h2>
-              <p className="text-gray-700 text-lg leading-relaxed">{city.description}</p>
+              <div className="flex items-center mb-6">
+                <FaMapMarkerAlt className="text-primary text-3xl mr-4" />
+                <h2 className="text-3xl font-bold text-gray-800">Top Attractions in {city.name}</h2>
+              </div>
+              <div className="space-y-6">
+                {city.topAttractions.map((attraction, index) => (
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
+                      <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">
+                        {index + 1}
+                      </span>
+                      {attraction.name}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">{attraction.description}</p>
+                  </div>
+                ))}
+              </div>
             </section>
           </div>
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
             {/* Quick Facts */}
-            <div className="bg-white p-6 rounded-lg shadow-md mb-8 sticky top-20">
+            <div className="bg-white p-6 rounded-lg shadow-md mb-8 sticky top-32">
               <h3 className="text-xl font-bold mb-4 text-gray-800">Quick Facts</h3>
               <div className="space-y-3">
                 <div>
@@ -95,9 +113,6 @@ export default function CityPage({ params }) {
                 </Link>
               </div>
             </div>
-
-            {/* AdSense Sidebar */}
-            {/* <AdSense slot="3333333333" format="vertical" /> */}
           </div>
         </div>
       </div>

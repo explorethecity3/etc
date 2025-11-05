@@ -4,8 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
 import cities from '@/data/cities.json'
+import { FaClock } from 'react-icons/fa'
 
-export default function CityPage({ params }) {
+export default function BestTimePage({ params }) {
   const city = cities.find((c) => c.slug === params.slug)
 
   if (!city) {
@@ -46,7 +47,9 @@ export default function CityPage({ params }) {
             {' / '}
             <Link href="/cities" className="hover:text-primary">Cities</Link>
             {' / '}
-            <span className="text-gray-800">{city.name}</span>
+            <Link href={`/cities/${city.slug}`} className="hover:text-primary">{city.name}</Link>
+            {' / '}
+            <span className="text-gray-800">Best Time</span>
           </div>
         </div>
       </div>
@@ -58,17 +61,28 @@ export default function CityPage({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            {/* Description */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">About {city.name}</h2>
-              <p className="text-gray-700 text-lg leading-relaxed">{city.description}</p>
+            {/* Best Time to Visit */}
+            <section className="mb-12 bg-blue-50 p-8 rounded-lg">
+              <div className="flex items-center mb-6">
+                <FaClock className="text-primary text-3xl mr-4" />
+                <h2 className="text-3xl font-bold text-gray-800">Best Time to Visit {city.name}</h2>
+              </div>
+              <p className="text-gray-700 text-2xl font-semibold mb-6">{city.bestTimeToVisit}</p>
+              <div className="bg-white p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">Why This Time?</h3>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  The recommended period is ideal for visiting {city.name} due to pleasant weather conditions,
+                  making it perfect for sightseeing and outdoor activities. During this time, you can comfortably
+                  explore all the attractions without extreme heat or heavy rainfall disrupting your plans.
+                </p>
+              </div>
             </section>
           </div>
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
             {/* Quick Facts */}
-            <div className="bg-white p-6 rounded-lg shadow-md mb-8 sticky top-20">
+            <div className="bg-white p-6 rounded-lg shadow-md mb-8 sticky top-32">
               <h3 className="text-xl font-bold mb-4 text-gray-800">Quick Facts</h3>
               <div className="space-y-3">
                 <div>
@@ -95,9 +109,6 @@ export default function CityPage({ params }) {
                 </Link>
               </div>
             </div>
-
-            {/* AdSense Sidebar */}
-            {/* <AdSense slot="3333333333" format="vertical" /> */}
           </div>
         </div>
       </div>
