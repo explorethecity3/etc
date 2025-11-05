@@ -1,0 +1,69 @@
+{
+  "slug": "delhi",
+  "name": "Delhi",
+  "state": "National Capital Territory",
+  "keywords": [
+    "Delhi travel guide",
+    "Delhi tourism",
+    "things to do in Delhi",
+    "Delhi attractions",
+    "Red Fort Delhi",
+    "India Gate",
+    "Qutub Minar",
+    "Lotus Temple",
+    "Humayun's Tomb",
+    "Old Delhi",
+    "New Delhi",
+    "Chandni Chowk",
+    "Delhi Metro",
+    "Delhi street food",
+    "Butter Chicken Delhi",
+    "Golden Triangle India",
+    "Delhi monuments",
+    "Mughal architecture",
+    "visit Delhi",
+    "Delhi sightseeing"
+  ],
+  "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800",
+  "shortDescription": "India's capital city, a perfect blend of ancient heritage and modern development.",
+  "attractions": 52,
+  "description": "Delhi, the heart of India, is a city where history comes alive. From Mughal monuments to British-era buildings, bustling bazaars to modern metro, Delhi offers an unforgettable experience. The city is divided into Old Delhi with its narrow lanes and rich heritage, and New Delhi with wide roads and contemporary architecture.",
+  "bestTimeToVisit": "October to March",
+  "topAttractions": [
+    {
+      "name": "Red Fort",
+      "description": "Magnificent Mughal fort, a UNESCO World Heritage Site"
+    },
+    {
+      "name": "India Gate",
+      "description": "War memorial and iconic landmark of Delhi"
+    },
+    {
+      "name": "Qutub Minar",
+      "description": "World's tallest brick minaret, UNESCO World Heritage Site"
+    },
+    {
+      "name": "Lotus Temple",
+      "description": "Architectural marvel designed in the shape of a lotus flower"
+    },
+    {
+      "name": "Humayun's Tomb",
+      "description": "Beautiful Mughal garden tomb, inspiration for Taj Mahal"
+    }
+  ],
+  "localFood": [
+    "Chole Bhature - Spicy chickpeas with fried bread",
+    "Butter Chicken - Creamy tomato-based curry",
+    "Paranthe Wali Gali - Famous lane for stuffed parathas",
+    "Daulat Ki Chaat - Seasonal winter dessert",
+    "Kebabs at Karim's - Historic Mughlai restaurant"
+  ],
+  "travelTips": [
+    "Delhi Metro is the best way to avoid traffic",
+    "Visit monuments early morning to avoid crowds and heat",
+    "Try street food at Chandni Chowk, but choose busy stalls",
+    "Hire a guide for historical monuments to understand their significance",
+    "Be cautious of touts near tourist attractions"
+  ],
+  "budgetEstimate": "₹1,500 - ₹4,000 per day (mid-range budget)"
+}

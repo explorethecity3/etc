@@ -1,0 +1,69 @@
+{
+  "slug": "jaipur",
+  "name": "Jaipur",
+  "state": "Rajasthan",
+  "keywords": [
+    "Jaipur travel guide",
+    "Pink City India",
+    "Jaipur tourism",
+    "things to do in Jaipur",
+    "Amber Fort Jaipur",
+    "Hawa Mahal",
+    "City Palace Jaipur",
+    "Jantar Mantar Jaipur",
+    "Nahargarh Fort",
+    "Jaipur palaces",
+    "Rajasthan tourism",
+    "Golden Triangle India",
+    "Jaipur forts",
+    "Johari Bazaar",
+    "Chokhi Dhani Jaipur",
+    "Jaipur shopping",
+    "Rajasthani culture",
+    "visit Jaipur",
+    "Jaipur sightseeing",
+    "Dal Baati Churma"
+  ],
+  "image": "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
+  "shortDescription": "The Pink City, famous for magnificent palaces, forts, and vibrant Rajasthani culture.",
+  "attractions": 41,
+  "description": "Jaipur, the capital of Rajasthan, is famously known as the Pink City due to its distinctive pink-colored buildings. This royal city is home to magnificent forts, opulent palaces, and colorful bazaars. Jaipur forms part of the Golden Triangle tourist circuit and offers a glimpse into India's regal past.",
+  "bestTimeToVisit": "November to February",
+  "topAttractions": [
+    {
+      "name": "Amber Fort",
+      "description": "Majestic hilltop fort with elephant rides and stunning architecture"
+    },
+    {
+      "name": "Hawa Mahal",
+      "description": "Iconic five-story palace with 953 windows"
+    },
+    {
+      "name": "City Palace",
+      "description": "Royal residence with museums showcasing Rajput heritage"
+    },
+    {
+      "name": "Jantar Mantar",
+      "description": "UNESCO World Heritage Site, astronomical observatory with giant instruments"
+    },
+    {
+      "name": "Nahargarh Fort",
+      "description": "Hill fort offering panoramic views of the Pink City"
+    }
+  ],
+  "localFood": [
+    "Dal Baati Churma - Traditional Rajasthani dish",
+    "Ghewar - Sweet dessert made during festivals",
+    "Laal Maas - Spicy mutton curry",
+    "Pyaaz Kachori - Fried pastry with onion filling",
+    "Lassi - Traditional yogurt drink"
+  ],
+  "travelTips": [
+    "Book palace hotels in advance for royal experience",
+    "Hire a guide to learn about fort histories",
+    "Shop at Johari Bazaar for jewelry and textiles",
+    "Try elephant rides at Amber Fort early morning",
+    "Attend cultural shows at Chokhi Dhani village resort"
+  ],
+  "budgetEstimate": "₹1,800 - ₹4,000 per day (mid-range budget)"
+}

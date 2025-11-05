@@ -1,0 +1,69 @@
+{
+  "slug": "goa",
+  "name": "Goa",
+  "state": "Goa",
+  "keywords": [
+    "Goa travel guide",
+    "Goa beaches",
+    "Goa tourism",
+    "things to do in Goa",
+    "Baga Beach",
+    "North Goa beaches",
+    "South Goa beaches",
+    "Goa nightlife",
+    "Basilica of Bom Jesus",
+    "Fort Aguada",
+    "Dudhsagar Falls",
+    "Anjuna Flea Market",
+    "Goa water sports",
+    "Goa beach shacks",
+    "Portuguese heritage Goa",
+    "Goa seafood",
+    "visit Goa",
+    "Goa holiday",
+    "Goa party",
+    "Goa spice plantations"
+  ],
+  "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800",
+  "shortDescription": "India's beach paradise with stunning coastline, Portuguese heritage, and vibrant nightlife.",
+  "attractions": 47,
+  "description": "Goa, India's smallest state, is famous for its pristine beaches, Portuguese colonial architecture, vibrant nightlife, and laid-back atmosphere. From the party beaches of North Goa to the serene shores of South Goa, this coastal paradise offers something for everyone. Rich in history and natural beauty, Goa is a perfect blend of relaxation and adventure.",
+  "bestTimeToVisit": "November to February",
+  "topAttractions": [
+    {
+      "name": "Baga Beach",
+      "description": "Popular beach known for water sports and nightlife"
+    },
+    {
+      "name": "Basilica of Bom Jesus",
+      "description": "UNESCO World Heritage Site, 400-year-old church"
+    },
+    {
+      "name": "Fort Aguada",
+      "description": "17th-century Portuguese fort with lighthouse"
+    },
+    {
+      "name": "Dudhsagar Falls",
+      "description": "Spectacular four-tiered waterfall amidst lush forests"
+    },
+    {
+      "name": "Anjuna Flea Market",
+      "description": "Colorful Wednesday market with handicrafts and clothes"
+    }
+  ],
+  "localFood": [
+    "Fish Curry Rice - Goan staple with coconut-based curry",
+    "Vindaloo - Spicy pork curry with Portuguese influence",
+    "Bebinca - Traditional layered dessert",
+    "Xacuti - Chicken or lamb in complex curry",
+    "Sorpotel - Spicy pork dish"
+  ],
+  "travelTips": [
+    "Rent a scooter to explore at your own pace",
+    "Try fresh seafood at beach shacks",
+    "Book accommodation in advance during peak season",
+    "Visit spice plantations for unique experience",
+    "Respect local culture when visiting religious sites"
+  ],
+  "budgetEstimate": "₹2,500 - ₹6,000 per day (mid-range budget)"
+}

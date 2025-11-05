@@ -1,0 +1,69 @@
+{
+  "slug": "bangalore",
+  "name": "Bangalore",
+  "state": "Karnataka",
+  "keywords": [
+    "Bangalore travel guide",
+    "Bengaluru tourism",
+    "things to do in Bangalore",
+    "Bangalore attractions",
+    "Silicon Valley of India",
+    "Lalbagh Botanical Garden",
+    "Bangalore Palace",
+    "Cubbon Park",
+    "ISKCON Temple Bangalore",
+    "Vidhana Soudha",
+    "Bangalore weather",
+    "Nandi Hills Bangalore",
+    "Bangalore cafes",
+    "Koramangala",
+    "Indiranagar Bangalore",
+    "Masala Dosa Bangalore",
+    "MTR Bangalore",
+    "Karnataka tourism",
+    "visit Bangalore",
+    "Bangalore IT hub"
+  ],
+  "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800",
+  "shortDescription": "The Silicon Valley of India, known for its pleasant weather, parks, and vibrant culture.",
+  "attractions": 38,
+  "description": "Bangalore, officially known as Bengaluru, is India's IT hub and one of the most cosmopolitan cities. Known for its pleasant climate year-round, the city offers beautiful parks, historic palaces, modern shopping malls, and a thriving food scene. It's also the gateway to exploring Karnataka's rich heritage.",
+  "bestTimeToVisit": "Year-round (pleasant climate)",
+  "topAttractions": [
+    {
+      "name": "Lalbagh Botanical Garden",
+      "description": "Historic 240-acre garden with rare plants and glass house"
+    },
+    {
+      "name": "Bangalore Palace",
+      "description": "Tudor-style palace inspired by Windsor Castle"
+    },
+    {
+      "name": "Cubbon Park",
+      "description": "Sprawling 300-acre green space in the heart of the city"
+    },
+    {
+      "name": "ISKCON Temple",
+      "description": "Beautiful temple dedicated to Lord Krishna"
+    },
+    {
+      "name": "Vidhana Soudha",
+      "description": "Impressive legislative building showcasing Dravidian architecture"
+    }
+  ],
+  "localFood": [
+    "Masala Dosa - Crispy rice crepe with spiced potato filling",
+    "Bisi Bele Bath - Spicy rice and lentil dish",
+    "Filter Coffee - Authentic South Indian coffee",
+    "Idli Vada - Steamed rice cakes with lentil fritters",
+    "Ragi Mudde - Nutritious finger millet balls"
+  ],
+  "travelTips": [
+    "Traffic can be heavy, plan extra travel time",
+    "Use metro and app-based cabs for easy commuting",
+    "Explore the cafe culture in Koramangala and Indiranagar",
+    "Visit nearby Nandi Hills for sunrise views (60 km away)",
+    "Try local breakfast at MTR or Vidyarthi Bhavan"
+  ],
+  "budgetEstimate": "₹2,000 - ₹4,500 per day (mid-range budget)"
+}

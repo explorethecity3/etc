@@ -1,0 +1,69 @@
+{
+  "slug": "mumbai",
+  "name": "Mumbai",
+  "state": "Maharashtra",
+  "keywords": [
+    "Mumbai travel guide",
+    "Mumbai tourism",
+    "things to do in Mumbai",
+    "Mumbai attractions",
+    "Gateway of India",
+    "Marine Drive Mumbai",
+    "Elephanta Caves",
+    "Mumbai street food",
+    "Vada Pav",
+    "Bollywood Mumbai",
+    "Mumbai beaches",
+    "Colaba Mumbai",
+    "Juhu Beach",
+    "Mumbai sightseeing",
+    "Maharashtra tourism",
+    "visit Mumbai",
+    "Mumbai holiday",
+    "financial capital India",
+    "Chhatrapati Shivaji Terminus",
+    "Haji Ali Dargah"
+  ],
+  "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800",
+  "shortDescription": "The city of dreams, bustling with energy, Bollywood glamour, and stunning coastal views.",
+  "attractions": 45,
+  "description": "Mumbai, the financial capital of India, is a vibrant metropolis that never sleeps. From the iconic Gateway of India to the bustling streets of Colaba, this city offers an incredible mix of colonial architecture, modern skyscrapers, and traditional markets.",
+  "bestTimeToVisit": "November to February",
+  "topAttractions": [
+    {
+      "name": "Gateway of India",
+      "description": "Iconic monument overlooking the Arabian Sea, built during British rule"
+    },
+    {
+      "name": "Marine Drive",
+      "description": "Scenic 3.6 km long boulevard along the coast, perfect for evening walks"
+    },
+    {
+      "name": "Elephanta Caves",
+      "description": "UNESCO World Heritage Site with ancient rock-cut cave temples"
+    },
+    {
+      "name": "Chhatrapati Shivaji Terminus",
+      "description": "Historic railway station, a UNESCO World Heritage Site"
+    },
+    {
+      "name": "Haji Ali Dargah",
+      "description": "Stunning mosque located on an islet off the coast of Worli"
+    }
+  ],
+  "localFood": [
+    "Vada Pav - Mumbai's iconic street food burger",
+    "Pav Bhaji - Spicy vegetable curry with buttered bread",
+    "Bhel Puri - Tangy and crunchy street snack",
+    "Bombay Duck Fry - Local fish specialty",
+    "Misal Pav - Spicy sprouts curry"
+  ],
+  "travelTips": [
+    "Local trains are the fastest way to travel, but can be extremely crowded during rush hours",
+    "Try street food at Juhu Beach and Mohammed Ali Road",
+    "Book Elephanta Caves ferry tickets in advance during peak season",
+    "Use Uber or Ola for convenient taxi services",
+    "Keep small change handy for local purchases"
+  ],
+  "budgetEstimate": "₹2,000 - ₹5,000 per day (mid-range budget)"
+}

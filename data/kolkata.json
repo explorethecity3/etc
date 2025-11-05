@@ -1,0 +1,69 @@
+{
+  "slug": "kolkata",
+  "name": "Kolkata",
+  "state": "West Bengal",
+  "keywords": [
+    "Kolkata travel guide",
+    "Calcutta tourism",
+    "things to do in Kolkata",
+    "City of Joy",
+    "Kolkata attractions",
+    "Victoria Memorial",
+    "Howrah Bridge",
+    "Indian Museum Kolkata",
+    "Dakshineswar Temple",
+    "Park Street Kolkata",
+    "Durga Puja Kolkata",
+    "Bengali culture",
+    "Kolkata street food",
+    "Rosogolla",
+    "Kathi Roll Kolkata",
+    "College Street Kolkata",
+    "West Bengal tourism",
+    "visit Kolkata",
+    "Kolkata heritage",
+    "Bengali sweets"
+  ],
+  "image": "https://images.unsplash.com/photo-1558431382-27e303142255?w=800",
+  "shortDescription": "The City of Joy, rich in culture, literature, art, and colonial architecture.",
+  "attractions": 39,
+  "description": "Kolkata, formerly known as Calcutta, is the cultural capital of India. Known for its colonial architecture, art galleries, literary heritage, and intellectual atmosphere, Kolkata offers a unique blend of old-world charm and modern development. The city is famous for its festivals, especially Durga Puja, which transforms the entire city into a grand celebration.",
+  "bestTimeToVisit": "October to March",
+  "topAttractions": [
+    {
+      "name": "Victoria Memorial",
+      "description": "Iconic white marble monument with museum"
+    },
+    {
+      "name": "Howrah Bridge",
+      "description": "Iconic cantilever bridge over Hooghly River"
+    },
+    {
+      "name": "Indian Museum",
+      "description": "Oldest and largest museum in India"
+    },
+    {
+      "name": "Dakshineswar Temple",
+      "description": "Hindu temple complex on the banks of Hooghly"
+    },
+    {
+      "name": "Park Street",
+      "description": "Vibrant street known for restaurants and nightlife"
+    }
+  ],
+  "localFood": [
+    "Rosogolla - Iconic Bengali sweet",
+    "Kathi Roll - Wrapped street food with fillings",
+    "Hilsa Fish Curry - Bengali delicacy",
+    "Mishti Doi - Sweet yogurt dessert",
+    "Puchka - Bengali version of pani puri"
+  ],
+  "travelTips": [
+    "Use yellow taxis or metro for commuting",
+    "Visit during Durga Puja (September/October) for grand celebrations",
+    "Explore College Street for books and intellectual atmosphere",
+    "Try Bengali sweets at famous shops like KC Das",
+    "Take a ferry ride on Hooghly River"
+  ],
+  "budgetEstimate": "₹1,200 - ₹3,500 per day (mid-range budget)"
+}
