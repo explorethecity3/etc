@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
+import CityStructuredData from '@/components/CityStructuredData'
 import cities from '@/data/cities.json'
 
 export default function CityPage({ params }) {
@@ -21,6 +22,9 @@ export default function CityPage({ params }) {
 
   return (
     <div>
+      {/* Structured Data for SEO */}
+      <CityStructuredData city={city} />
+
       {/* Hero Section */}
       <div className="relative h-[400px] w-full">
         <Image
