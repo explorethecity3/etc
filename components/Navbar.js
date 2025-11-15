@@ -15,10 +15,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/logo.png"
+              src="/images/logo1.png"
               alt="Explore The City Logo"
-              width={50}
-              height={50}
+              width={100}
+              height={100}
               className="object-contain"
             />
             {/* <span className="text-2xl font-bold text-white lowercase">explorethecity.in</span> */}
