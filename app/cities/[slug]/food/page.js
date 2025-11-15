@@ -67,15 +67,32 @@ export default function FoodPage({ params }) {
                 <FaUtensils className="text-secondary text-3xl mr-4" />
                 <h2 className="text-3xl font-bold text-gray-800">Must-Try Local Food in {city.name}</h2>
               </div>
-              <div className="bg-gradient-to-r from-orange-50 to-yellow-50 p-8 rounded-lg">
-                <ul className="space-y-4">
-                  {city.localFood.map((food, index) => (
-                    <li key={index} className="flex items-start bg-white p-4 rounded-lg shadow-sm">
-                      <span className="text-orange-500 mr-4 text-2xl font-bold">{index + 1}.</span>
-                      <span className="text-gray-700 text-lg flex-1">{food}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="space-y-6">
+                {city.localFood.map((food, index) => (
+                  <div key={index} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                    <div className="p-6 pb-4">
+                      <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
+                        <span className="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">
+                          {index + 1}
+                        </span>
+                        {food.name}
+                      </h3>
+                    </div>
+                    {food.image && (
+                      <div className="relative h-64 w-full">
+                        <Image
+                          src={food.image}
+                          alt={food.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="p-6 pt-4">
+                      <p className="text-gray-600 leading-relaxed">{food.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </section>
           </div>

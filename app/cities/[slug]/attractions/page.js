@@ -69,14 +69,28 @@ export default function AttractionsPage({ params }) {
               </div>
               <div className="space-y-6">
                 {city.topAttractions.map((attraction, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
-                      <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">
-                        {index + 1}
-                      </span>
-                      {attraction.name}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">{attraction.description}</p>
+                  <div key={index} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                    <div className="p-6 pb-4">
+                      <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
+                        <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">
+                          {index + 1}
+                        </span>
+                        {attraction.name}
+                      </h3>
+                    </div>
+                    {attraction.image && (
+                      <div className="relative h-64 w-full">
+                        <Image
+                          src={attraction.image}
+                          alt={attraction.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="p-6 pt-4">
+                      <p className="text-gray-600 leading-relaxed">{attraction.description}</p>
+                    </div>
                   </div>
                 ))}
               </div>

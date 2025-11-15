@@ -32,23 +32,28 @@
   "topAttractions": [
     {
       "name": "Gateway of India",
-      "description": "Iconic monument overlooking the Arabian Sea, built during British rule"
+      "description": "Iconic monument overlooking the Arabian Sea, built during British rule",
+      "image": "https://images.unsplash.com/photo-1566552881560-0be862a7c445?w=800"
     },
     {
       "name": "Marine Drive",
-      "description": "Scenic 3.6 km long boulevard along the coast, perfect for evening walks"
+      "description": "Scenic 3.6 km long boulevard along the coast, perfect for evening walks",
+      "image": "https://images.unsplash.com/photo-1595658658481-d53d3f999875?w=800"
     },
     {
       "name": "Elephanta Caves",
-      "description": "UNESCO World Heritage Site with ancient rock-cut cave temples"
+      "description": "UNESCO World Heritage Site with ancient rock-cut cave temples",
+      "image": "https://images.unsplash.com/photo-1609920658906-8223bd289001?w=800"
     },
     {
       "name": "Chhatrapati Shivaji Terminus",
-      "description": "Historic railway station, a UNESCO World Heritage Site"
+      "description": "Historic railway station, a UNESCO World Heritage Site",
+      "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800"
     },
     {
       "name": "Haji Ali Dargah",
-      "description": "Stunning mosque located on an islet off the coast of Worli"
+      "description": "Stunning mosque located on an islet off the coast of Worli",
+      "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800"
     }
   ],
   "localFood": [

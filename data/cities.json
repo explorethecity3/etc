@@ -11,31 +11,56 @@
     "topAttractions": [
       {
         "name": "Gateway of India",
-        "description": "Iconic monument overlooking the Arabian Sea, built during British rule"
+        "description": "Iconic monument overlooking the Arabian Sea, built during British rule",
+        "image": "https://images.unsplash.com/photo-1595658658481-d53d3f999875?w=800"
       },
       {
         "name": "Marine Drive",
-        "description": "Scenic 3.6 km long boulevard along the coast, perfect for evening walks"
+        "description": "Scenic 3.6 km long boulevard along the coast, perfect for evening walks",
+        "image": "https://images.unsplash.com/photo-1566552881560-0be862a7c445?w=800"
       },
       {
         "name": "Elephanta Caves",
-        "description": "UNESCO World Heritage Site with ancient rock-cut cave temples"
+        "description": "UNESCO World Heritage Site with ancient rock-cut cave temples",
+        "image": "https://images.unsplash.com/photo-1609920658906-8223bd289001?w=800"
       },
       {
         "name": "Chhatrapati Shivaji Terminus",
-        "description": "Historic railway station, a UNESCO World Heritage Site"
+        "description": "Historic railway station, a UNESCO World Heritage Site",
+        "image": "https://images.unsplash.com/photo-1587474289488-942a1be3fe2b?w=800"
       },
       {
         "name": "Haji Ali Dargah",
-        "description": "Stunning mosque located on an islet off the coast of Worli"
+        "description": "Stunning mosque located on an islet off the coast of Worli",
+        "image": "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800"
       }
     ],
     "localFood": [
-      "Vada Pav - Mumbai's iconic street food burger",
-      "Pav Bhaji - Spicy vegetable curry with buttered bread",
-      "Bhel Puri - Tangy and crunchy street snack",
-      "Bombay Duck Fry - Local fish specialty",
-      "Misal Pav - Spicy sprouts curry"
+      {
+        "name": "Vada Pav",
+        "description": "Mumbai's iconic street food burger",
+        "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800"
+      },
+      {
+        "name": "Pav Bhaji",
+        "description": "Spicy vegetable curry with buttered bread",
+        "image": "https://images.unsplash.com/photo-1606491956391-1a4bd9e0e1c4?w=800"
+      },
+      {
+        "name": "Bhel Puri",
+        "description": "Tangy and crunchy street snack",
+        "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800"
+      },
+      {
+        "name": "Bombay Duck Fry",
+        "description": "Local fish specialty",
+        "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800"
+      },
+      {
+        "name": "Misal Pav",
+        "description": "Spicy sprouts curry",
+        "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800"
+      }
     ],
     "travelTips": [
       "Local trains are the fastest way to travel, but can be extremely crowded during rush hours",
@@ -58,31 +83,56 @@
     "topAttractions": [
       {
         "name": "Red Fort",
-        "description": "Magnificent Mughal fort, a UNESCO World Heritage Site"
+        "description": "Magnificent Mughal fort, a UNESCO World Heritage Site",
+        "image": "https://images.unsplash.com/photo-1597075933194-5ac2e4f43ba4?w=800"
       },
       {
         "name": "India Gate",
-        "description": "War memorial and iconic landmark of Delhi"
+        "description": "War memorial and iconic landmark of Delhi",
+        "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800"
       },
       {
         "name": "Qutub Minar",
-        "description": "World's tallest brick minaret, UNESCO World Heritage Site"
+        "description": "World's tallest brick minaret, UNESCO World Heritage Site",
+        "image": "https://images.unsplash.com/photo-1588498184985-ec5a4c49c00d?w=800"
       },
       {
         "name": "Lotus Temple",
-        "description": "Architectural marvel designed in the shape of a lotus flower"
+        "description": "Architectural marvel designed in the shape of a lotus flower",
+        "image": "https://images.unsplash.com/photo-1591375462077-800fd7bc5c49?w=800"
       },
       {
         "name": "Humayun's Tomb",
-        "description": "Beautiful Mughal garden tomb, inspiration for Taj Mahal"
+        "description": "Beautiful Mughal garden tomb, inspiration for Taj Mahal",
+        "image": "https://images.unsplash.com/photo-1592904794554-387d86d4c3e8?w=800"
       }
     ],
     "localFood": [
-      "Chole Bhature - Spicy chickpeas with fried bread",
-      "Butter Chicken - Creamy tomato-based curry",
-      "Paranthe Wali Gali - Famous lane for stuffed parathas",
-      "Daulat Ki Chaat - Seasonal winter dessert",
-      "Kebabs at Karim's - Historic Mughlai restaurant"
+      {
+        "name": "Chole Bhature",
+        "description": "Spicy chickpeas with fried bread",
+        "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800"
+      },
+      {
+        "name": "Butter Chicken",
+        "description": "Creamy tomato-based curry",
+        "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800"
+      },
+      {
+        "name": "Paranthe Wali Gali",
+        "description": "Famous lane for stuffed parathas",
+        "image": "https://images.unsplash.com/photo-1542367787-4baf35f3037d?w=800"
+      },
+      {
+        "name": "Daulat Ki Chaat",
+        "description": "Seasonal winter dessert",
+        "image": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=800"
+      },
+      {
+        "name": "Kebabs at Karim's",
+        "description": "Historic Mughlai restaurant",
+        "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800"
+      }
     ],
     "travelTips": [
       "Delhi Metro is the best way to avoid traffic",
@@ -105,31 +155,56 @@
     "topAttractions": [
       {
         "name": "Lalbagh Botanical Garden",
-        "description": "Historic 240-acre garden with rare plants and glass house"
+        "description": "Historic 240-acre garden with rare plants and glass house",
+        "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800"
       },
       {
         "name": "Bangalore Palace",
-        "description": "Tudor-style palace inspired by Windsor Castle"
+        "description": "Tudor-style palace inspired by Windsor Castle",
+        "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800"
       },
       {
         "name": "Cubbon Park",
-        "description": "Sprawling 300-acre green space in the heart of the city"
+        "description": "Sprawling 300-acre green space in the heart of the city",
+        "image": "https://images.unsplash.com/photo-1608211695916-7c1098b6d72c?w=800"
       },
       {
         "name": "ISKCON Temple",
-        "description": "Beautiful temple dedicated to Lord Krishna"
+        "description": "Beautiful temple dedicated to Lord Krishna",
+        "image": "https://images.unsplash.com/photo-1609416917656-e4c0c95d2f8c?w=800"
       },
       {
         "name": "Vidhana Soudha",
-        "description": "Impressive legislative building showcasing Dravidian architecture"
+        "description": "Impressive legislative building showcasing Dravidian architecture",
+        "image": "https://images.unsplash.com/photo-1635224477920-77c1b5de7b93?w=800"
       }
     ],
     "localFood": [
-      "Masala Dosa - Crispy rice crepe with spiced potato filling",
-      "Bisi Bele Bath - Spicy rice and lentil dish",
-      "Filter Coffee - Authentic South Indian coffee",
-      "Idli Vada - Steamed rice cakes with lentil fritters",
-      "Ragi Mudde - Nutritious finger millet balls"
+      {
+        "name": "Masala Dosa",
+        "description": "Crispy rice crepe with spiced potato filling",
+        "image": "https://images.unsplash.com/photo-1630383249896-424e482df921?w=800"
+      },
+      {
+        "name": "Bisi Bele Bath",
+        "description": "Spicy rice and lentil dish",
+        "image": "https://images.unsplash.com/photo-1645177628172-a94c30a5e948?w=800"
+      },
+      {
+        "name": "Filter Coffee",
+        "description": "Authentic South Indian coffee",
+        "image": "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=800"
+      },
+      {
+        "name": "Idli Vada",
+        "description": "Steamed rice cakes with lentil fritters",
+        "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800"
+      },
+      {
+        "name": "Ragi Mudde",
+        "description": "Nutritious finger millet balls",
+        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800"
+      }
     ],
     "travelTips": [
       "Traffic can be heavy, plan extra travel time",
@@ -152,31 +227,56 @@
     "topAttractions": [
       {
         "name": "Amber Fort",
-        "description": "Majestic hilltop fort with elephant rides and stunning architecture"
+        "description": "Majestic hilltop fort with elephant rides and stunning architecture",
+        "image": "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800"
       },
       {
         "name": "Hawa Mahal",
-        "description": "Iconic five-story palace with 953 windows"
+        "description": "Iconic five-story palace with 953 windows",
+        "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800"
       },
       {
         "name": "City Palace",
-        "description": "Royal residence with museums showcasing Rajput heritage"
+        "description": "Royal residence with museums showcasing Rajput heritage",
+        "image": "https://images.unsplash.com/photo-1624138047565-b0c0f2e8b780?w=800"
       },
       {
         "name": "Jantar Mantar",
-        "description": "UNESCO World Heritage Site, astronomical observatory with giant instruments"
+        "description": "UNESCO World Heritage Site, astronomical observatory with giant instruments",
+        "image": "https://images.unsplash.com/photo-1605555857773-5183c92c8686?w=800"
       },
       {
         "name": "Nahargarh Fort",
-        "description": "Hill fort offering panoramic views of the Pink City"
+        "description": "Hill fort offering panoramic views of the Pink City",
+        "image": "https://images.unsplash.com/photo-1621424387216-d6960c5ecf22?w=800"
       }
     ],
     "localFood": [
-      "Dal Baati Churma - Traditional Rajasthani dish",
-      "Ghewar - Sweet dessert made during festivals",
-      "Laal Maas - Spicy mutton curry",
-      "Pyaaz Kachori - Fried pastry with onion filling",
-      "Lassi - Traditional yogurt drink"
+      {
+        "name": "Dal Baati Churma",
+        "description": "Traditional Rajasthani dish",
+        "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800"
+      },
+      {
+        "name": "Ghewar",
+        "description": "Sweet dessert made during festivals",
+        "image": "https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=800"
+      },
+      {
+        "name": "Laal Maas",
+        "description": "Spicy mutton curry",
+        "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800"
+      },
+      {
+        "name": "Pyaaz Kachori",
+        "description": "Fried pastry with onion filling",
+        "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800"
+      },
+      {
+        "name": "Lassi",
+        "description": "Traditional yogurt drink",
+        "image": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=800"
+      }
     ],
     "travelTips": [
       "Book palace hotels in advance for royal experience",
@@ -199,31 +299,56 @@
     "topAttractions": [
       {
         "name": "Baga Beach",
-        "description": "Popular beach known for water sports and nightlife"
+        "description": "Popular beach known for water sports and nightlife",
+        "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800"
       },
       {
         "name": "Basilica of Bom Jesus",
-        "description": "UNESCO World Heritage Site, 400-year-old church"
+        "description": "UNESCO World Heritage Site, 400-year-old church",
+        "image": "https://images.unsplash.com/photo-1589900243119-b0ad5baeb6c7?w=800"
       },
       {
         "name": "Fort Aguada",
-        "description": "17th-century Portuguese fort with lighthouse"
+        "description": "17th-century Portuguese fort with lighthouse",
+        "image": "https://images.unsplash.com/photo-1585149613991-4ec8db0ec07e?w=800"
       },
       {
         "name": "Dudhsagar Falls",
-        "description": "Spectacular four-tiered waterfall amidst lush forests"
+        "description": "Spectacular four-tiered waterfall amidst lush forests",
+        "image": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800"
       },
       {
         "name": "Anjuna Flea Market",
-        "description": "Colorful Wednesday market with handicrafts and clothes"
+        "description": "Colorful Wednesday market with handicrafts and clothes",
+        "image": "https://images.unsplash.com/photo-1559628376-f3fe5f782a2e?w=800"
       }
     ],
     "localFood": [
-      "Fish Curry Rice - Goan staple with coconut-based curry",
-      "Vindaloo - Spicy pork curry with Portuguese influence",
-      "Bebinca - Traditional layered dessert",
-      "Xacuti - Chicken or lamb in complex curry",
-      "Sorpotel - Spicy pork dish"
+      {
+        "name": "Fish Curry Rice",
+        "description": "Goan staple with coconut-based curry",
+        "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800"
+      },
+      {
+        "name": "Vindaloo",
+        "description": "Spicy pork curry with Portuguese influence",
+        "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800"
+      },
+      {
+        "name": "Bebinca",
+        "description": "Traditional layered dessert",
+        "image": "https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=800"
+      },
+      {
+        "name": "Xacuti",
+        "description": "Chicken or lamb in complex curry",
+        "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800"
+      },
+      {
+        "name": "Sorpotel",
+        "description": "Spicy pork dish",
+        "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800"
+      }
     ],
     "travelTips": [
       "Rent a scooter to explore at your own pace",
@@ -246,31 +371,56 @@
     "topAttractions": [
       {
         "name": "Victoria Memorial",
-        "description": "Iconic white marble monument with museum"
+        "description": "Iconic white marble monument with museum",
+        "image": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800"
       },
       {
         "name": "Howrah Bridge",
-        "description": "Iconic cantilever bridge over Hooghly River"
+        "description": "Iconic cantilever bridge over Hooghly River",
+        "image": "https://images.unsplash.com/photo-1558431382-27e303142255?w=800"
       },
       {
         "name": "Indian Museum",
-        "description": "Oldest and largest museum in India"
+        "description": "Oldest and largest museum in India",
+        "image": "https://images.unsplash.com/photo-1566127444979-b3d2b654e3b5?w=800"
       },
       {
         "name": "Dakshineswar Temple",
-        "description": "Hindu temple complex on the banks of Hooghly"
+        "description": "Hindu temple complex on the banks of Hooghly",
+        "image": "https://images.unsplash.com/photo-1591300458816-d4f086726de4?w=800"
       },
       {
         "name": "Park Street",
-        "description": "Vibrant street known for restaurants and nightlife"
+        "description": "Vibrant street known for restaurants and nightlife",
+        "image": "https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=800"
       }
     ],
     "localFood": [
-      "Rosogolla - Iconic Bengali sweet",
-      "Kathi Roll - Wrapped street food with fillings",
-      "Hilsa Fish Curry - Bengali delicacy",
-      "Mishti Doi - Sweet yogurt dessert",
-      "Puchka - Bengali version of pani puri"
+      {
+        "name": "Rosogolla",
+        "description": "Iconic Bengali sweet",
+        "image": "https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=800"
+      },
+      {
+        "name": "Kathi Roll",
+        "description": "Wrapped street food with fillings",
+        "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800"
+      },
+      {
+        "name": "Hilsa Fish Curry",
+        "description": "Bengali delicacy",
+        "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800"
+      },
+      {
+        "name": "Mishti Doi",
+        "description": "Sweet yogurt dessert",
+        "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800"
+      },
+      {
+        "name": "Puchka",
+        "description": "Bengali version of pani puri",
+        "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800"
+      }
     ],
     "travelTips": [
       "Use yellow taxis or metro for commuting",

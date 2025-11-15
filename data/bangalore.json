@@ -32,23 +32,28 @@
   "topAttractions": [
     {
       "name": "Lalbagh Botanical Garden",
-      "description": "Historic 240-acre garden with rare plants and glass house"
+      "description": "Historic 240-acre garden with rare plants and glass house",
+      "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800"
     },
     {
       "name": "Bangalore Palace",
-      "description": "Tudor-style palace inspired by Windsor Castle"
+      "description": "Tudor-style palace inspired by Windsor Castle",
+      "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800"
     },
     {
       "name": "Cubbon Park",
-      "description": "Sprawling 300-acre green space in the heart of the city"
+      "description": "Sprawling 300-acre green space in the heart of the city",
+      "image": "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800"
     },
     {
       "name": "ISKCON Temple",
-      "description": "Beautiful temple dedicated to Lord Krishna"
+      "description": "Beautiful temple dedicated to Lord Krishna",
+      "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800"
     },
     {
       "name": "Vidhana Soudha",
-      "description": "Impressive legislative building showcasing Dravidian architecture"
+      "description": "Impressive legislative building showcasing Dravidian architecture",
+      "image": "https://images.unsplash.com/photo-1612854124649-4f5f12b4f702?w=800"
     }
   ],
   "localFood": [

@@ -32,23 +32,28 @@
   "topAttractions": [
     {
       "name": "Red Fort",
-      "description": "Magnificent Mughal fort, a UNESCO World Heritage Site"
+      "description": "Magnificent Mughal fort, a UNESCO World Heritage Site",
+      "image": "https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800"
     },
     {
       "name": "India Gate",
-      "description": "War memorial and iconic landmark of Delhi"
+      "description": "War memorial and iconic landmark of Delhi",
+      "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800"
     },
     {
       "name": "Qutub Minar",
-      "description": "World's tallest brick minaret, UNESCO World Heritage Site"
+      "description": "World's tallest brick minaret, UNESCO World Heritage Site",
+      "image": "https://images.unsplash.com/photo-1588262713567-b9b01f2dc1c4?w=800"
     },
     {
       "name": "Lotus Temple",
-      "description": "Architectural marvel designed in the shape of a lotus flower"
+      "description": "Architectural marvel designed in the shape of a lotus flower",
+      "image": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800"
     },
     {
       "name": "Humayun's Tomb",
-      "description": "Beautiful Mughal garden tomb, inspiration for Taj Mahal"
+      "description": "Beautiful Mughal garden tomb, inspiration for Taj Mahal",
+      "image": "https://images.unsplash.com/photo-1586339277861-b0b7d3b455d6?w=800"
     }
   ],
   "localFood": [

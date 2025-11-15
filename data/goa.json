@@ -32,23 +32,28 @@
   "topAttractions": [
     {
       "name": "Baga Beach",
-      "description": "Popular beach known for water sports and nightlife"
+      "description": "Popular beach known for water sports and nightlife",
+      "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800"
     },
     {
       "name": "Basilica of Bom Jesus",
-      "description": "UNESCO World Heritage Site, 400-year-old church"
+      "description": "UNESCO World Heritage Site, 400-year-old church",
+      "image": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800"
     },
     {
       "name": "Fort Aguada",
-      "description": "17th-century Portuguese fort with lighthouse"
+      "description": "17th-century Portuguese fort with lighthouse",
+      "image": "https://images.unsplash.com/photo-1586150099194-a1538d66ad85?w=800"
     },
     {
       "name": "Dudhsagar Falls",
-      "description": "Spectacular four-tiered waterfall amidst lush forests"
+      "description": "Spectacular four-tiered waterfall amidst lush forests",
+      "image": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800"
     },
     {
       "name": "Anjuna Flea Market",
-      "description": "Colorful Wednesday market with handicrafts and clothes"
+      "description": "Colorful Wednesday market with handicrafts and clothes",
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800"
     }
   ],
   "localFood": [

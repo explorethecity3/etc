@@ -32,23 +32,28 @@
   "topAttractions": [
     {
       "name": "Amber Fort",
-      "description": "Majestic hilltop fort with elephant rides and stunning architecture"
+      "description": "Majestic hilltop fort with elephant rides and stunning architecture",
+      "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800"
     },
     {
       "name": "Hawa Mahal",
-      "description": "Iconic five-story palace with 953 windows"
+      "description": "Iconic five-story palace with 953 windows",
+      "image": "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800"
     },
     {
       "name": "City Palace",
-      "description": "Royal residence with museums showcasing Rajput heritage"
+      "description": "Royal residence with museums showcasing Rajput heritage",
+      "image": "https://images.unsplash.com/photo-1620766182966-c6eb5ed2b788?w=800"
     },
     {
       "name": "Jantar Mantar",
-      "description": "UNESCO World Heritage Site, astronomical observatory with giant instruments"
+      "description": "UNESCO World Heritage Site, astronomical observatory with giant instruments",
+      "image": "https://images.unsplash.com/photo-1598789432394-8b5f99c3a7e7?w=800"
     },
     {
       "name": "Nahargarh Fort",
-      "description": "Hill fort offering panoramic views of the Pink City"
+      "description": "Hill fort offering panoramic views of the Pink City",
+      "image": "https://images.unsplash.com/photo-1609416917881-1e44dc82b5d6?w=800"
     }
   ],
   "localFood": [

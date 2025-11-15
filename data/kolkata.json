@@ -32,23 +32,28 @@
   "topAttractions": [
     {
       "name": "Victoria Memorial",
-      "description": "Iconic white marble monument with museum"
+      "description": "Iconic white marble monument with museum",
+      "image": "https://images.unsplash.com/photo-1558431382-27e303142255?w=800"
     },
     {
       "name": "Howrah Bridge",
-      "description": "Iconic cantilever bridge over Hooghly River"
+      "description": "Iconic cantilever bridge over Hooghly River",
+      "image": "https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800"
     },
     {
       "name": "Indian Museum",
-      "description": "Oldest and largest museum in India"
+      "description": "Oldest and largest museum in India",
+      "image": "https://images.unsplash.com/photo-1566127992631-137a642a90f4?w=800"
     },
     {
       "name": "Dakshineswar Temple",
-      "description": "Hindu temple complex on the banks of Hooghly"
+      "description": "Hindu temple complex on the banks of Hooghly",
+      "image": "https://images.unsplash.com/photo-1609416515371-e19c6927a866?w=800"
     },
     {
       "name": "Park Street",
-      "description": "Vibrant street known for restaurants and nightlife"
+      "description": "Vibrant street known for restaurants and nightlife",
+      "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800"
     }
   ],
   "localFood": [
