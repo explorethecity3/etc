@@ -36,6 +36,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="IZHMSq9e0p173wQb1TeEu7nYjjbB5yPn12rmIuG_-_E" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTCV09D973"></script>
         <script
           dangerouslySetInnerHTML={{
