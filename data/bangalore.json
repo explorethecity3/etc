@@ -118,43 +118,265 @@
   "topAttractions": [
     {
       "name": "Lalbagh Botanical Garden",
-      "description": "Historic 240-acre garden with rare plants and glass house",
-      "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800"
+      "description": "Stepping into Lalbagh Botanical Garden feels like discovering a secret world where time moves differently. This magnificent 240-acre sanctuary in the heart of Bangalore has been breathing life into the city since Hyder Ali first envisioned it in 1760. The garden's crown jewel, the Glass House, stands as a testament to Victorian engineering, its crystalline structure catching the morning sun in ways that make photographers weep with joy. Every January and August, the flower shows here transform the space into a riot of colors that rival any artist's palette. Walking through the ancient rock formations that are over 3,000 million years old, you can't help but feel humbled by nature's timeline. The garden houses over 1,800 species of plants, including centuries-old trees that have watched the city transform from a pensioner's paradise to India's Silicon Valley. Early morning joggers share paths with serious botanists, while families spread picnic blankets under the shade of massive rain trees. The lake attracts numerous bird species, making it a paradise for birdwatchers who arrive with their telephoto lenses before dawn breaks.",
+      "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800",
+      "timings": "6:00 AM - 7:00 PM",
+      "entryFee": "₹25 for adults, ₹10 for children"
     },
     {
       "name": "Bangalore Palace",
-      "description": "Tudor-style palace inspired by Windsor Castle",
-      "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800"
+      "description": "The moment you glimpse Bangalore Palace through its wrought-iron gates, you're transported to an era when maharajas ruled and grandeur was a way of life. Built in 1878 by the Wadiyar dynasty, this Tudor-style architectural marvel draws inspiration from England's Windsor Castle, yet maintains its distinctly Indian soul. The palace sprawls across 45,000 square feet, its fortified towers and turrets creating a skyline that seems plucked from a fairy tale. Inside, the opulence is almost overwhelming – hand-carved wooden ceilings tell stories of Karnataka's rich heritage, while the ornate furniture speaks of royal tastes refined over generations. The Durbar Hall, with its stained glass windows casting rainbow patterns on the mosaic floor, has hosted countless dignitaries and continues to serve as a venue for cultural events. The palace grounds, spanning 454 acres, have evolved into Bangalore's premier venue for rock concerts and cultural festivals, where international artists perform against the backdrop of royal architecture. The audio tour takes you through the private chambers where you can see the maharaja's personal collection of photographs, offering intimate glimpses into royal life.",
+      "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800",
+      "timings": "10:00 AM - 5:30 PM",
+      "entryFee": "₹250 for Indians, ₹500 for foreigners"
     },
     {
       "name": "Cubbon Park",
-      "description": "Sprawling 300-acre green space in the heart of the city",
-      "image": "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800"
+      "description": "Cubbon Park is Bangalore's breathing space, a 300-acre green lung that pumps fresh air into the concrete arteries of this bustling metropolis. Established in 1870 by Lord Cubbon, this isn't just a park – it's a living museum of flora where over 6,000 trees representing 96 species create a canopy so dense that the city's chaos simply melts away. Sunday mornings here are magical, with the roads closed to traffic and thousands of Bangaloreans reclaiming the streets for cycling, skating, and yoga. The park seamlessly blends nature with heritage, housing within its boundaries the State Library, the High Court, and several museums. The bamboo grove near the bandstand creates an almost zen-like atmosphere where corporate executives practice tai chi before heading to their glass towers. Children chase butterflies while their grandparents feed the squirrels that have become surprisingly tame over the years. The walking trails wind through different ecosystems – from manicured lawns perfect for picnics to wild sections where nature is left to its own devices. Artists find inspiration under the century-old trees, their easels capturing the play of light through leaves.",
+      "image": "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800",
+      "timings": "6:00 AM - 6:00 PM",
+      "entryFee": "Free"
     },
     {
       "name": "ISKCON Temple",
-      "description": "Beautiful temple dedicated to Lord Krishna",
-      "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800"
+      "description": "Rising like a modern-day monument to devotion, the ISKCON Temple in Rajajinagar has become one of Bangalore's most visited spiritual destinations since its inauguration in 1997. This architectural marvel blends traditional Dravidian and contemporary styles, creating a structure that's both timeless and modern. The temple complex is a complete spiritual ecosystem, featuring not just the main prayer halls but also a multimedia theater, a Vedic library, and restaurants serving sanctified vegetarian food. The main deity hall houses beautifully adorned statues of Radha Krishna, and the evening aarti (prayer ceremony) is an experience that transcends religious boundaries – the synchronized movements of the priests, the hypnotic chanting, and the flame offerings create an atmosphere of profound peace. The temple's gold-plated dwajasthambha (flag post) stands 56 feet tall, visible from miles away, serving as a beacon for spiritual seekers. On weekends, the cultural complex hosts classical music concerts, dance performances, and spiritual discourses that attract intellectuals and artists. The temple's Akshaya Patra kitchen, one of the world's largest, prepares meals for thousands of school children daily, embodying the principle of service.",
+      "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800",
+      "timings": "4:15 AM - 5:00 AM, 7:15 AM - 1:00 PM, 4:00 PM - 8:30 PM",
+      "entryFee": "Free"
     },
     {
       "name": "Vidhana Soudha",
-      "description": "Impressive legislative building showcasing Dravidian architecture",
-      "image": "https://images.unsplash.com/photo-1612854124649-4f5f12b4f702?w=800"
+      "description": "Standing majestically at the heart of Bangalore's administrative district, Vidhana Soudha is more than just the seat of Karnataka's legislature – it's an architectural poem written in granite and marble. Built in 1956 under Chief Minister Kengal Hanumanthaiah's vision, this imposing structure represents the aspirations of a newly independent India. The building's Neo-Dravidian architecture spans 700 feet in length and rises to 150 feet, making it one of the most impressive legislative buildings in the country. The four-domed structure incorporates elements from across Indian architectural traditions – you'll spot Rajasthani jharokhas, Dravidian temple carvings, and Indo-Saracenic arches all harmoniously integrated. When illuminated on Sunday evenings and public holidays, the building transforms into a golden beacon that draws photographers and tourists alike. The massive staircase flanked by four lion heads leads to entrances that have welcomed presidents, prime ministers, and dignitaries from around the world. Though public entry is restricted, the exterior itself tells the story of Karnataka's democratic journey, with inscriptions declaring 'Government's Work is God's Work' reminding everyone of the building's noble purpose.",
+      "image": "https://images.unsplash.com/photo-1612854124649-4f5f12b4f702?w=800",
+      "timings": "Exterior viewing only (illuminated on Sundays and holidays 6:30 PM - 8:30 PM)",
+      "entryFee": "Free (exterior viewing)"
+    },
+    {
+      "name": "Nandi Hills",
+      "description": "Just 60 kilometers from Bangalore's urban sprawl, Nandi Hills emerges from the Deccan Plateau like nature's own skyscraper, offering respite to city dwellers seeking communion with clouds. This ancient hill fortress, standing at 4,851 feet above sea level, has played host to Tipu Sultan's summer retreat and serves as modern Bangalore's favorite sunrise point. The journey up the winding ghat roads is an adventure in itself, with hairpin bends revealing increasingly spectacular views of the plains below. At the summit, the experience is nothing short of magical – watching the sun paint the sky in shades of orange and pink while clouds drift below you makes the 3 AM wake-up call worthwhile. The hills are steeped in history, with Tipu's Drop, a 600-foot cliff from where condemned prisoners were supposedly pushed, offering vertigo-inducing views. The ancient Nandi Temple, dating back to the Chola period, sits peacefully amidst the tourist bustle. Adventure enthusiasts find their calling here with paragliding and cycling routes that test both skill and nerve. The climate remains pleasant throughout the year, but winter mornings wrap the hills in mist, creating an ethereal atmosphere that photographers dream about.",
+      "image": "https://images.unsplash.com/photo-1580894742597-87bc8789db3d?w=800",
+      "timings": "6:00 AM - 6:00 PM",
+      "entryFee": "₹35 per person, ₹175 for cars"
+    },
+    {
+      "name": "Tipu Sultan's Summer Palace",
+      "description": "Hidden in the bustling lanes of old Bangalore, Tipu Sultan's Summer Palace stands as a testament to the Tiger of Mysore's refined taste and architectural vision. Built entirely of teakwood in 1791, this Indo-Islamic architectural gem whispers tales of a ruler who was as cultured as he was courageous. The palace's most striking features are its ornately carved pillars, arches, and balconies, all painted in deep browns and greens that have somehow retained their richness despite centuries of weathering. The intricate floral motifs on the walls and ceilings showcase the craftsmanship of artisans who worked without modern tools yet created designs of mathematical precision. The palace museum houses artifacts from Tipu's reign, including his clothes, crown, and weapons, but it's the atmosphere that truly transports you – standing in the Darbar Hall, you can almost hear the echoes of court proceedings and diplomatic negotiations that shaped South Indian history. The gardens, though smaller than their original expanse, still provide a peaceful retreat where you can sit and imagine the Sultan walking these very paths, perhaps contemplating his next military strategy or composing poetry.",
+      "image": "https://images.unsplash.com/photo-1599831013130-62c2e7a6c6e9?w=800",
+      "timings": "8:30 AM - 5:30 PM",
+      "entryFee": "₹20 for Indians, ₹200 for foreigners"
+    },
+    {
+      "name": "Bull Temple (Dodda Basavana Gudi)",
+      "description": "In the heart of Basavanagudi, one of Bangalore's oldest neighborhoods, sits the Bull Temple, home to one of the world's largest monolithic Nandi statues. Carved from a single granite boulder in 1537, this magnificent bull measures 15 feet tall and 20 feet long, its surface polished to a shine by centuries of devotee offerings of butter and benne (sesame oil). Local legend speaks of a bull that ravaged the groundnut crops until appeased by the temple's construction, after which the area flourished. The temple's Dravidian architecture, with its characteristic pyramidal tower, creates a striking silhouette against Bangalore's modern skyline. Every year during Kadalekayi Parishe (groundnut fair), the area around the temple transforms into a carnival celebrating the humble peanut, with farmers from surrounding villages bringing their harvest as offering. The temple courtyard offers a slice of old Bangalore life – elderly residents gather for their evening discussions, children play traditional games, and the temple elephant blesses visitors with its trunk. The nearby Bugle Rock Garden provides panoramic views of the city, making this area a perfect blend of spiritual and natural attractions.",
+      "image": "https://images.unsplash.com/photo-1623849830166-d1e5b5f1228f?w=800",
+      "timings": "6:00 AM - 12:00 PM, 5:00 PM - 9:00 PM",
+      "entryFee": "Free"
+    },
+    {
+      "name": "Ulsoor Lake",
+      "description": "Ulsoor Lake, spread across 125 acres in the heart of the city, offers Bangaloreans a slice of serenity amidst urban chaos. Created by Kempe Gowda II in the 1530s, this historic water body has evolved from a utilitarian reservoir to one of the city's most beloved recreational spaces. The lake comes alive during sunrise when rowing enthusiasts glide across its mirror-like surface, their oars creating ripples that catch the golden light. The walking path circling the lake has become a social institution – morning walkers have formed informal clubs, sharing everything from health tips to stock market advice. The numerous islands dotting the lake attract a variety of birds, making it an urban birding hotspot where you might spot purple herons, cormorants, and kingfishers. During Ganesh Chaturthi, the lake becomes the focal point of celebrations with thousands gathering for the immersion ceremony. The boating facilities offer everything from romantic pedal boats to speedy motorboats, while the children's play area and outdoor gym equipment ensure there's something for every age group. The lakeside also hosts food festivals and cultural events, transforming into an open-air amphitheater under the stars.",
+      "image": "https://images.unsplash.com/photo-1609920658906-8223bd289001?w=800",
+      "timings": "6:00 AM - 8:00 PM",
+      "entryFee": "Free (Boating charges: ₹30-150 per person)"
+    },
+    {
+      "name": "Commercial Street",
+      "description": "Commercial Street is Bangalore's shopping heartland, a sensory explosion where tradition meets trends across narrow lanes packed with over 800 shops. This kilometer-long stretch has been the city's retail therapy destination since the British era, evolving from a European shopping district to a melting pot of Indian commerce. The street awakens early with wholesale flower vendors setting up their fragrant displays, soon joined by textile merchants unfurling bolts of silk and cotton in rainbow arrays. By noon, the street transforms into organized chaos – shoppers haggling over prices, delivery boys weaving through crowds on bicycles, and the aroma of street food mixing with incense from nearby temples. From traditional Kanchipuram sarees to trendy Western wear, handcrafted jewelry to cheap Chinese electronics, Commercial Street offers everything under one chaotic roof. The old establishments like Bombay Dyeing and Mysore Sarees still maintain their vintage charm with wooden cabinets and handwritten bills, while modern boutiques showcase the latest fashion. The street food scene here is legendary – crispy dosas from corner carts, fresh fruit juice stalls, and the famous Bengali sweets that have locals queuing up.",
+      "image": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800",
+      "timings": "10:00 AM - 8:30 PM (Closed on Sundays)",
+      "entryFee": "Free"
     }
   ],
   "localFood": [
-    "Masala Dosa - Crispy rice crepe with spiced potato filling",
-    "Bisi Bele Bath - Spicy rice and lentil dish",
-    "Filter Coffee - Authentic South Indian coffee",
-    "Idli Vada - Steamed rice cakes with lentil fritters",
-    "Ragi Mudde - Nutritious finger millet balls"
+    {
+      "name": "Masala Dosa",
+      "description": "The king of South Indian breakfast, this golden-brown crispy crepe made from fermented rice and lentil batter is Bangalore's pride. Stuffed with a spiced potato filling seasoned with mustard seeds, curry leaves, and turmeric, it's served with coconut chutney and tangy sambar. Head to Vidyarthi Bhavan in Gandhi Bazaar for their legendary crispy dosas that have been perfected since 1943.",
+      "whereToTry": "Vidyarthi Bhavan, MTR (Mavalli Tiffin Rooms), Brahmin's Coffee Bar",
+      "price": "₹40-80"
+    },
+    {
+      "name": "Bisi Bele Bath",
+      "description": "This comfort food translates to 'hot lentil rice' and is Karnataka's answer to khichdi but with a spicy twist. Made with rice, lentils, vegetables, and a special spice mix including cinnamon, cloves, and nutmeg, it's topped with ghee, fried cashews, and boondi. The dish at MTR is so iconic that they sell ready-to-make packets for homesick Bangaloreans worldwide.",
+      "whereToTry": "MTR, Puliyogare Point, Hotel Janatha",
+      "price": "₹50-100"
+    },
+    {
+      "name": "Filter Coffee",
+      "description": "No Bangalore morning is complete without the aromatic South Indian filter coffee. Made with dark roasted coffee beans and chicory, brewed in a traditional metal filter, and mixed with hot frothy milk, it's served in a steel tumbler and dabarah (bowl) set. The ritual of cooling the coffee by pouring it between vessels creates the perfect froth and temperature.",
+      "whereToTry": "Indian Coffee House, Brahmin's Coffee Bar, Airlines Hotel",
+      "price": "₹20-40"
+    },
+    {
+      "name": "Idli Vada",
+      "description": "Soft, fluffy steamed rice cakes paired with crispy golden-brown lentil donuts form this classic combination. The idlis are like clouds on your plate while the vadas provide a savory crunch. Served with an array of chutneys - coconut, tomato, and mint - plus sambar, it's a perfectly balanced meal that's light yet satisfying.",
+      "whereToTry": "Brahmin's Coffee Bar, Veena Stores, CTR (Central Tiffin Room)",
+      "price": "₹30-60"
+    },
+    {
+      "name": "Ragi Mudde",
+      "description": "This traditional Karnataka staple made from finger millet flour is a powerhouse of nutrition. Formed into softball-sized balls, it's typically eaten with sambar, chicken curry, or mutton curry. While it's an acquired taste for outsiders, locals swear by its health benefits and cooling properties. The technique is to break off pieces and swallow without chewing.",
+      "whereToTry": "Ragi Mane, Village Restaurant, Kamat Hotel",
+      "price": "₹60-120"
+    },
+    {
+      "name": "Mangalore Buns",
+      "description": "Don't let the name fool you - these are sweet, fluffy, deep-fried bread made with mashed bananas, flour, and a hint of cumin. Crispy outside and soft inside, they're perfect with coconut chutney or sambar. Originally from coastal Karnataka, they've become a Bangalore favorite for breakfast or evening snacks.",
+      "whereToTry": "Central Tiffin Room, Udupi restaurants, SLV Corner",
+      "price": "₹35-60"
+    },
+    {
+      "name": "Akki Roti",
+      "description": "Rice flour flatbread that's a Karnataka specialty, mixed with vegetables like onions, carrots, coriander, and green chilies, then roasted on a griddle. Each home and restaurant has its variation - some add dill, others coconut. It's typically eaten with chutney, pickle, or a dollop of homemade butter.",
+      "whereToTry": "Kamat Hotels, Village Restaurant, Local darshinis",
+      "price": "₹40-70"
+    },
+    {
+      "name": "Obbattu/Holige",
+      "description": "This sweet flatbread is Karnataka's festive delicacy, made with a filling of jaggery and lentils or coconut, encased in soft wheat dough. Served hot with ghee and milk, it's a dish that brings back childhood memories for every Bangalorean. During festivals, families compete over whose recipe is best.",
+      "whereToTry": "MTR, Brahmin's Bakery, Sweet shops in Malleswaram",
+      "price": "₹30-50 per piece"
+    },
+    {
+      "name": "Congress Kadlekai",
+      "description": "These spicy roasted peanuts got their name from being served at Indian National Congress meetings. Coated with a spicy mixture of gram flour, red chili, and garlic, they're Bangalore's favorite tea-time snack. You'll find vendors at every bus stand and park, filling paper cones with these addictive munchies.",
+      "whereToTry": "Street vendors, Lalbagh, Cubbon Park, Local markets",
+      "price": "₹10-30"
+    },
+    {
+      "name": "Thatte Idli",
+      "description": "Named after the plate (thatte) it's served on, these are flatter, larger versions of regular idlis from Bidadi, between Bangalore and Mysore. Soft, spongy, and slightly tangy, they're perfect for soaking up chutneys and sambar. Many Bangaloreans make special trips to Bidadi just for these.",
+      "whereToTry": "Bidadi Thatte Idli Hotel, Vasudev Adiga's, IDC Kitchen",
+      "price": "₹25-40"
+    },
+    {
+      "name": "Vada Pav",
+      "description": "Though originally from Mumbai, Bangalore has adopted this street food with enthusiasm. A deep-fried potato dumpling sandwiched in a bun with chutneys has become a quick hunger fix. The city's IT crowd has made it their unofficial snack, available at every corner.",
+      "whereToTry": "Anand Sweets, Street stalls near tech parks, Garden Vada Pav",
+      "price": "₹20-40"
+    },
+    {
+      "name": "Chow Chow Bath",
+      "description": "This unique combination plate features one sweet (kesari bath) and one savory (khara bath/upma) dish served together. The contrast of flavors - sweet semolina pudding with saffron and savory semolina with vegetables - is surprisingly harmonious. It's a breakfast that covers all taste preferences.",
+      "whereToTry": "CTR, Janatha Hotel, Vidyarthi Bhavan",
+      "price": "₹50-80"
+    }
   ],
   "travelTips": [
-    "Traffic can be heavy, plan extra travel time",
-    "Use metro and app-based cabs for easy commuting",
-    "Explore the cafe culture in Koramangala and Indiranagar",
-    "Visit nearby Nandi Hills for sunrise views (60 km away)",
-    "Try local breakfast at MTR or Vidyarthi Bhavan"
+    {
+      "category": "Transportation",
+      "tips": [
+        "Download Namma Metro app for metro routes and smart card recharge - the metro connects major areas like MG Road, Indiranagar, and the airport, running from 5 AM to 11 PM",
+        "Use app-based cabs (Uber, Ola, Rapido) during peak hours (8-10 AM, 5-8 PM) when auto-rickshaws often refuse or demand higher fares",
+        "Auto-rickshaws should use meters (minimum fare ₹30) but often don't - use the 'Namma Yatri' app for fair pricing or negotiate before starting",
+        "BMTC buses are cheapest but crowded - look for Volvo AC buses (slightly expensive but comfortable) for longer routes",
+        "Airport is 35km from city center - use airport taxi (₹800-1000) or Vayu Vajra bus service (₹250) instead of regular cabs that may overcharge",
+        "Rent bikes through Bounce, Vogo, or Yulu for short distances - great for beating traffic and costs ₹3-5 per km",
+        "Book outstation cabs a day in advance for places like Nandi Hills, Mysore - shared cabs are available from Kalyan Nagar for weekend trips"
+      ]
+    },
+    {
+      "category": "Best Times & Weather",
+      "tips": [
+        "October to February is perfect weather (15-28°C) - pack light woolens for evenings and early mornings",
+        "Avoid traveling during long weekends when half the city heads to Coorg, Ooty, or Goa - prices triple and traffic is horrible",
+        "Monsoon (June-September) brings unexpected heavy showers - always carry an umbrella or raincoat, streets flood quickly",
+        "April-May can be hot (35°C) but that's when you get best deals on hotels and less crowds at attractions",
+        "Visit parks and lakes early morning (6-8 AM) when the weather is pleasant and you'll see the local fitness culture",
+        "Plan indoor activities (malls, museums) for afternoons when the sun is harsh"
+      ]
+    },
+    {
+      "category": "Food & Dining",
+      "tips": [
+        "Darshinis are standing eat-outs offering quick, cheap, authentic South Indian food - order at counter, pay first, collect token",
+        "Try breakfast at iconic places before 11 AM - later they switch to lunch menu and the famous items might run out",
+        "Bangalore's microbrewery scene is huge - Toit, Arbor Brewing, Windmills offer craft beers with great food",
+        "Street food is generally safe but stick to busy stalls with high turnover - avoid cut fruits and ice unless from reputed places",
+        "Food delivery apps (Swiggy, Zomato) deliver everything from 5-star restaurants to local favorites till late night",
+        "Many restaurants close between 3-6 PM - plan lunch before 3 PM or dinner after 7 PM",
+        "Pure vegetarian restaurants are marked with green dots, non-veg with red - helpful for dietary preferences"
+      ]
+    },
+    {
+      "category": "Areas to Stay",
+      "tips": [
+        "Indiranagar/Koramangala - best for nightlife, cafes, and restaurants but expensive and traffic-heavy",
+        "MG Road/Brigade Road - central location, metro connectivity, close to shopping but noisy",
+        "Malleshwaram/Basavanagudi - traditional neighborhoods with authentic food, peaceful but far from IT areas",
+        "Whitefield/Electronic City - near IT hubs, modern amenities but far from city attractions (2-3 hours in traffic)",
+        "Jayanagar - balanced option with good food, shopping, and connectivity at reasonable prices",
+        "Book accommodations near metro stations to save on commute time and cost"
+      ]
+    },
+    {
+      "category": "Shopping & Bargaining",
+      "tips": [
+        "Commercial Street and Chickpet - bargain hard, start at 50% of quoted price especially for clothes and accessories",
+        "Brigade Road and UB City Mall for brands and fixed prices - no bargaining but wait for sale seasons",
+        "KR Market for flowers, spices, and vegetables - visit early morning (4 AM) to see the wholesale flower market in action",
+        "Cauvery Emporium (government-run) for authentic Karnataka handicrafts, silk sarees at fixed, fair prices",
+        "Sunday Soul Sante flea market for quirky finds, handmade products, and organic food",
+        "Most shops close by 8:30 PM except malls (till 10 PM) - plan shopping accordingly"
+      ]
+    },
+    {
+      "category": "Cultural Etiquette",
+      "tips": [
+        "Bangalore is cosmopolitan but dress modestly when visiting temples - cover shoulders and legs",
+        "Remove shoes before entering temples, some shops, and all homes",
+        "Learn basic Kannada phrases like 'Namaskara' (hello), 'Dhanyavada' (thank you) - locals appreciate the effort",
+        "Tipping is not mandatory but appreciated - ₹20-50 at local restaurants, 10% at upscale places",
+        "Public display of affection is frowned upon, especially in traditional areas",
+        "Many locals speak English fluently but with a distinct accent - be patient and polite if you don't understand"
+      ]
+    },
+    {
+      "category": "Safety & Health",
+      "tips": [
+        "Bangalore is generally safe but avoid isolated areas after 10 PM - stick to well-lit, busy streets",
+        "Keep copies of important documents in cloud storage - police are helpful but procedures can be lengthy",
+        "Drink only bottled water (Bisleri, Kinley) or use water purification apps to find RO water stations",
+        "Air quality can be poor in traffic areas - carry a mask if you have respiratory issues",
+        "Save emergency numbers: Police (100), Ambulance (108), Tourist Helpline (1363)",
+        "Beware of tourist scams at attractions - official guides have ID cards, avoid touts offering 'special deals'",
+        "ATMs are plentiful but inform your bank about travel to avoid card blocks"
+      ]
+    },
+    {
+      "category": "Weekend Getaways",
+      "tips": [
+        "Nandi Hills (60km) - leave by 4 AM to catch sunrise and beat crowds, entry closes if parking is full",
+        "Mysore (150km) - perfect day trip, visit palace, zoo, and Brindavan Gardens, take the Shatabdi train for comfort",
+        "Coorg (270km) - needs 2-3 days, book homestays in coffee estates for authentic experience",
+        "Hampi (340km) - UNESCO site needs minimum 2 days, overnight bus or train recommended",
+        "Pondicherry (310km) - French quarter and beaches, popular long weekend destination, book months ahead",
+        "Skandagiri (70km) - night trek to watch sunrise, requires forest department permission",
+        "Most getaways are crowded on weekends - try weekday trips if possible"
+      ]
+    },
+    {
+      "category": "Tech & Connectivity",
+      "tips": [
+        "Free WiFi at metro stations, malls, and cafes - speeds vary but useful for basic browsing",
+        "Get a local SIM card (Airtel, Jio) at airport - costs ₹500-1000 for tourist plans with good data",
+        "UPI payment (GPay, PhonePe) accepted everywhere from street vendors to five-star hotels",
+        "Download offline maps for navigation - Google Maps traffic updates are accurate but data-heavy",
+        "Power cuts are rare in main areas but carry a power bank for long days out",
+        "Most restaurants and attractions accept cards but keep ₹2000-3000 cash for street food, autos, and small vendors"
+      ]
+    },
+    {
+      "category": "Special Experiences",
+      "tips": [
+        "Attend a cricket match at Chinnaswamy Stadium - even if you don't understand cricket, the atmosphere is electric",
+        "Take a heritage walk in Basavanagudi or Malleshwaram with Unhurried or Bangalore Walks - ₹500-800 per person",
+        "Visit during Karaga festival (March/April) or Kadalekai Parishe (November) for authentic cultural experiences",
+        "Book a microlight flying experience at Jakkur Airfield for aerial views of the city",
+        "Join the Sunday cycling groups at Cubbon Park - bikes available on rent, all skill levels welcome",
+        "Experience Ranga Shankara theater for plays in multiple languages - tickets from ₹200",
+        "Visit Ragigudda temple at night for panoramic city views with temple lights"
+      ]
+    }
   ],
   "budgetEstimate": "₹2,000 - ₹4,500 per day (mid-range budget)"
 }

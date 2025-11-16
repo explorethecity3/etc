@@ -34,7 +34,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <link rel="icon" href="/favicon.ico" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTCV09D973"></script>
         <script
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-      </head>
+      </head> */}
       <body className={inter.className}>
         <Navbar />
         <main className="min-h-screen">

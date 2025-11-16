@@ -18,7 +18,7 @@
     "Qutub Minar",
     "Qutub Minar UNESCO",
     "Lotus Temple",
-    "Bahá'í Temple Delhi",
+    "Baháʼí Temple Delhi",
     "Humayun's Tomb",
     "Humayun's Tomb UNESCO",
     "Old Delhi",
@@ -148,44 +148,300 @@
   "bestTimeToVisit": "October to March",
   "topAttractions": [
     {
-      "name": "Red Fort",
-      "description": "Magnificent Mughal fort, a UNESCO World Heritage Site",
-      "image": "https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800"
+      "name": "Red Fort (Lal Qila)",
+      "description": "The Red Fort stands as Delhi's most powerful symbol of Mughal grandeur, its massive red sandstone walls having witnessed the rise and fall of empires since 1648. This UNESCO World Heritage Site spreads across 256 acres, and walking through its Lahori Gate feels like stepping into the pages of history where Emperor Shah Jahan once held court. The fort's architecture is poetry in stone – the Diwan-i-Aam (Hall of Public Audience) where the emperor met common subjects, and the Diwan-i-Khas (Hall of Private Audience) with its famous inscription 'If there is paradise on earth, it is this, it is this.' Every evening, the fort comes alive with a spectacular sound and light show that narrates Delhi's tumultuous history in the voices of its rulers. The Chandni Chowk bazaar right outside adds to the experience, where the aroma of street food mingles with the calls of vendors selling everything from wedding cards to electrical goods. Independence Day sees the Prime Minister hoisting the tricolor here, continuing a tradition that began in 1947 when Nehru declared India's freedom from these very ramparts.",
+      "image": "https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800",
+      "timings": "9:30 AM - 4:30 PM (Closed on Mondays)",
+      "entryFee": "₹35 for Indians, ₹500 for foreigners"
     },
     {
       "name": "India Gate",
-      "description": "War memorial and iconic landmark of Delhi",
-      "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800"
+      "description": "India Gate rises 42 meters into Delhi's sky, a somber yet magnificent memorial to the 82,000 Indian soldiers who fell during World War I and the Third Afghan War. Designed by Sir Edwin Lutyens, this sandstone arch has become Delhi's most recognizable landmark and the city's favorite gathering spot. The eternal flame of Amar Jawan Jyoti burns beneath the arch, honoring soldiers who made the ultimate sacrifice in the 1971 Indo-Pakistan War. As evening approaches, the monument transforms into a carnival atmosphere – families spread out on the lawns with picnic baskets, children chase soap bubbles sold by enterprising vendors, and young couples find moments of privacy in the vast public space. The ice cream carts, balloon sellers, and photographers with instant cameras create a nostalgic charm that hasn't changed in decades. During Republic Day celebrations, the area becomes the epicenter of national pride as military parades march down Rajpath. The newly inaugurated National War Memorial nearby adds another dimension to this area's significance, with its four concentric circles symbolizing immortality, bravery, sacrifice, and protection.",
+      "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800",
+      "timings": "24 hours (best visited evening)",
+      "entryFee": "Free"
     },
     {
       "name": "Qutub Minar",
-      "description": "World's tallest brick minaret, UNESCO World Heritage Site",
-      "image": "https://images.unsplash.com/photo-1588262713567-b9b01f2dc1c4?w=800"
+      "description": "Piercing Delhi's skyline at 73 meters, the Qutub Minar stands as the world's tallest brick minaret and a testament to Indo-Islamic architectural brilliance. Built in 1193 by Qutub-ud-din Aibak to celebrate Muslim dominance in Delhi, this UNESCO World Heritage Site tells its story through intricate Arabic inscriptions and geometric patterns carved into red sandstone and marble. The tower tapers from a 15-meter diameter base to just 2.5 meters at the top, an architectural feat that has survived earthquakes and lightning strikes over eight centuries. The surrounding complex is equally fascinating – the rust-free Iron Pillar from the 4th century continues to baffle metallurgists, while the Quwwat-ul-Islam Mosque, India's first mosque, was built using pillars from destroyed Hindu and Jain temples, creating a unique architectural fusion. The incomplete Alai Minar nearby tells of Sultan Alauddin Khilji's ambition to build a tower twice as tall, abandoned after his death. As you climb the monument (though internal access is now restricted), each balcony reveals intricate calligraphy and the changing architectural styles of different dynasties that contributed to its construction.",
+      "image": "https://images.unsplash.com/photo-1588262713567-b9b01f2dc1c4?w=800",
+      "timings": "7:00 AM - 5:00 PM",
+      "entryFee": "₹40 for Indians, ₹600 for foreigners"
     },
     {
       "name": "Lotus Temple",
-      "description": "Architectural marvel designed in the shape of a lotus flower",
-      "image": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800"
+      "description": "Like a giant lotus flower blooming in concrete and dust, the Baháʼí House of Worship emerges from South Delhi as one of the world's most visited buildings. Completed in 1986, architect Fariborz Sahba's masterpiece uses 27 free-standing marble-clad petals arranged in clusters to form nine sides, creating a structure that seems to float despite weighing thousands of tons. The temple welcomes everyone regardless of religion, maintaining the Baháʼí principle of unity of all faiths – inside, the prayer hall's pristine silence can accommodate 1,300 people, where no sermons are preached, no rituals performed, only silent prayer and meditation. The surrounding 26 acres of landscaped gardens with nine pools and gardens create a microclimate that's several degrees cooler than the city outside. During evening hours, the marble glows ethereally in the setting sun, and the reflection in the pools creates an illusion of the lotus floating on water. The temple has won numerous architectural awards and attracts over 4 million visitors annually, making it one of the most visited buildings in the world, surpassing even the Eiffel Tower and Taj Mahal in daily footfall.",
+      "image": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800",
+      "timings": "9:00 AM - 5:30 PM (Oct-Mar), 9:00 AM - 7:00 PM (Apr-Sep), Closed on Mondays",
+      "entryFee": "Free"
     },
     {
       "name": "Humayun's Tomb",
-      "description": "Beautiful Mughal garden tomb, inspiration for Taj Mahal",
-      "image": "https://images.unsplash.com/photo-1586339277861-b0b7d3b455d6?w=800"
+      "description": "This sublime garden tomb, built in 1565 by Humayun's widow Empress Bega Begum, stands as the first garden-tomb on the Indian subcontinent and the inspiration for the Taj Mahal. The UNESCO World Heritage Site showcases the height of Mughal architecture with its perfect symmetry, combining Persian traditions with Indian craftsmanship. The double-domed structure rises from a 7-meter high platform, its red sandstone contrasting beautifully with white marble details, while the char bagh (four-part) garden divided by water channels represents the Quranic paradise. The tomb houses not just Emperor Humayun but over 160 members of the Mughal family, earning it the nickname 'dormitory of the Mughals.' The recent restoration by the Aga Khan Trust has revived the water channels and gardens to their original glory, complete with the traditional varieties of plants mentioned in Mughal texts. Walking through the Arab Serai, Isa Khan's tomb, and Bu Halima's garden within the complex reveals layers of Delhi's history predating even the Mughals. The tomb gains special significance during sunset when the sandstone glows amber and the symmetrical reflection in the pools creates perfect Instagram moments.",
+      "image": "https://images.unsplash.com/photo-1586339277861-b0b7d3b455d6?w=800",
+      "timings": "Sunrise to Sunset",
+      "entryFee": "₹40 for Indians, ₹600 for foreigners"
+    },
+    {
+      "name": "Jama Masjid",
+      "description": "India's largest mosque spreads its red sandstone and white marble magnificence across Old Delhi, its courtyard capable of holding 25,000 devotees. Built by Shah Jahan between 1644 and 1656, the mosque's three gateways, two 40-meter high minarets, and four towers create an architectural masterpiece that has survived the changing fortunes of empires. Climbing the southern minaret (when open) rewards you with breathtaking 360-degree views of Old Delhi's chaotic beauty – a sea of buildings punctuated by temple spires, mosque domes, and in the distance, the Red Fort. The mosque houses several relics including an ancient copy of the Quran written on deerskin, a red beard hair of Prophet Muhammad, his sandals, and footprints embedded in marble. During Ramadan, the mosque and surrounding areas transform into a food paradise after sunset, with the faithful breaking their fast with dates and special delicacies. The pigeon feeders outside create magical moments as hundreds of birds take flight simultaneously, while the steps serve as Delhi's most democratic space where millionaires and daily wage workers sit side by side.",
+      "image": "https://images.unsplash.com/photo-1591017403321-dc264d1fd6e5?w=800",
+      "timings": "7:00 AM - 12:00 PM, 1:30 PM - 6:30 PM",
+      "entryFee": "Free (₹300 for camera, ₹100 for minaret climb)"
+    },
+    {
+      "name": "Akshardham Temple",
+      "description": "Rising from the banks of the Yamuna like a vision from ancient scriptures, Akshardham Temple redefines what modern Hindu architecture can achieve. Opened in 2005, this cultural complex spreads across 100 acres, its central monument built from Rajasthani pink sandstone and Italian Carrara marble without using any steel or concrete. The intricately carved temple features 20,000 statues, floral motifs, and the entire structure tells stories from Hindu mythology through its 234 ornate pillars, 9 domes, and 148 elephants. The musical fountain show after sunset narrates an ancient Sanskrit story through water, lights, and music, creating a spectacular sensory experience. The temple's exhibitions use robotics, dioramas, and an IMAX-style theater to bring Hindu philosophy to life, while the boat ride takes visitors through 10,000 years of Indian heritage in 12 minutes. The Yagnapurush Kund, the world's largest stepwell, hosts the musical fountain and serves as a stunning backdrop for evening ceremonies. Despite being relatively new, the temple has become Delhi's most visited attraction after the Taj Mahal, welcoming over 70% of all tourists who visit the capital.",
+      "image": "https://images.unsplash.com/photo-1594735760431-c12ad6eca331?w=800",
+      "timings": "9:30 AM - 6:30 PM (Closed on Mondays)",
+      "entryFee": "Free (Exhibitions: ₹170 adults, ₹100 children)"
+    },
+    {
+      "name": "Lodhi Garden",
+      "description": "Lodhi Garden offers 90 acres of serenity in the heart of Delhi, where 15th-century tombs coexist with morning joggers, yoga enthusiasts, and young lovers seeking privacy among ancient monuments. This archaeological park preserves the architectural works of the Sayyid and Lodhi dynasties, with Mohammed Shah's Tomb, Sikander Lodi's Tomb, Shisha Gumband, and Bara Gumband scattered across manicured lawns and winding pathways. The garden has evolved into Delhi's most democratic space where diplomats from nearby embassies power-walk alongside local residents, where expensive pedigree dogs socialize with street puppies, and where amateur photographers capture pre-wedding shoots against medieval backdrops. The butterfly conservatory attracts nature enthusiasts, while over 100 species of trees and birds make it a biodiversity hotspot in urban Delhi. Sunday mornings see the garden transform into an open-air cultural center with laughter clubs, music groups, and even Shakespeare readings by theater groups. The National Bonsai Park within adds a Japanese zen element, while the restaurant at the garden's edge has become a favorite brunch spot for Delhi's elite.",
+      "image": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800",
+      "timings": "5:00 AM - 8:00 PM (Oct-Mar), 5:00 AM - 8:00 PM (Apr-Sep)",
+      "entryFee": "Free"
+    },
+    {
+      "name": "Chandni Chowk",
+      "description": "Chandni Chowk is sensory overload in the best possible way – a 17th-century market street where centuries-old havelis lean against each other, their facades hiding treasures from Mughal-era jewelry to the latest smartphone accessories. Designed by Princess Jahanara in 1650, this 'moonlight square' once had a canal running through its center reflecting moonlight, though today it reflects the organized chaos of one of Asia's largest wholesale markets. The narrow galis (lanes) branching off the main street each have their own specialty – Kinari Bazaar for wedding accessories, Khari Baoli for Asia's largest spice market, Dariba Kalan for silver jewelry, and Ballimaran for shoes and Mirza Ghalib's haveli. Food here is legendary – from the 150-year-old Paranthe Wali Gali serving stuffed parathas to Karim's near Jama Masjid dishing out Mughlai cuisine from recipes passed down since the Mughal royal kitchens. The recently pedestrianized Chandni Chowk with its improved facade and underground cables offers glimpses of its former glory, though the real charm lies in getting lost in its maze-like lanes where each turn reveals hidden temples, forgotten havelis, and culinary treasures that have survived centuries.",
+      "image": "https://images.unsplash.com/photo-1573138756850-d6c1981a0e62?w=800",
+      "timings": "9:00 AM - 8:00 PM (Closed on Sundays)",
+      "entryFee": "Free"
+    },
+    {
+      "name": "Rashtrapati Bhavan",
+      "description": "Sprawled across 330 acres atop Raisina Hill, Rashtrapati Bhavan stands as one of the world's largest residences of any head of state, its 340 rooms telling the story of India's journey from colony to republic. Designed by Edwin Lutyens, this architectural marvel blends Indian and European elements – Buddhist railings, Hindu chhajjas, Muslim domes, and British colonial grandeur. The Mughal Gardens, open to public during spring, showcase 159 types of roses, 60 varieties of bougainvillea, and many other flowers in geometric patterns that would make Shah Jahan proud. The changing of guard ceremony every Saturday morning offers a glimpse of military precision set against the backdrop of democratic India's power center. Inside (accessible only through special guided tours), the Durbar Hall with its 2-ton chandelier, the Banquet Hall that can seat 104 guests, and the priceless art collection including a Rembrandt painting, reveal the grandeur befitting a nation of 1.4 billion people. The building's dome, originally planned to rival St. Peter's Basilica, was scaled down but still dominates Delhi's skyline, especially when illuminated during Republic Day celebrations.",
+      "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800",
+      "timings": "Visit by prior online registration only (Friday-Sunday)",
+      "entryFee": "₹50 for Indians, ₹50 for foreigners"
+    },
+    {
+      "name": "Hauz Khas Village",
+      "description": "Hauz Khas Village perfectly encapsulates Delhi's dual personality – a 14th-century urban village that's become the epicenter of the city's creative and nightlife scene. Built around an ancient water reservoir by Alauddin Khilji, the area combines Sultanate-era monuments with trendy cafes, quirky boutiques, and art galleries. The deer park adjoining the lake offers morning walkers a chance to spot peacocks and rabbits, while the medieval ruins provide Instagram-perfect backdrops for fashion shoots and pre-wedding photography. As the sun sets, the village transforms – rooftop restaurants fill with Delhi's young professionals, live music spills from bars, and art galleries host wine-and-cheese exhibition openings. The narrow lanes hide everything from traditional pottery shops to contemporary designer studios, Lebanese restaurants to molecular gastronomy experiments. The Hauz Khas Complex with its mosque, tomb, and madrasa reminds visitors of Firoz Shah Tughlaq's 14th-century educational center, now surrounded by establishments educating Delhi's youth in craft beers and global cuisines. This juxtaposition of ancient and ultra-modern makes Hauz Khas Village Delhi's most fascinating neighborhood.",
+      "image": "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=800",
+      "timings": "Monuments: Sunrise to Sunset; Restaurants/Cafes: 11:00 AM - 1:00 AM",
+      "entryFee": "Free for park and monuments"
+    },
+    {
+      "name": "Connaught Place",
+      "description": "Connaught Place, or CP as locals call it, forms the heart of New Delhi with its distinctive Georgian architecture arranged in two concentric circles around a central park. Built between 1929 and 1933, this colonial-era marketplace has evolved into Delhi's premier commercial and financial hub while retaining its distinctive white-pillared facades and covered corridors. The inner circle houses flagship stores of international brands, centuries-old businesses like Ram Chandra & Sons (Shark Tooth), and iconic establishments like United Coffee House that have served everyone from freedom fighters to Bollywood stars. The underground Palika Bazaar offers everything from electronics to clothing at bargain prices, while the renovated Central Park hosts cultural events and food festivals. The recent addition of Delhi Metro's hub station has made CP more accessible, though finding the right block (A to N in inner circle, G to P in outer) remains a Delhi rite of passage. Evenings see the corridors come alive with street performers, artists, and thousands of office-goers transitioning from corporate meetings to casual drinks at the numerous bars and restaurants that stay open till late.",
+      "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800",
+      "timings": "Shops: 10:00 AM - 8:00 PM (Closed on Sundays)",
+      "entryFee": "Free"
     }
   ],
   "localFood": [
-    "Chole Bhature - Spicy chickpeas with fried bread",
-    "Butter Chicken - Creamy tomato-based curry",
-    "Paranthe Wali Gali - Famous lane for stuffed parathas",
-    "Daulat Ki Chaat - Seasonal winter dessert",
-    "Kebabs at Karim's - Historic Mughlai restaurant"
+    {
+      "name": "Chole Bhature",
+      "description": "Delhi's ultimate comfort food, this combination of spicy chickpea curry with puffy deep-fried bread is a meal that defines the city's palate. The chole, slow-cooked overnight with tea leaves for that distinctive dark color, carries complex flavors from a secret blend of spices each vendor guards jealously. The bhature, made from refined flour and yogurt, puffs up like a balloon when hitting hot oil, creating a crispy exterior and soft interior perfect for scooping up the curry. Sita Ram Diwan Chand in Paharganj has been serving their legendary version since 1950, with queues starting before they open at 8 AM. The accompaniments - tangy pickle, sliced onions, and green chutney - cut through the richness, while a glass of lassi helps digest this heavy but satisfying meal.",
+      "whereToTry": "Sita Ram Diwan Chand, Baba Nagpal Corner, Chache Di Hatti",
+      "price": "₹60-150"
+    },
+    {
+      "name": "Butter Chicken",
+      "description": "Created accidentally at Moti Mahal in the 1950s when leftover chicken was mixed with a tomato-butter-cream gravy, this dish has become Delhi's gift to global cuisine. The chicken is marinated in yogurt and spices, grilled in a tandoor until charred at edges, then simmered in a silky sauce that balances tanginess from tomatoes with richness from butter and cream. The addition of dried fenugreek leaves (kasoori methi) adds an distinctive aroma that makes authentic butter chicken instantly recognizable. While Moti Mahal and Gulati claim to be inventors, every Delhi restaurant has its version, from the rich and indulgent style at ITC hotels to the rustic dhaba versions that focus more on the smoky tandoor flavors.",
+      "whereToTry": "Moti Mahal Delux, Gulati, Aslam Chicken",
+      "price": "₹350-800"
+    },
+    {
+      "name": "Paranthe Wali Gali Parathas",
+      "description": "This narrow lane in Chandni Chowk has been serving stuffed parathas since the 1870s, with shops passing recipes through generations. Unlike typical parathas, these are deep-fried, creating a crispy exterior that gives way to innovative fillings - from traditional aloo and gobhi to exotic papad, rabri, and even banana. Each shop has its specialties; Pandit Gaya Prasad Shiv Charan offers 30 varieties including their famous kaju-kishmish paratha. The parathas come with an array of sides - sweet tamarind chutney, mint chutney, mixed vegetable pickle, and a banana-jaggery curry unique to this lane. Watching the parathas being rolled, stuffed, and fried in massive iron kadhais while sitting on rickety benches adds to the charm of this culinary time capsule.",
+      "whereToTry": "Pt. Gaya Prasad Shiv Charan, Pt. Dayal Paratha Wala, Kanhaiya Lal Durga Prasad",
+      "price": "₹70-200 per plate"
+    },
+    {
+      "name": "Daulat ki Chaat",
+      "description": "This ethereal winter dessert appears on Delhi streets only from October to February, as delicate as morning dew and as fleeting as Delhi's pleasant weather. Made by churning milk overnight in the winter cold until it forms a light foam, then garnished with khoya, pistachios, and a hint of saffron, it literally melts on your tongue. The art of making authentic daulat ki chaat is dying - it requires the perfect winter temperature and humidity, skilled hands to collect the foam without breaking it, and patience to wake up at 3 AM to start the churning process. The few remaining vendors in Chandni Chowk and Kinari Bazaar guard their family techniques zealously, creating a dessert so light that eating it feels like tasting a sweet cloud.",
+      "whereToTry": "Chandni Chowk, Old Delhi street vendors, Kinari Bazaar",
+      "price": "₹30-60"
+    },
+    {
+      "name": "Kebabs at Karim's",
+      "description": "Established in 1913 by Mohammed Aziz, a descendant of Mughal royal chefs, Karim's serves recipes that once graced Emperor's tables. Their seekh kebabs, made from finely minced mutton mixed with 32 spices, are grilled over charcoal until the exterior develops a beautiful char while remaining succulent inside. The mutton burra, marinated for hours in raw papaya (for tenderness) and spices, falls off the bone. The chicken jahangiri, named after Emperor Jahangir, combines whole chicken with eggs and rich gravies. The restaurant's location in a cramped lane near Jama Masjid, with its no-frills ambiance and shared tables, adds authenticity to the experience. Their breakfast nahari, a slow-cooked stew traditionally eaten after morning prayers, has devotees who claim it cures hangovers.",
+      "whereToTry": "Karim's (Jama Masjid), Al Jawahar, Qureshi Kebab Corner",
+      "price": "₹200-500"
+    },
+    {
+      "name": "Delhi Chaat",
+      "description": "Delhi's chaat culture transcends mere street food - it's a philosophy of balancing six tastes in every bite. The papdi chaat combines crispy wafers with boiled potatoes, chickpeas, yogurt, tamarind chutney, and green chutney, topped with sev and chaat masala. Aloo tikki, shallow-fried potato patties, are broken open and loaded with chutneys and yogurt. The gol gappa (pani puri) experience involves standing at a cart, receiving hollow puris filled with spiced water, and consuming them in one bite before they dissolve. Each area has its chaat specialists - UPSC aspirants swear by Old Rajinder Nagar's tikki, while Bengali Market's nathu's serves chaat in air-conditioned comfort without losing authenticity.",
+      "whereToTry": "Nathu's Sweets, Prince Chaat, Lala Babu Chaat Bhandar",
+      "price": "₹50-150"
+    },
+    {
+      "name": "Nihari",
+      "description": "This slow-cooked stew originated in Old Delhi during the Mughal era as a breakfast for laborers, its rich gravy providing energy for the entire day. Beef or mutton shanks are cooked overnight with bone marrow in a sealed pot with dozens of spices including long pepper, mace, and dried ginger. The result is meat so tender it falls apart at touch and a gravy thick with dissolved marrow and collagen. Served with khameeri roti (fermented bread) and garnished with julienned ginger, green chilies, and lemon, it's a complete meal. Kallu Nihari and Haji Shabrati open at dawn, serving construction workers and executives alike who believe starting the day with nihari ensures success.",
+      "whereToTry": "Kallu Nihari, Haji Shabrati Nihari Wale, Javed Famous Nihari",
+      "price": "₹120-200"
+    },
+    {
+      "name": "Kulfi Faluda",
+      "description": "Delhi's answer to ice cream sundae, kulfi faluda combines dense, creamy frozen milk (kulfi) with rose-flavored vermicelli (faluda), basil seeds (sabja), and rose syrup. Unlike regular ice cream, kulfi is not churned but slow-cooked until milk reduces to a third, creating an intensely milky, dense texture. The traditional matka kulfi, served in earthen pots, adds an earthy flavor. Kuremal Mohan Lal in Chawri Bazaar revolutionized kulfi by stuffing it inside actual fruits - mangoes, oranges, pomegranates - creating edible bowls. The combination of cold kulfi, chewy faluda noodles, and crunchy basil seeds creates textural magic that no modern dessert can replicate.",
+      "whereToTry": "Kuremal Mohan Lal, Roshan Di Kulfi, Sitaram Bazaar",
+      "price": "₹60-200"
+    },
+    {
+      "name": "Jalebi",
+      "description": "The jalebis at Old Famous Jalebi Wala in Chandni Chowk have achieved legendary status since 1884, with their perfect spiral shape, crispy exterior, and syrup-soaked interior. Made by piping fermented batter directly into hot ghee in perfect concentric circles, then immediately dunking in saffron-cardamom sugar syrup, these jalebis are best consumed hot when the contrast between crispy and juicy is most pronounced. The winter tradition of jalebi with rabri (thickened sweetened milk) creates a hot-cold, crispy-creamy combination that epitomizes Delhi's love for contrasts. The shop still uses pure desi ghee and follows the same recipe, creating jalebis that are less cloyingly sweet than modern versions.",
+      "whereToTry": "Old Famous Jalebi Wala, Jalebi Junction, Natraj Dahi Bhalle Wala",
+      "price": "₹40-100 per plate"
+    },
+    {
+      "name": "Bedmi Aloo",
+      "description": "A breakfast unique to Delhi, bedmi is a puri made with ground urad dal mixed into wheat flour, deep-fried until it puffs up golden brown with a slightly coarse texture. Served with spicy potato curry and often accompanied by sweet-sour pumpkin sabzi, it's a combination that works despite seeming contradictory. The addition of hing (asafoetida) in the dough aids digestion of the heavy meal. Shyam Sweets in Chawri Bazaar and Laxmi Narayan's stall serve hundreds of plates every morning to everyone from rickshaw pullers to High Court lawyers, all standing together savoring this democratic meal.",
+      "whereToTry": "Shyam Sweets, Laxmi Narayan, Jung Bahadur Kachori Wala",
+      "price": "₹40-80"
+    },
+    {
+      "name": "Mutton Biryani",
+      "description": "While Hyderabad and Lucknow claim biryani supremacy, Delhi's version has its own character - less subtle than Lucknowi, less spicy than Hyderabadi, perfectly balanced for Delhi's diverse palate. The long-grain basmati rice, sourced from nearby Haryana, is cooked with mutton in the dum style where the pot is sealed with dough to trap steam. Each grain remains separate, infused with saffron and ghee, while the mutton becomes fork-tender. Restaurants like Deez Biryani and Biryani By Kilo deliver in traditional earthen handis, while Al-Bake in New Friends Colony serves a fusion version that has achieved cult status among students.",
+      "whereToTry": "Deez Biryani, Biryani By Kilo, Al-Bake",
+      "price": "₹250-500"
+    },
+    {
+      "name": "Momos",
+      "description": "Though Tibetan in origin, momos have become so integral to Delhi's food culture that the city probably consumes more momos than Tibet and Nepal combined. From the basic steamed version with watery chutney at street corners to gourmet versions with truffle oil at high-end cafes, Delhi has embraced and evolved this dumpling. The street version, sold from small carts with portable steamers, offers both veg (cabbage-based) and chicken options, served with fiery red chutney that makes eyes water. Tandoori momos, a Delhi invention where steamed momos are grilled in a tandoor and basted with spicy sauce, represents the city's ability to absorb and transform any cuisine.",
+      "whereToTry": "Yeti, QD's, GK2 M Block Market, Street vendors everywhere",
+      "price": "₹40-150"
+    }
   ],
   "travelTips": [
-    "Delhi Metro is the best way to avoid traffic",
-    "Visit monuments early morning to avoid crowds and heat",
-    "Try street food at Chandni Chowk, but choose busy stalls",
-    "Hire a guide for historical monuments to understand their significance",
-    "Be cautious of touts near tourist attractions"
+    {
+      "category": "Transportation",
+      "tips": [
+        "Delhi Metro is your lifeline - download DMRC app for routes and buy a tourist card (₹200/day unlimited travel) at any station to avoid queues",
+        "Yellow Line connects major tourist spots (Chandni Chowk, CP, Qutub Minar) while Airport Express reaches the city in 20 minutes",
+        "Pre-paid taxi counters at airport/railway stations prevent overcharging - insist on them despite driver protests about 'knowing shortcuts'",
+        "Uber/Ola work well but in Old Delhi's narrow lanes, cycle rickshaws are only option - negotiate fare beforehand (₹20-50 for short distances)",
+        "DTC buses are extremely cheap (₹5-15) but confusing for tourists - green buses are AC and more comfortable",
+        "Hop-on-hop-off tourist bus (HOHO) covers major monuments with commentary - ₹500 for day pass",
+        "Auto-rickshaws often refuse to go by meter - use apps like Uber Auto or negotiate (add 20-30% to meter rate as thumb rule)",
+        "For day trips to Agra/Jaipur, Gatimaan Express (to Agra) and Shatabdi trains are faster and more comfortable than road",
+        "E-rickshaws are perfect for last-mile connectivity from metro stations - fixed routes, shared, costs ₹10-20"
+      ]
+    },
+    {
+      "category": "Best Times & Weather",
+      "tips": [
+        "October to March is ideal - December/January can be very cold (3-5°C) and foggy, affecting flights and trains",
+        "Avoid April to June when temperatures hit 45°C - if you must visit, plan indoor activities for afternoons",
+        "Monsoon (July-September) brings relief from heat but also waterlogging - carry umbrella and waterproof footwear",
+        "Pollution peaks November-December during crop burning season - carry N95 masks if you have respiratory issues",
+        "Visit monuments early morning (many open at sunrise) to avoid crowds and heat",
+        "Republic Day (Jan 26) offers parade spectacle but heavy security and road closures make movement difficult",
+        "Holi festival (March) is fun but can get rowdy - stay in groups and wear old clothes you can discard",
+        "During Diwali, air quality becomes hazardous - beautiful celebrations but health considerations important"
+      ]
+    },
+    {
+      "category": "Areas to Stay",
+      "tips": [
+        "Connaught Place/Paharganj - Budget to mid-range options, central location, but Paharganj can be overwhelming for first-timers",
+        "Karol Bagh - Good connectivity, shopping paradise, lots of budget hotels but congested",
+        "South Delhi (Hauz Khas, Greater Kailash) - Upscale, safe, great cafes/restaurants but far from historical sites",
+        "Near Airport (Aerocity) - Convenient for short stays, modern hotels, but isolated from city attractions",
+        "Old Delhi - Authentic experience, walk to many monuments, but narrow lanes, limited modern amenities",
+        "Dwarka - Affordable, on metro line, but 1-2 hours from main attractions",
+        "Gurgaon/Noida - Business hotels, malls, modern amenities but technically outside Delhi, far from tourist sites",
+        "Choose hotels near metro stations - saves significant time and money on daily commute"
+      ]
+    },
+    {
+      "category": "Food Safety & Dining",
+      "tips": [
+        "Street food is generally safe at busy stalls with high turnover - avoid pre-cut fruits and salads",
+        "Stick to bottled water (check seal) or boiled beverages - ice at street stalls often made from tap water",
+        "Build tolerance gradually - don't dive into spicy street food on day one",
+        "Paranthe Wali Gali and Karim's are must-tries but go easy on ghee/oil if you have sensitive stomach",
+        "Many Old Delhi eateries are vegetarian on Tuesdays - check before making special trip",
+        "Alcohol served only at licensed restaurants/bars - not available at street eateries or many traditional restaurants",
+        "Restaurants in malls and five-stars add service charge (10%) plus GST (18%) - bills can be 30% higher than menu prices",
+        "Download Zomato/Swiggy for reviews, menus, and delivery - especially useful for navigating dietary restrictions"
+      ]
+    },
+    {
+      "category": "Cultural Etiquette & Customs",
+      "tips": [
+        "Dress modestly at religious places - cover shoulders/knees, remove shoes, some temples don't allow leather",
+        "Photography banned inside many monuments and all museums - respect signs or risk camera confiscation",
+        "Friday prayers at Jama Masjid (12:30-2 PM) restrict tourist entry - plan accordingly",
+        "Touching feet of elders shows respect - you'll see this everywhere, especially at religious places",
+        "Right hand for eating/greeting, left considered unclean - important at traditional eateries",
+        "Bargaining expected at markets except malls/fixed-price shops - start at 40% of asking price",
+        "Public display of affection frowned upon - save romance for private spaces",
+        "Many businesses closed on Sundays in Old Delhi, Mondays for some monuments",
+        "Temple prasad (offering) is sacred - accept with right hand, don't refuse or waste"
+      ]
+    },
+    {
+      "category": "Safety & Security",
+      "tips": [
+        "Delhi is generally safe but stay alert - avoid isolated areas after 9 PM, especially women traveling alone",
+        "Keep photocopies of passport/visa separately - many hotels keep originals, which makes tourists nervous",
+        "Tourist police stationed at major monuments - look for khaki uniforms with 'Tourist Police' badges",
+        "Common scams: fake travel agents at New Delhi Railway Station, overpriced 'government' handicraft shops, closed monument redirects",
+        "Beware of too-friendly strangers offering unsolicited help - often leads to commission-based shops",
+        "ATMs plentiful but inform bank of travel plans - many cards get blocked for 'suspicious' activity",
+        "Emergency numbers: Police 100, Fire 101, Ambulance 108, Women's Helpline 1091",
+        "Download 'Himmat' app - Delhi Police's safety app with SOS feature",
+        "Keep hotel business card - addresses in Delhi are confusing, card helps taxi/auto drivers"
+      ]
+    },
+    {
+      "category": "Money Matters",
+      "tips": [
+        "ATMs dispense maximum ₹10,000-20,000 per transaction - multiple withdrawals may incur fees",
+        "Cards accepted at most restaurants/hotels but carry cash for street food, markets, monuments",
+        "USD, EUR widely exchanged - avoid airport counters (poor rates), use authorized dealers in CP or Karol Bagh",
+        "Tipping: ₹20-50 at street eateries, 10% at restaurants, ₹20-100 for hotel staff, ₹100-200 for tour guides",
+        "Government monuments have separate (higher) rates for foreigners - no way around this, prices clearly displayed",
+        "Beware of ₹500/2000 notes at small vendors - they often don't have change, keep smaller denominations",
+        "UPI payments ubiquitous but need Indian bank account - foreign cards work at most tourist-oriented businesses",
+        "Budget ₹3000-5000 per day for mid-range comfort including hotel, food, transport, and monument entry"
+      ]
+    },
+    {
+      "category": "Shopping Smart",
+      "tips": [
+        "Karol Bagh for wedding shopping, Sarojini for branded seconds, Lajpat for electronics - each area has specialty",
+        "Dilli Haat offers fixed-price handicrafts from all states - good for quality souvenirs without bargaining stress",
+        "Wednesday closure in many wholesale markets - retail remains open but less variety",
+        "Palika Bazaar is underground AC market but quality questionable - good for bargain hunting, not authentic goods",
+        "Khan Market and Select City Mall for international brands - no bargaining, prices similar to Western countries",
+        "Buy spices from Khari Baoli (Asia's largest spice market) but go with local guide to avoid tourist traps",
+        "Fabindia, Good Earth for quality Indian textiles/handicrafts at fixed prices - multiple outlets across city",
+        "Check customs regulations - many tourists buy too much, face problems at departure"
+      ]
+    },
+    {
+      "category": "Health & Wellness",
+      "tips": [
+        "Air pollution is serious issue - download AQI app, wear N95 masks when AQI exceeds 200",
+        "Carry hand sanitizer - not always available at public toilets or street food stalls",
+        "Pharmacies everywhere and medicines cheap - but carry prescription for controlled substances",
+        "Good hospitals like AIIMS, Apollo, Max for emergencies - but expensive for foreigners without insurance",
+        "Avoid tap water, even for brushing teeth if you have sensitive stomach - bottled water costs ₹20",
+        "Delhi belly is real - carry Imodium, ORS packets, and stick to cooked food initially",
+        "Mosquitoes can carry dengue/chikungunya - use repellent, especially during monsoon",
+        "Ayurvedic pharmacies offer traditional remedies - Baidyanath, Dabur are reputable chains"
+      ]
+    },
+    {
+      "category": "Hidden Gems & Offbeat",
+      "tips": [
+        "Mehrauli Archaeological Park has 100+ monuments in forest setting - free entry, no crowds",
+        "Sanjay Van (city forest) offers nature trails and 15th-century ruins - perfect morning walk",
+        "Majnu ka Tilla (Little Tibet) serves authentic Tibetan food and has monastery - take yellow line to Vidhan Sabha",
+        "Nizamuddin Dargah Thursday evening qawwali sessions are spiritual experience - dress conservatively",
+        "Book cafes like Kunzum in Hauz Khas offer travel books and free coffee (pay what you like)",
+        "Sulabh International Museum of Toilets is quirky but educational - great conversation starter",
+        "Morning heritage walks by INTACH cover different neighborhoods - book online in advance",
+        "Agrasen ki Baoli stepwell near CP is Instagram-famous but genuinely impressive architecture",
+        "National Rail Museum has toy train rides - hit with kids, adults enjoy vintage engines",
+        "Garden of Five Senses hosts cultural events - check calendar for concerts, food festivals"
+      ]
+    }
   ],
   "budgetEstimate": "₹1,500 - ₹4,000 per day (mid-range budget)"
 }

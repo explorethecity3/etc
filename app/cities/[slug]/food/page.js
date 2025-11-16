@@ -5,9 +5,36 @@ import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
 import cities from '@/data/cities.json'
 import { FaUtensils } from 'react-icons/fa'
+import { useState, useEffect } from 'react'
 
 export default function FoodPage({ params }) {
-  const city = cities.find((c) => c.slug === params.slug)
+  const [city, setCity] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const cityBasic = cities.find((c) => c.slug === params.slug)
+
+  useEffect(() => {
+    async function loadCityData() {
+      try {
+        // Try to load detailed city data
+        const detailedCity = await import(`@/data/${params.slug}.json`)
+        setCity(detailedCity.default)
+      } catch (error) {
+        // Fall back to basic city data if detailed file doesn't exist
+        setCity(cityBasic)
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadCityData()
+  }, [params.slug, cityBasic])
+
+  if (loading) {
+    return (
+      <div className="container-custom py-20 text-center">
+        <div className="text-xl text-gray-600">Loading...</div>
+      </div>
+    )
+  }
 
   if (!city) {
     return (
@@ -90,6 +117,22 @@ export default function FoodPage({ params }) {
                     )}
                     <div className="p-6 pt-4">
                       <p className="text-gray-600 leading-relaxed">{food.description}</p>
+                      {(food.whereToTry || food.price) && (
+                        <div className="mt-4 pt-4 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-3">
+                          {food.whereToTry && (
+                            <div>
+                              <p className="text-sm font-semibold text-gray-700">Where to Try</p>
+                              <p className="text-sm text-gray-600">{food.whereToTry}</p>
+                            </div>
+                          )}
+                          {food.price && (
+                            <div>
+                              <p className="text-sm font-semibold text-gray-700">Price Range</p>
+                              <p className="text-sm text-gray-600">{food.price}</p>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}

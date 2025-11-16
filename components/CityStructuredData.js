@@ -29,11 +29,20 @@ export default function CityStructuredData({ city }) {
       }),
       ...(city.localFood && {
         hasMap: city.localFood.map((food) => {
-          const [name, desc] = food.split(' - ')
-          return {
-            '@type': 'Recipe',
-            name: name.trim(),
-            description: desc ? desc.trim() : name.trim(),
+          // Handle both string format ("Name - Description") and object format ({ name, description })
+          if (typeof food === 'string') {
+            const [name, desc] = food.split(' - ')
+            return {
+              '@type': 'Recipe',
+              name: name.trim(),
+              description: desc ? desc.trim() : name.trim(),
+            }
+          } else {
+            return {
+              '@type': 'Recipe',
+              name: food.name,
+              description: food.description || food.name,
+            }
           }
         }),
       }),

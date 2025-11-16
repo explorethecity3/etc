@@ -5,9 +5,36 @@ import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
 import cities from '@/data/cities.json'
 import { FaLightbulb } from 'react-icons/fa'
+import { useState, useEffect } from 'react'
 
 export default function TravelTipsPage({ params }) {
-  const city = cities.find((c) => c.slug === params.slug)
+  const [city, setCity] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const cityBasic = cities.find((c) => c.slug === params.slug)
+
+  useEffect(() => {
+    async function loadCityData() {
+      try {
+        // Try to load detailed city data
+        const detailedCity = await import(`@/data/${params.slug}.json`)
+        setCity(detailedCity.default)
+      } catch (error) {
+        // Fall back to basic city data if detailed file doesn't exist
+        setCity(cityBasic)
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadCityData()
+  }, [params.slug, cityBasic])
+
+  if (loading) {
+    return (
+      <div className="container-custom py-20 text-center">
+        <div className="text-xl text-gray-600">Loading...</div>
+      </div>
+    )
+  }
 
   if (!city) {
     return (
@@ -67,15 +94,37 @@ export default function TravelTipsPage({ params }) {
                 <FaLightbulb className="text-yellow-500 text-3xl mr-4" />
                 <h2 className="text-3xl font-bold text-gray-800">Travel Tips for {city.name}</h2>
               </div>
-              <div className="bg-yellow-50 p-8 rounded-lg">
-                <ul className="space-y-4">
-                  {city.travelTips.map((tip, index) => (
-                    <li key={index} className="flex items-start bg-white p-5 rounded-lg shadow-sm">
-                      <span className="text-yellow-600 mr-4 mt-1 text-xl font-bold">✓</span>
-                      <span className="text-gray-700 text-lg flex-1">{tip}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="space-y-6">
+                {city.travelTips.map((item, index) => {
+                  // Check if it's a structured object with category and tips
+                  if (typeof item === 'object' && item.category && item.tips) {
+                    return (
+                      <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-4">
+                          <h3 className="text-xl font-bold text-white">{item.category}</h3>
+                        </div>
+                        <div className="p-6">
+                          <ul className="space-y-3">
+                            {item.tips.map((tip, tipIndex) => (
+                              <li key={tipIndex} className="flex items-start">
+                                <span className="text-yellow-600 mr-3 mt-1 text-lg font-bold">✓</span>
+                                <span className="text-gray-700 flex-1 leading-relaxed">{tip}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )
+                  } else {
+                    // Simple string format
+                    return (
+                      <div key={index} className="flex items-start bg-white p-5 rounded-lg shadow-sm">
+                        <span className="text-yellow-600 mr-4 mt-1 text-xl font-bold">✓</span>
+                        <span className="text-gray-700 text-lg flex-1">{item}</span>
+                      </div>
+                    )
+                  }
+                })}
               </div>
             </section>
           </div>
