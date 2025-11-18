@@ -171,43 +171,329 @@
   "topAttractions": [
     {
       "name": "Baga Beach",
-      "description": "Popular beach known for water sports and nightlife",
-      "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800"
+      "description": "Baga Beach pulsates with an energy that defines Goa's party spirit, where golden sands meet turquoise waters and the bass from beach shacks competes with crashing waves. This crescent-shaped beach stretches for miles, transforming from a serene morning yoga spot to a water sports hub by noon, and finally into North Goa's party epicenter after sunset. The beach is lined with legendary shacks like Britto's and Tito's, where fresh seafood platters arrive as the sun dips into the Arabian Sea, painting the sky in impossible shades of orange and purple. Water sports operators hawk parasailing rides that lift you 300 feet above the coastline, offering views of the entire Bardez coastline, while jet skis carve white trails through blue waters. As darkness falls, the beach transforms – fire dancers perform on the sand, DJs spin everything from Bollywood to EDM, and the crowd becomes a United Nations of party-seekers. The Saturday Night Market at nearby Arpora adds another dimension, where you can shop for everything from Rajasthani handicrafts to rave wear. Despite its commercialization, Baga retains pockets of charm – early morning dolphin-spotting trips, fishermen hauling in their catch, and that perfect spot where the Baga River meets the sea.",
+      "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800",
+      "timings": "24 hours (best visited early morning or evening)",
+      "entryFee": "Free (Water sports: ₹500-3000)"
     },
     {
       "name": "Basilica of Bom Jesus",
-      "description": "UNESCO World Heritage Site, 400-year-old church",
-      "image": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800"
+      "description": "The Basilica of Bom Jesus stands as a testament to Goa's unique position in history, where East met West and created something entirely new. Built in 1605, this UNESCO World Heritage Site houses the 400-year-old remains of St. Francis Xavier in a silver casket that's displayed to the public once every decade, drawing millions of pilgrims from around the world. The baroque architecture, with its un-plastered laterite stone exterior that has weathered to a distinctive mottled red, was a deliberate choice to showcase the building material's natural beauty. Inside, the altars drip with gold – the main altar soars three stories high, intricately carved with the infant Jesus and St. Ignatius of Loyola, founder of the Jesuit order. The art gallery upstairs displays portraits of St. Francis Xavier's life, painted in a style that blends European techniques with Indian sensibilities. The church's acoustics are so perfect that whispers from one end can be heard at the other, a feature that amazes architects even today. During the exposition years, the church becomes a sea of humanity, with believers claiming miraculous healings just from being in the presence of the saint's remains. The preservation of the body, which hasn't been embalmed, continues to baffle scientists.",
+      "image": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800",
+      "timings": "9:00 AM - 6:30 PM (Mon-Sat), 10:30 AM - 6:30 PM (Sun)",
+      "entryFee": "Free"
     },
     {
       "name": "Fort Aguada",
-      "description": "17th-century Portuguese fort with lighthouse",
-      "image": "https://images.unsplash.com/photo-1586150099194-a1538d66ad85?w=800"
+      "description": "Fort Aguada rises from a rocky peninsula like a guardian watching over the Arabian Sea, its 400-year-old walls having protected Portuguese Goa from Dutch and Maratha invasions. Built in 1612, this remarkably preserved fort gets its name from the freshwater springs within its walls that provided 'agua' (water) to ships – the massive water storage capacity of 2,376,000 gallons was an engineering marvel of its time. The four-story lighthouse, added in 1864, is the oldest of its kind in Asia and though no longer operational, offers panoramic views of the sunset that photographers dream about. The fort complex sprawls across the headland, with the upper fort housing the lighthouse and garrison barracks, while the lower fort at sea level protected the shore with its massive walls and strategic gun emplacements. Walking through the fort's passages, you can still see the prison cells that later housed political prisoners during Goa's liberation struggle, including the cell where freedom fighters were tortured. The Aguada jail, still operational within the fort complex, adds a somber note to the tourist attraction. From the ramparts, you can spot dolphins playing in the distance while luxury yachts cruise below, a contrast that captures modern Goa perfectly.",
+      "image": "https://images.unsplash.com/photo-1586150099194-a1538d66ad85?w=800",
+      "timings": "9:30 AM - 6:00 PM",
+      "entryFee": "₹30 for Indians, ₹60 for foreigners"
     },
     {
       "name": "Dudhsagar Falls",
-      "description": "Spectacular four-tiered waterfall amidst lush forests",
-      "image": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800"
+      "description": "Dudhsagar Falls crashes down from 310 meters in four distinct tiers, creating a spectacle that literally translates to 'Sea of Milk' – and when you see the white foam cascading down the Western Ghats' green face, the name makes perfect sense. Located on the Goa-Karnataka border, reaching the falls is an adventure in itself – the journey involves either a bumpy jeep ride through the Bhagwan Mahavir Wildlife Sanctuary, crossing streams and navigating forest tracks, or a trek along railway tracks that tests your endurance but rewards with unforgettable views. The pool at the base, emerald green and refreshingly cold, invites brave swimmers while tiny doctor fish provide free pedicures to those who dare dip their feet. The railway bridge crossing in front of the falls has achieved Instagram fame, especially when the train passes, creating a scene straight from a Bollywood movie – in fact, the Chennai Express scene was shot here. During monsoon, the falls are at their mighty best but often inaccessible; October to February offers the perfect balance of water flow and accessibility. The surrounding forest is home to leopards, gaur, and numerous bird species, though the monkeys near the falls are the most visible wildlife, notorious for snatching food from unsuspecting tourists.",
+      "image": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800",
+      "timings": "9:00 AM - 5:00 PM (Closed during monsoon)",
+      "entryFee": "₹50 per person + ₹400 for jeep (shared)"
     },
     {
       "name": "Anjuna Flea Market",
-      "description": "Colorful Wednesday market with handicrafts and clothes",
-      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800"
+      "description": "Every Wednesday, Anjuna Beach transforms into a kaleidoscope of colors, sounds, and smells as the famous flea market sprawls across the coconut groves, continuing a tradition that began in the 1960s when hippies would sell their belongings to fund their extended stays. Today's market is a fascinating mix of old and new – aging hippies still sell handmade jewelry alongside Kashmiri traders with their carpets, Tibetan refugees with singing bowls, Karnataka craftsmen with sandalwood carvings, and young designers showcasing bohemian fashion. The market is as much about people-watching as shopping – dreadlocked travelers haggling in broken Hindi, Israeli backpackers comparing notes on the best parties, Russian tourists bulk-buying souvenirs, and local Goans selling everything from cashew feni to homemade pickles. Live music drifts from the beach shacks where bands play everything from Bob Marley covers to Goan folk songs, while the aroma of grilling seafood mingles with incense and the salt air. The best finds require patient searching – vintage Bollywood posters, rare vinyl records, handwoven hammocks, and one-of-a-kind accessories hidden among mass-produced items. As the sun sets, the market gradually transforms into a party zone with drum circles on the beach and impromptu raves in the palm groves.",
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800",
+      "timings": "8:00 AM - 7:00 PM (Wednesdays only)",
+      "entryFee": "Free"
+    },
+    {
+      "name": "Palolem Beach",
+      "description": "Palolem Beach curves like a perfect crescent moon in South Goa, its calm waters protected by a natural bay that makes it ideal for swimming even when other beaches have dangerous currents. This beach manages the impossible balance of being developed enough for comfort yet retaining its laid-back charm – the local panchayat's decision to allow only temporary structures means every season sees creative new beach huts that must be dismantled before monsoon. The northern end, known as Green Island or Butterfly Island, can be reached by foot during low tide, offering a Robinson Crusoe moment in tourist-heavy Goa. Silent discos have become Palolem's signature nightlife – hundreds of people dancing on the beach with wireless headphones, creating a surreal scene of synchronized movement without music. Kayaking through the backwaters reveals a different Goa – mangroves full of kingfishers, eagles circling overhead, and if you're lucky, dolphins racing alongside your kayak. The beach caters to every traveler tribe – yoga enthusiasts start their day with sun salutations, families build sandcastles in the safe shallows, couples watch sunset from beachfront restaurants, and backpackers share travel stories around beach bonfires that burn late into the night.",
+      "image": "https://images.unsplash.com/photo-1539979654533-8c9ef6cd504f?w=800",
+      "timings": "24 hours",
+      "entryFee": "Free"
+    },
+    {
+      "name": "Fontainhas Latin Quarter",
+      "description": "Walking through Fontainhas feels like being transported to a small Portuguese town, with narrow winding streets, overhanging balconies, and houses painted in shades of blue, green, yellow, and ochre that pop against the tropical sky. This heritage quarter in Panjim has retained its colonial character through strict regulations – houses must be painted annually (traditionally after monsoon), maintaining the Portuguese tradition where unpainted houses indicated the owner was in mourning. The neighborhood's crown jewel is the Chapel of St. Sebastian, housing a crucifix that once hung in the Palace of the Inquisition, its eyes open rather than closed, supposedly watching over those condemned. Art galleries have found homes in restored mansions, showcasing contemporary Goan artists alongside Portuguese azulejos (ceramic tiles). The narrow streets hide surprises – a bakery selling fresh poi bread at dawn, a tavern where locals discuss politics over feni, an elderly couple maintaining a private chapel in their living room. During the Fontainhas Festival of Arts, the quarter becomes an open gallery with music performances in courtyards, art installations in windows, and traditional Goan meals served in heritage homes. The Instagram-famous spiral staircase at Hospedaria Venite has become a pilgrimage site for photographers.",
+      "image": "https://images.unsplash.com/photo-1600255821058-46e3bfb7ce3a?w=800",
+      "timings": "Best explored in early morning or late afternoon",
+      "entryFee": "Free (Guided heritage walks: ₹500-800)"
+    },
+    {
+      "name": "Chapora Fort",
+      "description": "Chapora Fort may be in ruins, but its ramparts offer the most spectacular 360-degree views in North Goa, where the Chapora River meets the Arabian Sea and creates a landscape that's been immortalized in Bollywood's 'Dil Chahta Hai'. Built by the Portuguese in 1617 on the ruins of an earlier Muslim structure, the fort has watched empires rise and fall while its red laterite walls slowly crumbled into photogenic decay. The steep climb up irregular steps carved into the hillside is rewarded with views that stretch from Vagator Beach's dramatic red cliffs to Morjim's river mouth where Olive Ridley turtles nest. The fort has no roof or restored structures, just open sky and walls that frame perfect sunset shots, making it a favorite spot for both photographers and couples seeking privacy among the ruins. The underground tunnels, now mostly blocked, once provided escape routes to the river, fueling local legends of hidden Portuguese treasure. During full moon nights, the fort becomes an informal party venue with drummers, fire dancers, and revelers watching the moon rise over the Arabian Sea. The adjacent Vagator Beach, split into Big and Little Vagator by a seaside headland, offers some of North Goa's most dramatic coastline.",
+      "image": "https://images.unsplash.com/photo-1593692382346-868fcab3f09b?w=800",
+      "timings": "24 hours (best at sunrise or sunset)",
+      "entryFee": "Free"
+    },
+    {
+      "name": "Spice Plantations",
+      "description": "The spice plantations of Goa offer a sensory journey through tropical agriculture, where vanilla vines climb areca nut trees, black pepper creeps up wooden posts, and the air is heavy with the scent of cinnamon, nutmeg, and cardamom. Sahakari Spice Farm and Tropical Spice Plantation have perfected the art of agro-tourism, offering guided walks where you learn that cashews grow from a fruit, vanilla is the second most expensive spice after saffron, and a single nutmeg tree can produce for 80 years. The plantation experience includes watching toddy tappers climb coconut trees with remarkable agility, demonstrations of traditional farming methods, and the chance to taste fresh spices straight from the plant. Lunch is typically a traditional Goan thali served on banana leaves under thatched roofs, featuring dishes made with the plantation's own produce – the fish curry gets its tang from kokum, the vegetable xacuti its complexity from 16 different spices. Many plantations have added elephant rides and bathing sessions, though ethical concerns have led some to focus purely on spices and organic farming. The medicinal garden sections reveal how every plant has a purpose in traditional medicine – from natural mosquito repellents to hangover cures that locals swear by.",
+      "image": "https://images.unsplash.com/photo-1506368144402-ec8f3d85e6f7?w=800",
+      "timings": "9:00 AM - 5:00 PM",
+      "entryFee": "₹400-600 including lunch"
+    },
+    {
+      "name": "Arambol Beach",
+      "description": "Arambol Beach in North Goa remains the last stronghold of the hippie culture that made Goa famous in the 1960s, where alternative lifestyles flourish and commercialization has been largely resisted by a community that values freedom over profit. The beach stretches for miles, but the real magic happens at the far end where a freshwater lake appears during high tide, separated from the sea by just a thin strip of sand, creating a natural infinity pool effect. Behind this lake, a jungle trail leads to another freshwater spring where hot sulfur mud is believed to have healing properties – watching tattooed yogis covered in mud performing sun salutations is quintessentially Arambol. The drum circle at sunset has become legendary, starting organically with a few drummers and growing into hundreds of people dancing, juggling fire, and playing instruments as the sun melts into the ocean. The beach's bohemian vibe attracts long-term travelers who run small businesses from the beach – jewelry making, tarot reading, massage, yoga classes – creating a parallel economy. The paragliding launch point on the cliff offers tandem flights that soar over the entire coastline, while the rocks at Kalacha (Sweet Water) Beach hide secret spots perfect for meditation or escaping the crowds.",
+      "image": "https://images.unsplash.com/photo-1558881307-c0fb8ac7f5d5?w=800",
+      "timings": "24 hours",
+      "entryFee": "Free"
+    },
+    {
+      "name": "Old Goa Churches",
+      "description": "Old Goa, once called the 'Rome of the East', preserves a concentration of churches and cathedrals that tell the story of Portuguese colonization and the spread of Christianity in Asia. The Se Cathedral, the largest church in Asia, took 80 years to build and houses the Golden Bell, whose sound allegedly reaches 14 km, traditionally rung during important religious occasions. The Church of St. Cajetan, modeled on St. Peter's Basilica in Rome, showcases Corinthian architecture rarely seen in India, while its crypt below houses the embalmed bodies of Portuguese governors. The Church of St. Francis of Assisi, now an archaeological museum, displays portraits of Portuguese viceroys and sculptures that blend Hindu and Christian iconography, evidence of the complex cultural synthesis that occurred. The nearby Viceroy's Arch, the gateway to Old Goa for those arriving by river, still bears the statue of Vasco da Gama, though local activists periodically demand its removal. Walking through these monuments during the Feast of St. Francis Xavier (December 3) reveals living faith – thousands of pilgrims, many walking barefoot from distant villages, creating a river of humanity that transforms these historical monuments into active places of worship.",
+      "image": "https://images.unsplash.com/photo-1574075218823-46e3bfb2b6d4?w=800",
+      "timings": "9:00 AM - 5:00 PM",
+      "entryFee": "Free (Museum: ₹10)"
+    },
+    {
+      "name": "Casino Pride",
+      "description": "Anchored on the Mandovi River, Casino Pride represents Goa's unique status as one of the few Indian states where gambling is legal, offering a Vegas-style experience on water with the Portuguese colonial architecture of Panjim as backdrop. The floating casino spans multiple decks, with the gaming floor featuring everything from traditional Indian card games like Andar Bahar and Teen Patti to international favorites like Roulette, Blackjack, and Baccarat, plus hundreds of slot machines with themes ranging from Bollywood to ancient Egypt. The entry fee includes unlimited food and drinks, making it popular even among non-gamblers who come for the buffet spreads featuring Goan, Continental, and Asian cuisines, plus premium spirits that would cost a fortune in regular bars. The upper deck transforms into a party zone after midnight, with DJs spinning commercial hits while revelers dance under the stars, the Panjim city lights reflecting off the river. The casino attracts an eclectic crowd – serious gamblers with systems and superstitions, curious tourists trying their luck, business groups celebrating deals, and locals who've made Friday night casino visits a tradition. While the house always wins in the long run, the stories of occasional big wins keep the dream alive, and watching the sunrise from the deck after an all-night session has become a rite of passage for many Goa visitors.",
+      "image": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?w=800",
+      "timings": "24 hours",
+      "entryFee": "₹1,500-4,000 (includes chips, food, and drinks)"
     }
   ],
   "localFood": [
-    "Fish Curry Rice - Goan staple with coconut-based curry",
-    "Vindaloo - Spicy pork curry with Portuguese influence",
-    "Bebinca - Traditional layered dessert",
-    "Xacuti - Chicken or lamb in complex curry",
-    "Sorpotel - Spicy pork dish"
+    {
+      "name": "Fish Curry Rice (Xitt Kodi Nuste)",
+      "description": "The soul of Goan cuisine, this deceptively simple dish represents centuries of coastal tradition where every family has their secret recipe passed down through generations. The curry base combines freshly grated coconut with a careful balance of red chilies, turmeric, and kokum (garcinia indica) that provides the signature tangy taste. The fish – typically kingfish, pomfret, or mackerel – is added raw to the simmering curry, cooking just until it flakes, preserving its delicate texture. Local restaurants like Ritz Classic in Panjim serve it with red parboiled rice that soaks up the curry perfectly. The beauty lies in its variations – Hindu Goans add more kokum for sourness while Catholics might use toddy vinegar, and each coastal village claims their version is superior. Fishing families eat this twice daily, with yesterday's leftover curry often considered tastier as flavors mature overnight.",
+      "whereToTry": "Ritz Classic, Anantashram, Bhatti Village",
+      "price": "₹150-300"
+    },
+    {
+      "name": "Vindaloo",
+      "description": "Far from the fiery curry served globally, authentic Goan Vindaloo is a complex interplay of Portuguese 'vinha d'alhos' (wine and garlic) adapted with Indian spices and Goan creativity. The meat, traditionally pork from semi-wild pigs fed on cashew fruits, is marinated for hours in a paste of dried red chilies, garlic, ginger, cumin, cloves, and the crucial ingredient – toddy vinegar from coconut palm sap. The slow cooking process allows the meat to absorb the marinade completely while the fat renders down to create a rich, dark gravy that's tangy rather than just hot. The dish was originally created to preserve meat in pre-refrigeration days, with the vinegar acting as a natural preservative. Chef Fernando's in Raia village makes a version that hasn't changed in 50 years, while Martin's Corner offers a modern interpretation that's slightly sweeter to suit tourist palates. Christmas isn't complete in Catholic homes without Vindaloo, often made days in advance and reheated, improving with age like wine.",
+      "whereToTry": "Fernando's Nostalgia, Martin's Corner, Souza Lobo",
+      "price": "₹250-450"
+    },
+    {
+      "name": "Bebinca",
+      "description": "The queen of Goan desserts, Bebinca requires patience, skill, and about four hours to create its signature seven to sixteen layers, each one baked separately before the next is added. Made with coconut milk, egg yolks (lots of them – sometimes 20 for a single cake), flour, sugar, and nutmeg, each layer must be perfectly caramelized before adding the next, creating a dessert with the texture of a firm custard and complex caramel notes. The traditional method uses a special clay oven with heat from above and below, though modern versions use regular ovens with the broiler. Bebinca's creation myth says it was invented by a nun named Bebiana at Santa Monica Convent, using egg yolks left over from starching habits with egg whites. During Christmas, families pride themselves on homemade Bebinca, with recipes guarded jealously and slight variations – some add rose water, others a hint of vanilla. At Infantaria in Calangute, they serve it warm with vanilla ice cream, creating a hot-cold contrast that elevates this already special dessert.",
+      "whereToTry": "Infantaria, Cafe Tato, Mr. Baker 1922",
+      "price": "₹80-150 per slice"
+    },
+    {
+      "name": "Xacuti",
+      "description": "Pronounced 'sha-koo-ti', this complex curry represents the height of Goan spice blending, where up to 20 ingredients including white poppy seeds, grated coconut, and a mix of whole spices are roasted individually to specific colors before grinding. Star anise, nutmeg, mace, and black pepper provide warmth, while the poppy seeds and coconut create a rich, thick gravy that coats chicken or lamb pieces. The key is the roasting – each spice must reach its optimal color without burning, a skill that takes years to master. Unlike other Goan curries, Xacuti uses minimal water, depending on the coconut milk for liquid, resulting in an intensely flavored dish. Pentagon Restaurant in Margao is famous for their lamb xacuti that's been consistently perfect since 1985. The dish originated in Harmal (now Arambol) and was traditionally made for special occasions when the elaborate preparation was justified. Home cooks often prepare the xacuti masala in bulk, sun-drying and storing it for months.",
+      "whereToTry": "Pentagon Restaurant, Avanti Bar & Restaurant, Mum's Kitchen",
+      "price": "₹300-500"
+    },
+    {
+      "name": "Sorpotel",
+      "description": "This pickled pork curry embodies Goa's nose-to-tail eating philosophy, using pork meat, liver, heart, and sometimes ears and tongue, creating layers of texture and flavor that change with each bite. The meat is first parboiled, then fried, and finally simmered in a sauce of chilies, garlic, and toddy vinegar that acts as both flavoring and preservative. The dish actually improves over days, with families making large batches during Christmas that last through New Year, reheating daily which deepens the flavors. Each family's recipe varies slightly – some add a touch of jaggery for balance, others include more liver for richness, and the amount of vinegar determines how long it keeps. The accompaniment of sanna (steamed rice cakes) is essential, their mild sweetness balancing the intense flavors. At Casa Araujo in Santimol, they serve a version that's been refined over three generations, while younger chefs experiment with adding Chinese five-spice or reducing the organ meats for squeamish diners.",
+      "whereToTry": "Casa Araujo, O'Coqueiro, Florentine Bar",
+      "price": "₹250-400"
+    },
+    {
+      "name": "Prawn Balchão",
+      "description": "This pickle-curry hybrid showcases Goa's love for preserved foods, where prawns are cooked in a tangy, spicy tomato-based sauce that can be stored for weeks, though it rarely lasts that long. The balchão paste – made from dried red chilies, garlic, ginger, and vinegar ground together – forms the base, with onions and tomatoes added for body. The prawns are quickly stir-fried to retain their texture before being folded into the thick sauce. Traditionally made during the monsoon when fresh seafood was scarce, families would prepare jars of balchão using dried prawns that would last months. The dish reflects Goa's Portuguese heritage, similar to Portuguese 'molho balcão', but with Indian additions like turmeric and more chilies. Served with pão (local bread) for breakfast or poi (fermented bread) for dinner, it's equally at home as a pickle accompaniment or main dish. Britto's at Baga Beach makes a fiery version that has customers ordering bottles to take home.",
+      "whereToTry": "Britto's, Fisherman's Wharf, Zeebop by the Sea",
+      "price": "₹300-450"
+    },
+    {
+      "name": "Chicken Cafreal",
+      "description": "This green masala chicken reflects Goa's African connections through Portuguese Mozambique, where the dish originated and was brought to Goa by Portuguese soldiers. The marinade is a vibrant green paste of coriander, mint, green chilies, ginger, garlic, and lime juice, with some recipes adding spinach for deeper color. The chicken is marinated overnight, then either grilled over charcoal for smokiness or pan-fried until the masala forms a crust. The use of fresh herbs rather than dry spices makes Cafreal unique in Goan cuisine, with the herbs caramelizing during cooking to create complex flavors. Different establishments have their signatures – Souza Lobo adds toddy vinegar for tang, while St. Anthony's Bar in Calangute uses a secret spice mix they've guarded for 40 years. Traditionally served at village feasts where whole chickens are butterflied and grilled over coconut husk fires, the home version often uses chicken pieces for easier cooking.",
+      "whereToTry": "Souza Lobo, St. Anthony's Bar, Claudina's Shack",
+      "price": "₹250-400"
+    },
+    {
+      "name": "Goan Sausages (Choriz)",
+      "description": "These dried sausages, hanging in strings at local markets, are Goa's answer to Spanish chorizo but with a tropical twist using toddy vinegar instead of wine and Goan red chilies for heat. Made from pork shoulder and back fat, the meat is marinated in a mixture of chilies, garlic, ginger, cumin, and turmeric before being stuffed into casings and dried in the sun or smoked over coconut husks. The sausages can be stored without refrigeration for months, intensifying in flavor over time. Choriz Pão – sausages fried with onions and stuffed in local bread – is Goa's favorite breakfast, available at every street corner. The sausages also star in pulao, where their rendered fat flavors the rice, or in 'Chinese' dishes at local restaurants where Indo-Chinese cuisine gets a Goan twist. Making sausages is a family affair before monsoon season, with recipes varying by region – Mapusa market sausages are spicier, while those from Margao are slightly sweet.",
+      "whereToTry": "Cafe Real, Joseph Bar, local markets",
+      "price": "₹200-350"
+    },
+    {
+      "name": "Sannas",
+      "description": "These spongy, slightly sweet steamed rice cakes are Goa's version of idlis but with a twist – they're fermented with toddy (coconut palm sap) instead of being naturally fermented, giving them a distinctive mild alcoholic aroma and incredible fluffiness. The batter of rice and fresh coconut is ground to silky smoothness, then left to ferment overnight with toddy, causing it to bubble and double in size. Steamed in special molds, they emerge white, soft, and full of tiny holes perfect for soaking up curries. Sannas are essential with Sorpotel or any pork dish, their sweetness balancing the vinegary meats. Different communities have variations – Catholics add more coconut for sweetness, while Hindus might use jaggery. During church feasts, women wake at 3 AM to prepare hundreds of sannas, the steam from massive pots creating clouds in the morning air. Modern versions use yeast when toddy isn't available, but purists claim the flavor isn't the same.",
+      "whereToTry": "Mum's Kitchen, Vinayak Family Restaurant, local celebrations",
+      "price": "₹30-60 per plate"
+    },
+    {
+      "name": "Poi",
+      "description": "This traditional Goan bread, with its distinctive butterfly shape and fermented wheat flavor, is as essential to Goan meals as rice, perfectly designed to soak up the last drops of curry from your plate. Made from wheat flour fermented with toddy, then shaped by hand and baked in traditional wood-fired ovens, poi has a crusty exterior and soft, slightly tangy interior. The fermentation process, which can take up to two days depending on weather, creates complex flavors and makes the bread easier to digest. Local bakeries (called poder) deliver fresh poi daily on bicycles, announcing their arrival with distinctive horn sounds that bring residents to their doors. The bread's unique characteristic is its ability to stay soft for days, unlike regular bread, due to the fermentation process. Watching poders work is fascinating – they shape dozens of pois in minutes, their hands moving in practiced rhythm. While modern bakeries use yeast for convenience, traditional poders in villages still use toddy, claiming it gives better flavor and texture.",
+      "whereToTry": "Local bakeries, Confeitaria 31 de Janeiro, any Goan restaurant",
+      "price": "₹5-10 per piece"
+    },
+    {
+      "name": "Feni",
+      "description": "Goa's indigenous spirit, feni is to Goa what scotch is to Scotland – a protected geographical indication that can only be produced here using traditional methods unchanged for 500 years. Cashew feni, the more popular variant, is made from cashew apples that are crushed (traditionally by foot), fermented, then triple-distilled in copper pots over wood fires, producing a clear spirit with a distinctive fruity aroma that newcomers find challenging. Coconut feni, rarer and considered superior by connoisseurs, comes from the sap of coconut palms, tapped by skilled toddy tappers who climb trees twice daily. The first distillation produces 'urrak', a milder version consumed during the cashew season, while the final product can reach 45% alcohol. Locals never drink feni straight – it's mixed with lime juice and sugar (becoming 'niro'), coconut water, or Limca. Fazenda Cazulo offers distillery tours where you can see the entire process and taste different grades. Despite its strong flavor, feni doesn't give hangovers, locals claim, due to its pure, additive-free nature.",
+      "whereToTry": "Fazenda Cazulo, Joseph Bar, local taverns",
+      "price": "₹50-150 per drink"
+    },
+    {
+      "name": "Rava Fried Fish",
+      "description": "This simple yet perfect preparation lets the freshness of Goa's seafood shine, where fish fillets are marinated in a paste of red chilies, turmeric, and garlic, then coated in semolina (rava) and shallow-fried until golden and crispy. The semolina coating creates a crunchy exterior that contrasts beautifully with the moist, flaky fish inside – typically kingfish, pomfret, or mackerel caught that morning. The marinade varies by restaurant and home – some add tamarind for tang, others kokum, while beach shacks might include a secret masala they'll never reveal. The dish represents Goa's ability to elevate simple ingredients through technique, with the key being the oil temperature and timing to achieve the perfect crust without overcooking the fish. At Anand Seafood Restaurant in Betul, they serve it with a salad of onions, tomatoes, and lime that cuts through the richness. The dish pairs perfectly with a cold beer at sunset, explaining why every beach shack from Arambol to Palolem has their version on the menu.",
+      "whereToTry": "Anand Seafood Restaurant, The Fisherman's Wharf, beach shacks",
+      "price": "₹200-400"
+    }
   ],
   "travelTips": [
-    "Rent a scooter to explore at your own pace",
-    "Try fresh seafood at beach shacks",
-    "Book accommodation in advance during peak season",
-    "Visit spice plantations for unique experience",
-    "Respect local culture when visiting religious sites"
+    {
+      "category": "Transportation",
+      "tips": [
+        "Rent a scooter/bike for ultimate freedom - ₹300-500/day for scooters, ₹800-1500 for bikes like Royal Enfield; international driving permit technically required but rarely checked",
+        "Download 'GoaMiles' app for taxis with government-approved rates - avoids the constant haggling with local taxi mafia who inflate prices",
+        "Avoid local buses for beach hopping - they're cheap (₹10-30) but unreliable, crowded, and don't go to many beaches directly",
+        "Pre-paid taxi from Dabolim Airport prevents overcharging - counter inside arrival hall, insist despite drivers approaching you outside",
+        "Uber/Ola work but face resistance from local taxi unions - drivers might cancel or ask you to cancel; works better in urban areas",
+        "Pilots (motorcycle taxis) are cheapest for solo travelers - ₹100-200 for short distances, negotiate beforehand",
+        "Ferry services connect islands and cross rivers - ₹5-10 for passengers, free for pedestrians at some crossings, adds local flavor to journey",
+        "Car rentals with driver cost ₹1500-2500/day - good for families or groups, driver knows shortcuts and parking spots",
+        "Bicycle rentals perfect for short distances - ₹100-200/day, great for exploring Panjim or beach roads early morning",
+        "Water taxis and boats for river/backwater exploration - negotiate rates, typically ₹500-1500 for 2-hour trips"
+      ]
+    },
+    {
+      "category": "Beach Guide",
+      "tips": [
+        "North Goa beaches (Baga, Calangute, Anjuna) - party atmosphere, water sports, crowds, higher prices but more activities",
+        "South Goa beaches (Palolem, Agonda, Patnem) - peaceful, family-friendly, cleaner but fewer restaurants and nightlife options",
+        "Hidden beaches worth finding - Butterfly Beach (boat access only), Kakolem (dangerous road but pristine), Cola Beach (lagoon and beach combo)",
+        "Beach shack etiquette - using sunbeds usually free if you order food/drinks, minimum spend ₹200-300 expected",
+        "High tide/low tide dramatically changes beaches - check tide charts, some beaches disappear at high tide",
+        "Red flags mean dangerous currents - common during monsoon and October, respect warnings as undertows are deadly",
+        "Beach parking charges ₹20-100 - keep receipt, some attendants try charging twice; free parking usually available 5-minute walk away",
+        "Early morning (6-9 AM) best for peaceful beach experience - fewer crowds, dolphins visible, yoga sessions",
+        "Full moon parties happen at different beaches - Anjuna, Vagator, Arambol rotate; ask locals for current month's location",
+        "Beach vendors can be persistent - firm 'no thank you' works; buying from one attracts others"
+      ]
+    },
+    {
+      "category": "Best Times & Seasons",
+      "tips": [
+        "Peak season (December-January) - perfect weather but 3x prices, advance booking essential, beaches crowded, traffic jams",
+        "November and February - ideal sweet spot with good weather, fewer crowds, better prices, everything open",
+        "March-May - hot but manageable, great hotel deals, empty beaches, some restaurants close, water sports limited",
+        "Monsoon (June-September) - most beach shacks closed, rough seas, but lush green landscape, Ayurveda packages, rain parties",
+        "October - season reopening, fresh and clean after monsoon, good deals, but weather unpredictable",
+        "Christmas-New Year - absolutely packed, hotels charge 5x normal rates, parties everywhere but book 3 months ahead",
+        "Carnival (February/March) - colorful parades, street parties, unique cultural experience but accommodation prices spike",
+        "Avoid Indian long weekends - domestic tourists flood in, prices increase, peaceful beaches become crowded",
+        "Sunburn Festival (December) - electronic music festival attracts thousands, party atmosphere but accommodation scarce",
+        "Off-season benefits - 50-70% hotel discounts, personalized service, peaceful beaches, but limited dining options"
+      ]
+    },
+    {
+      "category": "Accommodation Strategy",
+      "tips": [
+        "Beach huts vs hotels - huts give authentic experience but basic facilities; hotels offer comfort but less character",
+        "Airbnb villas great for groups - ₹5000-15000/night for entire villa with pool, kitchen saves money on dining out",
+        "Homestays offer local experience - ₹1000-2500/night, often include breakfast, hosts share insider tips",
+        "Location matters more than facilities - beachfront costs premium but saves transport; inland properties 50% cheaper",
+        "Book direct with hotels for better rates - avoid Booking.com fees, negotiate for longer stays",
+        "North vs South Goa stay - North for nightlife/activities, South for relaxation/families, consider splitting time",
+        "Hostels abundant and social - ₹400-800/bed, great for solo travelers, organize group activities",
+        "Monsoon packages offer luxury for less - 5-star resorts at 3-star prices, includes meals and spa treatments",
+        "Check reviews for specific issues - power cuts, water problems, construction noise are common complaints",
+        "Walking distance to beach worth premium - saves ₹200-300 daily on transport, allows spontaneous beach visits"
+      ]
+    },
+    {
+      "category": "Food & Dining",
+      "tips": [
+        "Beach shacks vs restaurants - shacks cheaper with beach views but basic menu; restaurants more variety but inland",
+        "Tinto (local bars) offer authentic cheap eats - ₹50-150 per dish, where locals eat, no frills but genuine flavors",
+        "Fish market to table - buy fresh catch at markets (Mapusa, Margao), many restaurants will cook for ₹100-200",
+        "Breakfast joints open early - Café Bodega, Artjuna, Baba Au Rhum famous for all-day breakfast",
+        "Thursday is dry day - no alcohol sold, many bars/clubs closed, plan accordingly",
+        "Water safety - stick to bottled water, avoid ice at street stalls, coconut water is safe alternative",
+        "Seasonal seafood availability - kingfish, pomfret best November-May; avoid seafood during monsoon",
+        "Vegetarian options plentiful - pure veg restaurants in every area, South Indian joints for dosa/idli",
+        "Feni tasting approach cautiously - strong acquired taste, mix with lime/soda, don't drink on empty stomach",
+        "Delivery apps work well - Zomato, Swiggy deliver to beaches, useful for hangover recovery"
+      ]
+    },
+    {
+      "category": "Cultural Etiquette",
+      "tips": [
+        "Dress codes vary by area - bikinis fine on beaches but cover up when leaving; temples/churches require modest dress",
+        "Photography restrictions at religious sites - many churches ban photography, always ask permission for people shots",
+        "Respect local customs during festivals - Ganesh Chaturthi, Diwali, Christmas are family times, some services limited",
+        "Susegad lifestyle means things move slowly - don't expect quick service, embrace the relaxed pace",
+        "Tipping culture - 10% at restaurants, ₹20-50 for beach services, ₹100-200 for hotel staff",
+        "Environmental consciousness growing - carry reusable water bottles, refuse plastic straws, respect turtle nesting sites",
+        "Nudism not accepted - despite hippie reputation, public nudity illegal and offensive to locals",
+        "Drug laws strictly enforced - despite availability, penalties severe including for marijuana; many dealers are police informants",
+        "Noise restrictions after 10 PM - enforced sporadically but respect residential areas",
+        "Sunday is family day - many Goans hit beaches with extended families, different vibe from weekdays"
+      ]
+    },
+    {
+      "category": "Safety & Security",
+      "tips": [
+        "Ocean safety paramount - many beaches have no lifeguards, rip currents common, swim parallel to shore if caught",
+        "Valuables on beach - waterproof pouches essential, take turns swimming, beach lockers available at some shacks",
+        "Night swimming dangerous - no lighting, strong currents, jellyfish common, absolutely avoid when drunk",
+        "Scooter safety - always wear helmet (₹100 fine), avoid night riding on unlit roads, check brakes before renting",
+        "Party drug warnings - drinks can be spiked, buy your own drinks, stay with trusted friends",
+        "Women's safety - generally safe but use common sense, avoid isolated beaches alone, trusted taxi services recommended",
+        "Theft from rooms - use safes for passports/cash, lock windows, budget accommodations more vulnerable",
+        "Beach touts and scams - fake goods, overpriced services, gem scams common; if deal seems too good, it is",
+        "Police corruption exists - keep documents ready, know your rights, tourist police generally helpful",
+        "Medical facilities - Manipal Hospital for emergencies, pharmacies everywhere, travel insurance recommended"
+      ]
+    },
+    {
+      "category": "Nightlife Navigation",
+      "tips": [
+        "Different party nights at different venues - Wednesday Anjuna, Thursday Soro, Friday Tito's, Saturday varies",
+        "Entry fees and cover charges - ₹500-2000 for clubs, often includes drinks, couples get preference",
+        "Silent discos unique to Goa - ₹500-800 entry, three DJs simultaneously, headphones provided, happens at Palolem",
+        "Casino dress codes enforced - no shorts/slippers, carry ID proof, entry includes food/drinks credits",
+        "Beach parties vs clubs - beach parties more relaxed dress, earlier start, police raids occasional so stay alert",
+        "Ladies nights common - Wednesday/Thursday free entry and drinks for women at many venues",
+        "Transportation after midnight limited - arrange return transport beforehand, taxis charge double after midnight",
+        "Club Cubana worth the journey - hilltop location, pool party atmosphere, spectacular views but remote location",
+        "Rave parties still happen - ask trusted locals, usually secret locations, full moon nights, carry water",
+        "Bar closing times vary - beach shacks close by 11 PM, clubs until 3 AM, casinos 24/7"
+      ]
+    },
+    {
+      "category": "Shopping Smart",
+      "tips": [
+        "Wednesday Anjuna Market - arrive early for best selection, bargain 50% off asking price, quality varies greatly",
+        "Saturday Night Market Arpora - fixed prices higher but better quality, live music, food stalls, festive atmosphere",
+        "Mapusa Market for local goods - Fridays busiest, spices, cashews, feni cheaper than tourist shops",
+        "Government emporiums for fixed prices - Goa Handicrafts, authentic items, no bargaining but fair rates",
+        "Cashews best bought from factories - Zantye's, Plantations cheaper and fresher than shops",
+        "Beachwear everywhere - Calangute Market Street cheapest, quality proportional to price",
+        "Custom leather goods - Anjuna and Arambol have craftsmen, 2-3 days for custom sandals/bags",
+        "Avoid buying shells/coral - illegal and environmentally damaging, heavy fines at airport",
+        "Electronic goods no cheaper - despite duty-free reputation, prices similar to major cities",
+        "Shipping services available - for large purchases, DHL/FedEx offices in Panjim/Margao"
+      ]
+    },
+    {
+      "category": "Activities & Experiences",
+      "tips": [
+        "Water sports packages - negotiate bundled deals, ₹1500-3000 for multiple activities, cheaper at Mobor/Colva than Baga",
+        "Scuba diving best October-May - Grande Island popular, ₹3500-5500 including equipment, PADI courses available",
+        "Dolphin trips early morning - 7-9 AM best time, ₹300-500 per person, success rate 70%, avoid afternoon trips",
+        "Spice plantation tours - include lunch and elephant rides, ₹400-700, Sahakari and Tropical Spice recommended",
+        "Dudhsagar Falls accessibility - closed during monsoon, book jeep safari in advance, train views spectacular",
+        "Sunset cruises on Mandovi - ₹300-500, includes entertainment, pick Paradise or Santa Monica boats",
+        "Kayaking in backwaters - early morning best for birds, ₹500-1500, guided tours recommended for mangroves",
+        "Yoga and wellness retreats - drop-in classes ₹300-500, week-long retreats ₹15000-50000 including accommodation",
+        "Fishing trips with locals - ₹2000-5000 for boat, early morning departures, catch can be cooked at shacks",
+        "Heritage walks in Fontainhas - ₹500-800, 2-hour guided tours, morning walks avoid heat"
+      ]
+    },
+    {
+      "category": "Money Matters",
+      "tips": [
+        "ATMs often run out of cash - especially weekends, stock up on weekdays, multiple cards helpful",
+        "Card payments increasingly accepted - but beach shacks, markets, transport still largely cash only",
+        "Money exchange at banks best rates - avoid airport/hotel counters, Thomas Cook branches convenient",
+        "Bargaining expected at markets - start at 40% asking price, walk away tactic effective",
+        "Service tax adds 18% to bills - check if menu prices include taxes, can significantly increase final amount",
+        "Seasonal price variations huge - December rates 3-5x higher than May for everything",
+        "Split bills among groups - many places don't split cards, Splitwise app helpful for group travels",
+        "Emergency funds important - medical emergencies, bike accidents can require immediate cash",
+        "Avoid lending money to strangers - common scam with sob stories, especially at beaches",
+        "Budget ₹3000-5000 per day for comfort - includes accommodation, food, transport, and activities"
+      ]
+    }
   ],
   "budgetEstimate": "₹2,500 - ₹6,000 per day (mid-range budget)"
 }
