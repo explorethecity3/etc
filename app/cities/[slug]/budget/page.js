@@ -3,11 +3,58 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
-import cities from '@/data/cities.json'
+import { getCityData } from '@/lib/cityData'
 import { FaMoneyBillWave } from 'react-icons/fa'
+import { useEffect } from 'react'
+
+function BudgetStructuredData({ city }) {
+  useEffect(() => {
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: `Budget Estimate for ${city.name}`,
+      description: `Detailed budget guide and cost estimates for traveling to ${city.name}, ${city.state}`,
+      image: city.image,
+      author: {
+        '@type': 'Organization',
+        name: 'Explore The City',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Explore The City',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.explorethecity.in/logo.png',
+        },
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://www.explorethecity.in/cities/${city.slug}/budget`,
+      },
+    }
+
+    let script = document.getElementById('budget-structured-data')
+    if (!script) {
+      script = document.createElement('script')
+      script.id = 'budget-structured-data'
+      script.type = 'application/ld+json'
+      document.head.appendChild(script)
+    }
+    script.textContent = JSON.stringify(structuredData)
+
+    return () => {
+      const scriptToRemove = document.getElementById('budget-structured-data')
+      if (scriptToRemove) {
+        scriptToRemove.remove()
+      }
+    }
+  }, [city])
+
+  return null
+}
 
 export default function BudgetPage({ params }) {
-  const city = cities.find((c) => c.slug === params.slug)
+  const city = getCityData(params.slug)
 
   if (!city) {
     return (
@@ -22,11 +69,14 @@ export default function BudgetPage({ params }) {
 
   return (
     <div>
+      {/* Structured Data for SEO */}
+      <BudgetStructuredData city={city} />
+
       {/* Hero Section */}
       <div className="relative h-[400px] w-full">
         <Image
           src={city.image}
-          alt={city.name}
+          alt={`${city.name} budget guide - Travel costs and expenses for ${city.state}`}
           fill
           className="object-cover brightness-75"
           priority
@@ -114,7 +164,7 @@ export default function BudgetPage({ params }) {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Best Time</p>
-                  <p className="font-semibold text-gray-800">{city.bestTimeToVisit}</p>
+                  <p className="font-semibold text-gray-800">{city.bestTimeToVisitShort || city.bestTimeToVisit}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Budget Range</p>

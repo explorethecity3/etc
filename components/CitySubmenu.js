@@ -9,8 +9,9 @@ export default function CitySubmenu({ citySlug }) {
   const menuItems = [
     { name: 'About', path: `/cities/${citySlug}` },
     { name: 'Best Time', path: `/cities/${citySlug}/best-time` },
-    { name: 'Attractions', path: `/cities/${citySlug}/attractions` },
+    { name: 'Places to Explore', path: `/cities/${citySlug}/places-to-explore` },
     { name: 'Food', path: `/cities/${citySlug}/food` },
+    { name: 'Hidden Gems', path: `/cities/${citySlug}/hidden-gems` },
     { name: 'Travel Tips', path: `/cities/${citySlug}/travel-tips` },
     { name: 'Budget', path: `/cities/${citySlug}/budget` }
   ]

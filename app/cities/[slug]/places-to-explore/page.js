@@ -3,30 +3,68 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
-import cities from '@/data/cities.json'
+import { getCityData } from '@/lib/cityData'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
+
+function AttractionsStructuredData({ city }) {
+  useEffect(() => {
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: `Top Attractions in ${city.name}`,
+      description: `Best places to visit and top tourist attractions in ${city.name}, ${city.state}`,
+      itemListElement: city.topAttractions.map((attraction, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'TouristAttraction',
+          name: attraction.name,
+          description: attraction.description,
+          ...(attraction.image && { image: attraction.image }),
+        },
+      })),
+    }
+
+    let script = document.getElementById('attractions-structured-data')
+    if (!script) {
+      script = document.createElement('script')
+      script.id = 'attractions-structured-data'
+      script.type = 'application/ld+json'
+      document.head.appendChild(script)
+    }
+    script.textContent = JSON.stringify(structuredData)
+
+    return () => {
+      const scriptToRemove = document.getElementById('attractions-structured-data')
+      if (scriptToRemove) {
+        scriptToRemove.remove()
+      }
+    }
+  }, [city])
+
+  return null
+}
 
 export default function AttractionsPage({ params }) {
   const [city, setCity] = useState(null)
   const [loading, setLoading] = useState(true)
-  const cityBasic = cities.find((c) => c.slug === params.slug)
 
   useEffect(() => {
     async function loadCityData() {
       try {
-        // Try to load detailed city data
-        const detailedCity = await import(`@/data/${params.slug}.json`)
-        setCity(detailedCity.default)
+        // Load city data using utility function
+        const cityData = getCityData(params.slug)
+        setCity(cityData)
       } catch (error) {
-        // Fall back to basic city data if detailed file doesn't exist
-        setCity(cityBasic)
+        console.error('Error loading city data:', error)
+        setCity(null)
       } finally {
         setLoading(false)
       }
     }
     loadCityData()
-  }, [params.slug, cityBasic])
+  }, [params.slug])
 
   if (loading) {
     return (
@@ -49,11 +87,14 @@ export default function AttractionsPage({ params }) {
 
   return (
     <div>
+      {/* Structured Data for SEO */}
+      <AttractionsStructuredData city={city} />
+
       {/* Hero Section */}
       <div className="relative h-[400px] w-full">
         <Image
           src={city.image}
-          alt={city.name}
+          alt={`${city.name} attractions - Top places to visit in ${city.state}`}
           fill
           className="object-cover brightness-75"
           priority
@@ -109,14 +150,14 @@ export default function AttractionsPage({ params }) {
                       <div className="relative h-64 w-full">
                         <Image
                           src={attraction.image}
-                          alt={attraction.name}
+                          alt={`${attraction.name} - Popular tourist attraction in ${city.name}`}
                           fill
                           className="object-cover"
                         />
                       </div>
                     )}
                     <div className="p-6 pt-4">
-                      <p className="text-gray-600 leading-relaxed">{attraction.description}</p>
+                      <p className="text-gray-600 text-base leading-relaxed">{attraction.description}</p>
                       {(attraction.timings || attraction.entryFee) && (
                         <div className="mt-4 pt-4 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-3">
                           {attraction.timings && (
@@ -156,7 +197,7 @@ export default function AttractionsPage({ params }) {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Best Time</p>
-                  <p className="font-semibold text-gray-800">{city.bestTimeToVisit}</p>
+                  <p className="font-semibold text-gray-800">{city.bestTimeToVisitShort || city.bestTimeToVisit}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Budget Range</p>

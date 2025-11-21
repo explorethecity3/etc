@@ -3,11 +3,58 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
-import cities from '@/data/cities.json'
+import { getCityData } from '@/lib/cityData'
 import { FaClock } from 'react-icons/fa'
+import { useEffect } from 'react'
+
+function BestTimeStructuredData({ city }) {
+  useEffect(() => {
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: `Best Time to Visit ${city.name}`,
+      description: `Comprehensive guide on the best time to visit ${city.name}, ${city.state} with weather information and seasonal details`,
+      image: city.image,
+      author: {
+        '@type': 'Organization',
+        name: 'Explore The City',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Explore The City',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.explorethecity.in/logo.png',
+        },
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://www.explorethecity.in/cities/${city.slug}/best-time`,
+      },
+    }
+
+    let script = document.getElementById('best-time-structured-data')
+    if (!script) {
+      script = document.createElement('script')
+      script.id = 'best-time-structured-data'
+      script.type = 'application/ld+json'
+      document.head.appendChild(script)
+    }
+    script.textContent = JSON.stringify(structuredData)
+
+    return () => {
+      const scriptToRemove = document.getElementById('best-time-structured-data')
+      if (scriptToRemove) {
+        scriptToRemove.remove()
+      }
+    }
+  }, [city])
+
+  return null
+}
 
 export default function BestTimePage({ params }) {
-  const city = cities.find((c) => c.slug === params.slug)
+  const city = getCityData(params.slug)
 
   if (!city) {
     return (
@@ -22,11 +69,14 @@ export default function BestTimePage({ params }) {
 
   return (
     <div>
+      {/* Structured Data for SEO */}
+      <BestTimeStructuredData city={city} />
+
       {/* Hero Section */}
       <div className="relative h-[400px] w-full">
         <Image
           src={city.image}
-          alt={city.name}
+          alt={`${city.name} best time to visit - Weather and seasonal guide for ${city.state}`}
           fill
           className="object-cover brightness-75"
           priority
@@ -67,7 +117,7 @@ export default function BestTimePage({ params }) {
                 <FaClock className="text-primary text-3xl mr-4" />
                 <h2 className="text-3xl font-bold text-gray-800">Best Time to Visit {city.name}</h2>
               </div>
-              <p className="text-gray-700 text-2xl font-semibold mb-6">{city.bestTimeToVisit}</p>
+              <p className="text-gray-700 text-lg leading-relaxed mb-6 whitespace-pre-line">{city.bestTimeToVisit}</p>
               <div className="bg-white p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Why This Time?</h3>
                 <p className="text-gray-700 text-lg leading-relaxed">
@@ -95,7 +145,7 @@ export default function BestTimePage({ params }) {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Best Time</p>
-                  <p className="font-semibold text-gray-800">{city.bestTimeToVisit}</p>
+                  <p className="font-semibold text-gray-800">{city.bestTimeToVisitShort || city.bestTimeToVisit}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Budget Range</p>

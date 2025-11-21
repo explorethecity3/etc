@@ -1,6 +1,6 @@
 import CityCard from '@/components/CityCard'
 import AdSense from '@/components/AdSense'
-import cities from '@/data/cities.json'
+import { getCityCards } from '@/lib/cityData'
 
 export const metadata = {
   title: 'Explore Cities Across India - City Guides | Explore The City',
@@ -9,6 +9,8 @@ export const metadata = {
 }
 
 export default function CitiesPage() {
+  const cities = getCityCards()
+
   return (
     <div>
       {/* Hero Section */}

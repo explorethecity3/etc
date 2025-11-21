@@ -1,24 +1,13 @@
-import cities from '@/data/cities.json'
-
-// Helper function to load individual city data
-async function getCityData(slug) {
-  try {
-    const cityData = await import(`@/data/${slug}.json`)
-    return cityData.default
-  } catch (error) {
-    // Fallback to cities.json if individual file doesn't exist
-    return cities.find((c) => c.slug === slug)
-  }
-}
+import { getAllCitySlugs, getCityData } from '@/lib/cityData'
 
 export async function generateStaticParams() {
-  return cities.map((city) => ({
-    slug: city.slug,
+  return getAllCitySlugs().map((slug) => ({
+    slug: slug,
   }))
 }
 
 export async function generateMetadata({ params }) {
-  const city = await getCityData(params.slug)
+  const city = getCityData(params.slug)
 
   if (!city) {
     return {
@@ -27,10 +16,10 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  // Use keywords from JSON if available, otherwise generate them
+  // Generate comprehensive keywords for main city page
   const keywords = city.keywords
     ? city.keywords.join(', ')
-    : `${city.name}, ${city.state}, travel guide, tourism, things to do in ${city.name}, visit ${city.name}, ${city.name} attractions`
+    : `${city.name} travel guide, ${city.name} tourism, visit ${city.name}, ${city.name} ${city.state}, things to do in ${city.name}, ${city.name} attractions, ${city.name} sightseeing, ${city.name} tourist places, ${city.name} city guide, explore ${city.name}, ${city.name} travel tips, ${city.name} trip planning, ${city.name} vacation, ${city.name} holiday, ${city.name} itinerary, ${city.name} tour packages, ${city.name} travel information, ${city.name} tourism guide 2025`
 
   // Enhanced meta title with better structure
   const metaTitle = `${city.name} Travel Guide 2025 - Top Attractions, Food & Tips | Explore The City`

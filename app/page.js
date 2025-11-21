@@ -2,11 +2,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import CityCard from '@/components/CityCard'
 import AdSense from '@/components/AdSense'
-import cities from '@/data/cities.json'
+import { getCityCards } from '@/lib/cityData'
 import blogs from '@/data/blogs.json'
 
 export default function Home() {
   // Get featured cities (first 3)
+  const cities = getCityCards()
   const featuredCities = cities.slice(0, 3)
 
   // Get latest blog post

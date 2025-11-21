@@ -1,8 +1,9 @@
-import cities from '@/data/cities.json'
+import { getAllCitySlugs } from '@/lib/cityData'
 import blogs from '@/data/blogs.json'
 
 export default function sitemap() {
   const baseUrl = 'https://explorethecity.in'
+  const citySlugs = getAllCitySlugs()
 
   // Static pages
   const staticPages = [
@@ -51,39 +52,39 @@ export default function sitemap() {
   ]
 
   // City pages
-  const cityPages = cities.flatMap((city) => [
+  const cityPages = citySlugs.flatMap((slug) => [
     {
-      url: `${baseUrl}/cities/${city.slug}`,
+      url: `${baseUrl}/cities/${slug}`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/cities/${city.slug}/best-time`,
+      url: `${baseUrl}/cities/${slug}/best-time`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/cities/${city.slug}/attractions`,
+      url: `${baseUrl}/cities/${slug}/places-to-explore`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/cities/${city.slug}/food`,
+      url: `${baseUrl}/cities/${slug}/food`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/cities/${city.slug}/travel-tips`,
+      url: `${baseUrl}/cities/${slug}/travel-tips`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/cities/${city.slug}/budget`,
+      url: `${baseUrl}/cities/${slug}/budget`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

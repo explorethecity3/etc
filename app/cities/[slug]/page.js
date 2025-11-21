@@ -4,10 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
 import CityStructuredData from '@/components/CityStructuredData'
-import cities from '@/data/cities.json'
+import { getCityData } from '@/lib/cityData'
 
 export default function CityPage({ params }) {
-  const city = cities.find((c) => c.slug === params.slug)
+  const city = getCityData(params.slug)
 
   if (!city) {
     return (
@@ -29,7 +29,7 @@ export default function CityPage({ params }) {
       <div className="relative h-[400px] w-full">
         <Image
           src={city.image}
-          alt={city.name}
+          alt={`${city.name} travel guide - Explore attractions, food and culture in ${city.state}`}
           fill
           className="object-cover brightness-75"
           priority
@@ -85,7 +85,7 @@ export default function CityPage({ params }) {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Best Time</p>
-                  <p className="font-semibold text-gray-800">{city.bestTimeToVisit}</p>
+                  <p className="font-semibold text-gray-800">{city.bestTimeToVisitShort || city.bestTimeToVisit}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Budget Range</p>

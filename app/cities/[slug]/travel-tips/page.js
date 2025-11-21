@@ -3,30 +3,74 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
-import cities from '@/data/cities.json'
+import { getCityData } from '@/lib/cityData'
 import { FaLightbulb } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
+
+function TravelTipsStructuredData({ city }) {
+  useEffect(() => {
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: `Travel Tips for ${city.name}`,
+      description: `Essential travel tips and advice for visiting ${city.name}, ${city.state}`,
+      image: city.image,
+      author: {
+        '@type': 'Organization',
+        name: 'Explore The City',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Explore The City',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.explorethecity.in/logo.png',
+        },
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://www.explorethecity.in/cities/${city.slug}/travel-tips`,
+      },
+    }
+
+    let script = document.getElementById('travel-tips-structured-data')
+    if (!script) {
+      script = document.createElement('script')
+      script.id = 'travel-tips-structured-data'
+      script.type = 'application/ld+json'
+      document.head.appendChild(script)
+    }
+    script.textContent = JSON.stringify(structuredData)
+
+    return () => {
+      const scriptToRemove = document.getElementById('travel-tips-structured-data')
+      if (scriptToRemove) {
+        scriptToRemove.remove()
+      }
+    }
+  }, [city])
+
+  return null
+}
 
 export default function TravelTipsPage({ params }) {
   const [city, setCity] = useState(null)
   const [loading, setLoading] = useState(true)
-  const cityBasic = cities.find((c) => c.slug === params.slug)
 
   useEffect(() => {
     async function loadCityData() {
       try {
-        // Try to load detailed city data
-        const detailedCity = await import(`@/data/${params.slug}.json`)
-        setCity(detailedCity.default)
+        const cityData = getCityData(params.slug)
+        setCity(cityData)
       } catch (error) {
-        // Fall back to basic city data if detailed file doesn't exist
-        setCity(cityBasic)
+        console.error('Error loading city data:', error)
+        setCity(null)
       } finally {
         setLoading(false)
       }
     }
     loadCityData()
-  }, [params.slug, cityBasic])
+  }, [params.slug])
 
   if (loading) {
     return (
@@ -49,11 +93,14 @@ export default function TravelTipsPage({ params }) {
 
   return (
     <div>
+      {/* Structured Data for SEO */}
+      <TravelTipsStructuredData city={city} />
+
       {/* Hero Section */}
       <div className="relative h-[400px] w-full">
         <Image
           src={city.image}
-          alt={city.name}
+          alt={`${city.name} travel guide - Essential tips for visiting ${city.state}`}
           fill
           className="object-cover brightness-75"
           priority
@@ -108,7 +155,7 @@ export default function TravelTipsPage({ params }) {
                             {item.tips.map((tip, tipIndex) => (
                               <li key={tipIndex} className="flex items-start">
                                 <span className="text-yellow-600 mr-3 mt-1 text-lg font-bold">✓</span>
-                                <span className="text-gray-700 flex-1 leading-relaxed">{tip}</span>
+                                <span className="text-gray-700 text-base flex-1 leading-relaxed">{tip}</span>
                               </li>
                             ))}
                           </ul>
@@ -145,7 +192,7 @@ export default function TravelTipsPage({ params }) {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Best Time</p>
-                  <p className="font-semibold text-gray-800">{city.bestTimeToVisit}</p>
+                  <p className="font-semibold text-gray-800">{city.bestTimeToVisitShort || city.bestTimeToVisit}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Budget Range</p>
