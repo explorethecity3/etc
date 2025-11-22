@@ -1,189 +1,220 @@
+// pages/terms.jsx  (or app/(public)/terms/page.jsx depending on your Next.js structure)
 export default function TermsPage() {
+  const effectiveDate = "January 2025";
+  const contactEmail = "contact@explorethecity.in"; // Replace if needed
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary to-secondary py-20">
+      <header className="bg-gradient-to-r from-primary to-secondary py-20" role="banner">
         <div className="container-custom">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Terms & Conditions</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Terms &amp; Conditions</h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            Please read these terms carefully before using our website
+            Please read these terms carefully before using our website.
           </p>
         </div>
-      </div>
+      </header>
 
-      <div className="container-custom py-16">
-        <div className="max-w-4xl mx-auto prose prose-lg">
+      <main className="container-custom py-16" role="main">
+        <div className="max-w-4xl mx-auto prose prose-lg text-gray-800">
           <p className="text-gray-600 mb-8">
-            <strong>Last Updated:</strong> January 2025
+            <strong>Effective Date:</strong> {effectiveDate}
           </p>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">1. Agreement to Terms</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Welcome to Explore The City ("Company," "we," "our," "us"). These Terms and Conditions ("Terms") govern your access to and use of our website explorethecity.in (the "Website"), including any content, functionality, and services offered on or through the Website.
+          <section aria-labelledby="acceptance-of-terms" className="mb-10">
+            <h2 id="acceptance-of-terms" className="text-3xl font-bold text-gray-800 mb-3">1. Acceptance of Terms</h2>
+            <p>
+              Welcome to <strong>Explore The City</strong> (“Company”, “we”, “our”, “us”). These Terms and Conditions (“Terms”) govern your access to and use of our website <a href="https://www.explorethecity.in" className="text-primary hover:underline" rel="noopener noreferrer">explorethecity.in</a> (“Website”), including all information, guides, and services provided.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              By accessing or using the Website, you agree to be bound by these Terms. If you disagree with any part of these Terms, you may not access the Website.
+            <p className="mt-3">
+              By accessing or using our Website, you agree to be bound by these Terms. If you do not agree with these Terms, you must stop using the Website immediately.
+            </p>
+            <p className="mt-3">
+              By using the Website you confirm that you are at least 13 years old and have the legal capacity to enter into these Terms.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">2. Use of the Website</h2>
+          <section aria-labelledby="use-of-website" className="mb-10">
+            <h2 id="use-of-website" className="text-3xl font-bold text-gray-800 mb-3">2. Use of the Website</h2>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">2.1 Permitted Use</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              You may use the Website for lawful purposes only and in accordance with these Terms. You agree not to use the Website:
+            <h3 className="text-2xl font-semibold mt-4 mb-2">2.1 Permitted Use</h3>
+            <p>
+              You may use the Website solely for lawful, personal, non-commercial purposes, such as accessing travel guides, blog posts, city information, and general travel-related content.
             </p>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-              <li>In any way that violates any applicable national or international law or regulation</li>
-              <li>To transmit or procure the sending of any advertising or promotional material without our prior written consent</li>
-              <li>To impersonate or attempt to impersonate the Company, a Company employee, another user, or any other person or entity</li>
-              <li>In any way that infringes upon the rights of others, or in any way is illegal, threatening, fraudulent, or harmful</li>
-              <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Website</li>
+
+            <h3 className="text-2xl font-semibold mt-4 mb-2">2.2 Prohibited Use</h3>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Violating any applicable local, national, or international law or regulation.</li>
+              <li>Copying, reproducing, or republishing content without our prior written permission.</li>
+              <li>Using automated systems (bots, scrapers, spiders) to extract data from the Website.</li>
+              <li>Uploading or transmitting any malicious code, malware, or spam.</li>
+              <li>Interfering with or attempting to interfere with the security or proper functioning of the Website.</li>
+              <li>Impersonating another person or falsely stating or misrepresenting your affiliation with a person or entity.</li>
             </ul>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">2.2 User Account</h3>
-            <p className="text-gray-700 leading-relaxed">
-              While currently we do not require user accounts to access the Website, if we implement such features in the future, you will be responsible for maintaining the confidentiality of your account and password and for restricting access to your computer or device.
+            <h3 className="text-2xl font-semibold mt-4 mb-2">2.3 User Accounts</h3>
+            <p>
+              The Website currently does not require user accounts for access. If account features are added in the future, you will be responsible for maintaining the confidentiality of your account credentials and for all activity under your account.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">3. Intellectual Property Rights</h2>
+          <section aria-labelledby="intellectual-property" className="mb-10">
+            <h2 id="intellectual-property" className="text-3xl font-bold text-gray-800 mb-3">3. Intellectual Property</h2>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">3.1 Our Content</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              The Website and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof) are owned by Explore The City, its licensors, or other providers of such material and are protected by copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
+            <h3 className="text-2xl font-semibold mt-4 mb-2">3.1 Ownership</h3>
+            <p>
+              All content on the Website — including text, images, graphics, logos, designs, audio, video, and code — is owned by Explore The City or its licensors and is protected by intellectual property laws.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">3.2 Your Use of Content</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              You may access and use the Website content for your personal, non-commercial use only. You must not:
+            <h3 className="text-2xl font-semibold mt-4 mb-2">3.2 Limited License</h3>
+            <p>
+              We grant you a limited, non-exclusive, non-transferable license to view and share the content for personal, non-commercial use. You must not republish, sell, rent, or commercially exploit the content without our express written permission.
             </p>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>Reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Website without prior written consent</li>
-              <li>Use any data mining, robots, or similar data gathering or extraction methods</li>
-              <li>Attempt to gain unauthorized access to any portion of the Website or any systems or networks connected to the Website</li>
-            </ul>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">4. Travel Information and Disclaimer</h2>
+          <section aria-labelledby="travel-disclaimer" className="mb-10">
+            <h2 id="travel-disclaimer" className="text-3xl font-bold text-gray-800 mb-3">4. Travel Information &amp; Disclaimer</h2>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">4.1 Informational Purposes Only</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              All travel information, guides, tips, and recommendations provided on the Website are for informational purposes only. We strive to provide accurate and up-to-date information, but we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information contained on the Website.
+            <h3 className="text-2xl font-semibold mt-4 mb-2">4.1 Informational Purposes Only</h3>
+            <p>
+              Content on the Website (including guides, tips, reviews, and itineraries) is provided for general informational purposes only. While we strive for accuracy, we make no warranties or guarantees regarding the completeness, accuracy, or suitability of the information provided.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">4.2 User Responsibility</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              You acknowledge that:
-            </p>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>Travel conditions, prices, operating hours, and other details can change without notice</li>
-              <li>You are responsible for verifying all information before making travel decisions</li>
-              <li>You should consult official sources, local authorities, and professional travel advisors for current and accurate information</li>
-              <li>We are not responsible for any travel arrangements, bookings, or transactions you make based on information from our Website</li>
+            <h3 className="text-2xl font-semibold mt-4 mb-2">4.2 Your Responsibility</h3>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>You should verify prices, availability, safety, and local regulations directly with providers or official sources before making plans or purchases.</li>
+              <li>We are not responsible for any travel arrangements, bookings, losses, delays, or incidents arising from reliance on our content.</li>
             </ul>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">5. Third-Party Links and Content</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              The Website may contain links to third-party websites or services that are not owned or controlled by Explore The City. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.
+          <section aria-labelledby="third-party-links" className="mb-10">
+            <h2 id="third-party-links" className="text-3xl font-bold text-gray-800 mb-3">5. Third-Party Links &amp; Affiliates</h2>
+
+            <h3 className="text-2xl font-semibold mt-4 mb-2">5.1 Third-Party Links</h3>
+            <p>
+              Our Website may include links to third-party websites, services, or resources that we do not own or control. We are not responsible for the content, privacy practices, or accuracy of third-party sites.
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              You acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or services.
+
+            <h3 className="text-2xl font-semibold mt-4 mb-2">5.2 Affiliate Disclosure</h3>
+            <p>
+              Some links on our Website are affiliate links. If you click an affiliate link and make a purchase, we may receive a commission at no additional cost to you. We only promote products and services we believe may be helpful to our readers.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">6. Disclaimer of Warranties</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              THE WEBSITE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. NEITHER THE COMPANY NOR ANY PERSON ASSOCIATED WITH THE COMPANY MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE WEBSITE.
+          <section aria-labelledby="advertising-cookies" className="mb-10">
+            <h2 id="advertising-cookies" className="text-3xl font-bold text-gray-800 mb-3">6. Advertising, Cookies &amp; Tracking</h2>
+
+            <h3 className="text-2xl font-semibold mt-4 mb-2">6.1 Advertising</h3>
+            <p>
+              The Website may display advertisements served by third-party ad networks (including Google AdSense) and may include sponsored content. We do not control the content of advertisements, and we are not responsible for claims made by advertisers.
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              We do not warrant that the Website will be uninterrupted, secure, or error-free, or that defects will be corrected. We make no warranty regarding the quality of any products, services, information, or other material obtained through the Website.
+            <p className="mt-3">
+              You must not click on advertisements for the purpose of generating revenue for the site or otherwise manipulate ad impressions or clicks. Artificially inflating ad traffic is prohibited and may lead to account termination.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-4 mb-2">6.2 Cookies &amp; Tracking</h3>
+            <p>
+              We use cookies, analytics services (such as Google Analytics), and other tracking technologies to operate and improve the Website, analyze user behavior, and show relevant content and advertisements. By using the Website, you consent to our use of cookies and tracking technologies in accordance with our Privacy Policy.
+            </p>
+            <p className="mt-3">
+              You can control cookies via your browser settings or privacy tools; however, disabling cookies may affect site functionality.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">7. Limitation of Liability</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              TO THE FULLEST EXTENT PROVIDED BY LAW, IN NO EVENT WILL EXPLORE THE CITY, ITS AFFILIATES, OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS, OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE WEBSITE, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES.
+          <section aria-labelledby="user-content" className="mb-10">
+            <h2 id="user-content" className="text-3xl font-bold text-gray-800 mb-3">7. User Content</h2>
+            <p>
+              If you submit content (comments, photos, reviews, or other materials) to the Website, you grant Explore The City a perpetual, irrevocable, worldwide, royalty-free license to use, reproduce, modify, publish, and display that content in any media.
+            </p>
+            <p className="mt-3">
+              You represent and warrant that any content you submit is your own, does not violate third-party rights, and is not illegal, defamatory, or infringing. We reserve the right to remove or refuse any user content at our discretion.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">8. Indemnification</h2>
-            <p className="text-gray-700 leading-relaxed">
-              You agree to defend, indemnify, and hold harmless Explore The City and its licensors, licensees, and service providers from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Website.
+          <section aria-labelledby="limitation-of-liability" className="mb-10">
+            <h2 id="limitation-of-liability" className="text-3xl font-bold text-gray-800 mb-3">8. Limitation of Liability</h2>
+            <p>
+              TO THE FULLEST EXTENT PERMITTED BY LAW, EXPLORE THE CITY WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF THE WEBSITE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+            </p>
+            <p className="mt-3">
+              This limitation applies to all claims, whether based in contract, tort, negligence, strict liability, or otherwise.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">9. User Comments and Feedback</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              If you provide us with any feedback, comments, or suggestions about the Website ("Feedback"), you grant us the right to use such Feedback without any restriction or compensation to you. We may use your Feedback for any purpose, including improving the Website and creating new features.
+          <section aria-labelledby="indemnification" className="mb-10">
+            <h2 id="indemnification" className="text-3xl font-bold text-gray-800 mb-3">9. Indemnification</h2>
+            <p>
+              You agree to indemnify, defend, and hold harmless Explore The City, its officers, directors, employees, agents, and partners from any claims, liabilities, losses, damages, and expenses (including reasonable attorneys' fees) arising from your violation of these Terms or your use of the Website.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">10. Governing Law and Jurisdiction</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              These Terms shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Any disputes arising out of or relating to these Terms or the Website shall be subject to the exclusive jurisdiction of the courts located in India.
+          <section aria-labelledby="termination" className="mb-10">
+            <h2 id="termination" className="text-3xl font-bold text-gray-800 mb-3">10. Termination</h2>
+            <p>
+              We reserve the right to suspend or terminate your access to the Website, in whole or in part, at any time and for any reason, including breach of these Terms or unlawful activity, without prior notice.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">11. Changes to Terms</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              We reserve the right to modify or replace these Terms at any time at our sole discretion. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect by updating the "Last Updated" date at the top of this page.
+          <section aria-labelledby="dmca" className="mb-10">
+            <h2 id="dmca" className="text-3xl font-bold text-gray-800 mb-3">11. DMCA / Copyright Complaints</h2>
+            <p>
+              If you believe content on our Website infringes your copyright, please send a notice to our designated agent at <a href={`mailto:${contactEmail}`} className="text-primary hover:underline">{contactEmail}</a> with:
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              By continuing to access or use the Website after revisions become effective, you agree to be bound by the revised Terms. If you do not agree to the new Terms, you must stop using the Website.
+            <ul className="list-disc pl-6 space-y-2 mt-3">
+              <li>A description of the copyrighted work you claim was infringed.</li>
+              <li>The URL(s) of the material you claim is infringing.</li>
+              <li>Your name, address, telephone number, and email address.</li>
+              <li>A statement that you have a good faith belief that use of the material is not authorized by the copyright owner.</li>
+              <li>A statement, under penalty of perjury, that the information in the notice is accurate and that you are the copyright owner or authorized to act on their behalf.</li>
+              <li>Your electronic or physical signature.</li>
+            </ul>
+            <p className="mt-3">We will respond to valid notices under applicable law.</p>
+          </section>
+
+          <section aria-labelledby="governing-law" className="mb-10">
+            <h2 id="governing-law" className="text-3xl font-bold text-gray-800 mb-3">12. Governing Law</h2>
+            <p>
+              These Terms are governed by the laws of India without regard to conflict-of-law provisions. Any disputes arising from these Terms will be subject to the exclusive jurisdiction of courts located in India.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">12. Severability</h2>
-            <p className="text-gray-700 leading-relaxed">
-              If any provision of these Terms is held to be invalid or unenforceable by a court of competent jurisdiction, the remaining provisions of these Terms will remain in effect. Such invalid or unenforceable provision will be replaced with a valid and enforceable provision that most closely matches the intent of the original provision.
+          <section aria-labelledby="changes-to-terms" className="mb-10">
+            <h2 id="changes-to-terms" className="text-3xl font-bold text-gray-800 mb-3">13. Changes to These Terms</h2>
+            <p>
+              We may update these Terms from time to time. When material changes are made, we will provide notice by updating the <strong>Effective Date</strong> at the top of this page and, where appropriate, posting a prominent notice on the Website. Your continued use after changes constitute acceptance of the updated Terms.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">13. Entire Agreement</h2>
-            <p className="text-gray-700 leading-relaxed">
-              These Terms, together with our Privacy Policy, constitute the entire agreement between you and Explore The City regarding the use of the Website and supersede all prior and contemporaneous written or oral agreements.
+          <section aria-labelledby="entire-agreement" className="mb-10">
+            <h2 id="entire-agreement" className="text-3xl font-bold text-gray-800 mb-3">14. Entire Agreement</h2>
+            <p>
+              These Terms, together with our Privacy Policy, Cookie Policy, and any other policies posted on the Website, constitute the entire agreement between you and Explore The City regarding your use of the Website.
             </p>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">14. Contact Information</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              If you have any questions about these Terms, please contact us:
+          <section aria-labelledby="accessibility" className="mb-10">
+            <h2 id="accessibility" className="text-3xl font-bold text-gray-800 mb-3">15. Accessibility</h2>
+            <p>
+              We aim to make the Website accessible and usable for as many people as possible. If you encounter accessibility barriers, please contact us at <a href={`mailto:${contactEmail}`} className="text-primary hover:underline">{contactEmail}</a> and we will make reasonable efforts to assist.
             </p>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="text-gray-700 mb-2">
-                <strong>Website:</strong> <a href="https://www.explorethecity.in" className="text-primary hover:underline">www.explorethecity.in</a>
-              </p>
-              <p className="text-gray-700">
-                <strong>Contact Page:</strong> <a href="/contact" className="text-primary hover:underline">Visit our Contact page</a>
-              </p>
+          </section>
+
+          <section aria-labelledby="contact" className="mb-10">
+            <h2 id="contact" className="text-3xl font-bold text-gray-800 mb-3">16. Contact Information</h2>
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
+              <p className="mb-2"><strong>Website:</strong> <a href="https://www.explorethecity.in" className="text-primary hover:underline" rel="noopener noreferrer">www.explorethecity.in</a></p>
+              <p className="mb-2"><strong>Contact Page:</strong> <a href="/contact" className="text-primary hover:underline">Visit our Contact page</a></p>
+              <p className="mb-0"><strong>Email:</strong> <a href={`mailto:${contactEmail}`} className="text-primary hover:underline">{contactEmail}</a></p>
             </div>
           </section>
 
-          <div className="bg-blue-50 border-l-4 border-primary p-6 mt-12">
+          <div className="bg-blue-50 border-l-4 border-primary p-6 mt-8 rounded">
             <p className="text-gray-700">
               By using Explore The City, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.
             </p>
           </div>
         </div>
-      </div>
+      </main>
     </div>
-  )
+  );
 }
