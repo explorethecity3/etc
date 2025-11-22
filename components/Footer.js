@@ -17,7 +17,7 @@ export default function Footer() {
             </p>
             <div className="mt-4">
               <Link href="/about" className="text-white hover:text-gray-200 underline text-sm">
-                Learn More
+                Learn More About Us
               </Link>
             </div>
           </div>

@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 export default function CityCard({ city }) {
   return (
-    <Link href={`/cities/${city.slug}`}>
+    <Link href={`/cities/${city.slug}`} aria-label={`Explore ${city.name}, ${city.state} - Complete Travel Guide`}>
       <div className="bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer h-full transform hover:-translate-y-2">
         <div className="relative h-56 w-full">
           <Image
             src={city.image}
-            alt={city.name}
+            alt={`${city.name}, ${city.state} - Travel destination`}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

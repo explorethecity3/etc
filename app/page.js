@@ -28,7 +28,7 @@ export default function Home() {
               Discover hidden gems, local experiences, and authentic travel stories across India's most amazing cities
             </p>
             <Link href="/cities" className="btn-primary">
-              Explore
+              Explore Our Travel Destinations
             </Link>
           </div>
         </div>
@@ -96,8 +96,8 @@ export default function Home() {
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
                 {latestBlog.excerpt}
               </p>
-              <Link href={`/blog/${latestBlog.slug}`} className="btn-primary">
-                Read More
+              <Link href={`/blog/${latestBlog.slug}`} className="btn-primary" aria-label={`Read full article: ${latestBlog.title}`}>
+                Read Full Article
               </Link>
             </div>
           </div>

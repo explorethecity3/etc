@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className="container-custom">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3" aria-label="Explore The City - Home">
             <Image
               src="/images/logo1.png"
               alt="Explore The City Logo"
@@ -47,6 +47,8 @@ export default function Navbar() {
           <button
             className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
