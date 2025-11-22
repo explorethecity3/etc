@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `${city.name} Food Guide 2025 - Must-Try Local Cuisine & Restaurants | Explore The City`
+  const metaTitle = `${city.name} Food Scene: Local Cuisine, Best Restaurants & Street Food | Explore The City`
   const metaDescription = `Discover the best food in ${city.name}, ${city.state}. Explore authentic local cuisine, must-try dishes, famous restaurants, street food, and culinary specialties that make ${city.name} a food lover's paradise.`
 
   const siteUrl = 'https://www.explorethecity.in'

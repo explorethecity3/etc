@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `${city.name} Budget Guide 2025 - Trip Cost & Expenses | Explore The City`
+  const metaTitle = `${city.name} Trip Budget: Complete Cost Breakdown & Money-Saving Tips | Explore The City`
   const metaDescription = `Plan your budget for ${city.name}, ${city.state}. Detailed breakdown of accommodation costs, food expenses, transport fares, and entry fees. ${city.budgetEstimate} for a comfortable trip to ${city.name}.`
 
   const siteUrl = 'https://www.explorethecity.in'

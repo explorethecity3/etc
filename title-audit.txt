@@ -1,0 +1,27 @@
+CURRENT PAGE TITLES AUDIT
+==========================
+
+HOME PAGE:
+- Explore The City - Discover Amazing Cities Across India
+
+STATIC PAGES:
+- About Us - Explore The City | Your Ultimate Travel Companion
+- Contact Us - Explore The City | Get in Touch
+- Privacy Policy - Explore The City | Your Data Protection
+- Terms & Conditions - Explore The City | Legal Information
+- Explore Cities Across India - City Guides | Explore The City
+- Travel Blog - Stories, Tips & Guides | Explore The City
+
+CITY PAGES (Dynamic - same format for each city):
+- [City] Travel Guide 2025 - Top Attractions, Food & Tips | Explore The City
+- Best Time to Visit [City] 2025 - Weather, Season & Travel Guide | Explore The City
+- Top [X]+ Attractions in [City] 2025 - Best Places to Visit | Explore The City
+- [City] Food Guide 2025 - Must-Try Local Cuisine & Restaurants | Explore The City
+- Hidden Gems in [City] 2025 - Off-the-Beaten-Path Locations | Explore The City
+- Travel Tips for [City] 2025 - Essential Guide & Advice | Explore The City
+- [City] Budget Guide 2025 - Trip Cost & Expenses | Explore The City
+
+POTENTIAL ISSUES:
+1. All city pages use similar template structure (normal for dynamic pages)
+2. About page has metadata in page.js instead of layout.js (inconsistent with other pages)
+3. Some titles could be more unique and descriptive

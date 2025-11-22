@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `Top ${city.attractions}+ Attractions in ${city.name} 2025 - Best Places to Visit | Explore The City`
+  const metaTitle = `${city.name} Tourist Attractions: ${city.attractions}+ Must-Visit Places & Landmarks | Explore The City`
   const metaDescription = `Explore the best attractions and places to visit in ${city.name}, ${city.state}. Discover top tourist spots, historical landmarks, cultural sites, and hidden gems with timings, entry fees, and detailed descriptions.`
 
   const siteUrl = 'https://www.explorethecity.in'

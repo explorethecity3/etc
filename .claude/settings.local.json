@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ren:*)"
+      "Bash(ren:*)",
+      "Bash(\"d:\\personal\\New folder\\etc\\app\\contact\\layout.js\")"
     ],
     "deny": [],
     "ask": []

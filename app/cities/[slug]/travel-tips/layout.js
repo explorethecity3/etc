@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `Travel Tips for ${city.name} 2025 - Essential Guide & Advice | Explore The City`
+  const metaTitle = `${city.name} Travel Essentials: Insider Tips & Practical Advice for Visitors | Explore The City`
   const metaDescription = `Essential travel tips for visiting ${city.name}, ${city.state}. Get insider advice on local customs, transportation, safety, best practices, and everything you need to know for a smooth trip to ${city.name}.`
 
   const siteUrl = 'https://www.explorethecity.in'

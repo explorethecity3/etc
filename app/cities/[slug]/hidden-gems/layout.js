@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `Hidden Gems in ${city.name} 2025 - Off-the-Beaten-Path Locations | Explore The City`
+  const metaTitle = `${city.name} Hidden Gems: Secret Spots & Offbeat Experiences 2025 | Explore The City`
   const metaDescription = `Discover hidden gems and lesser-known attractions in ${city.name}, ${city.state}. Explore off-the-beaten-path locations, secret spots, and authentic local experiences away from tourist crowds in ${city.name}.`
 
   const siteUrl = 'https://www.explorethecity.in'

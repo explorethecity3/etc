@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
     : `${city.name} travel guide, ${city.name} tourism, visit ${city.name}, ${city.name} ${city.state}, things to do in ${city.name}, ${city.name} attractions, ${city.name} sightseeing, ${city.name} tourist places, ${city.name} city guide, explore ${city.name}, ${city.name} travel tips, ${city.name} trip planning, ${city.name} vacation, ${city.name} holiday, ${city.name} itinerary, ${city.name} tour packages, ${city.name} travel information, ${city.name} tourism guide 2025`
 
   // Enhanced meta title with better structure
-  const metaTitle = `${city.name} Travel Guide 2025 - Top Attractions, Food & Tips | Explore The City`
+  const metaTitle = `${city.name} Complete Travel Guide 2025: Top Things to Do & See | Explore The City`
 
   // Enhanced description with call-to-action
   const metaDescription = `Discover ${city.name}, ${city.state}: ${city.shortDescription} Find the best attractions, local food, travel tips, and budget estimates for your ${city.name} trip.`

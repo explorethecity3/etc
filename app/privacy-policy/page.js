@@ -1,158 +1,186 @@
-export const metadata = {
-  title: 'Privacy Policy - Explore The City',
-  description: 'Privacy Policy for Explore The City. Learn how we collect, use, and protect your personal information.',
-}
-
 export default function PrivacyPolicyPage() {
   return (
-    <div>
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-          <p className="text-xl text-gray-100">
-            Last Updated: January 2024
+      <div className="bg-gradient-to-r from-primary to-secondary py-20">
+        <div className="container-custom">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Privacy Policy</h1>
+          <p className="text-xl text-white/90 max-w-3xl">
+            Your privacy is important to us. Learn how we collect, use, and protect your information.
           </p>
         </div>
-      </section>
+      </div>
 
-      {/* Privacy Policy Content */}
-      <section className="py-16">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto prose prose-lg">
-            <div className="bg-blue-50 p-6 rounded-lg mb-8">
-              <p className="text-gray-700 mb-0">
-                At Explore The City (www.explorethecity.in), we are committed to protecting your
-                privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard
-                your information when you visit our website.
-              </p>
-            </div>
+      <div className="container-custom py-16">
+        <div className="max-w-4xl mx-auto prose prose-lg">
+          <p className="text-gray-600 mb-8">
+            <strong>Last Updated:</strong> January 2025
+          </p>
 
-            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">1. Information We Collect</h2>
-
-            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Personal Information</h3>
-            <p className="text-gray-700 mb-4">
-              When you subscribe to our newsletter or contact us, we may collect:
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">1. Introduction</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Welcome to Explore The City ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website explorethecity.in.
             </p>
-            <ul className="list-disc pl-6 text-gray-700 mb-6 space-y-2">
-              <li>Name and email address</li>
-              <li>Any information you provide in contact forms or comments</li>
-              <li>Communication preferences</li>
+            <p className="text-gray-700 leading-relaxed">
+              Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the site.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">2. Information We Collect</h2>
+
+            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">2.1 Information You Provide to Us</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We collect information that you voluntarily provide to us when you:
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Contact us through our contact form</li>
+              <li>Subscribe to our newsletter or updates</li>
+              <li>Participate in surveys or promotions</li>
+              <li>Provide feedback or suggestions</li>
             </ul>
-
-            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Automatically Collected Information</h3>
-            <p className="text-gray-700 mb-4">
-              When you visit our website, we automatically collect:
+            <p className="text-gray-700 leading-relaxed">
+              This information may include your name, email address, and any other information you choose to provide in your messages to us.
             </p>
-            <ul className="list-disc pl-6 text-gray-700 mb-6 space-y-2">
-              <li>IP address and browser information</li>
-              <li>Device type and operating system</li>
-              <li>Pages visited and time spent on pages</li>
+
+            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">2.2 Automatically Collected Information</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              When you visit our website, we automatically collect certain information about your device and browsing actions, including:
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <li>IP address and browser type</li>
+              <li>Operating system and device information</li>
+              <li>Pages visited and time spent on each page</li>
               <li>Referring website addresses</li>
-              <li>Cookies and similar tracking technologies</li>
+              <li>Clickstream data and website navigation patterns</li>
             </ul>
+          </section>
 
-            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">2. How We Use Your Information</h2>
-            <p className="text-gray-700 mb-4">We use the collected information to:</p>
-            <ul className="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">3. How We Use Your Information</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We use the information we collect for various purposes, including to:
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Provide, operate, and maintain our website</li>
-              <li>Send you newsletters and updates (if you've subscribed)</li>
-              <li>Respond to your comments, questions, and requests</li>
-              <li>Analyze website usage and improve our content</li>
-              <li>Detect and prevent technical issues and fraud</li>
-              <li>Display relevant advertisements through Google AdSense</li>
+              <li>Improve, personalize, and expand our website content</li>
+              <li>Understand and analyze how you use our website</li>
+              <li>Develop new features, products, and services</li>
+              <li>Communicate with you for customer service and support</li>
+              <li>Send you newsletters, updates, and promotional materials (with your consent)</li>
+              <li>Detect, prevent, and address technical issues and security threats</li>
+              <li>Comply with legal obligations and enforce our policies</li>
             </ul>
+          </section>
 
-            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">3. Cookies and Tracking Technologies</h2>
-            <p className="text-gray-700 mb-4">
-              We use cookies and similar tracking technologies to track activity on our website
-              and store certain information. Cookies are files with small amounts of data that
-              are stored on your device.
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">4. Cookies and Tracking Technologies</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We use cookies and similar tracking technologies to track activity on our website and store certain information. Cookies are small data files stored on your device. We use both session cookies (which expire when you close your browser) and persistent cookies (which remain on your device until deleted).
             </p>
-            <p className="text-gray-700 mb-4">Types of cookies we use:</p>
-            <ul className="list-disc pl-6 text-gray-700 mb-6 space-y-2">
-              <li><strong>Essential Cookies:</strong> Necessary for website functionality</li>
-              <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website</li>
-              <li><strong>Advertising Cookies:</strong> Used to display relevant ads through Google AdSense</li>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We use cookies to:
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Remember your preferences and settings</li>
+              <li>Understand how you interact with our website</li>
+              <li>Analyze website traffic and user behavior</li>
+              <li>Improve website performance and user experience</li>
+              <li>Deliver relevant advertisements (if applicable)</li>
             </ul>
-            <p className="text-gray-700 mb-6">
-              You can instruct your browser to refuse all cookies or to indicate when a cookie is
-              being sent. However, if you do not accept cookies, you may not be able to use some
-              portions of our website.
+            <p className="text-gray-700 leading-relaxed">
+              You can instruct your browser to refuse all cookies or indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.
             </p>
+          </section>
 
-            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">4. Google AdSense</h2>
-            <p className="text-gray-700 mb-4">
-              We use Google AdSense to display advertisements on our website. Google uses cookies
-              to serve ads based on your prior visits to our website or other websites. You may
-              opt out of personalized advertising by visiting{' '}
-              <a href="https://www.google.com/settings/ads" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-                Ads Settings
-              </a>.
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">5. Third-Party Services</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We may use third-party service providers to help us operate our website and administer activities on our behalf. These third parties may have access to your information only to perform specific tasks and are obligated not to disclose or use it for any other purpose.
             </p>
-
-            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">5. Third-Party Links</h2>
-            <p className="text-gray-700 mb-6">
-              Our website may contain links to third-party websites. We have no control over and
-              assume no responsibility for the content, privacy policies, or practices of any
-              third-party sites or services.
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Third-party services we may use include:
             </p>
-
-            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">6. Data Security</h2>
-            <p className="text-gray-700 mb-6">
-              We implement reasonable security measures to protect your personal information.
-              However, no method of transmission over the Internet or electronic storage is 100%
-              secure. While we strive to protect your data, we cannot guarantee its absolute
-              security.
-            </p>
-
-            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">7. Children's Privacy</h2>
-            <p className="text-gray-700 mb-6">
-              Our website is not intended for children under 13 years of age. We do not knowingly
-              collect personal information from children under 13. If you are a parent or guardian
-              and believe your child has provided us with personal information, please contact us.
-            </p>
-
-            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">8. Your Rights</h2>
-            <p className="text-gray-700 mb-4">You have the right to:</p>
-            <ul className="list-disc pl-6 text-gray-700 mb-6 space-y-2">
-              <li>Access the personal information we hold about you</li>
-              <li>Request correction of inaccurate data</li>
-              <li>Request deletion of your personal information</li>
-              <li>Unsubscribe from our email communications at any time</li>
-              <li>Opt out of cookies through your browser settings</li>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <li>Google Analytics for website analytics</li>
+              <li>Google AdSense for advertising (if applicable)</li>
+              <li>Email service providers for newsletters</li>
+              <li>Hosting and content delivery services</li>
             </ul>
+          </section>
 
-            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">9. Changes to This Privacy Policy</h2>
-            <p className="text-gray-700 mb-6">
-              We may update our Privacy Policy from time to time. We will notify you of any
-              changes by posting the new Privacy Policy on this page and updating the "Last
-              Updated" date.
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">6. Data Security</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, please note that no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
             </p>
+          </section>
 
-            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">10. Contact Us</h2>
-            <p className="text-gray-700 mb-4">
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">7. Your Privacy Rights</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Depending on your location, you may have certain rights regarding your personal information, including:
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>The right to access and receive a copy of your personal information</li>
+              <li>The right to correct or update inaccurate information</li>
+              <li>The right to request deletion of your personal information</li>
+              <li>The right to object to or restrict processing of your information</li>
+              <li>The right to withdraw consent at any time</li>
+              <li>The right to opt-out of marketing communications</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              To exercise these rights, please contact us using the information provided in the Contact Us section below.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">8. Children's Privacy</h2>
+            <p className="text-gray-700 leading-relaxed">
+              Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us, and we will take steps to delete such information.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">9. Links to Other Websites</h2>
+            <p className="text-gray-700 leading-relaxed">
+              Our website may contain links to third-party websites that are not operated by us. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services. We strongly advise you to review the Privacy Policy of every site you visit.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">10. Changes to This Privacy Policy</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this Privacy Policy.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              We encourage you to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">11. Contact Us</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
               If you have any questions about this Privacy Policy, please contact us:
             </p>
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="text-gray-700 mb-2">
-                <strong>Email:</strong> contact@explorethecity.in
+                <strong>Website:</strong> <a href="https://www.explorethecity.in" className="text-primary hover:underline">www.explorethecity.in</a>
               </p>
               <p className="text-gray-700">
-                <strong>Website:</strong> www.explorethecity.in
+                <strong>Contact Page:</strong> <a href="/contact" className="text-primary hover:underline">Visit our Contact page</a>
               </p>
             </div>
+          </section>
 
-            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mt-8">
-              <p className="text-gray-700 font-semibold mb-2">Important Note:</p>
-              <p className="text-gray-700 text-sm">
-                By using our website, you consent to our Privacy Policy and agree to its terms.
-                Please review this policy periodically for any updates.
-              </p>
-            </div>
+          <div className="bg-blue-50 border-l-4 border-primary p-6 mt-12">
+            <p className="text-gray-700">
+              By using Explore The City, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   )
 }
