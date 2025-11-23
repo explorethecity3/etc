@@ -16,6 +16,9 @@ export const metadata = {
   verification: {
     google: 'IZHMSq9e0p173wQb1TeEu7nYjjbB5yPn12rmIuG_-_E',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-6525177681486877',
+  },
   openGraph: {
     title: 'Explore The City - Discover Amazing Cities Across India',
     description: 'Your ultimate guide to exploring cities in India',
@@ -38,6 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        
         <link rel="icon" href="/favicon.ico" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTCV09D973"></script>
         <script
@@ -49,6 +53,11 @@ export default function RootLayout({ children }) {
               gtag('config', 'G-ZTCV09D973');
             `,
           }}
+        />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6525177681486877"
+          crossOrigin="anonymous"
         />
       </head>
       <body className={inter.className}>
