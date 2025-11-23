@@ -10,6 +10,7 @@ export default function ContactPage() {
     message: ''
   })
   const [status, setStatus] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e) => {
     setFormData({
@@ -18,10 +19,42 @@ export default function ContactPage() {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setStatus('Thank you for your message! We will get back to you soon.')
-    setFormData({ name: '', email: '', subject: '', message: '' })
+    setIsSubmitting(true)
+    setStatus('')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: 'Explore The City Contact Form',
+          to_email: 'contact@explorethecity.in'
+        })
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setStatus('Thank you for your message! We will get back to you soon.')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setStatus('Something went wrong. Please try again or email us directly at contact@explorethecity.in')
+      }
+    } catch (error) {
+      setStatus('Something went wrong. Please try again or email us directly at contact@explorethecity.in')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -109,13 +142,18 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
 
                 {status && (
-                  <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
+                  <div className={`px-4 py-3 rounded-lg ${
+                    status.includes('wrong')
+                      ? 'bg-red-50 border border-red-200 text-red-800'
+                      : 'bg-green-50 border border-green-200 text-green-800'
+                  }`}>
                     {status}
                   </div>
                 )}
@@ -138,10 +176,10 @@ export default function ContactPage() {
                   <h3 className="text-xl font-semibold text-gray-800 mb-3">Email Us</h3>
                   <p className="text-gray-600 mb-2">For any inquiries, please reach out to us at:</p>
                   <a
-                    href="mailto:support@explorethecity.in"
+                    href="mailto:contact@explorethecity.in"
                     className="text-primary hover:text-primary/80 font-semibold text-lg transition"
                   >
-                    support@explorethecity.in
+                    contact@explorethecity.in
                   </a>
                 </div>
 
