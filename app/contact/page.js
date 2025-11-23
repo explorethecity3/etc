@@ -134,6 +134,17 @@ export default function ContactPage() {
                   </p>
                 </div>
 
+                <div className="bg-primary/10 p-6 rounded-lg border border-primary/30">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Email Us</h3>
+                  <p className="text-gray-600 mb-2">For any inquiries, please reach out to us at:</p>
+                  <a
+                    href="mailto:support@explorethecity.in"
+                    className="text-primary hover:text-primary/80 font-semibold text-lg transition"
+                  >
+                    support@explorethecity.in
+                  </a>
+                </div>
+
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-3">What We Can Help With</h3>
                   <ul className="space-y-2 text-gray-600">
