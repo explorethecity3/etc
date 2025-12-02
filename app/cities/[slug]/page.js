@@ -1,10 +1,57 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import CitySubmenu from '@/components/CitySubmenu'
 import CityStructuredData from '@/components/CityStructuredData'
-import { getCityData } from '@/lib/cityData'
+import FAQSchema from '@/components/FAQSchema'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import RelatedCities from '@/components/RelatedCities'
+import { getCityData, getAllCitySlugs } from '@/lib/cityData'
+
+export async function generateStaticParams() {
+  const slugs = getAllCitySlugs()
+  return slugs.map((slug) => ({
+    slug: slug,
+  }))
+}
+
+export async function generateMetadata({ params }) {
+  const city = getCityData(params.slug)
+
+  if (!city) {
+    return {
+      title: 'City Not Found | Explore The City',
+      description: 'The requested city guide could not be found.',
+    }
+  }
+
+  return {
+    title: `${city.name} Travel Guide - Best Places to Visit in ${city.name}, ${city.state}`,
+    description: city.shortDescription || `Discover the best places to visit in ${city.name}, ${city.state}. Complete travel guide with attractions, food, budget tips, and hidden gems.`,
+    keywords: `${city.name}, ${city.state}, travel guide, places to visit in ${city.name}, ${city.name} tourism, ${city.name} attractions, things to do in ${city.name}`,
+    openGraph: {
+      title: `${city.name} Travel Guide | Explore The City`,
+      description: city.shortDescription || `Discover ${city.name}'s top attractions, local food, and travel tips`,
+      url: `https://www.explorethecity.in/cities/${city.slug}`,
+      siteName: 'Explore The City',
+      images: [
+        {
+          url: city.image,
+          width: 1200,
+          height: 630,
+          alt: `${city.name} - ${city.state}`,
+        },
+      ],
+      locale: 'en_IN',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${city.name} Travel Guide`,
+      description: city.shortDescription || `Discover ${city.name}'s top attractions, local food, and travel tips`,
+      images: [city.image],
+    },
+  }
+}
 
 export default function CityPage({ params }) {
   const city = getCityData(params.slug)
@@ -20,10 +67,35 @@ export default function CityPage({ params }) {
     )
   }
 
+  // FAQ data for schema markup
+  const faqs = [
+    {
+      question: `How many days do I need to explore ${city.name}?`,
+      answer: `Ideally, 3-4 days allow you to cover major attractions comfortably. If you want to explore in-depth including day trips and hidden gems, consider spending 5-7 days.`,
+    },
+    {
+      question: `Is ${city.name} safe for solo travelers?`,
+      answer: `${city.name} is generally safe for solo travelers, including women. However, always exercise normal precautions: avoid isolated areas at night, use licensed transportation, and keep valuables secure. The local people are generally helpful and welcoming to tourists.`,
+    },
+    {
+      question: `What should I not miss in ${city.name}?`,
+      answer: `Don't miss the top attractions, local street food, and cultural experiences unique to ${city.name}. Check our comprehensive guides for must-visit places, authentic eateries, and hidden gems that locals love.`,
+    },
+  ]
+
+  // Breadcrumb data for schema markup
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Cities', url: '/cities' },
+    { name: city.name, url: `/cities/${city.slug}` },
+  ]
+
   return (
     <div>
       {/* Structured Data for SEO */}
       <CityStructuredData city={city} />
+      <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema items={breadcrumbs} />
 
       {/* Hero Section */}
       <div className="relative h-[400px] w-full">
@@ -188,6 +260,9 @@ export default function CityPage({ params }) {
                 </div>
               </div>
             </section>
+
+            {/* Related Cities Section */}
+            <RelatedCities currentCitySlug={city.slug} />
           </div>
 
           {/* Sidebar */}

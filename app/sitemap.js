@@ -2,7 +2,7 @@ import { getAllCitySlugs } from '@/lib/cityData'
 import blogs from '@/data/blogs.json'
 
 export default function sitemap() {
-  const baseUrl = 'https://explorethecity.in'
+  const baseUrl = 'https://www.explorethecity.in'
   const citySlugs = getAllCitySlugs()
 
   // Static pages
@@ -73,6 +73,12 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/cities/${slug}/food`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/cities/${slug}/hidden-gems`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
