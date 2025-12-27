@@ -1,0 +1,85 @@
+# Explore The City - AI Information File
+
+## Website Overview
+Explore The City (explorethecity.in) is a comprehensive travel guide for exploring cities across India. We provide detailed information about tourist destinations, attractions, food, budget planning, and travel tips.
+
+## Purpose
+To help travelers discover and plan trips to India's most beautiful cities with authentic, detailed travel guides and practical information.
+
+## Main Content Areas
+
+### Cities Directory (/cities)
+- Comprehensive guides for major Indian cities
+- Each city includes: attractions, food scene, best time to visit, budget estimates, travel tips, and hidden gems
+- Cities covered include major tourist destinations across India
+
+### Blog (/blog)
+Travel stories, tips, and guides organized by categories:
+- Budget Travel
+- Cultural Travel
+- Festivals
+- Food & Culture
+- Travel Guide
+- Weekend Trips
+
+### Static Pages
+- About Us (/about) - Information about our mission and team
+- Contact (/contact) - Get in touch with us
+- Privacy Policy (/privacy-policy) - Data protection information
+- Terms & Conditions (/terms) - Legal information
+
+## Key Features
+1. Detailed city guides with practical information
+2. Budget estimates for different travel styles
+3. Seasonal travel recommendations
+4. Local food and cuisine guides
+5. Off-the-beaten-path recommendations
+6. Cultural insights and local customs
+7. Transportation and safety tips
+
+## Content Structure
+Each city guide includes:
+- Overview and description
+- Top attractions (with entry fees and timings where applicable)
+- Best time to visit (season-wise breakdown)
+- Local food and dining recommendations
+- Hidden gems and secret spots
+- Essential travel tips
+- Budget breakdown (accommodation, food, transport, activities)
+
+## Target Audience
+- Domestic travelers exploring India
+- International tourists visiting India
+- Budget travelers and backpackers
+- Cultural enthusiasts
+- Food lovers
+- Weekend trip planners
+- Solo travelers, families, and groups
+
+## Geographic Focus
+Primary focus on Indian cities across states including:
+- Major metropolitan areas
+- Historical and cultural destinations
+- Coastal and hill stations
+- Pilgrimage sites
+- Emerging tourist destinations
+
+## Content Guidelines
+- All information is practical and actionable
+- Focus on authentic local experiences
+- Budget-friendly options highlighted
+- Safety and responsible travel emphasized
+- Cultural sensitivity maintained
+- Up-to-date information (2025)
+
+## API Endpoints
+- /api/* - Internal API routes (not for public access)
+
+## Sitemap
+Available at: https://www.explorethecity.in/sitemap.xml
+
+## Social Media
+Twitter: @explorethecity
+
+## Last Updated
+2025
