@@ -7,9 +7,9 @@ export function middleware(request) {
   if (process.env.NODE_ENV === 'production') {
     // If the host is explorethecity.in (without www), redirect to www version
     if (host === 'explorethecity.in') {
-      const url = request.nextUrl.clone()
-      url.host = 'www.explorethecity.in'
-      return NextResponse.redirect(url, 301) // Permanent redirect
+      const url = new URL(request.url)
+      url.hostname = 'www.explorethecity.in'
+      return NextResponse.redirect(url.toString(), 301) // Permanent redirect
     }
   }
 
