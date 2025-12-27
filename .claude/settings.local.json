@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(ren:*)",
-      "Bash(\"d:\\personal\\New folder\\etc\\app\\contact\\layout.js\")"
+      "Bash(\"d:\\personal\\New folder\\etc\\app\\contact\\layout.js\")",
+      "Bash(git checkout:*)",
+      "Bash(python:*)",
+      "Bash(node -e:*)",
+      "Bash(node humanize_remaining.js:*)",
+      "Bash(node complete_humanization.js:*)"
     ],
     "deny": [],
     "ask": []

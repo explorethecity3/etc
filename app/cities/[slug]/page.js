@@ -67,21 +67,8 @@ export default function CityPage({ params }) {
     )
   }
 
-  // FAQ data for schema markup
-  const faqs = [
-    {
-      question: `How many days do I need to explore ${city.name}?`,
-      answer: `Ideally, 3-4 days allow you to cover major attractions comfortably. If you want to explore in-depth including day trips and hidden gems, consider spending 5-7 days.`,
-    },
-    {
-      question: `Is ${city.name} safe for solo travelers?`,
-      answer: `${city.name} is generally safe for solo travelers, including women. However, always exercise normal precautions: avoid isolated areas at night, use licensed transportation, and keep valuables secure. The local people are generally helpful and welcoming to tourists.`,
-    },
-    {
-      question: `What should I not miss in ${city.name}?`,
-      answer: `Don't miss the top attractions, local street food, and cultural experiences unique to ${city.name}. Check our comprehensive guides for must-visit places, authentic eateries, and hidden gems that locals love.`,
-    },
-  ]
+  // FAQ data from city JSON file
+  const faqs = city.faq || []
 
   // Breadcrumb data for schema markup
   const breadcrumbs = [
@@ -243,23 +230,19 @@ export default function CityPage({ params }) {
             </section>
 
             {/* FAQ Section */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                <div className="bg-white p-5 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-gray-800 mb-2">How many days do I need to explore {city.name}?</h3>
-                  <p className="text-gray-600">Ideally, 3-4 days allow you to cover major attractions comfortably. If you want to explore in-depth including day trips and hidden gems, consider spending 5-7 days.</p>
+            {faqs && faqs.length > 0 && (
+              <section className="mb-12">
+                <h2 className="text-3xl font-bold mb-6 text-gray-800">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, index) => (
+                    <div key={index} className="bg-white p-5 rounded-lg shadow-sm">
+                      <h3 className="font-semibold text-gray-800 mb-2">{faq.question}</h3>
+                      <p className="text-gray-600">{faq.answer}</p>
+                    </div>
+                  ))}
                 </div>
-                <div className="bg-white p-5 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-gray-800 mb-2">Is {city.name} safe for solo travelers?</h3>
-                  <p className="text-gray-600">{city.name} is generally safe for solo travelers, including women. However, always exercise normal precautions: avoid isolated areas at night, use licensed transportation, and keep valuables secure. The local people are generally helpful and welcoming to tourists.</p>
-                </div>
-                <div className="bg-white p-5 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-gray-800 mb-2">What should I not miss in {city.name}?</h3>
-                  <p className="text-gray-600">Don't miss the top attractions, local street food, and cultural experiences unique to {city.name}. Check our comprehensive guides for must-visit places, authentic eateries, and hidden gems that locals love.</p>
-                </div>
-              </div>
-            </section>
+              </section>
+            )}
 
             {/* Related Cities Section */}
             <RelatedCities currentCitySlug={city.slug} />
