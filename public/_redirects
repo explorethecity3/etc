@@ -1,3 +1,0 @@
-# Redirect non-www to www
-https://explorethecity.in/* https://www.explorethecity.in/:splat 301!
-http://explorethecity.in/* https://www.explorethecity.in/:splat 301!
