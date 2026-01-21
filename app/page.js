@@ -4,7 +4,7 @@ import CityCard from '@/components/CityCard'
 import AdSense from '@/components/AdSense'
 import { getCityCards } from '@/lib/cityData'
 import blogs from '@/data/blogs.json'
-import { FaMapMarkedAlt, FaHeart, FaUsers, FaLightbulb, FaLandmark, FaUtensils, FaHiking, FaPalette } from 'react-icons/fa'
+import { FaMapMarkedAlt, FaLandmark, FaUtensils, FaHiking, FaPalette } from 'react-icons/fa'
 
 export default function Home() {
   // Get all cities
@@ -17,63 +17,77 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section with Background Image */}
-      <section className="relative h-[600px] bg-cover bg-center" style={{
-        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600')"
+      <section className="relative h-[700px] bg-cover bg-center" style={{
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/hero-banner.png')"
       }}>
         <div className="container-custom h-full flex items-center">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight uppercase tracking-wide">
-              Adventure<br />& Exploration
+          <div className="max-w-3xl text-white pt-20">
+            <h1 className="text-5xl md:text-7xl font-serif font-light mb-6 leading-tight italic">
+              Every City Has a Story.<br />
+              <span className="font-normal not-italic">Let's Explore Yours.</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-              Discover hidden gems, local experiences, and authentic travel stories across India's most amazing cities
+            <p className="text-lg md:text-xl mb-8 leading-relaxed font-light">
+              Discover the hidden corners and untold tales of India's vibrant cities.
             </p>
-            <Link href="/cities" className="btn-primary">
-              Explore Our Travel Destinations
+            <Link href="/cities" className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-xl">
+              Explore Cities →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      {/* Wander Through Section */}
+      <section className="py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              Why Explore With Us
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif italic text-gray-900 mb-2">
+              Wander Through...
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Your trusted companion for discovering the real India, one city at a time
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-6">
-                <FaMapMarkedAlt className="text-3xl" />
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 h-80">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-900/80 to-orange-900/80"></div>
+              <div className="relative h-full p-8 text-white flex flex-col justify-end">
+                <FaMapMarkedAlt className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold mb-2">Hidden Streets</h3>
+                <p className="text-amber-100 mb-4">Temples, Bazaars & Secret Galleries</p>
+                <Link href="/cities" className="text-white hover:text-amber-200 font-semibold inline-flex items-center gap-2">
+                  Discover More →
+                </Link>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Authentic Guides</h3>
-              <p className="text-gray-600">Comprehensive city guides with local insights and hidden gems you won't find elsewhere</p>
             </div>
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 text-purple-600 rounded-full mb-6">
-                <FaHeart className="text-3xl" />
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 h-80">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-900/80 to-red-900/80"></div>
+              <div className="relative h-full p-8 text-white flex flex-col justify-end">
+                <FaUtensils className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold mb-2">Local Flavors</h3>
+                <p className="text-orange-100 mb-4">Spice Curry, Naan & Samosas</p>
+                <Link href="/blog?category=Food" className="text-white hover:text-orange-200 font-semibold inline-flex items-center gap-2">
+                  Discover More →
+                </Link>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Curated Experiences</h3>
-              <p className="text-gray-600">Handpicked recommendations from food to culture, tailored for every type of traveler</p>
             </div>
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 text-orange-600 rounded-full mb-6">
-                <FaUsers className="text-3xl" />
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 h-80">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 to-pink-900/80"></div>
+              <div className="relative h-full p-8 text-white flex flex-col justify-end">
+                <FaPalette className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold mb-2">Living Culture</h3>
+                <p className="text-purple-100 mb-4">Follow street side Ipda hunters</p>
+                <Link href="/blog?category=Culture" className="text-white hover:text-purple-200 font-semibold inline-flex items-center gap-2">
+                  Discover More →
+                </Link>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Travel Community</h3>
-              <p className="text-gray-600">Join thousands of travelers sharing stories, tips, and unforgettable experiences</p>
             </div>
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-6">
-                <FaLightbulb className="text-3xl" />
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 h-80">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-900/80 to-cyan-900/80"></div>
+              <div className="relative h-full p-8 text-white flex flex-col justify-end">
+                <FaLandmark className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold mb-2">Secret Spots</h3>
+                <p className="text-teal-100 mb-4">Tercenters Haze to Calm Troptique</p>
+                <Link href="/cities" className="text-white hover:text-teal-200 font-semibold inline-flex items-center gap-2">
+                  Discover More →
+                </Link>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Practical Tips</h3>
-              <p className="text-gray-600">Budget guides, best times to visit, and insider tips to make your journey smooth</p>
             </div>
           </div>
         </div>
