@@ -54,11 +54,8 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6525177681486877"
-          crossOrigin="anonymous"
-        />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6525177681486877"
+          crossorigin="anonymous"></script>
       </head>
       <body className={inter.className}>
         <Navbar />
