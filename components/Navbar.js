@@ -2,14 +2,28 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <nav className="bg-primary shadow-md sticky top-0 z-50">
+    <nav className={`shadow-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled
+        ? 'bg-primary'
+        : 'bg-transparent backdrop-blur-md bg-black/20'
+    }`}>
       <div className="container-custom">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -32,9 +46,9 @@ export default function Navbar() {
             <Link href="/cities" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Destinations
             </Link>
-            <Link href="/blog" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
+            {/* <Link href="/blog" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Blog
-            </Link>
+            </Link> */}
             <Link href="/about" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               About
             </Link>

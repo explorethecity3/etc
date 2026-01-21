@@ -7,7 +7,8 @@
       "Bash(python:*)",
       "Bash(node -e:*)",
       "Bash(node humanize_remaining.js:*)",
-      "Bash(node complete_humanization.js:*)"
+      "Bash(node complete_humanization.js:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []
