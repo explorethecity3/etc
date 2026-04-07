@@ -23,14 +23,14 @@ export default function Home() {
         <div className="container-custom h-full flex items-center">
           <div className="max-w-3xl text-white pt-20">
             <h1 className="text-5xl md:text-7xl font-serif font-light mb-6 leading-tight italic">
-              Every City Has a Story.<br />
-              <span className="font-normal not-italic">Let's Explore Yours.</span>
+              Bangalore Has a Story.<br />
+              <span className="font-normal not-italic">Let's Explore It Together.</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 leading-relaxed font-light">
-              Discover the hidden corners and untold tales of India's vibrant cities.
+              Discover the hidden corners and untold tales of India's Garden City.
             </p>
-            <Link href="/cities" className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-xl">
-              Explore Cities →
+            <Link href="/cities/bangalore" className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-xl">
+              Explore Bangalore →
             </Link>
           </div>
         </div>
@@ -93,18 +93,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Destinations Section */}
+      {/* Featured Destination Section */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              Featured Destinations
+              Featured Destination
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Start your journey with these amazing destinations across India
+              Start your journey with our in-depth guide to Bangalore, India's Garden City
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="max-w-2xl mx-auto">
             {cities.map((city) => (
               <CityCard key={city.slug} city={city} />
             ))}
@@ -165,11 +165,11 @@ export default function Home() {
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-5xl md:text-6xl font-extrabold mb-2">{cities.length}+</div>
-              <div className="text-lg md:text-xl text-blue-100">Cities Covered</div>
+              <div className="text-5xl md:text-6xl font-extrabold mb-2">38+</div>
+              <div className="text-lg md:text-xl text-blue-100">Top Attractions</div>
             </div>
             <div>
-              <div className="text-5xl md:text-6xl font-extrabold mb-2">50+</div>
+              <div className="text-5xl md:text-6xl font-extrabold mb-2">20+</div>
               <div className="text-lg md:text-xl text-blue-100">Hidden Gems</div>
             </div>
             <div>
