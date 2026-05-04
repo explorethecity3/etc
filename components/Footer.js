@@ -12,12 +12,17 @@ export default function Footer() {
               About Us
             </h3>
             <p className="text-white text-sm max-w-md">
-              Your ultimate guide to discovering amazing cities across India.
-              Explore hidden gems, local experiences, and travel tips.
+              An independent, locally-written travel publication. We started with one city — Bangalore — and write everything from first-hand visits.
             </p>
-            <div className="mt-4">
-              <Link href="/about" className="text-white hover:text-gray-200 underline text-sm">
-                Learn More About Us
+            <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              <Link href="/about" className="text-white hover:text-gray-200 underline">
+                About
+              </Link>
+              <Link href="/cities/bangalore" className="text-white hover:text-gray-200 underline">
+                Bangalore Guide
+              </Link>
+              <Link href="/blog" className="text-white hover:text-gray-200 underline">
+                Articles
               </Link>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import AdSense from '@/components/AdSense'
 import blogs from '@/data/blogs.json'
 
 export async function generateMetadata({ searchParams }) {
@@ -8,9 +7,9 @@ export async function generateMetadata({ searchParams }) {
 
   if (category) {
     return {
-      title: `${category} - Travel Blog | Explore The City`,
-      description: `Explore ${category.toLowerCase()} articles, stories, and guides. Discover practical tips and insights for your travel adventures in India.`,
-      keywords: `${category.toLowerCase()}, travel blog, travel stories, india travel, city guides`,
+      title: `${category} - Travel Articles | Explore The City`,
+      description: `${category} articles, stories and practical India travel guides written from first-hand experience.`,
+      keywords: `${category.toLowerCase()}, india travel, travel articles, city guides`,
       alternates: {
         canonical: `https://www.explorethecity.in/blog?category=${encodeURIComponent(category)}`,
       },
@@ -18,9 +17,9 @@ export async function generateMetadata({ searchParams }) {
   }
 
   return {
-    title: 'Travel Blog - Stories, Tips & Guides | Explore The City',
-    description: 'Read inspiring travel stories, practical tips, and comprehensive guides for exploring cities across India. Learn from experienced travelers.',
-    keywords: 'travel blog, travel stories, travel tips, india travel, city guides',
+    title: 'India Travel Articles | Explore The City',
+    description: 'Long-form India travel articles — street food, monsoon travel, train journeys, festivals, photography spots, solo travel safety and budget itineraries — written from first-hand trips.',
+    keywords: 'india travel articles, india travel guide, india travel tips, indian street food, indian railways, festivals',
     alternates: {
       canonical: 'https://www.explorethecity.in/blog',
     },
@@ -42,16 +41,21 @@ export default async function BlogPage({ searchParams }) {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-primary text-white py-20 pt-32">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase">
-            {selectedCategory ? `${selectedCategory}` : 'Travel Stories & Guides'}
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            {selectedCategory ? `${selectedCategory} Articles` : 'India Travel Articles'}
           </h1>
-          <p className="text-xl max-w-2xl mx-auto">
+          <p className="text-xl max-w-2xl mx-auto text-white/90">
             {selectedCategory
-              ? `Explore our collection of ${selectedCategory.toLowerCase()} articles and guides`
-              : 'Discover inspiring stories, practical tips, and insider knowledge from fellow travelers'}
+              ? `${selectedCategory} articles and guides from our archive.`
+              : `Long-form articles on travelling across India — alongside our focused `}
+            {!selectedCategory && (
+              <Link href="/cities/bangalore" className="underline hover:text-white">Bangalore guide</Link>
+            )}
+            {!selectedCategory && '.'}
           </p>
+          <p className="text-sm text-white/70 mt-4">{blogs.length} articles · updated periodically</p>
         </div>
       </section>
 

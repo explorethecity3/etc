@@ -43,12 +43,12 @@ export default function Navbar() {
             <Link href="/" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Home
             </Link>
-            <Link href="/cities" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
-              Destinations
+            <Link href="/cities/bangalore" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
+              Bangalore Guide
             </Link>
-            {/* <Link href="/blog" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
-              Blog
-            </Link> */}
+            <Link href="/blog" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
+              Articles
+            </Link>
             <Link href="/about" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               About
             </Link>
@@ -79,18 +79,18 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="/cities"
+              href="/cities/bangalore"
               className="block py-3 text-white hover:text-gray-200 transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
-              Destinations
+              Bangalore Guide
             </Link>
             <Link
               href="/blog"
               className="block py-3 text-white hover:text-gray-200 transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
-              Blog
+              Articles
             </Link>
             <Link
               href="/about"

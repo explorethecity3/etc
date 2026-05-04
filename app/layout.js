@@ -6,13 +6,16 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Explore The City - Discover Amazing Cities Across India',
-  description: 'Your ultimate guide to exploring cities in India. Discover hidden gems, local food, travel tips, and authentic experiences.',
-  keywords: 'travel, india, cities, tourism, travel guide, explore india, city guide',
-  authors: [{ name: 'Explore The City' }],
+  title: 'Explore The City — A Locally-Written Bangalore Travel Guide',
+  description: 'A first-hand, locally-written travel guide to Bangalore (Bengaluru) — attractions, food, hidden gems, day trips, neighbourhoods, and practical tips. Plus long-form articles on travelling across India.',
+  keywords: 'bangalore travel guide, bengaluru tourism, things to do in bangalore, india travel articles, bangalore food, bangalore hidden gems',
+  authors: [{ name: 'Explore The City Editorial' }],
   creator: 'Explore The City',
   publisher: 'Explore The City',
   metadataBase: new URL('https://www.explorethecity.in'),
+  alternates: {
+    canonical: 'https://www.explorethecity.in',
+  },
   verification: {
     google: 'IZHMSq9e0p173wQb1TeEu7nYjjbB5yPn12rmIuG_-_E',
   },
@@ -20,8 +23,8 @@ export const metadata = {
     'google-adsense-account': 'ca-pub-6525177681486877',
   },
   openGraph: {
-    title: 'Explore The City - Discover Amazing Cities Across India',
-    description: 'Your ultimate guide to exploring cities in India',
+    title: 'Explore The City — A Locally-Written Bangalore Travel Guide',
+    description: 'First-hand Bangalore travel guide — attractions, food, hidden gems, day trips and practical tips, plus long-form India travel articles.',
     url: 'https://www.explorethecity.in',
     siteName: 'Explore The City',
     locale: 'en_IN',

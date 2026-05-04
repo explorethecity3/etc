@@ -1,14 +1,15 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import CityCard from '@/components/CityCard'
-import AdSense from '@/components/AdSense'
 import { getCityCards } from '@/lib/cityData'
 import { FaMapMarkedAlt, FaUtensils, FaMoneyBillWave, FaClock, FaCompass, FaRoute, FaQuestionCircle } from 'react-icons/fa'
 
 export const metadata = {
-  title: 'Explore Bangalore - The Complete City Guide | Explore The City',
-  description: 'Your complete travel guide to Bangalore. Discover top attractions, local food, hidden gems, travel tips, and budget estimates for the Garden City of India.',
+  title: 'Bangalore Travel Guide | Explore The City',
+  description: 'A complete, locally-written travel guide to Bangalore: top attractions, food, hidden gems, neighbourhoods, day trips, and budget tips for the Garden City of India.',
   keywords: 'bangalore travel guide, bengaluru tourism, explore bangalore, things to do in bangalore, bangalore city guide',
+  alternates: {
+    canonical: 'https://www.explorethecity.in/cities',
+  },
 }
 
 export default function CitiesPage() {
@@ -22,29 +23,28 @@ export default function CitiesPage() {
       }}>
         <div className="container-custom text-center text-white">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 uppercase tracking-wide">
-            Explore Bangalore - The Garden City of India
+            Bangalore Travel Guide
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 leading-relaxed">
-            Your complete guide to the best attractions, food, hidden gems and experiences in India's Silicon Valley
+            A locally-researched guide to Bengaluru — the Garden City and India's startup capital. Attractions, food, neighbourhoods, day trips and the practical things visitors actually need.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto mt-12">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-              <div className="text-4xl font-extrabold mb-2">38+</div>
-              <div className="text-blue-100">Attractions</div>
+              <div className="text-4xl font-extrabold mb-2">{cities[0]?.attractions || 38}+</div>
+              <div className="text-blue-100">Attractions covered</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-              <div className="text-4xl font-extrabold mb-2">20+</div>
-              <div className="text-blue-100">Hidden Gems</div>
+              <div className="text-4xl font-extrabold mb-2">12</div>
+              <div className="text-blue-100">Local dishes profiled</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <div className="text-4xl font-extrabold mb-2">6</div>
-              <div className="text-blue-100">Detailed Guides</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-              <div className="text-4xl font-extrabold mb-2">∞</div>
-              <div className="text-blue-100">Memories</div>
+              <div className="text-blue-100">Detailed sub-guides</div>
             </div>
           </div>
+          <p className="text-sm text-blue-100/80 mt-8 max-w-2xl mx-auto">
+            More cities will be added only when we can write them with the same first-hand research. Until then, this site is dedicated to one city, done well.
+          </p>
         </div>
       </section>
 
@@ -53,10 +53,10 @@ export default function CitiesPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              Featured Destination
+              The City We Cover
             </h2>
             <p className="text-gray-600 text-lg">
-              Dive deep into everything Bangalore has to offer
+              Tap the card to open the full guide.
             </p>
           </div>
 
@@ -68,77 +68,72 @@ export default function CitiesPage() {
         </div>
       </section>
 
-      {/* AdSense */}
-      <div className="container-custom">
-        {/* <AdSense slot="7777777777" format="horizontal" /> */}
-      </div>
-
       {/* What's Included Section */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              What's In Each City Guide
+              What's Inside the Guide
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Every destination guide is packed with comprehensive information to make your trip unforgettable
+              Six dedicated chapters, written from first-hand visits and updated as the city changes.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+            <Link href="/cities/bangalore/places-to-explore" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-blue-100 p-4 rounded-full">
                   <FaMapMarkedAlt className="text-3xl text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Top Attractions</h3>
+                <h3 className="text-xl font-bold text-gray-900">Places to Explore</h3>
               </div>
-              <p className="text-gray-600">Curated list of must-visit landmarks, monuments, museums, and cultural sites with detailed descriptions</p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-gray-600">Lalbagh, Cubbon Park, Bangalore Palace, ISKCON, Vidhana Soudha, Tipu Sultan's Summer Palace and more — with timings, fees and what to expect.</p>
+            </Link>
+            <Link href="/cities/bangalore/food" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-orange-100 p-4 rounded-full">
                   <FaUtensils className="text-3xl text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Local Cuisine</h3>
+                <h3 className="text-xl font-bold text-gray-900">Food & Cafes</h3>
               </div>
-              <p className="text-gray-600">Discover authentic local dishes, best restaurants, street food spots, and food experiences unique to each city</p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-gray-600">12 must-try Bangalore dishes — from masala dosa at Vidyarthi Bhavan to ragi mudde, bisi bele bath and filter coffee — with where to find each.</p>
+            </Link>
+            <Link href="/cities/bangalore/budget" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-green-100 p-4 rounded-full">
                   <FaMoneyBillWave className="text-3xl text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Budget Estimates</h3>
               </div>
-              <p className="text-gray-600">Detailed cost breakdown for accommodation, food, transport, and activities for different budget ranges</p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-gray-600">Daily spend breakdowns across backpacker, mid-range and premium trips — accommodation, food, transport and entry fees.</p>
+            </Link>
+            <Link href="/cities/bangalore/best-time" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-purple-100 p-4 rounded-full">
                   <FaClock className="text-3xl text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Best Time to Visit</h3>
               </div>
-              <p className="text-gray-600">Seasonal guide with weather patterns, festivals, and optimal travel periods for each destination</p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-gray-600">Season-by-season notes — what each month actually feels like in Bangalore, plus festival timings (Karaga, Kadalekai Parishe, Lit Fest, Dasara).</p>
+            </Link>
+            <Link href="/cities/bangalore/travel-tips" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-pink-100 p-4 rounded-full">
                   <FaRoute className="text-3xl text-pink-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Travel Tips</h3>
               </div>
-              <p className="text-gray-600">Practical advice on transportation, safety, local customs, and insider tips from experienced travelers</p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-gray-600">Metro vs auto vs cab, safe areas to stay, monsoon pitfalls, etiquette at temples, and what locals wish first-time visitors knew.</p>
+            </Link>
+            <Link href="/cities/bangalore/hidden-gems" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-teal-100 p-4 rounded-full">
                   <FaCompass className="text-3xl text-teal-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Hidden Gems</h3>
               </div>
-              <p className="text-gray-600">Off-the-beaten-path locations, local favorites, and secret spots that most tourists miss</p>
-            </div>
+              <p className="text-gray-600">Chunchi Falls, Nrityagram dance village, Dodda Alada Mara, Hesaraghatta grasslands, the HAL Aerospace Museum and other lesser-known spots.</p>
+            </Link>
           </div>
         </div>
       </section>
@@ -151,7 +146,7 @@ export default function CitiesPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Everything you need to know about exploring Indian cities
+              The questions first-time visitors to Bangalore ask most often.
             </p>
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
@@ -195,27 +190,6 @@ export default function CitiesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      {/* <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 uppercase">
-              Ready to Start Exploring?
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 text-blue-50">
-              Pick a destination above and dive into our comprehensive city guides. Your next adventure awaits!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/blog" className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl">
-                Read Travel Stories
-              </Link>
-              <Link href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   )
 }
