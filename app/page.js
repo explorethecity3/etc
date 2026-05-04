@@ -1,18 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import CityCard from '@/components/CityCard'
-import AdSense from '@/components/AdSense'
 import { getCityCards } from '@/lib/cityData'
-import blogs from '@/data/blogs.json'
-import { FaMapMarkedAlt, FaLandmark, FaUtensils, FaHiking, FaPalette } from 'react-icons/fa'
+import { FaMapMarkedAlt, FaLandmark, FaUtensils, FaPalette } from 'react-icons/fa'
 
 export default function Home() {
-  // Get all cities
   const cities = getCityCards()
-
-  // Get latest blog posts
-  const latestBlog = blogs[0]
-  const recentBlogs = blogs.slice(0, 3)
 
   return (
     <div>
@@ -27,11 +20,16 @@ export default function Home() {
               <span className="font-normal not-italic">Let's Explore It Together.</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 leading-relaxed font-light">
-              Discover the hidden corners and untold tales of India's Garden City.
+              A locally-written, in-depth travel guide to India's Garden City — attractions, food, day trips and the practical stuff nobody tells first-time visitors.
             </p>
-            <Link href="/cities/bangalore" className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-xl">
-              Explore Bangalore →
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/cities/bangalore" className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-xl">
+                Open the Bangalore Guide →
+              </Link>
+              <Link href="/about" className="inline-block bg-white/10 backdrop-blur-sm border border-white/40 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all">
+                About this site
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -41,17 +39,20 @@ export default function Home() {
         <div className="container-custom">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-serif italic text-gray-900 mb-2">
-              Wander Through...
+              Wander Through Bangalore...
             </h2>
+            <p className="text-gray-600 text-lg mt-3 max-w-2xl">
+              Four sides of the same city — heritage streets, food legends, living culture, and the hills that frame it.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 h-80">
               <div className="absolute inset-0 bg-gradient-to-br from-amber-900/80 to-orange-900/80"></div>
               <div className="relative h-full p-8 text-white flex flex-col justify-end">
                 <FaMapMarkedAlt className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-2">Hidden Streets</h3>
-                <p className="text-amber-100 mb-4">Temples, Bazaars & Secret Galleries</p>
-                <Link href="/cities" className="text-white hover:text-amber-200 font-semibold inline-flex items-center gap-2">
+                <h3 className="text-2xl font-bold mb-2">Heritage Streets</h3>
+                <p className="text-amber-100 mb-4">Old Bangalore, temples, bazaars, palaces.</p>
+                <Link href="/cities/bangalore/places-to-explore" className="text-white hover:text-amber-200 font-semibold inline-flex items-center gap-2">
                   Discover More →
                 </Link>
               </div>
@@ -61,8 +62,8 @@ export default function Home() {
               <div className="relative h-full p-8 text-white flex flex-col justify-end">
                 <FaUtensils className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-2xl font-bold mb-2">Local Flavors</h3>
-                <p className="text-orange-100 mb-4">Spice Curry, Naan & Samosas</p>
-                <Link href="/blog?category=Food" className="text-white hover:text-orange-200 font-semibold inline-flex items-center gap-2">
+                <p className="text-orange-100 mb-4">Masala dosa, filter coffee, ragi mudde.</p>
+                <Link href="/cities/bangalore/food" className="text-white hover:text-orange-200 font-semibold inline-flex items-center gap-2">
                   Discover More →
                 </Link>
               </div>
@@ -72,8 +73,8 @@ export default function Home() {
               <div className="relative h-full p-8 text-white flex flex-col justify-end">
                 <FaPalette className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-2xl font-bold mb-2">Living Culture</h3>
-                <p className="text-purple-100 mb-4">Follow street side Ipda hunters</p>
-                <Link href="/blog?category=Culture" className="text-white hover:text-purple-200 font-semibold inline-flex items-center gap-2">
+                <p className="text-purple-100 mb-4">Cafes, breweries, theatres, weekend markets.</p>
+                <Link href="/cities/bangalore/travel-tips" className="text-white hover:text-purple-200 font-semibold inline-flex items-center gap-2">
                   Discover More →
                 </Link>
               </div>
@@ -82,9 +83,9 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-teal-900/80 to-cyan-900/80"></div>
               <div className="relative h-full p-8 text-white flex flex-col justify-end">
                 <FaLandmark className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-2">Secret Spots</h3>
-                <p className="text-teal-100 mb-4">Tercenters Haze to Calm Troptique</p>
-                <Link href="/cities" className="text-white hover:text-teal-200 font-semibold inline-flex items-center gap-2">
+                <h3 className="text-2xl font-bold mb-2">Hidden Gems</h3>
+                <p className="text-teal-100 mb-4">Offbeat corners locals quietly love.</p>
+                <Link href="/cities/bangalore/hidden-gems" className="text-white hover:text-teal-200 font-semibold inline-flex items-center gap-2">
                   Discover More →
                 </Link>
               </div>
@@ -98,10 +99,10 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              Featured Destination
+              The Bangalore Guide
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Start your journey with our in-depth guide to Bangalore, India's Garden City
+              We're starting with the city we know best — a long-form, locally researched guide to Bengaluru.
             </p>
           </div>
           <div className="max-w-2xl mx-auto">
@@ -112,210 +113,148 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Travel Categories Section */}
+      {/* Explore by Interest Section */}
       <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              Explore by Interest
+              Pick Your Side of Bangalore
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Find your perfect travel experience based on what excites you most
+              Six focused chapters of the guide. Jump straight into what you came for.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/blog?category=Culture" className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/cities/bangalore/places-to-explore" className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800"></div>
               <div className="relative p-8 text-white">
                 <FaLandmark className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-2">Heritage & Culture</h3>
-                <p className="text-purple-100">Explore historic monuments, temples, and cultural experiences</p>
+                <h3 className="text-2xl font-bold mb-2">Places to Explore</h3>
+                <p className="text-purple-100">Lalbagh, Cubbon Park, Bangalore Palace, ISKCON and more.</p>
               </div>
             </Link>
-            <Link href="/blog?category=Food" className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+            <Link href="/cities/bangalore/food" className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-600 to-red-600"></div>
               <div className="relative p-8 text-white">
                 <FaUtensils className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-2">Food & Cuisine</h3>
-                <p className="text-orange-100">Discover local delicacies and authentic street food experiences</p>
+                <h3 className="text-2xl font-bold mb-2">Food & Cafes</h3>
+                <p className="text-orange-100">Where to find the best dosa, filter coffee, and craft beer.</p>
               </div>
             </Link>
-            <Link href="/blog?category=Adventure" className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-600"></div>
-              <div className="relative p-8 text-white">
-                <FaHiking className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-2">Adventure & Nature</h3>
-                <p className="text-green-100">Trek mountains, explore beaches, and embrace outdoor adventures</p>
-              </div>
-            </Link>
-            <Link href="/blog?category=Art" className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-600 to-rose-600"></div>
+            <Link href="/cities/bangalore/hidden-gems" className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-600 to-cyan-700"></div>
               <div className="relative p-8 text-white">
                 <FaPalette className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-2">Art & Markets</h3>
-                <p className="text-pink-100">Shop at vibrant markets and discover local arts and crafts</p>
+                <h3 className="text-2xl font-bold mb-2">Hidden Gems</h3>
+                <p className="text-teal-100">Day-trip waterfalls, banyan trees, dance villages, lakes.</p>
+              </div>
+            </Link>
+            <Link href="/cities/bangalore/best-time" className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-700"></div>
+              <div className="relative p-8 text-white">
+                <FaMapMarkedAlt className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold mb-2">Best Time to Visit</h3>
+                <p className="text-blue-100">Season-by-season notes and what each month actually feels like.</p>
+              </div>
+            </Link>
+            <Link href="/cities/bangalore/budget" className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-700"></div>
+              <div className="relative p-8 text-white">
+                <FaUtensils className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold mb-2">Budget Planner</h3>
+                <p className="text-green-100">Realistic daily spend across budget, mid-range and premium trips.</p>
+              </div>
+            </Link>
+            <Link href="/cities/bangalore/travel-tips" className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-600 to-rose-700"></div>
+              <div className="relative p-8 text-white">
+                <FaLandmark className="text-5xl mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold mb-2">Travel Tips</h3>
+                <p className="text-pink-100">Transport, safety, neighbourhoods, etiquette and what to skip.</p>
               </div>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      {/* What's Inside the Guide */}
+      <section className="py-20 bg-gradient-to-r from-blue-700 to-indigo-800 text-white">
         <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-5xl md:text-6xl font-extrabold mb-2">38+</div>
-              <div className="text-lg md:text-xl text-blue-100">Top Attractions</div>
+              <div className="text-5xl md:text-6xl font-extrabold mb-2">{cities[0]?.attractions || 38}+</div>
+              <div className="text-lg md:text-xl text-blue-100">Attractions covered</div>
             </div>
             <div>
-              <div className="text-5xl md:text-6xl font-extrabold mb-2">20+</div>
-              <div className="text-lg md:text-xl text-blue-100">Hidden Gems</div>
+              <div className="text-5xl md:text-6xl font-extrabold mb-2">12</div>
+              <div className="text-lg md:text-xl text-blue-100">Local dishes & where to find them</div>
             </div>
             <div>
-              <div className="text-5xl md:text-6xl font-extrabold mb-2">100+</div>
-              <div className="text-lg md:text-xl text-blue-100">Travel Tips</div>
-            </div>
-            <div>
-              <div className="text-5xl md:text-6xl font-extrabold mb-2">1000+</div>
-              <div className="text-lg md:text-xl text-blue-100">Happy Travelers</div>
+              <div className="text-5xl md:text-6xl font-extrabold mb-2">6</div>
+              <div className="text-lg md:text-xl text-blue-100">Detailed sub-guides</div>
             </div>
           </div>
+          <p className="text-center text-blue-100 max-w-2xl mx-auto mt-10 text-sm">
+            Every page is hand-written based on first-hand visits and local knowledge — no AI listicle filler, no scraped reviews.
+          </p>
         </div>
       </section>
 
-      {/* AdSense Slot 1 */}
-      {/* <div className="container-custom">
-        <AdSense slot="1234567890" format="horizontal" />
-      </div> */}
-
-      {/* Latest Blog Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              Travel Stories & Guides
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Read inspiring stories and practical travel tips from our adventures
-            </p>
-          </div>
-
-          {/* Blog Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {recentBlogs.map((blog) => (
-              <article key={blog.slug} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
-                <div className="relative h-[250px]">
-                  <Image
-                    src={blog.image}
-                    alt={blog.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      {blog.category}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                    <span>{blog.date}</span>
-                    <span>•</span>
-                    <span>{blog.readTime}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors">
-                    <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {blog.excerpt}
-                  </p>
-                  <Link
-                    href={`/blog/${blog.slug}`}
-                    className="text-primary hover:text-orange-600 font-semibold inline-flex items-center gap-2"
-                  >
-                    Read More →
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          {/* More Blog Posts */}
-          <div className="mt-16 text-center">
-            <Link href="/blog" className="btn-primary">
-              View All Blog Posts
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* AdSense Slot 2 */}
-      {/* <div className="container-custom">
-        <AdSense slot="0987654321" format="horizontal" />
-      </div> */}
-
-      {/* Quick Travel Tips Section */}
+      {/* Practical Bangalore Tips */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              Quick Travel Tips
+              Quick Bangalore Tips
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Essential advice to make your Indian city adventures smooth and memorable
+              The questions every first-time visitor to Bangalore asks, answered briefly. Tap any card for the full chapter.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border-l-4 border-blue-600">
+            <Link href="/cities/bangalore/best-time" className="block bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">🕐 Best Time to Visit</h3>
-              <p className="text-gray-700">Most Indian cities are best explored between October and March when the weather is pleasant. Avoid peak summer (April-June) and monsoon disruptions.</p>
-            </div>
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border-l-4 border-green-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">💰 Budget Planning</h3>
-              <p className="text-gray-700">Budget travelers can explore comfortably with ₹1500-2500/day, while mid-range travelers should plan ₹3000-5000/day including accommodation and meals.</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl border-l-4 border-purple-600">
+              <p className="text-gray-700">Bangalore sits at 900m, so the weather stays 20–30°C most of the year. November–February is ideal; even peak summer rarely crosses 35°C.</p>
+            </Link>
+            <Link href="/cities/bangalore/budget" className="block bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border-l-4 border-green-600 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">💰 Daily Budget</h3>
+              <p className="text-gray-700">Backpacker: ₹1,500–2,500/day. Mid-range: ₹2,500–4,500/day with comfortable hotels, cafes and cabs. Luxury: ₹8,000+ with five-stars and fine dining.</p>
+            </Link>
+            <Link href="/cities/bangalore/travel-tips" className="block bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl border-l-4 border-purple-600 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">🚗 Getting Around</h3>
-              <p className="text-gray-700">Use metro systems in major cities, book app-based cabs for convenience, and try local transport like auto-rickshaws for an authentic experience.</p>
-            </div>
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl border-l-4 border-orange-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🍽️ Food Safety</h3>
-              <p className="text-gray-700">Eat at busy restaurants and street stalls with high turnover. Start with mild dishes if you're not used to spicy food, and always carry bottled water.</p>
-            </div>
-            <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-2xl border-l-4 border-pink-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">📱 Stay Connected</h3>
-              <p className="text-gray-700">Get a local SIM card for affordable data. Download offline maps, keep emergency numbers saved, and use translation apps for regional languages.</p>
-            </div>
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-2xl border-l-4 border-teal-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🎒 Pack Smart</h3>
-              <p className="text-gray-700">Bring comfortable walking shoes, modest clothing for religious sites, sunscreen, and a small daypack. Layer clothing for varying temperatures.</p>
-            </div>
+              <p className="text-gray-700">Namma Metro is the fastest way through traffic. Use Uber/Ola/Rapido for short hops, and the Namma Yatri app for fairly priced autos. Keep ₹2–3k cash for street vendors.</p>
+            </Link>
+            <Link href="/cities/bangalore/food" className="block bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl border-l-4 border-orange-600 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">🍽️ Where to Eat</h3>
+              <p className="text-gray-700">MTR and Vidyarthi Bhavan for breakfast, VV Puram Food Street after sunset, and Indiranagar/Koramangala for the city's microbrewery scene.</p>
+            </Link>
+            <Link href="/cities/bangalore/places-to-explore" className="block bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-2xl border-l-4 border-pink-600 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">🌳 Where to Stay</h3>
+              <p className="text-gray-700">MG Road / Brigade Road keeps you central and on the metro. Indiranagar and Koramangala work best for cafes and nightlife. Whitefield only if your work is there.</p>
+            </Link>
+            <Link href="/cities/bangalore/hidden-gems" className="block bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-2xl border-l-4 border-teal-600 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">🎒 Day Trips</h3>
+              <p className="text-gray-700">Nandi Hills (60 km) for sunrise, Skandagiri (70 km) for night treks, and Mysore (150 km) by Shatabdi train for an easy palace day-trip.</p>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Newsletter CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
+      {/* Editorial / Trust Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 uppercase">
-              Start Your Next Adventure
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
+              Why this guide exists
             </h2>
-            <p className="text-xl md:text-2xl mb-8 text-orange-50">
-              Get exclusive travel guides, hidden gems, and insider tips delivered to your inbox. Join thousands of travelers exploring India like never before!
+            <p className="text-gray-700 text-lg leading-relaxed mb-4">
+              Most "Top 10 things to do in Bangalore" articles online are recycled from the same handful of sources. We started ExploreTheCity.in because we wanted a single, honest reference for this city — written by people who actually live here, eat at these places, and take these autos every week.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/contact" className="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl">
-                Get Travel Updates
-              </Link>
-              <Link href="/cities" className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-orange-600 transition-colors">
-                Explore Destinations
-              </Link>
-            </div>
-            <p className="mt-6 text-orange-100 text-sm">
-              No spam, just amazing travel content. Unsubscribe anytime.
+            <p className="text-gray-700 text-lg leading-relaxed mb-4">
+              Every attraction in our guide has been visited in person. Every restaurant recommendation comes from repeat visits, not aggregator stars. Where something has changed — a place has shut down, a neighbourhood has shifted character — we update the page.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              We're starting with Bangalore because that's home. More cities will follow only when we can apply the same standard of first-hand research to them. You can read more about the editorial approach on our <Link href="/about" className="text-primary font-semibold hover:underline">About</Link> page, or write in via <Link href="/contact" className="text-primary font-semibold hover:underline">Contact</Link>.
             </p>
           </div>
         </div>
