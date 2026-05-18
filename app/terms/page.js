@@ -1,6 +1,6 @@
 // pages/terms.jsx  (or app/(public)/terms/page.jsx depending on your Next.js structure)
 export default function TermsPage() {
-  const effectiveDate = "January 2025";
+  const effectiveDate = "May 2026";
   const contactEmail = "contact@explorethecity.in"; // Replace if needed
 
   return (

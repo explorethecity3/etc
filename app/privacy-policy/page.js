@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
       <div className="container-custom py-16">
         <div className="max-w-4xl mx-auto prose prose-lg">
           <p className="text-gray-600 mb-8">
-            <strong>Last Updated:</strong> January 2025
+            <strong>Last Updated:</strong> May 2026
           </p>
 
           <section className="mb-12">
@@ -97,17 +97,28 @@ export default function PrivacyPolicyPage() {
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">5. Third-Party Services</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              We may use third-party service providers to help us operate our website and administer activities on our behalf. These third parties may have access to your information only to perform specific tasks and are obligated not to disclose or use it for any other purpose.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Third-party services we may use include:
+              We use third-party service providers to help us operate our website and administer activities on our behalf. These third parties may have access to your information only to perform specific tasks and are obligated not to disclose or use it for any other purpose. The third-party services we use include:
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Google Analytics for website analytics</li>
-              <li>Google AdSense for advertising (if applicable)</li>
-              <li>Email service providers for newsletters</li>
+              <li>Google AdSense for advertising</li>
+              <li>Web3Forms for processing contact form submissions</li>
               <li>Hosting and content delivery services</li>
             </ul>
+
+            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">5.1 Google AdSense &amp; Advertising</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We use Google AdSense, a third-party advertising service provided by Google LLC, to display advertisements on our website. Google AdSense and its partners use cookies and similar technologies to serve ads based on your prior visits to this website or other websites on the internet.
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+              <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to our website or other websites.</li>
+              <li>Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our site and/or other sites on the Internet.</li>
+              <li>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" className="text-primary hover:underline" rel="noopener noreferrer" target="_blank">Google Ads Settings</a>.</li>
+              <li>Alternatively, users can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/" className="text-primary hover:underline" rel="noopener noreferrer" target="_blank">aboutads.info</a>.</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              For more information about how Google uses data when you use our partners' sites or apps, please visit <a href="https://policies.google.com/technologies/partner-sites" className="text-primary hover:underline" rel="noopener noreferrer" target="_blank">How Google uses information from sites or apps that use our services</a>.
+            </p>
           </section>
 
           <section className="mb-12">
@@ -165,6 +176,9 @@ export default function PrivacyPolicyPage() {
               If you have any questions about this Privacy Policy, please contact us:
             </p>
             <div className="bg-gray-50 p-6 rounded-lg">
+              <p className="text-gray-700 mb-2">
+                <strong>Email:</strong> <a href="mailto:contact@explorethecity.in" className="text-primary hover:underline">contact@explorethecity.in</a>
+              </p>
               <p className="text-gray-700 mb-2">
                 <strong>Website:</strong> <a href="https://www.explorethecity.in" className="text-primary hover:underline">www.explorethecity.in</a>
               </p>

@@ -221,12 +221,9 @@ export default function ContactPage() {
                 </div>
 
                 <div className="bg-primary/5 p-6 rounded-lg border border-primary/20">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Connect With Us</h3>
-                  <p className="text-gray-600 mb-4">
-                    Stay updated with the latest travel guides, tips, and destination insights by following us on social media.
-                  </p>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">We Welcome Your Feedback</h3>
                   <p className="text-gray-600">
-                    We value your feedback and suggestions as they help us improve and provide better content for travelers like you.
+                    Your feedback and suggestions help us improve our guides and create better content for travelers exploring India's cities. If something we wrote was wrong, outdated, or unclear, we want to know.
                   </p>
                 </div>
               </div>
