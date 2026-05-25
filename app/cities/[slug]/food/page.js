@@ -1,87 +1,41 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import CitySubmenu from '@/components/CitySubmenu'
 import { getCityData } from '@/lib/cityData'
 import { FaUtensils } from 'react-icons/fa'
-import { useState, useEffect } from 'react'
 
 function FoodStructuredData({ city }) {
-  useEffect(() => {
-    const structuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      name: `Must-Try Local Food in ${city.name}`,
-      description: `Authentic local cuisine and must-try dishes in ${city.name}, ${city.state}`,
-      itemListElement: city.localFood.map((food, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        item: {
-          '@type': 'Recipe',
-          name: food.name,
-          description: food.description,
-          ...(food.image && { image: food.image }),
-        },
-      })),
-    }
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Must-Try Local Food in ${city.name}`,
+    description: `Authentic local cuisine and must-try dishes in ${city.name}, ${city.state}`,
+    itemListElement: city.localFood.map((food, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Recipe',
+        name: food.name,
+        description: food.description,
+        ...(food.image && { image: food.image }),
+      },
+    })),
+  }
 
-    let script = document.getElementById('food-structured-data')
-    if (!script) {
-      script = document.createElement('script')
-      script.id = 'food-structured-data'
-      script.type = 'application/ld+json'
-      document.head.appendChild(script)
-    }
-    script.textContent = JSON.stringify(structuredData)
-
-    return () => {
-      const scriptToRemove = document.getElementById('food-structured-data')
-      if (scriptToRemove) {
-        scriptToRemove.remove()
-      }
-    }
-  }, [city])
-
-  return null
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  )
 }
 
 export default function FoodPage({ params }) {
-  const [city, setCity] = useState(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    async function loadCityData() {
-      try {
-        const cityData = getCityData(params.slug)
-        setCity(cityData)
-      } catch (error) {
-        console.error('Error loading city data:', error)
-        setCity(null)
-      } finally {
-        setLoading(false)
-      }
-    }
-    loadCityData()
-  }, [params.slug])
-
-  if (loading) {
-    return (
-      <div className="container-custom py-20 text-center">
-        <div className="text-xl text-gray-600">Loading...</div>
-      </div>
-    )
-  }
+  const city = getCityData(params.slug)
 
   if (!city) {
-    return (
-      <div className="container-custom py-20 text-center">
-        <h1 className="text-3xl font-bold mb-4">City Not Found</h1>
-        <Link href="/cities" className="text-primary hover:underline">
-          View All Cities
-        </Link>
-      </div>
-    )
+    notFound()
   }
 
   return (
@@ -385,6 +339,12 @@ export default function FoodPage({ params }) {
                   <p className="text-sm text-gray-600">Budget Range</p>
                   <p className="font-semibold text-gray-800">{city.budgetEstimate.split('(')[0]}</p>
                 </div>
+                {city.lastUpdated && (
+                  <div>
+                    <p className="text-sm text-gray-600">Last Updated</p>
+                    <p className="font-semibold text-gray-800">{city.lastUpdated}</p>
+                  </div>
+                )}
               </div>
 
               <div className="mt-6 pt-6 border-t">

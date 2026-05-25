@@ -19,7 +19,6 @@ export async function generateMetadata({ params }) {
   return {
     title: metaTitle,
     description: metaDescription,
-    keywords: `${city.name} hidden gems, secret places ${city.name}, off-the-beaten-path ${city.name}, ${city.name} local spots, unexplored ${city.name}, ${city.name} offbeat places, ${city.name} secret spots, ${city.name} lesser known places, ${city.name} undiscovered, ${city.name} hidden attractions, ${city.name} hidden places, ${city.name} secret destinations, ${city.name} untouched places, ${city.name} local secrets, ${city.name} hidden treasures, ${city.state} hidden gems, ${city.name} non-touristy places, ${city.name} authentic places, ${city.name} unexplored spots`,
     alternates: {
       canonical: pageUrl,
     },

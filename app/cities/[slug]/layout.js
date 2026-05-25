@@ -1,5 +1,7 @@
 import { getAllCitySlugs } from '@/lib/cityData'
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   return getAllCitySlugs().map((slug) => ({
     slug: slug,

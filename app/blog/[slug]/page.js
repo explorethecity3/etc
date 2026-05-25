@@ -1,8 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import AdSense from '@/components/AdSense'
+import ArticleSchema from '@/components/ArticleSchema'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import blogs from '@/data/blogs.json'
 import { FaClock, FaUser, FaCalendar, FaTag } from 'react-icons/fa'
+
+export const dynamicParams = false
 
 export async function generateStaticParams() {
   return blogs.map((blog) => ({
@@ -22,13 +27,16 @@ export async function generateMetadata({ params }) {
   return {
     title: `${blog.title} | Explore The City Blog`,
     description: blog.excerpt,
-    keywords: blog.tags.join(', '),
+    alternates: {
+      canonical: `https://www.explorethecity.in/blog/${blog.slug}`,
+    },
     openGraph: {
       title: blog.title,
       description: blog.excerpt,
       images: [blog.image],
       type: 'article',
       publishedTime: blog.date,
+      modifiedTime: blog.lastUpdated || blog.date,
       authors: [blog.author],
     },
   }
@@ -38,14 +46,7 @@ export default function BlogPost({ params }) {
   const blog = blogs.find((b) => b.slug === params.slug)
 
   if (!blog) {
-    return (
-      <div className="container-custom py-20 text-center">
-        <h1 className="text-3xl font-bold mb-4">Blog Post Not Found</h1>
-        <Link href="/blog" className="text-primary hover:underline">
-          View All Posts
-        </Link>
-      </div>
-    )
+    notFound()
   }
 
   // Get related posts (same category, excluding current)
@@ -53,8 +54,20 @@ export default function BlogPost({ params }) {
     .filter((b) => b.category === blog.category && b.slug !== blog.slug)
     .slice(0, 3)
 
+  const pageUrl = `https://www.explorethecity.in/blog/${blog.slug}`
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog' },
+    { name: blog.title, url: `/blog/${blog.slug}` },
+  ]
+  const hasUpdate = blog.lastUpdated && blog.lastUpdated !== blog.date
+  const updatedDate = hasUpdate ? blog.lastUpdated : null
+
   return (
     <div>
+      <ArticleSchema blog={blog} url={pageUrl} />
+      <BreadcrumbSchema items={breadcrumbs} />
+
       {/* Hero Section */}
       <div className="relative h-[400px] w-full">
         <Image
@@ -80,8 +93,14 @@ export default function BlogPost({ params }) {
                 </div>
                 <div className="flex items-center">
                   <FaCalendar className="mr-2" />
-                  <span>{blog.date}</span>
+                  <span>Published {blog.date}</span>
                 </div>
+                {updatedDate && (
+                  <div className="flex items-center">
+                    <FaCalendar className="mr-2" />
+                    <span>Updated {updatedDate}</span>
+                  </div>
+                )}
                 <div className="flex items-center">
                   <FaClock className="mr-2" />
                   <span>{blog.readTime}</span>
@@ -158,12 +177,14 @@ export default function BlogPost({ params }) {
               </div>
             </div>
 
-            {/* Author Info */}
+            {/* Editorial Info */}
             <div className="mt-8 bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-2">About the Author</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">About this article</h3>
               <p className="text-gray-700">
-                <strong>{blog.author}</strong> is a passionate travel writer who loves
-                exploring cities and sharing authentic experiences with fellow travelers.
+                Written and maintained by the <strong>Explore The City Editorial</strong> team — a
+                small group of writers who research every guide from first-hand visits and update
+                articles as places and prices change. Read more on the{' '}
+                <Link href="/about" className="text-primary hover:underline">About</Link> page.
               </p>
             </div>
 

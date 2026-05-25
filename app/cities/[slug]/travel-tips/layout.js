@@ -19,7 +19,6 @@ export async function generateMetadata({ params }) {
   return {
     title: metaTitle,
     description: metaDescription,
-    keywords: `${city.name} travel tips, ${city.name} advice, visit ${city.name}, ${city.name} guide, ${city.name} tourist tips, ${city.name} travel guide, ${city.name} tips and tricks, ${city.name} travel advice, ${city.name} trip tips, ${city.name} safety tips, ${city.name} local tips, ${city.name} insider tips, ${city.name} travel hacks, ${city.name} dos and donts, ${city.name} travel essentials, ${city.name} planning tips, first time ${city.name}, ${city.state} travel, ${city.name} visitor tips, ${city.name} practical tips`,
     alternates: {
       canonical: pageUrl,
     },

@@ -2,6 +2,7 @@
   "slug": "bangalore",
   "name": "Bangalore",
   "state": "Karnataka",
+  "lastUpdated": "2026-05-25",
   "keywords": [
     "Bangalore travel guide",
     "Bengaluru tourism",
@@ -110,7 +111,7 @@
     "Bangalore coworking spaces",
     "digital nomad Bangalore"
   ],
-  "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800",
+  "image": "/images/photos/unsplash-1596176530529-78163a4f7af2.jpg",
   "shortDescription": "India's tech capital with amazing weather, great food, and enough parks to actually call it the Garden City.",
   "attractions": 38,
   "description": "Everyone still calls it Bangalore, even though it officially became Bengaluru back in 2014. This is where India's tech dreams live—Google offices next to 16th-century temples, startup founders grabbing masala dosas at 6 AM before their investor meetings, and software engineers from every corner of India making this city home.\n\nWhat makes Bangalore special isn't just the tech boom. It's the weather. While Delhi bakes at 45°C and Mumbai drowns in monsoon, Bangalore sits at a pleasant 20-30°C most of the year. That's why retirees used to love it here, and why tech companies still do.\n\nThe city's transformation since the 1980s has been wild. When Infosys and Wipro first set up shop, Bangalore was known more for its gardens than its gigabytes. Now Electronic City, Whitefield, and the Outer Ring Road are basically one giant tech campus. Microsoft, Amazon, Google—they're all here. The city churns out unicorn startups and exports more software than most countries.\n\nBut here's the thing—old Bangalore hasn't disappeared. Lalbagh Garden, planted way back in 1760, is still where people go to escape the city madness. The Glass House there hosts flower shows that pack in crowds. Cubbon Park's 300 acres remain a green lung in the middle of all the concrete. Morning joggers, elderly uncles reading newspapers, couples sitting on benches—it's all still there.\n\nThe food scene is incredible. You've got legacy places like Vidyarthi Bhavan serving the same legendary masala dosa since 1943. MTR opens before sunrise and the queue is already 20 people deep. Then there's Koshy's, this old-school cafe where writers and artists have been hanging out for decades. But Bangalore's also got Korean BBQ joints, craft breweries (more than any other Indian city), and farm-to-table restaurants that wouldn't be out of place in Portland.\n\nShopping means different things in different parts of town. Commercial Street is organized chaos—you haggle for everything from sarees to electronics. Brigade Road has the branded stores with fixed prices. Then you've got KR Market, where flower sellers and vegetable vendors have been doing business the same way for generations.\n\nEach neighborhood has its own vibe. Koramangala and Indiranagar are where the young crowd hangs out—cafes, startups, bars everywhere. Jayanagar is more traditional, with numbered blocks and proper South Indian restaurants. Whitefield is basically expat central with all the tech parks. Malleswaram still feels like old Bangalore with its traditional homes and filter coffee culture.\n\nThe city's biggest strength? It pulls in people from everywhere. You'll hear Hindi, Tamil, Telugu, Malayalam, and English all on the same street. This mix shows up best in the food—traditional Karnataka cuisine alongside every regional Indian food you can think of, plus international options.\n\nCulture-wise, there's a lot happening. The National Gallery has good contemporary art. Theater is big here—Ranga Shankara and Jagriti put on shows regularly. The Literature Festival draws big names every year. IISc (India Institute of Science) and the engineering colleges mean there's always something interesting going on academically.\n\nYou can still see pre-tech Bangalore if you look. Tipu Sultan's Summer Palace, built entirely from teak, is squeezed into the old city. Bangalore Palace looks like it was airlifted from England but has this distinctly Indian character. The Bull Temple in Basavanagudi has a massive Nandi carved from one piece of granite.\n\nNow for the reality check—traffic is absolutely brutal. A commute that should take 30 minutes can easily stretch to 2 hours. The metro is expanding but not fast enough. Water scarcity is a real problem. Lakes are polluted (though some are being cleaned up). Real estate prices have shot through the roof.\n\nDespite all this, people keep coming. Startups keep launching. The cafes still buzz with the next big idea. That's Bangalore—messy, energetic, and always optimistic. It's where someone drinking filter coffee at a 100-year-old restaurant is probably also coding the next big app. The future of India is literally being built here, one startup at a time.",
@@ -120,70 +121,62 @@
     {
       "name": "Lalbagh Botanical Garden",
       "description": "This 240-acre garden right in the city has been around since 1760 when Hyder Ali planted it. The centerpiece is the Glass House—inspired by London's Crystal Palace—where flower shows happen twice a year in January and August. They're actually pretty spectacular.\n\nWhat's cool is walking past rock formations that are literally 3,000 million years old. The garden has over 1,800 plant species, including some seriously old trees that have seen the whole city transform. Early mornings, you'll find joggers, botanists studying plants, and families having picnics under massive rain trees. Birdwatchers show up at dawn with their fancy cameras. It's one of those places where the city chaos just fades away.",
-      "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800",
+      "image": "/images/photos/unsplash-1585320806297-9794b3e4eeae.jpg",
       "timings": "6:00 AM - 7:00 PM",
       "entryFee": "₹25 for adults, ₹10 for children"
     },
     {
       "name": "Bangalore Palace",
       "description": "Built in 1878 by the Wadiyar royal family, this palace was inspired by Windsor Castle in England but has its own character. The Tudor-style architecture with fortified towers looks straight out of a storybook.\n\nInside, it's pretty opulent—hand-carved wooden ceilings, ornate furniture that screams royal taste, and the Durbar Hall with stained glass windows that create amazing light patterns. The audio tour takes you through private chambers where you can see the maharaja's old photographs.\n\nThe palace grounds (454 acres!) now host concerts and cultural festivals. International rock bands perform here against this royal backdrop, which is surreal. Entry costs ₹250 for Indians, ₹500 for foreigners.",
-      "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800",
+      "image": "/images/photos/unsplash-1596176530529-78163a4f7af2.jpg",
       "timings": "10:00 AM - 5:30 PM",
       "entryFee": "₹250 for Indians, ₹500 for foreigners"
     },
     {
       "name": "Cubbon Park",
       "description": "300 acres of green space right in the middle of the city. Established in 1870, this isn't just a park—it's where Bangalore comes to breathe. Over 6,000 trees from 96 different species create this dense canopy that blocks out city noise.\n\nSunday mornings are special when roads close to traffic and thousands of people show up for cycling, skating, and yoga. The park has the State Library, High Court, and a few museums tucked inside. There's a bamboo grove that feels almost zen-like where people practice tai chi.\n\nKids chase butterflies, grandparents feed very tame squirrels, and artists set up easels to paint. It's completely free and open from 6 AM to 6 PM. One of the best ways to experience local Bangalore life.",
-      "image": "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800",
+      "image": "/images/photos/unsplash-1615729947596-a598e5de0ab3.jpg",
       "timings": "6:00 AM - 6:00 PM",
       "entryFee": "Free"
     },
     {
       "name": "ISKCON Temple",
       "description": "This massive temple in Rajajinagar opened in 1997 and has become one of Bangalore's most visited spots. It mixes traditional Dravidian style with contemporary architecture in a way that somehow works.\n\nBeyond the prayer halls, there's a multimedia theater, a library, and restaurants serving really good vegetarian food. The evening aarti (prayer ceremony) is worth experiencing—the chanting, synchronized movements, and flame offerings create this incredibly peaceful atmosphere regardless of your religious background.\n\nThe 56-foot gold-plated flagpost is visible from far away. On weekends, they host classical music and dance performances. The temple also runs Akshaya Patra, one of the world's largest kitchens, feeding thousands of school kids daily. Free entry, open from early morning (4:15 AM) till late evening (8:30 PM) with a break in the afternoon.",
-      "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800",
+      "image": "/images/photos/unsplash-1582510003544-4d00b7f74220.jpg",
       "timings": "4:15 AM - 5:00 AM, 7:15 AM - 1:00 PM, 4:00 PM - 8:30 PM",
       "entryFee": "Free"
     },
     {
       "name": "Vidhana Soudha",
-      "description": "This is Karnataka's legislative building, built in 1956 right after independence. It's massive—700 feet long, 150 feet tall—and represents this Neo-Dravidian architectural style that pulls from different Indian traditions. You'll spot Rajasthani balconies, South Indian temple carvings, and Indo-Saracenic arches all mixed together.\n\nYou can't go inside (it's a working government building), but the exterior is impressive. On Sunday evenings and public holidays, they light it up and it turns into this golden beacon. Great for photos. There's an inscription that says 'Government's Work is God's Work' which is... optimistic. Free to view from outside.",
-      "image": "https://images.unsplash.com/photo-1612854124649-4f5f12b4f702?w=800",
-      "timings": "Exterior viewing only (illuminated on Sundays and holidays 6:30 PM - 8:30 PM)",
+      "description": "This is Karnataka's legislative building, built in 1956 right after independence. It's massive—700 feet long, 150 feet tall—and represents this Neo-Dravidian architectural style that pulls from different Indian traditions. You'll spot Rajasthani balconies, South Indian temple carvings, and Indo-Saracenic arches all mixed together.\n\nYou can't go inside (it's a working government building), but the exterior is impressive. On Sunday evenings and public holidays, they light it up and it turns into this golden beacon. Great for photos. There's an inscription that says 'Government's Work is God's Work' which is... optimistic. Free to view from outside.",      "timings": "Exterior viewing only (illuminated on Sundays and holidays 6:30 PM - 8:30 PM)",
       "entryFee": "Free (exterior viewing)"
     },
     {
       "name": "Nandi Hills",
-      "description": "About 60 km from Bangalore, Nandi Hills sits at 4,851 feet and is where everyone goes to watch sunrise. The drive up the winding roads is fun, with hairpin turns revealing better and better views.\n\nAt the top, watching the sun come up while you're literally above the clouds is pretty magical. Yeah, you have to wake up at 3 AM, but it's worth it. There's history here too—Tipu Sultan had a summer retreat up here, and there's this cliff called Tipu's Drop where prisoners were supposedly pushed off (it's a 600-foot drop, so... yikes).\n\nThe ancient Nandi Temple dates back to the Chola period. You can also do paragliding and cycling if you're into that. Weather is pleasant year-round, but winter mornings get misty which makes for incredible photos. Entry is ₹35 per person, ₹175 for cars.",
-      "image": "https://images.unsplash.com/photo-1580894742597-87bc8789db3d?w=800",
-      "timings": "6:00 AM - 6:00 PM",
+      "description": "About 60 km from Bangalore, Nandi Hills sits at 4,851 feet and is where everyone goes to watch sunrise. The drive up the winding roads is fun, with hairpin turns revealing better and better views.\n\nAt the top, watching the sun come up while you're literally above the clouds is pretty magical. Yeah, you have to wake up at 3 AM, but it's worth it. There's history here too—Tipu Sultan had a summer retreat up here, and there's this cliff called Tipu's Drop where prisoners were supposedly pushed off (it's a 600-foot drop, so... yikes).\n\nThe ancient Nandi Temple dates back to the Chola period. You can also do paragliding and cycling if you're into that. Weather is pleasant year-round, but winter mornings get misty which makes for incredible photos. Entry is ₹35 per person, ₹175 for cars.",      "timings": "6:00 AM - 6:00 PM",
       "entryFee": "₹35 per person, ₹175 for cars"
     },
     {
       "name": "Tipu Sultan's Summer Palace",
-      "description": "Hidden in the busy old city lanes, this palace is completely made of teakwood and dates back to 1791. The Indo-Islamic architecture is beautiful—ornate pillars, detailed floral carvings, and the colors have somehow stayed vibrant for centuries.\n\nThe museum has Tipu's personal stuff—clothes, crown, weapons. But honestly, it's the vibe that gets you. Standing in the Darbar Hall where major historical decisions were made is pretty cool. The gardens are smaller now but still peaceful. Entry is cheap—₹20 for Indians, ₹200 for foreigners.",
-      "image": "https://images.unsplash.com/photo-1599831013130-62c2e7a6c6e9?w=800",
-      "timings": "8:30 AM - 5:30 PM",
+      "description": "Hidden in the busy old city lanes, this palace is completely made of teakwood and dates back to 1791. The Indo-Islamic architecture is beautiful—ornate pillars, detailed floral carvings, and the colors have somehow stayed vibrant for centuries.\n\nThe museum has Tipu's personal stuff—clothes, crown, weapons. But honestly, it's the vibe that gets you. Standing in the Darbar Hall where major historical decisions were made is pretty cool. The gardens are smaller now but still peaceful. Entry is cheap—₹20 for Indians, ₹200 for foreigners.",      "timings": "8:30 AM - 5:30 PM",
       "entryFee": "₹20 for Indians, ₹200 for foreigners"
     },
     {
       "name": "Bull Temple (Dodda Basavana Gudi)",
-      "description": "In Basavanagudi, this temple has one of the world's largest Nandi (bull) statues—15 feet tall, 20 feet long, carved from a single piece of granite back in 1537. Devotees have been rubbing butter and sesame oil on it for so long it's polished to a shine.\n\nLocal legend says a bull was destroying groundnut crops until this temple was built, after which everything prospered. The temple has classic Dravidian architecture. Every year during the groundnut fair (Kadalekayi Parishe), the whole area becomes this huge market with farmers bringing their harvest.\n\nThe temple elephant blesses visitors, elderly folks gather in the courtyard for evening chats, and kids play traditional games. Nearby Bugle Rock Garden has good city views. Free entry.",
-      "image": "https://images.unsplash.com/photo-1623849830166-d1e5b5f1228f?w=800",
-      "timings": "6:00 AM - 12:00 PM, 5:00 PM - 9:00 PM",
+      "description": "In Basavanagudi, this temple has one of the world's largest Nandi (bull) statues—15 feet tall, 20 feet long, carved from a single piece of granite back in 1537. Devotees have been rubbing butter and sesame oil on it for so long it's polished to a shine.\n\nLocal legend says a bull was destroying groundnut crops until this temple was built, after which everything prospered. The temple has classic Dravidian architecture. Every year during the groundnut fair (Kadalekayi Parishe), the whole area becomes this huge market with farmers bringing their harvest.\n\nThe temple elephant blesses visitors, elderly folks gather in the courtyard for evening chats, and kids play traditional games. Nearby Bugle Rock Garden has good city views. Free entry.",      "timings": "6:00 AM - 12:00 PM, 5:00 PM - 9:00 PM",
       "entryFee": "Free"
     },
     {
       "name": "Ulsoor Lake",
       "description": "This 125-acre lake from the 1530s is right in the middle of the city. Early mornings, you'll see rowing enthusiasts gliding across the water, which looks amazing at sunrise. The walking path around the lake is where locals have formed these informal clubs—people share health tips, stock market advice, whatever.\n\nLots of birds hang out here—herons, cormorants, kingfishers. During Ganesh Chaturthi, thousands come for the immersion ceremony. You can rent pedal boats or motorboats (₹30-150). There's a kids' play area and outdoor gym equipment. Sometimes they host food festivals and cultural events. Free entry, open 6 AM to 8 PM.",
-      "image": "https://images.unsplash.com/photo-1609920658906-8223bd289001?w=800",
+      "image": "/images/photos/unsplash-1609920658906-8223bd289001.jpg",
       "timings": "6:00 AM - 8:00 PM",
       "entryFee": "Free (Boating charges: ₹30-150 per person)"
     },
     {
       "name": "Commercial Street",
       "description": "This kilometer-long shopping strip has been Bangalore's retail heart since the British era. Over 800 shops sell everything—traditional Kanchipuram sarees, trendy Western wear, handmade jewelry, cheap electronics, you name it.\n\nThe street wakes up early with flower vendors, then textile merchants unfold their fabrics. By noon it's organized chaos—shoppers bargaining hard, delivery boys on bikes weaving through crowds, street food smells mixing with incense. Old stores like Bombay Dyeing still have wooden cabinets and handwritten bills, while modern boutiques show off latest fashion.\n\nBargain hard—start at 50% of the quoted price. The street food is legendary—corner dosas, fresh juice, Bengali sweets with long queues. Open 10 AM to 8:30 PM, closed Sundays.",
-      "image": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800",
+      "image": "/images/photos/unsplash-1555529669-e69e7aa0ba9a.jpg",
       "timings": "10:00 AM - 8:30 PM (Closed on Sundays)",
       "entryFee": "Free"
     }

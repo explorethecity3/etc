@@ -19,7 +19,6 @@ export async function generateMetadata({ params }) {
   return {
     title: metaTitle,
     description: metaDescription,
-    keywords: `${city.name} attractions, places to visit in ${city.name}, ${city.name} tourist spots, ${city.name} landmarks, things to do ${city.name}, ${city.name} sightseeing, ${city.name} monuments, ${city.name} tourist places, ${city.name} points of interest, ${city.name} must see places, top places ${city.name}, ${city.name} tourist attractions, ${city.name} heritage sites, ${city.name} famous places, ${city.name} places to see, ${city.name} tourism spots, best places ${city.name}, ${city.state} tourist places, ${city.name} top 10 attractions, visit ${city.name} places`,
     alternates: {
       canonical: pageUrl,
     },

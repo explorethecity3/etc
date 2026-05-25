@@ -19,7 +19,6 @@ export async function generateMetadata({ params }) {
   return {
     title: metaTitle,
     description: metaDescription,
-    keywords: `best time to visit ${city.name}, ${city.name} weather, ${city.name} season, when to visit ${city.name}, ${city.name} climate, ${city.name} temperature, ${city.name} monsoon, ${city.name} winter, ${city.name} summer, ${city.name} best season, ${city.name} weather forecast, ${city.name} peak season, ${city.name} off season, ${city.name} travel season, ideal time ${city.name}, ${city.name} weather guide, ${city.state} weather, ${city.name} monthly weather, ${city.name} travel weather`,
     alternates: {
       canonical: pageUrl,
     },

@@ -1,94 +1,48 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import CitySubmenu from '@/components/CitySubmenu'
 import { getCityData } from '@/lib/cityData'
 import { FaLightbulb } from 'react-icons/fa'
-import { useState, useEffect } from 'react'
 
 function TravelTipsStructuredData({ city }) {
-  useEffect(() => {
-    const structuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: `Travel Tips for ${city.name}`,
-      description: `Essential travel tips and advice for visiting ${city.name}, ${city.state}`,
-      image: city.image,
-      author: {
-        '@type': 'Organization',
-        name: 'Explore The City',
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `Travel Tips for ${city.name}`,
+    description: `Essential travel tips and advice for visiting ${city.name}, ${city.state}`,
+    image: city.image,
+    author: {
+      '@type': 'Organization',
+      name: 'Explore The City',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Explore The City',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.explorethecity.in/logo.png',
       },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Explore The City',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://www.explorethecity.in/logo.png',
-        },
-      },
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': `https://www.explorethecity.in/cities/${city.slug}/travel-tips`,
-      },
-    }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.explorethecity.in/cities/${city.slug}/travel-tips`,
+    },
+  }
 
-    let script = document.getElementById('travel-tips-structured-data')
-    if (!script) {
-      script = document.createElement('script')
-      script.id = 'travel-tips-structured-data'
-      script.type = 'application/ld+json'
-      document.head.appendChild(script)
-    }
-    script.textContent = JSON.stringify(structuredData)
-
-    return () => {
-      const scriptToRemove = document.getElementById('travel-tips-structured-data')
-      if (scriptToRemove) {
-        scriptToRemove.remove()
-      }
-    }
-  }, [city])
-
-  return null
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  )
 }
 
 export default function TravelTipsPage({ params }) {
-  const [city, setCity] = useState(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    async function loadCityData() {
-      try {
-        const cityData = getCityData(params.slug)
-        setCity(cityData)
-      } catch (error) {
-        console.error('Error loading city data:', error)
-        setCity(null)
-      } finally {
-        setLoading(false)
-      }
-    }
-    loadCityData()
-  }, [params.slug])
-
-  if (loading) {
-    return (
-      <div className="container-custom py-20 text-center">
-        <div className="text-xl text-gray-600">Loading...</div>
-      </div>
-    )
-  }
+  const city = getCityData(params.slug)
 
   if (!city) {
-    return (
-      <div className="container-custom py-20 text-center">
-        <h1 className="text-3xl font-bold mb-4">City Not Found</h1>
-        <Link href="/cities" className="text-primary hover:underline">
-          View All Cities
-        </Link>
-      </div>
-    )
+    notFound()
   }
 
   return (
@@ -198,6 +152,12 @@ export default function TravelTipsPage({ params }) {
                   <p className="text-sm text-gray-600">Budget Range</p>
                   <p className="font-semibold text-gray-800">{city.budgetEstimate.split('(')[0]}</p>
                 </div>
+                {city.lastUpdated && (
+                  <div>
+                    <p className="text-sm text-gray-600">Last Updated</p>
+                    <p className="font-semibold text-gray-800">{city.lastUpdated}</p>
+                  </div>
+                )}
               </div>
 
               <div className="mt-6 pt-6 border-t">

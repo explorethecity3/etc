@@ -19,7 +19,6 @@ export async function generateMetadata({ params }) {
   return {
     title: metaTitle,
     description: metaDescription,
-    keywords: `${city.name} food, ${city.name} cuisine, ${city.name} restaurants, local food ${city.name}, ${city.name} street food, ${city.name} dishes, ${city.name} food guide, best food ${city.name}, ${city.name} famous food, ${city.name} traditional food, ${city.name} local cuisine, ${city.name} food culture, ${city.name} must try food, ${city.name} specialty dishes, ${city.state} cuisine, ${city.name} eating places, ${city.name} food tour, ${city.name} culinary, ${city.name} dining, what to eat in ${city.name}`,
     alternates: {
       canonical: pageUrl,
     },

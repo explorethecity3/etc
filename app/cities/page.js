@@ -1,12 +1,31 @@
 import Link from 'next/link'
 import CityCard from '@/components/CityCard'
+import FAQSchema from '@/components/FAQSchema'
 import { getCityCards } from '@/lib/cityData'
 import { FaMapMarkedAlt, FaUtensils, FaMoneyBillWave, FaClock, FaCompass, FaRoute, FaQuestionCircle } from 'react-icons/fa'
+
+const citiesFaqs = [
+  {
+    question: 'What is the best time to visit Bangalore?',
+    answer: "Bangalore enjoys pleasant weather year-round thanks to its elevation, but October to February is ideal with cool, dry days perfect for sightseeing. Avoid heavy monsoon months (June-September) if you plan on outdoor exploration.",
+  },
+  {
+    question: 'How many days do I need to explore Bangalore?',
+    answer: "3-4 days are ideal to cover Bangalore's top attractions like Lalbagh, Cubbon Park, Bangalore Palace, ISKCON Temple, and the city's famous food and cafe scene. Add an extra day or two if you want to explore nearby day-trip destinations.",
+  },
+  {
+    question: 'Is Bangalore safe for solo travelers?',
+    answer: "Yes, Bangalore is one of the safest major cities in India for solo travelers, including women. Stick to well-reviewed accommodations, use app-based cabs like Uber or Ola, stay aware in crowded markets, and you'll have a comfortable experience.",
+  },
+  {
+    question: 'What food is Bangalore famous for?',
+    answer: "Bangalore is a foodie paradise with iconic dishes like masala dosa, bisi bele bath, ragi mudde, and filter coffee. Don't miss legendary spots like MTR, Vidyarthi Bhavan, and the vibrant cafe and craft beer scene in Indiranagar and Koramangala.",
+  },
+]
 
 export const metadata = {
   title: 'Bangalore Travel Guide | Explore The City',
   description: 'A complete, locally-written travel guide to Bangalore: top attractions, food, hidden gems, neighbourhoods, day trips, and budget tips for the Garden City of India.',
-  keywords: 'bangalore travel guide, bengaluru tourism, explore bangalore, things to do in bangalore, bangalore city guide',
   alternates: {
     canonical: 'https://www.explorethecity.in/cities',
   },
@@ -17,9 +36,11 @@ export default function CitiesPage() {
 
   return (
     <div>
+      <FAQSchema faqs={citiesFaqs} />
+
       {/* Hero Section with Background */}
       <section className="relative bg-cover bg-center py-24" style={{
-        backgroundImage: "linear-gradient(rgba(37, 99, 235, 0.85), rgba(124, 58, 237, 0.85)), url('https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=1600')"
+        backgroundImage: "linear-gradient(rgba(37, 99, 235, 0.85), rgba(124, 58, 237, 0.85)), url('/images/photos/unsplash-1596176530529-78163a4f7af2.jpg')"
       }}>
         <div className="container-custom text-center text-white">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 uppercase tracking-wide">

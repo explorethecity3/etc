@@ -8,7 +8,6 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Explore The City — A Locally-Written Bangalore Travel Guide',
   description: 'A first-hand, locally-written travel guide to Bangalore (Bengaluru) — attractions, food, hidden gems, day trips, neighbourhoods, and practical tips. Plus long-form articles on travelling across India.',
-  keywords: 'bangalore travel guide, bengaluru tourism, things to do in bangalore, india travel articles, bangalore food, bangalore hidden gems',
   authors: [{ name: 'Explore The City Editorial' }],
   creator: 'Explore The City',
   publisher: 'Explore The City',

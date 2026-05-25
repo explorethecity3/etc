@@ -19,7 +19,6 @@ export async function generateMetadata({ params }) {
   return {
     title: metaTitle,
     description: metaDescription,
-    keywords: `${city.name} budget, ${city.name} trip cost, ${city.name} expenses, how much to spend in ${city.name}, ${city.name} travel budget, ${city.name} cost of living, ${city.name} travel expenses, ${city.name} budget guide, ${city.name} cheap travel, ${city.name} budget travel, ${city.name} accommodation cost, ${city.name} food prices, ${city.name} transport cost, ${city.name} daily expenses, ${city.name} travel cost breakdown, budget trip ${city.name}, ${city.state} budget, ${city.name} affordable travel, ${city.name} cost estimate`,
     alternates: {
       canonical: pageUrl,
     },
