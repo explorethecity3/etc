@@ -15,6 +15,7 @@ export async function generateMetadata({ params }) {
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/food`
+  const ogImage = `${siteUrl}/images/photos/unsplash-1589301760014-d929f3979dbc.jpg`
 
   return {
     title: metaTitle,
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }) {
       description: metaDescription,
       images: [
         {
-          url: city.image,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: `${city.name} Food Guide`,
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: `${city.name} Food Guide`,
       description: metaDescription,
-      images: [city.image],
+      images: [ogImage],
     },
     robots: {
       index: true,

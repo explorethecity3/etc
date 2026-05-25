@@ -15,6 +15,7 @@ export async function generateMetadata({ params }) {
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/best-time`
+  const ogImage = `${siteUrl}/images/photos/unsplash-1519692933481-e162a57d6721.jpg`
 
   return {
     title: metaTitle,
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }) {
       description: metaDescription,
       images: [
         {
-          url: city.image,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: `Best Time to Visit ${city.name}`,
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: `Best Time to Visit ${city.name}`,
       description: metaDescription,
-      images: [city.image],
+      images: [ogImage],
     },
     robots: {
       index: true,

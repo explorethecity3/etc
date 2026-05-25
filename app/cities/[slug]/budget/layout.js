@@ -15,6 +15,7 @@ export async function generateMetadata({ params }) {
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/budget`
+  const ogImage = `${siteUrl}/images/photos/unsplash-1524492412937-b28074a5d7da.jpg`
 
   return {
     title: metaTitle,
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }) {
       description: metaDescription,
       images: [
         {
-          url: city.image,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: `${city.name} Budget Guide`,
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: `${city.name} Budget Guide`,
       description: metaDescription,
-      images: [city.image],
+      images: [ogImage],
     },
     robots: {
       index: true,

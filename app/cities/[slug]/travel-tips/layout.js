@@ -15,6 +15,7 @@ export async function generateMetadata({ params }) {
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/travel-tips`
+  const ogImage = `${siteUrl}/images/photos/unsplash-1474487548417-781cb71495f3.jpg`
 
   return {
     title: metaTitle,
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }) {
       description: metaDescription,
       images: [
         {
-          url: city.image,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: `Travel Tips for ${city.name}`,
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: `Travel Tips for ${city.name}`,
       description: metaDescription,
-      images: [city.image],
+      images: [ogImage],
     },
     robots: {
       index: true,

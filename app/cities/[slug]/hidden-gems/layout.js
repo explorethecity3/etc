@@ -15,6 +15,7 @@ export async function generateMetadata({ params }) {
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/hidden-gems`
+  const ogImage = `${siteUrl}/images/photos/unsplash-1506905925346-21bda4d32df4.jpg`
 
   return {
     title: metaTitle,
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }) {
       description: metaDescription,
       images: [
         {
-          url: city.image,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: `Hidden Gems in ${city.name}`,
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: `Hidden Gems in ${city.name}`,
       description: metaDescription,
-      images: [city.image],
+      images: [ogImage],
     },
     robots: {
       index: true,
