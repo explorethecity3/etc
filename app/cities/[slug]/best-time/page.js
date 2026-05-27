@@ -95,15 +95,7 @@ export default function BestTimePage({ params }) {
                 <FaClock className="text-primary text-3xl mr-4" />
                 <h2 className="text-3xl font-bold text-gray-800">Best Time to Visit {city.name}</h2>
               </div>
-              <p className="text-gray-700 text-lg leading-relaxed mb-6 whitespace-pre-line">{city.bestTimeToVisit}</p>
-              <div className="bg-white p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Why This Time?</h3>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  The recommended period is ideal for visiting {city.name} due to pleasant weather conditions,
-                  making it perfect for sightseeing and outdoor activities. During this time, you can comfortably
-                  explore all the attractions without extreme heat or heavy rainfall disrupting your plans.
-                </p>
-              </div>
+              <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line">{city.bestTimeToVisit}</p>
             </section>
           </div>
 
@@ -119,7 +111,7 @@ export default function BestTimePage({ params }) {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Top Attractions</p>
-                  <p className="font-semibold text-gray-800">{city.attractions}+</p>
+                  <p className="font-semibold text-gray-800">{city.attractions}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Best Time</p>

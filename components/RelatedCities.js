@@ -43,7 +43,7 @@ export default function RelatedCities({ currentCitySlug }) {
                 </h3>
                 <p className="text-sm text-gray-600">{city.state}</p>
                 <p className="text-xs text-gray-500 mt-2">
-                  {city.attractions}+ attractions
+                  {city.attractions} attractions
                 </p>
               </div>
             </div>

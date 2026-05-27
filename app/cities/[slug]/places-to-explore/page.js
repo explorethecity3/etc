@@ -88,6 +88,12 @@ export default function AttractionsPage({ params }) {
                 <FaMapMarkerAlt className="text-primary text-3xl mr-4" />
                 <h2 className="text-3xl font-bold text-gray-800">Top Attractions in {city.name}</h2>
               </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                The {city.topAttractions.length} places below are the ones we keep recommending to first-time visitors. They cover the obvious heavyweights — Lalbagh, Cubbon Park, Bangalore Palace — alongside spots like the Bull Temple and Tipu Sultan's Summer Palace that get under-rated in most listicles.
+              </p>
+              <p className="text-gray-600 text-sm mb-8">
+                Timings and entry fees were verified on our last visit. They change occasionally — if you spot an outdated detail, please <Link href="/contact" className="text-primary hover:underline">let us know</Link>.
+              </p>
               <div className="space-y-6">
                 {city.topAttractions.map((attraction, index) => (
                   <div key={index} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
@@ -131,6 +137,13 @@ export default function AttractionsPage({ params }) {
                   </div>
                 ))}
               </div>
+
+              <div className="mt-10 bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Planning a multi-day itinerary?</h3>
+                <p className="text-gray-700">
+                  Most travellers cover the central attractions (Lalbagh, Cubbon Park, Vidhana Soudha, Bangalore Palace, Bull Temple) in 2–3 days, then add Nandi Hills as a sunrise half-day. Pair this with the <Link href={`/cities/${city.slug}/food`} className="text-blue-700 font-semibold hover:underline">Food</Link> chapter to sequence meals near these spots, the <Link href={`/cities/${city.slug}/budget`} className="text-blue-700 font-semibold hover:underline">Budget</Link> page for sample daily spends, or the <Link href={`/cities/${city.slug}/hidden-gems`} className="text-blue-700 font-semibold hover:underline">Hidden Gems</Link> chapter for day-trip ideas if you have more time.
+                </p>
+              </div>
             </section>
           </div>
 
@@ -146,7 +159,7 @@ export default function AttractionsPage({ params }) {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Top Attractions</p>
-                  <p className="font-semibold text-gray-800">{city.attractions}+</p>
+                  <p className="font-semibold text-gray-800">{city.attractions}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Best Time</p>

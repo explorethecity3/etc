@@ -165,65 +165,45 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Get in Touch</h2>
 
               <div className="space-y-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">About Explore The City</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    We are passionate about helping travelers discover the beauty and diversity of India's incredible cities. Whether you have questions about a destination, want to suggest new content, or just want to share your travel experiences, we're here to listen.
-                  </p>
-                </div>
-
                 <div className="bg-primary/10 p-6 rounded-lg border border-primary/30">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Email Us</h3>
-                  <p className="text-gray-600 mb-2">For any inquiries, please reach out to us at:</p>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Email</h3>
                   <a
                     href="mailto:contact@explorethecity.in"
                     className="text-primary hover:text-primary/80 font-semibold text-lg transition"
                   >
                     contact@explorethecity.in
                   </a>
+                  <p className="text-gray-600 mt-3 text-sm">
+                    Replies usually arrive within 1–2 business days. If we're travelling for research, give us a few extra days.
+                  </p>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">What We Can Help With</h3>
-                  <ul className="space-y-2 text-gray-600">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">What we'd love to hear about</h3>
+                  <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <span>Questions about specific cities or destinations</span>
+                      <span><strong>Corrections.</strong> A timing has changed, a price has gone up, a place has shut down — please let us know which page and what's wrong.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <span>Suggestions for new cities to cover</span>
+                      <span><strong>Things we missed.</strong> A Bangalore spot we should cover, a neighbourhood we under-rated, a day-trip you keep recommending to friends.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <span>Feedback on our content and guides</span>
+                      <span><strong>Writing for us.</strong> If you live in another Indian city and want to research and write a guide with the same first-hand standard, tell us about your city.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <span>Partnership and collaboration opportunities</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Technical issues or website problems</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>General inquiries about our services</span>
+                      <span><strong>Just to say hi.</strong> What you liked, what you didn't, what we should write next. We read every message.</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Response Time</h3>
-                  <p className="text-gray-600">
-                    We typically respond to all inquiries within 24-48 hours. If you don't hear back from us within this timeframe, please check your spam folder or try reaching out again.
-                  </p>
-                </div>
-
-                <div className="bg-primary/5 p-6 rounded-lg border border-primary/20">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">We Welcome Your Feedback</h3>
-                  <p className="text-gray-600">
-                    Your feedback and suggestions help us improve our guides and create better content for travelers exploring India's cities. If something we wrote was wrong, outdated, or unclear, we want to know.
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">What we don't do</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    We don't accept paid placements, sponsored reviews or affiliate links disguised as recommendations. If you're pitching a PR campaign, a hotel takeover or a "guest post" with embedded links, please save us both the time.
                   </p>
                 </div>
               </div>

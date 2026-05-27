@@ -53,7 +53,7 @@ export default async function BlogPage({ searchParams }) {
             )}
             {!selectedCategory && '.'}
           </p>
-          <p className="text-sm text-white/70 mt-4">{blogs.length} articles · updated periodically</p>
+          <p className="text-sm text-white/70 mt-4">{blogs.length} long-form articles</p>
         </div>
       </section>
 

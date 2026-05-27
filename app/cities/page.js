@@ -6,26 +6,26 @@ import { FaMapMarkedAlt, FaUtensils, FaMoneyBillWave, FaClock, FaCompass, FaRout
 
 const citiesFaqs = [
   {
-    question: 'What is the best time to visit Bangalore?',
-    answer: "Bangalore enjoys pleasant weather year-round thanks to its elevation, but October to February is ideal with cool, dry days perfect for sightseeing. Avoid heavy monsoon months (June-September) if you plan on outdoor exploration.",
+    question: 'Which cities does Explore The City cover?',
+    answer: "We currently have full, locally-researched guides to Bangalore, Mumbai and Goa, with more Indian cities being added one at a time. Each guide covers attractions, food, hidden gems, neighbourhoods, day trips, best time to visit and a realistic budget breakdown.",
   },
   {
-    question: 'How many days do I need to explore Bangalore?',
-    answer: "3-4 days are ideal to cover Bangalore's top attractions like Lalbagh, Cubbon Park, Bangalore Palace, ISKCON Temple, and the city's famous food and cafe scene. Add an extra day or two if you want to explore nearby day-trip destinations.",
+    question: 'How detailed is each city guide?',
+    answer: "Every city guide is built from six dedicated chapters: places to explore, food and cafes, hidden gems, best time to visit, budget estimates, and travel tips. Each one profiles around 10 attractions and 12 local dishes, with timings, fees and where to find each.",
   },
   {
-    question: 'Is Bangalore safe for solo travelers?',
-    answer: "Yes, Bangalore is one of the safest major cities in India for solo travelers, including women. Stick to well-reviewed accommodations, use app-based cabs like Uber or Ola, stay aware in crowded markets, and you'll have a comfortable experience.",
+    question: 'Are the guides written from first-hand visits?',
+    answer: "That's the standard we work to. We add a new city only when we have someone who can apply the same first-hand research to it, rather than scaling fast with recycled content. That means slower growth but guides you can actually trust.",
   },
   {
-    question: 'What food is Bangalore famous for?',
-    answer: "Bangalore is a foodie paradise with iconic dishes like masala dosa, bisi bele bath, ragi mudde, and filter coffee. Don't miss legendary spots like MTR, Vidyarthi Bhavan, and the vibrant cafe and craft beer scene in Indiranagar and Koramangala.",
+    question: 'How many days do I need for each city?',
+    answer: "Three to four days covers the highlights of most cities comfortably, including the main attractions, food, and one or two day trips. Two days is enough for just the essentials. Each city guide includes its own suggested itineraries and pacing.",
   },
 ]
 
 export const metadata = {
-  title: 'Bangalore Travel Guide | Explore The City',
-  description: 'A complete, locally-written travel guide to Bangalore: top attractions, food, hidden gems, neighbourhoods, day trips, and budget tips for the Garden City of India.',
+  title: 'Indian City Travel Guides | Explore The City',
+  description: 'Locally-written travel guides to Indian cities — Bangalore, Mumbai and Goa so far, with more to come. Attractions, food, hidden gems, neighbourhoods, day trips and budget tips for each.',
   alternates: {
     canonical: 'https://www.explorethecity.in/cities',
   },
@@ -33,6 +33,7 @@ export const metadata = {
 
 export default function CitiesPage() {
   const cities = getCityCards()
+  const totalAttractions = cities.reduce((sum, c) => sum + (c.attractions || 0), 0)
 
   return (
     <div>
@@ -44,44 +45,44 @@ export default function CitiesPage() {
       }}>
         <div className="container-custom text-center text-white">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 uppercase tracking-wide">
-            Bangalore Travel Guide
+            City Travel Guides
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 leading-relaxed">
-            A locally-researched guide to Bengaluru — the Garden City and India's startup capital. Attractions, food, neighbourhoods, day trips and the practical things visitors actually need.
+            In-depth, locally-researched guides to India's cities — attractions, food, neighbourhoods, day trips and the practical things visitors actually need.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto mt-12">
+          <div className="grid grid-cols-3 gap-6 max-w-3xl mx-auto mt-12">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-              <div className="text-4xl font-extrabold mb-2">{cities[0]?.attractions || 38}+</div>
-              <div className="text-blue-100">Attractions covered</div>
+              <div className="text-4xl font-extrabold mb-2">{cities.length}</div>
+              <div className="text-blue-100">Cities covered</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-              <div className="text-4xl font-extrabold mb-2">12</div>
-              <div className="text-blue-100">Local dishes profiled</div>
+              <div className="text-4xl font-extrabold mb-2">{totalAttractions}+</div>
+              <div className="text-blue-100">Attractions profiled</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <div className="text-4xl font-extrabold mb-2">6</div>
-              <div className="text-blue-100">Detailed sub-guides</div>
+              <div className="text-blue-100">Chapters per city</div>
             </div>
           </div>
           <p className="text-sm text-blue-100/80 mt-8 max-w-2xl mx-auto">
-            More cities will be added only when we can write them with the same first-hand research. Until then, this site is dedicated to one city, done well.
+            We add a new city only when we can write it with the same first-hand research. Slow growth, but guides you can trust.
           </p>
         </div>
       </section>
 
-      {/* Featured City */}
+      {/* City Cards */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              The City We Cover
+              Cities We Cover
             </h2>
             <p className="text-gray-600 text-lg">
-              Tap the card to open the full guide.
+              Tap a card to open the full guide.
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {cities.map((city) => (
               <CityCard key={city.slug} city={city} />
             ))}
@@ -94,32 +95,32 @@ export default function CitiesPage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              What's Inside the Guide
+              What's Inside Every Guide
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Six dedicated chapters, written from first-hand visits and updated as the city changes.
+              Six dedicated chapters per city, written from first-hand visits and updated as each place changes.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/cities/bangalore/places-to-explore" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-blue-100 p-4 rounded-full">
                   <FaMapMarkedAlt className="text-3xl text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Places to Explore</h3>
               </div>
-              <p className="text-gray-600">Lalbagh, Cubbon Park, Bangalore Palace, ISKCON, Vidhana Soudha, Tipu Sultan's Summer Palace and more — with timings, fees and what to expect.</p>
-            </Link>
-            <Link href="/cities/bangalore/food" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
+              <p className="text-gray-600">Around 10 top attractions per city, with timings, entry fees and an honest sense of what to expect at each.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-orange-100 p-4 rounded-full">
                   <FaUtensils className="text-3xl text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Food & Cafes</h3>
+                <h3 className="text-xl font-bold text-gray-900">Food &amp; Cafes</h3>
               </div>
-              <p className="text-gray-600">12 must-try Bangalore dishes — from masala dosa at Vidyarthi Bhavan to ragi mudde, bisi bele bath and filter coffee — with where to find each.</p>
-            </Link>
-            <Link href="/cities/bangalore/budget" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
+              <p className="text-gray-600">12 must-try local dishes per city, from street food to coastal specialities, with exactly where to find each.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-green-100 p-4 rounded-full">
                   <FaMoneyBillWave className="text-3xl text-green-600" />
@@ -127,34 +128,34 @@ export default function CitiesPage() {
                 <h3 className="text-xl font-bold text-gray-900">Budget Estimates</h3>
               </div>
               <p className="text-gray-600">Daily spend breakdowns across backpacker, mid-range and premium trips — accommodation, food, transport and entry fees.</p>
-            </Link>
-            <Link href="/cities/bangalore/best-time" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-purple-100 p-4 rounded-full">
                   <FaClock className="text-3xl text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Best Time to Visit</h3>
               </div>
-              <p className="text-gray-600">Season-by-season notes — what each month actually feels like in Bangalore, plus festival timings (Karaga, Kadalekai Parishe, Lit Fest, Dasara).</p>
-            </Link>
-            <Link href="/cities/bangalore/travel-tips" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
+              <p className="text-gray-600">Season-by-season notes on what each month actually feels like, plus the festivals worth timing your visit around.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-pink-100 p-4 rounded-full">
                   <FaRoute className="text-3xl text-pink-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Travel Tips</h3>
               </div>
-              <p className="text-gray-600">Metro vs auto vs cab, safe areas to stay, monsoon pitfalls, etiquette at temples, and what locals wish first-time visitors knew.</p>
-            </Link>
-            <Link href="/cities/bangalore/hidden-gems" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow block">
+              <p className="text-gray-600">Getting around, safe areas to stay, monsoon pitfalls, etiquette, and what locals wish first-time visitors knew.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-teal-100 p-4 rounded-full">
                   <FaCompass className="text-3xl text-teal-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Hidden Gems</h3>
               </div>
-              <p className="text-gray-600">Chunchi Falls, Nrityagram dance village, Dodda Alada Mara, Hesaraghatta grasslands, the HAL Aerospace Museum and other lesser-known spots.</p>
-            </Link>
+              <p className="text-gray-600">The lesser-known corners, day-trip spots and offbeat places locals quietly love, beyond the obvious tourist trail.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -167,46 +168,21 @@ export default function CitiesPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              The questions first-time visitors to Bangalore ask most often.
+              About the guides and how we write them.
             </p>
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border-l-4 border-blue-600">
-              <div className="flex items-start gap-4">
-                <FaQuestionCircle className="text-3xl text-blue-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">What is the best time to visit Bangalore?</h3>
-                  <p className="text-gray-700">Bangalore enjoys pleasant weather year-round thanks to its elevation, but October to February is ideal with cool, dry days perfect for sightseeing. Avoid heavy monsoon months (June-September) if you plan on outdoor exploration.</p>
+            {citiesFaqs.map((faq, i) => (
+              <div key={i} className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border-l-4 border-blue-600">
+                <div className="flex items-start gap-4">
+                  <FaQuestionCircle className="text-3xl text-blue-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700">{faq.answer}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border-l-4 border-green-600">
-              <div className="flex items-start gap-4">
-                <FaQuestionCircle className="text-3xl text-green-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">How many days do I need to explore Bangalore?</h3>
-                  <p className="text-gray-700">3-4 days are ideal to cover Bangalore's top attractions like Lalbagh, Cubbon Park, Bangalore Palace, ISKCON Temple, and the city's famous food and cafe scene. Add an extra day or two if you want to explore nearby day-trip destinations.</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl border-l-4 border-purple-600">
-              <div className="flex items-start gap-4">
-                <FaQuestionCircle className="text-3xl text-purple-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Is Bangalore safe for solo travelers?</h3>
-                  <p className="text-gray-700">Yes, Bangalore is one of the safest major cities in India for solo travelers, including women. Stick to well-reviewed accommodations, use app-based cabs like Uber or Ola, stay aware in crowded markets, and you'll have a comfortable experience.</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl border-l-4 border-orange-600">
-              <div className="flex items-start gap-4">
-                <FaQuestionCircle className="text-3xl text-orange-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">What food is Bangalore famous for?</h3>
-                  <p className="text-gray-700">Bangalore is a foodie paradise with iconic dishes like masala dosa, bisi bele bath, ragi mudde, and filter coffee. Don't miss legendary spots like MTR, Vidyarthi Bhavan, and the vibrant cafe and craft beer scene in Indiranagar and Koramangala.</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

@@ -95,6 +95,9 @@ export default function TravelTipsPage({ params }) {
                 <FaLightbulb className="text-yellow-500 text-3xl mr-4" />
                 <h2 className="text-3xl font-bold text-gray-800">Travel Tips for {city.name}</h2>
               </div>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                Bangalore rewards travellers who plan around its quirks — the punishing traffic, the lack of a single tourist quarter, the way the monsoon turns 30-minute commutes into 3-hour ones. Below is the practical knowledge we wish someone had handed us before our first visits: how to get around, where to actually stay, what etiquette matters, and the bits of the city to skip.
+              </p>
               <div className="space-y-6">
                 {city.travelTips.map((item, index) => {
                   // Check if it's a structured object with category and tips
@@ -127,6 +130,13 @@ export default function TravelTipsPage({ params }) {
                   }
                 })}
               </div>
+
+              <div className="mt-10 bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Still planning your trip?</h3>
+                <p className="text-gray-700">
+                  Pair these tips with the <Link href={`/cities/${city.slug}/budget`} className="text-yellow-700 font-semibold hover:underline">Budget</Link> chapter for realistic day-spend numbers, the <Link href={`/cities/${city.slug}/best-time`} className="text-yellow-700 font-semibold hover:underline">Best Time</Link> page for which months suit your style, or jump back to the <Link href={`/cities/${city.slug}`} className="text-yellow-700 font-semibold hover:underline">{city.name} guide overview</Link>.
+                </p>
+              </div>
             </section>
           </div>
 
@@ -142,7 +152,7 @@ export default function TravelTipsPage({ params }) {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Top Attractions</p>
-                  <p className="font-semibold text-gray-800">{city.attractions}+</p>
+                  <p className="font-semibold text-gray-800">{city.attractions}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Best Time</p>

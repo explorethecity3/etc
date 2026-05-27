@@ -16,15 +16,15 @@ export default function Home() {
         <div className="container-custom h-full flex items-center">
           <div className="max-w-3xl text-white pt-20">
             <h1 className="text-5xl md:text-7xl font-serif font-light mb-6 leading-tight italic">
-              Bangalore Has a Story.<br />
+              Every City Has a Story.<br />
               <span className="font-normal not-italic">Let's Explore It Together.</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 leading-relaxed font-light">
-              A locally-written, in-depth travel guide to India's Garden City — attractions, food, day trips and the practical stuff nobody tells first-time visitors.
+              In-depth, locally-written travel guides to India's cities — attractions, food, day trips and the practical stuff nobody tells first-time visitors. We're in Bangalore, Mumbai and Goa, with more to come.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/cities/bangalore" className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-xl">
-                Open the Bangalore Guide →
+              <Link href="/cities" className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-xl">
+                Browse City Guides →
               </Link>
               <Link href="/about" className="inline-block bg-white/10 backdrop-blur-sm border border-white/40 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all">
                 About this site
@@ -99,13 +99,13 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              The Bangalore Guide
+              Our City Guides
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              We're starting with the city we know best — a long-form, locally researched guide to Bengaluru.
+              Long-form, locally-researched guides — built one city at a time. Tap a card to dive in.
             </p>
           </div>
-          <div className="max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {cities.map((city) => (
               <CityCard key={city.slug} city={city} />
             ))}
@@ -182,8 +182,8 @@ export default function Home() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-5xl md:text-6xl font-extrabold mb-2">{cities[0]?.attractions || 38}+</div>
-              <div className="text-lg md:text-xl text-blue-100">Attractions covered</div>
+              <div className="text-5xl md:text-6xl font-extrabold mb-2">{cities[0]?.attractions || 10}</div>
+              <div className="text-lg md:text-xl text-blue-100">Top attractions profiled</div>
             </div>
             <div>
               <div className="text-5xl md:text-6xl font-extrabold mb-2">12</div>
@@ -248,13 +248,13 @@ export default function Home() {
               Why this guide exists
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              Most "Top 10 things to do in Bangalore" articles online are recycled from the same handful of sources. We started ExploreTheCity.in because we wanted a single, honest reference for this city — written by people who actually live here, eat at these places, and take these autos every week.
+              Most "Top 10 things to do" articles online are recycled from the same handful of sources. We started ExploreTheCity.in because we wanted honest, first-hand references to Indian cities — written by people who actually live in them, eat at these places, and take these autos every week.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              Every attraction in our guide has been visited in person. Every restaurant recommendation comes from repeat visits, not aggregator stars. Where something has changed — a place has shut down, a neighbourhood has shifted character — we update the page.
+              Every attraction in our guides has been visited in person. Every restaurant recommendation comes from repeat visits, not aggregator stars. Where something has changed — a place has shut down, a neighbourhood has shifted character — we update the page.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              We're starting with Bangalore because that's home. More cities will follow only when we can apply the same standard of first-hand research to them. You can read more about the editorial approach on our <Link href="/about" className="text-primary font-semibold hover:underline">About</Link> page, or write in via <Link href="/contact" className="text-primary font-semibold hover:underline">Contact</Link>.
+              We started with Bangalore because that's home, then added Mumbai and Goa. New cities are added only when we can apply the same standard of first-hand research to them. You can read more about the editorial approach on our <Link href="/about" className="text-primary font-semibold hover:underline">About</Link> page, or write in via <Link href="/contact" className="text-primary font-semibold hover:underline">Contact</Link>.
             </p>
           </div>
         </div>

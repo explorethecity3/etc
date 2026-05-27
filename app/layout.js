@@ -6,8 +6,8 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Explore The City — A Locally-Written Bangalore Travel Guide',
-  description: 'A first-hand, locally-written travel guide to Bangalore (Bengaluru) — attractions, food, hidden gems, day trips, neighbourhoods, and practical tips. Plus long-form articles on travelling across India.',
+  title: 'Explore The City — Locally-Written India Travel Guides',
+  description: 'First-hand, locally-written travel guides to India\'s cities — currently Bangalore, Mumbai and Goa. Attractions, food, hidden gems, day trips, neighbourhoods and practical tips, plus long-form articles on travelling across India.',
   authors: [{ name: 'Explore The City Editorial' }],
   creator: 'Explore The City',
   publisher: 'Explore The City',
@@ -22,8 +22,8 @@ export const metadata = {
     'google-adsense-account': 'ca-pub-6525177681486877',
   },
   openGraph: {
-    title: 'Explore The City — A Locally-Written Bangalore Travel Guide',
-    description: 'First-hand Bangalore travel guide — attractions, food, hidden gems, day trips and practical tips, plus long-form India travel articles.',
+    title: 'Explore The City — Locally-Written India Travel Guides',
+    description: 'First-hand travel guides to India\'s cities (Bangalore, Mumbai and Goa) — attractions, food, hidden gems, day trips and practical tips, plus long-form India travel articles.',
     url: 'https://www.explorethecity.in',
     siteName: 'Explore The City',
     locale: 'en_IN',
@@ -58,6 +58,24 @@ export default function RootLayout({ children }) {
         />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6525177681486877"
           crossorigin="anonymous"></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Explore The City',
+              url: 'https://www.explorethecity.in',
+              logo: 'https://www.explorethecity.in/logo.png',
+              description: 'Locally-written, first-hand travel guides to India\'s cities — currently Bangalore, Mumbai and Goa — covering attractions, food, hidden gems, day trips and practical tips.',
+              email: 'contact@explorethecity.in',
+              areaServed: {
+                '@type': 'Country',
+                name: 'India',
+              },
+            }),
+          }}
+        />
       </head>
       <body className={inter.className}>
         <Navbar />

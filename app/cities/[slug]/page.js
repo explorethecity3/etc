@@ -127,98 +127,34 @@ export default function CityPage({ params }) {
               </div>
             </section>
 
-            {/* Why Visit Section */}
+            {/* The six chapters of the guide */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">Why Visit {city.name}?</h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-white p-5 rounded-lg shadow-sm border-l-4 border-primary">
-                  <h3 className="font-semibold text-gray-800 mb-2 text-lg">🏛️ Rich Cultural Heritage</h3>
-                  <p className="text-gray-600">Explore centuries of history through magnificent architecture, ancient temples, and heritage sites that tell fascinating stories.</p>
-                </div>
-                <div className="bg-white p-5 rounded-lg shadow-sm border-l-4 border-primary">
-                  <h3 className="font-semibold text-gray-800 mb-2 text-lg">🍜 Culinary Paradise</h3>
-                  <p className="text-gray-600">Indulge in authentic local cuisine, street food delicacies, and dining experiences that will tantalize your taste buds.</p>
-                </div>
-                <div className="bg-white p-5 rounded-lg shadow-sm border-l-4 border-primary">
-                  <h3 className="font-semibold text-gray-800 mb-2 text-lg">📸 Instagram-Worthy Spots</h3>
-                  <p className="text-gray-600">Discover stunning locations perfect for photography, from iconic landmarks to hidden gems off the beaten path.</p>
-                </div>
-                <div className="bg-white p-5 rounded-lg shadow-sm border-l-4 border-primary">
-                  <h3 className="font-semibold text-gray-800 mb-2 text-lg">🎭 Vibrant Local Life</h3>
-                  <p className="text-gray-600">Immerse yourself in the local culture, festivals, markets, and daily rhythms that make {city.name} unique.</p>
-                </div>
-              </div>
-            </section>
-
-            {/* Top Highlights */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">Top Highlights in {city.name}</h2>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                {city.name} offers an incredible array of experiences for every type of traveler. Whether you're a history buff, foodie, adventure seeker, or culture enthusiast, you'll find something that resonates with you.
-              </p>
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
-                <p className="text-gray-700 leading-relaxed">
-                  <strong>Did You Know?</strong> {city.name} attracts millions of visitors each year, making it one of India's most popular tourist destinations. The city perfectly balances its rich historical heritage with modern development, offering visitors a unique glimpse into both India's glorious past and dynamic present.
-                </p>
-              </div>
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">Chapters of this guide</h2>
               <div className="grid gap-4">
                 <Link href={`/cities/${city.slug}/places-to-explore`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
-                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">🏛️ Must-Visit Attractions ({city.attractions}+ Places)</h3>
-                  <p className="text-gray-600">Explore iconic landmarks, historical monuments, museums, gardens, and architectural marvels that define {city.name}'s skyline and character.</p>
+                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Places to Explore</h3>
+                  <p className="text-gray-600">Lalbagh, Cubbon Park, Bangalore Palace, ISKCON, Vidhana Soudha, Tipu Sultan's Summer Palace and the rest of the main attractions — with timings, fees and what to expect at each.</p>
                 </Link>
                 <Link href={`/cities/${city.slug}/food`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
-                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">🍽️ Local Food & Cuisine</h3>
-                  <p className="text-gray-600">Savor authentic {city.state} delicacies, street food favorites, fine dining experiences, and hidden culinary gems known only to locals.</p>
+                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Food & Cafes</h3>
+                  <p className="text-gray-600">Masala dosa at Vidyarthi Bhavan, bisi bele bath at MTR, ragi mudde, filter coffee, and the city's microbrewery scene — with where to find each.</p>
+                </Link>
+                <Link href={`/cities/${city.slug}/best-time`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
+                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Best Time to Visit</h3>
+                  <p className="text-gray-600">Bangalore's climate is unusually forgiving — {city.bestTimeToVisitShort || 'pleasant year-round'}. Month-by-month notes on what each season actually feels like, festival timings included.</p>
+                </Link>
+                <Link href={`/cities/${city.slug}/budget`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
+                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Budget</h3>
+                  <p className="text-gray-600">{city.budgetEstimate}. Backpacker, mid-range and premium sample-day budgets, neighbourhood-by-neighbourhood hotel pricing and the costs visitors don't expect.</p>
+                </Link>
+                <Link href={`/cities/${city.slug}/travel-tips`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
+                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Travel Tips</h3>
+                  <p className="text-gray-600">Metro vs auto vs cab, where to stay, monsoon pitfalls, temple etiquette, and what locals wish first-time visitors knew.</p>
                 </Link>
                 <Link href={`/cities/${city.slug}/hidden-gems`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
-                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">💎 Hidden Gems & Secret Spots</h3>
-                  <p className="text-gray-600">Discover offbeat locations, lesser-known attractions, and authentic experiences away from the tourist crowds.</p>
+                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Hidden Gems</h3>
+                  <p className="text-gray-600">Chunchi Falls, Nrityagram dance village, the 400-year-old Dodda Alada Mara banyan, Hesaraghatta grasslands and other lesser-known day trips.</p>
                 </Link>
-              </div>
-            </section>
-
-            {/* Planning Your Visit */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">Planning Your {city.name} Trip</h2>
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-bold text-xl text-gray-800 mb-3 flex items-center">
-                    <span className="text-2xl mr-3">🗓️</span>
-                    Best Time to Visit
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed mb-3">
-                    The ideal time to explore {city.name} is during {city.bestTimeToVisitShort || city.bestTimeToVisit}. During this period, the weather is pleasant, making it perfect for sightseeing and outdoor activities.
-                  </p>
-                  <Link href={`/cities/${city.slug}/best-time`} className="text-primary hover:underline font-medium">
-                    View detailed season-by-season guide →
-                  </Link>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-bold text-xl text-gray-800 mb-3 flex items-center">
-                    <span className="text-2xl mr-3">💰</span>
-                    Budget Planning
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed mb-3">
-                    {city.budgetEstimate} This includes accommodation, food, local transportation, and entry fees to major attractions. Budget travelers can explore for less, while luxury seekers can enjoy premium experiences.
-                  </p>
-                  <Link href={`/cities/${city.slug}/budget`} className="text-primary hover:underline font-medium">
-                    See detailed cost breakdown →
-                  </Link>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-bold text-xl text-gray-800 mb-3 flex items-center">
-                    <span className="text-2xl mr-3">✈️</span>
-                    Getting There & Around
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed mb-3">
-                    {city.name} is well-connected by air, rail, and road. The city has excellent public transportation including metro, buses, and auto-rickshaws. Ride-sharing apps are widely available. For first-time visitors, we recommend using a combination of metro and app-based cabs for convenience.
-                  </p>
-                  <Link href={`/cities/${city.slug}/travel-tips`} className="text-primary hover:underline font-medium">
-                    Read essential travel tips →
-                  </Link>
-                </div>
               </div>
             </section>
 
@@ -253,7 +189,7 @@ export default function CityPage({ params }) {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Top Attractions</p>
-                  <p className="font-semibold text-gray-800">{city.attractions}+</p>
+                  <p className="font-semibold text-gray-800">{city.attractions}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Best Time</p>

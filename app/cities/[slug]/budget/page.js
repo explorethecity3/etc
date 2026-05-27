@@ -96,32 +96,10 @@ export default function BudgetPage({ params }) {
                 <h2 className="text-3xl font-bold text-gray-800">Budget Estimate for {city.name}</h2>
               </div>
               <div className="bg-green-50 p-8 rounded-lg">
-                <p className="text-gray-700 text-3xl font-bold mb-4">{city.budgetEstimate}</p>
-                <p className="text-gray-600 text-lg mb-8">
-                  *Includes accommodation, food, local transport, and entry fees
+                <p className="text-gray-700 text-3xl font-bold mb-3">{city.budgetEstimate}</p>
+                <p className="text-gray-600 text-base">
+                  This is a mid-range two-person daily spend including accommodation, food, local transport and entry fees. The sections below break this down by neighbourhood, by traveller type (backpacker / mid-range / premium), and call out the costs first-time visitors rarely budget for.
                 </p>
-
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Budget Breakdown</h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center border-b pb-3">
-                      <span className="text-gray-700 font-medium">Accommodation</span>
-                      <span className="text-gray-900 font-semibold">₹800 - ₹2,500/night</span>
-                    </div>
-                    <div className="flex justify-between items-center border-b pb-3">
-                      <span className="text-gray-700 font-medium">Food (3 meals)</span>
-                      <span className="text-gray-900 font-semibold">₹500 - ₹1,500/day</span>
-                    </div>
-                    <div className="flex justify-between items-center border-b pb-3">
-                      <span className="text-gray-700 font-medium">Local Transport</span>
-                      <span className="text-gray-900 font-semibold">₹300 - ₹800/day</span>
-                    </div>
-                    <div className="flex justify-between items-center border-b pb-3">
-                      <span className="text-gray-700 font-medium">Attractions & Entry Fees</span>
-                      <span className="text-gray-900 font-semibold">₹400 - ₹1,200/day</span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </section>
 
@@ -335,7 +313,7 @@ export default function BudgetPage({ params }) {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Top Attractions</p>
-                  <p className="font-semibold text-gray-800">{city.attractions}+</p>
+                  <p className="font-semibold text-gray-800">{city.attractions}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Best Time</p>

@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'About Explore The City | A Bangalore-First Travel Guide',
-  description: 'How ExploreTheCity.in is written and edited — first-hand visits, no AI listicles, no scraped reviews. Meet the people behind the Bangalore guide.',
+  title: 'About Explore The City | Locally-Written India Travel Guides',
+  description: 'How ExploreTheCity.in is written and edited — first-hand visits, no AI listicles, no scraped reviews. The people behind our Bangalore, Mumbai and Goa guides.',
   alternates: {
     canonical: 'https://www.explorethecity.in/about',
   },
@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Explore The City</h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            A small, independent travel publication. We started with one city — Bangalore — because we'd rather cover one place properly than ten places badly.
+            A small, independent travel publication. We'd rather cover a few cities properly than dozens badly — right now that means Bangalore, Mumbai and Goa.
           </p>
         </div>
       </div>
@@ -27,13 +27,13 @@ export default function AboutPage() {
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Why this site exists</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Search for anything about Bangalore and you'll find dozens of "Top 10 things to do" articles that read like they were rewritten from each other — because they were. Most are produced by content farms, recycled by AI, or written by people who've never actually visited the places they describe.
+              Search for anything about an Indian city and you'll find dozens of "Top 10 things to do" articles that read like they were rewritten from each other — because they were. Most are produced by content farms, recycled by AI, or written by people who've never actually visited the places they describe.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              ExploreTheCity.in is a deliberate response to that. Every page in our <Link href="/cities/bangalore" className="text-primary font-semibold hover:underline">Bangalore guide</Link> is written by someone who has been to that place, eaten at that restaurant, taken that auto-rickshaw, watched that sunrise. Where things change — a place shuts down, a neighbourhood loses its character — we update the page.
+              ExploreTheCity.in is a deliberate response to that. Every page in our <Link href="/cities/bangalore" className="text-primary font-semibold hover:underline">Bangalore</Link>, <Link href="/cities/mumbai" className="text-primary font-semibold hover:underline">Mumbai</Link> and <Link href="/cities/goa" className="text-primary font-semibold hover:underline">Goa</Link> guides is written by someone who has been to that place, eaten at that restaurant, taken that auto-rickshaw, watched that sunrise. Where things change — a place shuts down, a neighbourhood loses its character — we update the page.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              We're not trying to be everything to everyone. We're trying to be the single most useful Bangalore resource on the internet for first-time visitors and curious locals.
+              We're not trying to be everything to everyone. We're trying to be the most useful resource on the internet for the cities we do cover — for first-time visitors and curious locals alike.
             </p>
           </section>
 
@@ -81,7 +81,19 @@ export default function AboutPage() {
               <Link href="/cities/bangalore" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow block">
                 <h3 className="text-xl font-semibold text-primary mb-3">Bangalore Guide</h3>
                 <p className="text-gray-600">
-                  Our main project. A six-chapter, deeply researched guide to Bengaluru — attractions, food, hidden gems, best time to visit, budget and travel tips.
+                  A six-chapter, deeply researched guide to Bengaluru — attractions, food, hidden gems, best time to visit, budget and travel tips.
+                </p>
+              </Link>
+              <Link href="/cities/mumbai" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow block">
+                <h3 className="text-xl font-semibold text-primary mb-3">Mumbai Guide</h3>
+                <p className="text-gray-600">
+                  The same six-chapter treatment for India's coastal megacity — landmarks, street food, the local trains, hidden corners and day trips.
+                </p>
+              </Link>
+              <Link href="/cities/goa" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow block">
+                <h3 className="text-xl font-semibold text-primary mb-3">Goa Guide</h3>
+                <p className="text-gray-600">
+                  Beaches, Portuguese-era churches, Goan food and feni, the North-versus-South question, and the hidden corners beyond the tourist beaches.
                 </p>
               </Link>
               <Link href="/blog" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow block">
@@ -95,9 +107,9 @@ export default function AboutPage() {
 
           {/* Future cities */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">Why only one city?</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Why so few cities?</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Most travel sites scale by adding cities they don't actually know. We're going the other way. We'll only add a new destination when we have someone on the team who can apply the same standard of first-hand research to it. That means slow growth, but content you can trust.
+              Most travel sites scale by adding cities they don't actually know. We're going the other way. We started with Bangalore, added Mumbai and Goa, and we'll only add the next destination when we have someone who can apply the same standard of first-hand research to it. That means slow growth, but content you can trust.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               If you live in another Indian city and want to write the same kind of guide — please <Link href="/contact" className="text-primary font-semibold hover:underline">reach out</Link>.
