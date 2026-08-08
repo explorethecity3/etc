@@ -53,6 +53,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/trip-planner`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: new Date(Math.max(...blogs.map((blog) => new Date(blog.date).getTime()))),
       changeFrequency: 'daily',

@@ -46,6 +46,9 @@ export default function Navbar() {
             <Link href="/cities" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Cities
             </Link>
+            <Link href="/trip-planner" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
+              Trip Planner
+            </Link>
             <Link href="/blog" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Articles
             </Link>
@@ -84,6 +87,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Cities
+            </Link>
+            <Link
+              href="/trip-planner"
+              className="block py-3 text-white hover:text-gray-200 transition-colors font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Trip Planner
             </Link>
             <Link
               href="/blog"

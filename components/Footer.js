@@ -24,6 +24,9 @@ export default function Footer() {
               <Link href="/cities" className="text-white hover:text-gray-200 underline">
                 Cities
               </Link>
+              <Link href="/trip-planner" className="text-white hover:text-gray-200 underline">
+                Free Trip Planner
+              </Link>
               <Link href="/cities/bangalore" className="text-white hover:text-gray-200 underline">
                 Bangalore
               </Link>

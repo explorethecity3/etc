@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
       <div className="container-custom py-16">
         <div className="max-w-4xl mx-auto prose prose-lg">
           <p className="text-gray-600 mb-8">
-            <strong>Last Updated:</strong> May 2026
+            <strong>Last Updated:</strong> August 2026
           </p>
 
           <section className="mb-12">
@@ -39,7 +39,11 @@ export default function PrivacyPolicyPage() {
               <li>Subscribe to our newsletter or updates</li>
               <li>Participate in surveys or promotions</li>
               <li>Provide feedback or suggestions</li>
+              <li>Enter trip preferences into our itinerary planner</li>
             </ul>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              The trip planner accepts destination, trip length, budget style, travel pace, group type, interests and an optional starting neighbourhood. Do not enter names, contact details, booking references or other sensitive information. Generated plans are not published as public pages.
+            </p>
             <p className="text-gray-700 leading-relaxed">
               This information may include your name, email address, and any other information you choose to provide in your messages to us.
             </p>
@@ -104,9 +108,15 @@ export default function PrivacyPolicyPage() {
               <li>Google AdSense for advertising</li>
               <li>Web3Forms for processing contact form submissions</li>
               <li>Hosting and content delivery services</li>
+              <li>AI model-routing providers, only when AI itinerary enhancement is enabled</li>
             </ul>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">5.1 Google AdSense &amp; Advertising</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">5.1 Itinerary Planner</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Our planner first assembles an itinerary from our own reviewed destination data. If AI enhancement is enabled, the selected trip preferences and verified draft may be sent securely to a configured model provider to improve wording. We do not ask for an account, retain a public conversation history or use planner input to create indexable pages. Basic technical information such as an IP address may be processed temporarily to enforce usage limits and prevent abuse.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">5.2 Google AdSense &amp; Advertising</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               We use Google AdSense, a third-party advertising service provided by Google LLC, to display advertisements on our website. Google AdSense and its partners use cookies and similar technologies to serve ads based on your prior visits to this website or other websites on the internet.
             </p>
