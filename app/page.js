@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import CityCard from '@/components/CityCard'
+import TripPlanner from '@/components/TripPlanner'
 import { getCityCards } from '@/lib/cityData'
 import blogs from '@/data/blogs.json'
 import { FaMapMarkedAlt, FaLandmark, FaUtensils, FaPalette } from 'react-icons/fa'
@@ -39,7 +40,7 @@ export default function Home() {
               <Link href="/about" className="inline-block bg-white/10 backdrop-blur-sm border border-white/40 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all">
                 About this site
               </Link>
-              <Link href="/trip-planner" className="inline-block bg-white text-orange-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-50 transition-all shadow-xl">
+              <Link href="#trip-planner" className="inline-block bg-white text-orange-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-50 transition-all shadow-xl">
                 Build a free itinerary
               </Link>
             </div>
@@ -47,14 +48,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="container-custom flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="max-w-3xl">
-            <p className="text-orange-300 uppercase tracking-widest font-bold text-sm mb-3">New planning tool</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Turn our city guides into your itinerary</h2>
-            <p className="text-gray-300 text-lg">Choose your destination, budget, interests and travel pace. Get a private 1–5 day plan built from our reviewed attractions, food recommendations and practical advice.</p>
+      <section id="trip-planner" className="py-20 bg-gradient-to-br from-orange-50 via-white to-amber-50 scroll-mt-20">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-orange-700 uppercase tracking-widest font-bold text-sm mb-3">Free itinerary planner</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Build your India city itinerary</h2>
+            <p className="text-gray-600 text-lg">Choose your destination, budget, interests and travel pace. Get a private 1–5 day plan built from our reviewed attractions, food recommendations and practical advice.</p>
           </div>
-          <Link href="/trip-planner" className="shrink-0 bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors">Plan my trip →</Link>
+          <TripPlanner cities={cities} />
+          <p className="text-center mt-10 text-gray-600">
+            Want a distraction-free view? <Link href="/trip-planner" className="font-semibold text-primary hover:underline">Open the dedicated trip planner →</Link>
+          </p>
         </div>
       </section>
 
@@ -298,10 +302,10 @@ export default function Home() {
               Many “Top 10 things to do” articles repeat the same thin lists. We started ExploreTheCity.in to build useful references to Indian cities, with enough context to compare places, understand local food and plan realistic days.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              Every attraction in our guides has been visited in person. Every restaurant recommendation comes from repeat visits, not aggregator stars. Where something has changed — a place has shut down, a neighbourhood has shifted character — we update the page.
+              Recommendations are checked against reliable sources and edited for practical usefulness rather than ranked by aggregator stars. Where something changes — a place shuts down, access rules move or a neighbourhood shifts character — we update the page.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              We started with Bangalore because that's home, then expanded to seven more high-interest Indian destinations. Every guide follows the same research, source-checking and review standard. You can read more about the editorial approach on our <Link href="/about" className="text-primary font-semibold hover:underline">About</Link> page, or write in via <Link href="/contact" className="text-primary font-semibold hover:underline">Contact</Link>.
+              We started with Bangalore because that's home, then expanded to 14 more high-interest Indian destinations. Every guide follows the same research, source-checking and review standard. You can read more about the editorial approach on our <Link href="/about" className="text-primary font-semibold hover:underline">About</Link> page, or write in via <Link href="/contact" className="text-primary font-semibold hover:underline">Contact</Link>.
             </p>
           </div>
         </div>
