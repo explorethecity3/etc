@@ -1,7 +1,7 @@
 import { getAllCitySlugs, getCityData } from '@/lib/cityData'
 import blogs from '@/data/blogs.json'
 
-const SITE_UPDATED = new Date('2026-05-27')
+const SITE_UPDATED = new Date('2026-08-08')
 const LEGAL_UPDATED = new Date('2025-01-01')
 
 export default function sitemap() {
@@ -18,6 +18,12 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/about`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/authors/explore-the-city-editorial`,
       lastModified: SITE_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.7,

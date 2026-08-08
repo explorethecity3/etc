@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import AdSenseLoader from '@/components/AdSenseLoader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -53,8 +54,6 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6525177681486877"
-          crossorigin="anonymous"></script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -75,6 +74,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
+        <AdSenseLoader />
         <Navbar />
         <main className="min-h-screen">
           {children}

@@ -89,7 +89,7 @@ export default function BlogPost({ params }) {
               <div className="flex flex-wrap gap-4 text-white text-sm">
                 <div className="flex items-center">
                   <FaUser className="mr-2" />
-                  <span>{blog.author}</span>
+                  <Link href="/authors/explore-the-city-editorial" className="hover:underline">{blog.author}</Link>
                 </div>
                 <div className="flex items-center">
                   <FaCalendar className="mr-2" />
@@ -181,7 +181,7 @@ export default function BlogPost({ params }) {
             <div className="mt-8 bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-2">About this article</h3>
               <p className="text-gray-700">
-                Written and maintained by the <strong>Explore The City Editorial</strong> team — a
+                Written and maintained by the <Link href="/authors/explore-the-city-editorial" className="font-semibold text-primary hover:underline">Explore The City Editorial</Link> team — a
                 small group of writers who research every guide from first-hand visits and update
                 articles as places and prices change. Read more on the{' '}
                 <Link href="/about" className="text-primary hover:underline">About</Link> page.

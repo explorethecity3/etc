@@ -18,6 +18,9 @@ export default function Footer() {
               <Link href="/about" className="text-white hover:text-gray-200 underline">
                 About
               </Link>
+              <Link href="/authors/explore-the-city-editorial" className="text-white hover:text-gray-200 underline">
+                Editorial Team
+              </Link>
               <Link href="/cities" className="text-white hover:text-gray-200 underline">
                 Cities
               </Link>

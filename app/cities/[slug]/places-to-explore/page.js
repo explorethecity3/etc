@@ -2,7 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import CitySubmenu from '@/components/CitySubmenu'
+import EditorialNote from '@/components/EditorialNote'
 import { getCityData } from '@/lib/cityData'
+import { getCityEditorial } from '@/lib/cityEditorial'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 
 function AttractionsStructuredData({ city }) {
@@ -37,6 +39,7 @@ export default function AttractionsPage({ params }) {
   if (!city) {
     notFound()
   }
+  const editorial = getCityEditorial(city.slug)
 
   return (
     <div>
@@ -82,6 +85,7 @@ export default function AttractionsPage({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
+            <EditorialNote city={city} scope="attractions guide" />
             {/* Top Attractions */}
             <section className="mb-12">
               <div className="flex items-center mb-6">
@@ -89,7 +93,7 @@ export default function AttractionsPage({ params }) {
                 <h2 className="text-3xl font-bold text-gray-800">Top Attractions in {city.name}</h2>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                The {city.topAttractions.length} places below are the ones we keep recommending to first-time visitors. They cover the obvious heavyweights — Lalbagh, Cubbon Park, Bangalore Palace — alongside spots like the Bull Temple and Tipu Sultan's Summer Palace that get under-rated in most listicles.
+                {editorial.attractionsIntro}
               </p>
               <p className="text-gray-600 text-sm mb-8">
                 Timings and entry fees were verified on our last visit. They change occasionally — if you spot an outdated detail, please <Link href="/contact" className="text-primary hover:underline">let us know</Link>.
@@ -141,7 +145,7 @@ export default function AttractionsPage({ params }) {
               <div className="mt-10 bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
                 <h3 className="text-lg font-bold text-gray-800 mb-2">Planning a multi-day itinerary?</h3>
                 <p className="text-gray-700">
-                  Most travellers cover the central attractions (Lalbagh, Cubbon Park, Vidhana Soudha, Bangalore Palace, Bull Temple) in 2–3 days, then add Nandi Hills as a sunrise half-day. Pair this with the <Link href={`/cities/${city.slug}/food`} className="text-blue-700 font-semibold hover:underline">Food</Link> chapter to sequence meals near these spots, the <Link href={`/cities/${city.slug}/budget`} className="text-blue-700 font-semibold hover:underline">Budget</Link> page for sample daily spends, or the <Link href={`/cities/${city.slug}/hidden-gems`} className="text-blue-700 font-semibold hover:underline">Hidden Gems</Link> chapter for day-trip ideas if you have more time.
+                  {editorial.itinerary} Pair this with the <Link href={`/cities/${city.slug}/food`} className="text-blue-700 font-semibold hover:underline">Food</Link> chapter, the <Link href={`/cities/${city.slug}/budget`} className="text-blue-700 font-semibold hover:underline">Budget</Link> page, or the <Link href={`/cities/${city.slug}/hidden-gems`} className="text-blue-700 font-semibold hover:underline">Hidden Gems</Link> chapter.
                 </p>
               </div>
             </section>

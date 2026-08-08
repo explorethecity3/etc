@@ -74,6 +74,16 @@ export default function AboutPage() {
             </div>
           </section>
 
+          <section className="mb-16 rounded-xl border border-blue-200 bg-blue-50 p-8">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Who reviews the guides</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-5">
+              City guides and articles are published and maintained by Explore The City Editorial. Each maintained city page identifies its review date and links to our correction process so readers can evaluate who is responsible for the information and how it is kept current.
+            </p>
+            <Link href="/authors/explore-the-city-editorial" className="btn-primary inline-block">
+              Meet the editorial team
+            </Link>
+          </section>
+
           {/* What's on the site */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">What's on the site right now</h2>

@@ -2,7 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import CitySubmenu from '@/components/CitySubmenu'
+import EditorialNote from '@/components/EditorialNote'
 import { getCityData } from '@/lib/cityData'
+import { getCityEditorial } from '@/lib/cityEditorial'
 import { FaUtensils } from 'react-icons/fa'
 
 function FoodStructuredData({ city }) {
@@ -37,6 +39,7 @@ export default function FoodPage({ params }) {
   if (!city) {
     notFound()
   }
+  const editorial = getCityEditorial(city.slug)
 
   return (
     <div>
@@ -82,16 +85,17 @@ export default function FoodPage({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
+            <EditorialNote city={city} scope="food guide" />
             {/* Introduction Section */}
             <section className="mb-12">
               <h1 className="text-4xl font-bold text-gray-900 mb-6">
                 {city.name} Food Guide: What to Eat & Where to Find It
               </h1>
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                {city.name}'s food scene is built around darshini-style breakfast joints, decades-old institutions like MTR and Vidyarthi Bhavan, and a craft-beer pub culture that has no parallel elsewhere in India. The 12 dishes below are the ones we keep coming back to — with the specific places we've eaten them.
+                {editorial.foodIntro}
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Prices, opening hours and crowd levels reflect our most recent visits. Where a place is famously busy, we've said so; where the queue is exaggerated online, we've said that too.
+                The entries combine what to order with practical context. Confirm current opening hours and prices directly before making a special journey.
               </p>
             </section>
 

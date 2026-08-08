@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import CitySubmenu from '@/components/CitySubmenu'
+import EditorialNote from '@/components/EditorialNote'
 import { getCityData } from '@/lib/cityData'
 import { FaClock } from 'react-icons/fa'
 
@@ -89,6 +90,7 @@ export default function BestTimePage({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
+            <EditorialNote city={city} scope="seasonal guide" />
             {/* Best Time to Visit */}
             <section className="mb-12 bg-blue-50 p-8 rounded-lg">
               <div className="flex items-center mb-6">

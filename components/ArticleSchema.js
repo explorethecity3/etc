@@ -10,7 +10,7 @@ export default function ArticleSchema({ blog, url }) {
     author: {
       '@type': 'Organization',
       name: blog.author,
-      url: 'https://www.explorethecity.in/about',
+      url: 'https://www.explorethecity.in/authors/explore-the-city-editorial',
     },
     publisher: {
       '@type': 'Organization',

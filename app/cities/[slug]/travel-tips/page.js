@@ -2,7 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import CitySubmenu from '@/components/CitySubmenu'
+import EditorialNote from '@/components/EditorialNote'
 import { getCityData } from '@/lib/cityData'
+import { getCityEditorial } from '@/lib/cityEditorial'
 import { FaLightbulb } from 'react-icons/fa'
 
 function TravelTipsStructuredData({ city }) {
@@ -44,6 +46,7 @@ export default function TravelTipsPage({ params }) {
   if (!city) {
     notFound()
   }
+  const editorial = getCityEditorial(city.slug)
 
   return (
     <div>
@@ -89,6 +92,7 @@ export default function TravelTipsPage({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
+            <EditorialNote city={city} scope="travel-tips guide" />
             {/* Travel Tips */}
             <section className="mb-12">
               <div className="flex items-center mb-6">
@@ -96,7 +100,7 @@ export default function TravelTipsPage({ params }) {
                 <h2 className="text-3xl font-bold text-gray-800">Travel Tips for {city.name}</h2>
               </div>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Bangalore rewards travellers who plan around its quirks — the punishing traffic, the lack of a single tourist quarter, the way the monsoon turns 30-minute commutes into 3-hour ones. Below is the practical knowledge we wish someone had handed us before our first visits: how to get around, where to actually stay, what etiquette matters, and the bits of the city to skip.
+                {editorial.travelIntro}
               </p>
               <div className="space-y-6">
                 {city.travelTips.map((item, index) => {

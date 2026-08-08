@@ -2,7 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import CitySubmenu from '@/components/CitySubmenu'
+import EditorialNote from '@/components/EditorialNote'
 import { getCityData } from '@/lib/cityData'
+import { getCityEditorial } from '@/lib/cityEditorial'
 import { FaGem } from 'react-icons/fa'
 
 function HiddenGemsStructuredData({ city }) {
@@ -36,6 +38,7 @@ export default function HiddenGemsPage({ params }) {
   if (!city) {
     notFound()
   }
+  const editorial = getCityEditorial(city.slug)
 
   // Check if hiddenGems exists
   if (!city.hiddenGems || city.hiddenGems.length === 0) {
@@ -133,6 +136,7 @@ export default function HiddenGemsPage({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
+            <EditorialNote city={city} scope="hidden-gems guide" />
             {/* Hidden Gems */}
             <section className="mb-12">
               <div className="flex items-center mb-6">
@@ -140,10 +144,10 @@ export default function HiddenGemsPage({ params }) {
                 <h2 className="text-3xl font-bold text-gray-800">Hidden Gems in {city.name}</h2>
               </div>
               <p className="text-gray-700 text-base mb-4 leading-relaxed">
-                These are the {city.name} day trips and offbeat corners that don't show up on most listicles — waterfalls, dance villages, 400-year-old banyan trees, decommissioned reservoirs, the bits of old Bangalore squeezed between flyovers. Most of them sit 30-90 km outside the city, so they work best as a weekend half-day or a Sunday morning escape.
+                {editorial.hiddenIntro}
               </p>
               <p className="text-gray-600 text-sm mb-8">
-                Distances and timings reflect our most recent visits. Several of these places (Hesaraghatta, Chunchi Falls) are seasonal — we've flagged the best months alongside each.
+                Access, weather and opening arrangements can change. Review each entry and confirm time-sensitive details before setting out.
               </p>
               <div className="space-y-6">
                 {city.hiddenGems.map((gem, index) => {
@@ -168,7 +172,7 @@ export default function HiddenGemsPage({ params }) {
               <div className="mt-10 bg-purple-50 p-6 rounded-lg border-l-4 border-purple-600">
                 <h3 className="text-lg font-bold text-gray-800 mb-2">Planning a day trip out of these?</h3>
                 <p className="text-gray-700 mb-3">
-                  Most of these spots are reachable by car or bike from central Bangalore. The {city.travelTips?.find(t => t.category === 'Weekend Getaways') ? 'Weekend Getaways section of our' : ''} <Link href={`/cities/${city.slug}/travel-tips`} className="text-purple-700 font-semibold hover:underline">Travel Tips</Link> chapter covers timings, transport options and what to pack. For sunrise and viewpoint trips, the <Link href={`/cities/${city.slug}/best-time`} className="text-purple-700 font-semibold hover:underline">Best Time to Visit</Link> page explains which months these places actually look their best.
+                  {editorial.hiddenPlanning} The <Link href={`/cities/${city.slug}/travel-tips`} className="text-purple-700 font-semibold hover:underline">Travel Tips</Link> chapter covers transport planning, while the <Link href={`/cities/${city.slug}/best-time`} className="text-purple-700 font-semibold hover:underline">Best Time to Visit</Link> page explains the seasonal trade-offs.
                 </p>
               </div>
             </section>
