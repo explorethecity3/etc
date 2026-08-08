@@ -7,15 +7,15 @@ import { FaMapMarkedAlt, FaUtensils, FaMoneyBillWave, FaClock, FaCompass, FaRout
 const citiesFaqs = [
   {
     question: 'Which cities does Explore The City cover?',
-    answer: "We currently have full guides to Bangalore, Mumbai, Goa, Delhi, Jaipur, Agra, Varanasi and Hyderabad. Each guide covers attractions, food, hidden gems, neighbourhoods, best time to visit and a realistic budget breakdown.",
+    answer: "We currently have full guides to Bangalore, Mumbai, Goa, Delhi, Jaipur, Agra, Varanasi, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Kochi, Chandigarh and Mysuru. Each guide covers attractions, food, hidden gems, neighbourhoods, best time to visit and a realistic budget breakdown.",
   },
   {
     question: 'How detailed is each city guide?',
-    answer: "Every city guide is built from six dedicated chapters: places to explore, food and cafes, hidden gems, best time to visit, budget estimates, and travel tips. Each one profiles around 10 attractions and 12 local dishes, with timings, fees and where to find each.",
+    answer: "Every city guide is built from six dedicated chapters: places to explore, food and cafes, hidden gems, best time to visit, budget estimates, and travel tips. Each one profiles at least eight attractions and six local dishes, with practical details for planning a visit.",
   },
   {
-    question: 'Are the guides written from first-hand visits?',
-    answer: "That's the standard we work to. We add a new city only when we have someone who can apply the same first-hand research to it, rather than scaling fast with recycled content. That means slower growth but guides you can actually trust.",
+    question: 'How are the guides researched?',
+    answer: "Each guide is independently researched and reviewed against reliable sources rather than assembled from recycled directory listings. We update practical details as places and transport change.",
   },
   {
     question: 'How many days do I need for each city?',
@@ -25,7 +25,7 @@ const citiesFaqs = [
 
 export const metadata = {
   title: 'Indian City Travel Guides | Explore The City',
-  description: 'Independent travel guides to eight Indian destinations, with attractions, food, hidden gems, neighbourhoods, seasonal advice and budget tips for each.',
+  description: 'Independent travel guides to 15 Indian destinations, with attractions, food, hidden gems, neighbourhoods, seasonal advice and budget tips for each.',
   alternates: {
     canonical: 'https://www.explorethecity.in/cities',
   },
@@ -65,7 +65,7 @@ export default function CitiesPage() {
             </div>
           </div>
           <p className="text-sm text-blue-100/80 mt-8 max-w-2xl mx-auto">
-            We add a new city only when we can write it with the same first-hand research. Slow growth, but guides you can trust.
+            Every guide is independently researched, checked against reliable sources and structured to help you plan a realistic trip.
           </p>
         </div>
       </section>
@@ -82,7 +82,7 @@ export default function CitiesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {cities.map((city) => (
               <CityCard key={city.slug} city={city} />
             ))}
@@ -98,7 +98,7 @@ export default function CitiesPage() {
               What's Inside Every Guide
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Six dedicated chapters per city, written from first-hand visits and updated as each place changes.
+              Six dedicated chapters per city, independently researched and updated as each place changes.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -109,7 +109,7 @@ export default function CitiesPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Places to Explore</h3>
               </div>
-              <p className="text-gray-600">Around 10 top attractions per city, with timings, entry fees and an honest sense of what to expect at each.</p>
+              <p className="text-gray-600">At least eight top attractions per city, with practical details and an honest sense of what to expect at each.</p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="flex items-center gap-4 mb-4">
@@ -118,7 +118,7 @@ export default function CitiesPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Food &amp; Cafes</h3>
               </div>
-              <p className="text-gray-600">12 must-try local dishes per city, from street food to coastal specialities, with exactly where to find each.</p>
+              <p className="text-gray-600">At least six must-try local dishes per city, from street food to regional specialities, with suggestions for where to begin.</p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="flex items-center gap-4 mb-4">

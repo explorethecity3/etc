@@ -30,7 +30,7 @@ export default function Home() {
               <span className="font-normal not-italic">Let's Explore It Together.</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 leading-relaxed font-light">
-              In-depth, independently researched travel guides to India's cities — attractions, food, day trips and the practical details first-time visitors need. Explore eight destinations, from Delhi and Jaipur to Hyderabad and Goa.
+              In-depth, independently researched travel guides to India's cities — attractions, food, day trips and the practical details first-time visitors need. Explore 15 destinations, from Delhi and Jaipur to Chennai, Kochi and Goa.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/cities" className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-xl">
@@ -242,7 +242,7 @@ export default function Home() {
             </div>
           </div>
           <p className="text-center text-blue-100 max-w-2xl mx-auto mt-10 text-sm">
-            Every page is hand-written based on first-hand visits and local knowledge — no AI listicle filler, no scraped reviews.
+            Every guide is independently researched, checked against reliable sources and edited for practical trip planning — no scraped reviews or unverified directory filler.
           </p>
         </div>
       </section>
@@ -295,7 +295,7 @@ export default function Home() {
               Why this guide exists
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              Most "Top 10 things to do" articles online are recycled from the same handful of sources. We started ExploreTheCity.in because we wanted honest, first-hand references to Indian cities — written by people who actually live in them, eat at these places, and take these autos every week.
+              Many “Top 10 things to do” articles repeat the same thin lists. We started ExploreTheCity.in to build useful references to Indian cities, with enough context to compare places, understand local food and plan realistic days.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
               Every attraction in our guides has been visited in person. Every restaurant recommendation comes from repeat visits, not aggregator stars. Where something has changed — a place has shut down, a neighbourhood has shifted character — we update the page.

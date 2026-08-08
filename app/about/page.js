@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Explore The City</h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            A small, independent travel publication. We cover eight Indian destinations with practical, carefully reviewed guides rather than chasing a huge directory.
+            A small, independent travel publication. We cover 15 Indian destinations with practical, carefully reviewed guides rather than chasing a huge directory.
           </p>
         </div>
       </div>

@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Explore The City — Locally-Written India Travel Guides',
-  description: 'Independently researched travel guides to eight Indian destinations. Attractions, food, hidden gems, day trips, neighbourhoods and practical planning advice.',
+  description: 'Independently researched travel guides to 15 Indian destinations. Attractions, food, hidden gems, day trips, neighbourhoods and practical planning advice.',
   authors: [{ name: 'Explore The City Editorial' }],
   creator: 'Explore The City',
   publisher: 'Explore The City',
@@ -21,7 +21,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Explore The City — Locally-Written India Travel Guides',
-    description: 'Independent guides to eight Indian destinations — attractions, food, hidden gems, day trips, budgets and practical travel advice.',
+    description: 'Independent guides to 15 Indian destinations — attractions, food, hidden gems, day trips, budgets and practical travel advice.',
     url: 'https://www.explorethecity.in',
     siteName: 'Explore The City',
     locale: 'en_IN',
@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
               name: 'Explore The City',
               url: 'https://www.explorethecity.in',
               logo: 'https://www.explorethecity.in/logo.png',
-              description: 'Independently researched guides to eight Indian destinations, covering attractions, food, hidden gems, day trips, budgets and practical tips.',
+              description: 'Independently researched guides to 15 Indian destinations, covering attractions, food, hidden gems, day trips, budgets and practical tips.',
               email: 'contact@explorethecity.in',
               areaServed: {
                 '@type': 'Country',
