@@ -149,7 +149,7 @@ export default function ContactPage() {
                 </button>
 
                 {status && (
-                  <div className={`px-4 py-3 rounded-lg ${
+                  <div role="status" aria-live="polite" className={`px-4 py-3 rounded-lg ${
                     status.includes('wrong')
                       ? 'bg-red-50 border border-red-200 text-red-800'
                       : 'bg-green-50 border border-green-200 text-green-800'

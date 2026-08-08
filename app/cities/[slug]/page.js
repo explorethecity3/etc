@@ -28,6 +28,9 @@ export async function generateMetadata({ params }) {
   return {
     title: `${city.name} Travel Guide - Best Places to Visit in ${city.name}, ${city.state}`,
     description: city.shortDescription || `Discover the best places to visit in ${city.name}, ${city.state}. Complete travel guide with attractions, food, budget tips, and hidden gems.`,
+    alternates: {
+      canonical: `https://www.explorethecity.in/cities/${city.slug}`,
+    },
     openGraph: {
       title: `${city.name} Travel Guide | Explore The City`,
       description: city.shortDescription || `Discover ${city.name}'s top attractions, local food, and travel tips`,

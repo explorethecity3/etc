@@ -54,7 +54,7 @@ export default function FoodPage({ params }) {
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">{city.name}</h1>
+            <p className="text-5xl md:text-6xl font-bold mb-4" aria-hidden="true">{city.name}</p>
             <p className="text-xl md:text-2xl">{city.state}</p>
           </div>
         </div>

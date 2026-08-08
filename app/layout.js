@@ -12,9 +12,6 @@ export const metadata = {
   creator: 'Explore The City',
   publisher: 'Explore The City',
   metadataBase: new URL('https://www.explorethecity.in'),
-  alternates: {
-    canonical: 'https://www.explorethecity.in',
-  },
   verification: {
     google: 'IZHMSq9e0p173wQb1TeEu7nYjjbB5yPn12rmIuG_-_E',
   },

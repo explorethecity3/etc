@@ -2,10 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import CityCard from '@/components/CityCard'
 import { getCityCards } from '@/lib/cityData'
+import blogs from '@/data/blogs.json'
 import { FaMapMarkedAlt, FaLandmark, FaUtensils, FaPalette } from 'react-icons/fa'
 
 export default function Home() {
   const cities = getCityCards()
+  const featuredArticles = [...blogs]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 3)
 
   return (
     <div>
@@ -34,12 +38,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Latest Articles */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Latest India Travel Articles</h2>
+              <p className="text-gray-600 text-lg max-w-2xl">Practical, long-form advice that complements our city guides.</p>
+            </div>
+            <Link href="/blog" className="text-primary font-semibold hover:underline">Browse all travel articles →</Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {featuredArticles.map((article) => (
+              <Link key={article.slug} href={`/blog/${article.slug}`} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+                <p className="text-sm font-semibold text-primary mb-3">{article.category}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{article.title}</h3>
+                <p className="text-gray-600 text-sm line-clamp-3 mb-4">{article.excerpt}</p>
+                <span className="text-sm text-gray-500">{article.readTime} · {article.date}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Wander Through Section */}
       <section className="py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50">
         <div className="container-custom">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-serif italic text-gray-900 mb-2">
-              Wander Through Bangalore...
+              Featured City: Bangalore
             </h2>
             <p className="text-gray-600 text-lg mt-3 max-w-2xl">
               Four sides of the same city — heritage streets, food legends, living culture, and the hills that frame it.
@@ -53,7 +80,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">Heritage Streets</h3>
                 <p className="text-amber-100 mb-4">Old Bangalore, temples, bazaars, palaces.</p>
                 <Link href="/cities/bangalore/places-to-explore" className="text-white hover:text-amber-200 font-semibold inline-flex items-center gap-2">
-                  Discover More →
+                  Explore Bangalore&apos;s heritage →
                 </Link>
               </div>
             </div>
@@ -64,7 +91,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">Local Flavors</h3>
                 <p className="text-orange-100 mb-4">Masala dosa, filter coffee, ragi mudde.</p>
                 <Link href="/cities/bangalore/food" className="text-white hover:text-orange-200 font-semibold inline-flex items-center gap-2">
-                  Discover More →
+                  Explore Bangalore&apos;s food →
                 </Link>
               </div>
             </div>
@@ -75,7 +102,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">Living Culture</h3>
                 <p className="text-purple-100 mb-4">Cafes, breweries, theatres, weekend markets.</p>
                 <Link href="/cities/bangalore/travel-tips" className="text-white hover:text-purple-200 font-semibold inline-flex items-center gap-2">
-                  Discover More →
+                  Read Bangalore travel tips →
                 </Link>
               </div>
             </div>
@@ -86,7 +113,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">Hidden Gems</h3>
                 <p className="text-teal-100 mb-4">Offbeat corners locals quietly love.</p>
                 <Link href="/cities/bangalore/hidden-gems" className="text-white hover:text-teal-200 font-semibold inline-flex items-center gap-2">
-                  Discover More →
+                  Find Bangalore&apos;s hidden gems →
                 </Link>
               </div>
             </div>
@@ -118,7 +145,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              Pick Your Side of Bangalore
+              Explore Bangalore in Depth
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Six focused chapters of the guide. Jump straight into what you came for.
@@ -205,7 +232,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase">
-              Quick Bangalore Tips
+              Featured Bangalore Tips
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               The questions every first-time visitor to Bangalore asks, answered briefly. Tap any card for the full chapter.

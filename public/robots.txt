@@ -10,9 +10,6 @@ Disallow: /admin/
 # Sitemap location
 Sitemap: https://www.explorethecity.in/sitemap.xml
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
 # Allow all major search engines
 User-agent: Googlebot
 Allow: /

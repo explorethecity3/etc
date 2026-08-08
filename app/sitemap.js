@@ -1,5 +1,8 @@
-import { getAllCitySlugs } from '@/lib/cityData'
+import { getAllCitySlugs, getCityData } from '@/lib/cityData'
 import blogs from '@/data/blogs.json'
+
+const SITE_UPDATED = new Date('2026-05-27')
+const LEGAL_UPDATED = new Date('2025-01-01')
 
 export default function sitemap() {
   const baseUrl = 'https://www.explorethecity.in'
@@ -9,93 +12,98 @@ export default function sitemap() {
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: SITE_UPDATED,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: SITE_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: SITE_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
+      lastModified: LEGAL_UPDATED,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: new Date(),
+      lastModified: LEGAL_UPDATED,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: `${baseUrl}/cities`,
-      lastModified: new Date(),
+      lastModified: SITE_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: new Date(Math.max(...blogs.map((blog) => new Date(blog.date).getTime()))),
       changeFrequency: 'daily',
       priority: 0.9,
     },
   ]
 
   // City pages
-  const cityPages = citySlugs.flatMap((slug) => [
+  const cityPages = citySlugs.flatMap((slug) => {
+    const city = getCityData(slug)
+    const lastModified = city?.lastUpdated ? new Date(city.lastUpdated) : SITE_UPDATED
+
+    return [
     {
       url: `${baseUrl}/cities/${slug}`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/cities/${slug}/best-time`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/cities/${slug}/places-to-explore`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/cities/${slug}/food`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/cities/${slug}/hidden-gems`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/cities/${slug}/travel-tips`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/cities/${slug}/budget`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-  ])
+    ]
+  })
 
   // Blog posts
   const blogPages = blogs.map((blog) => ({
