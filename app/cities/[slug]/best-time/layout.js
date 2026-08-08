@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `When to Visit ${city.name}: Best Months, Weather & Seasons 2025 | Explore The City`
+  const metaTitle = `When to Visit ${city.name}: Best Months, Weather & Seasons 2026 | Explore The City`
   const metaDescription = `Find the best time to visit ${city.name}, ${city.state}. Comprehensive guide on weather conditions, peak seasons, festivals, and ideal months for visiting ${city.name} to make the most of your trip.`
 
   const siteUrl = 'https://www.explorethecity.in'

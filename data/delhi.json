@@ -1,0 +1,51 @@
+{
+  "slug": "delhi",
+  "name": "Delhi",
+  "state": "National Capital Territory of Delhi",
+  "lastUpdated": "2026-08-08",
+  "image": "/images/photos/unsplash-1474487548417-781cb71495f3.jpg",
+  "shortDescription": "India's capital layers Mughal monuments, grand civic avenues, crowded bazaars and contemporary neighbourhoods into one enormous, endlessly varied city.",
+  "attractions": 8,
+  "description": "Delhi is not one centre but several cities accumulated over centuries. Old Delhi gathers the Red Fort, Jama Masjid and Chandni Chowk into an intense historic core; New Delhi opens into broad avenues around India Gate and the government district; farther south, medieval ruins sit beside modern neighbourhoods and Metro stations.\n\nA first visit works best in geographic clusters. Give Old Delhi an early morning, combine Humayun's Tomb with nearby Nizamuddin and Lodhi Garden, and keep Qutub Minar and Mehrauli together. The Metro is usually faster than driving between districts, while short auto-rickshaw or taxi rides solve the last mile.\n\nDelhi rewards curiosity, but its scale, summer heat and winter air pollution demand realistic pacing. Build indoor breaks into warm days, leave buffers for traffic, and check current official notices before visiting major monuments or government areas.",
+  "bestTimeToVisit": "October to March is the most comfortable sightseeing window. October and November usually bring warm days and festival activity, while December and January can be cold and foggy in the mornings. Air quality can deteriorate during late autumn and winter, so sensitive travellers should check forecasts.\n\nFebruary and March offer pleasant days before the heat intensifies. April to June is extremely hot; outdoor sightseeing belongs in early mornings and evenings. The July-to-September monsoon lowers temperatures but adds humidity, sudden rain and occasional waterlogging.",
+  "bestTimeToVisitShort": "October to March; check winter air quality and fog",
+  "budgetEstimate": "₹2,000–7,000 per person per day (excluding intercity travel)",
+  "topAttractions": [
+    {"name":"Red Fort","description":"The Mughal imperial citadel anchors Old Delhi with massive red-sandstone walls, ceremonial halls and museums. Pair it with Jama Masjid and Chandni Chowk rather than making a separate cross-city journey.","timings":"Usually closed Monday; verify official schedule","entryFee":"Ticketed; rates can change"},
+    {"name":"Qutub Minar","description":"A soaring early Delhi Sultanate minaret surrounded by the intricate ruins of the Qutub complex. Go near opening time for cooler weather and fewer tour groups.","timings":"Daily; verify current hours","entryFee":"Ticketed"},
+    {"name":"Humayun's Tomb","description":"A symmetrical garden tomb and important precursor to the Taj Mahal. The wider complex deserves time beyond the main monument, especially in the softer late-afternoon light.","timings":"Daily; daylight visit","entryFee":"Ticketed"},
+    {"name":"India Gate and Kartavya Path","description":"Delhi's monumental central axis is best experienced as an evening walk, when families gather around the lawns and the heat eases.","timings":"Public outdoor area; security restrictions may apply","entryFee":"Free"},
+    {"name":"Jama Masjid","description":"One of India's largest historic mosques, rising above Old Delhi's lanes. Dress modestly, remove shoes and avoid prayer times unless attending worship.","timings":"Visitor access pauses during prayers","entryFee":"Entry generally free; camera rules may vary"},
+    {"name":"Lotus Temple","description":"The Baháʼí House of Worship is known for its lotus-shaped architecture and quiet, non-denominational prayer hall. Silence and orderly entry are part of the experience.","timings":"Often closed Monday; verify before travel","entryFee":"Free"},
+    {"name":"Lodhi Garden","description":"A landscaped public garden scattered with fifteenth-century tombs. It is ideal for a morning walk and pairs naturally with nearby museums and neighbourhood cafés.","timings":"Daily, daylight hours","entryFee":"Free"},
+    {"name":"National Museum","description":"A broad introduction to Indian art and archaeology that adds valuable context to the monuments seen across the city. Allow at least two hours and check gallery availability.","timings":"Verify current opening days","entryFee":"Ticketed"}
+  ],
+  "localFood": [
+    {"name":"Chole Bhature","description":"Spiced chickpeas with large, freshly fried bread: rich, filling and best treated as breakfast or lunch.","whereToTry":"Established shops in Paharganj, Karol Bagh or Lajpat Nagar","price":"₹100–250"},
+    {"name":"Old Delhi Kebabs","description":"Seekh kebabs, grilled meats and slow-cooked dishes reflect the old city's Mughlai food traditions.","whereToTry":"Around Jama Masjid; choose busy, well-reviewed kitchens","price":"₹200–600"},
+    {"name":"Paratha","description":"Stuffed flatbreads arrive with pickles, chutneys and curries; versions range from traditional fillings to modern inventions.","whereToTry":"Chandni Chowk or neighbourhood breakfast shops","price":"₹80–250"},
+    {"name":"Delhi Chaat","description":"Papdi chaat, aloo tikki and golgappe balance tangy chutney, yoghurt, spice and crunch.","whereToTry":"Busy vendors in Bengali Market, UPSC Lane or Chandni Chowk","price":"₹60–180"},
+    {"name":"Butter Chicken","description":"A Delhi restaurant classic of grilled chicken finished in a buttery tomato gravy.","whereToTry":"Established Punjabi restaurants across central and south Delhi","price":"₹350–800"},
+    {"name":"Daulat Ki Chaat","description":"A delicate winter-only milk foam sweet prepared in Old Delhi when cool weather allows.","whereToTry":"Chandni Chowk in winter mornings","price":"₹80–200"}
+  ],
+  "travelTips": [
+    {"category":"Getting Around","tips":["Use the Delhi Metro for long cross-city journeys and avoid peak commuter hours when possible.","Keep a stored-value card or supported ticketing method handy, and check the correct station exit before leaving.","Use app cabs or autos for the last mile; allow extra time for airport and railway-station security."]},
+    {"category":"Planning and Safety","tips":["Group Old Delhi, central Delhi and south Delhi sights into separate days.","Protect against heat from April to June and check winter air-quality forecasts.","Ignore unsolicited guides and transport offers; buy monument tickets only from official counters or portals."]},
+    {"category":"Etiquette","tips":["Cover shoulders and knees at religious sites and carry socks for hot stone floors.","Ask before photographing people or worship.","Drink bottled or properly filtered water and choose busy food stalls with high turnover."]},
+    {"category":"Where to Stay","tips":["Connaught Place is central and Metro-connected but often expensive.","South Delhi suits cafés and quieter evenings, though Old Delhi is farther away.","Aerocity is practical for short airport stopovers, not a heritage-focused itinerary."]}
+  ],
+  "hiddenGems": [
+    "Mehrauli Archaeological Park - A broad historic landscape of tombs, stepwells and ruins near Qutub Minar; visit in daylight and use a current map.",
+    "Agrasen Ki Baoli - A striking historic stepwell hidden close to central Delhi's commercial streets.",
+    "Sunder Nursery - Carefully restored monuments, gardens and biodiversity beside Humayun's Tomb.",
+    "Majnu ka Tilla - A compact Tibetan neighbourhood known for cafés, lanes and a different rhythm from central Delhi.",
+    "Sanjay Van - A large urban forest for daylight walks; go with a companion and stay on active routes.",
+    "Ghalib's Haveli - A small Old Delhi museum connected with Urdu poet Mirza Ghalib."
+  ],
+  "faq": [
+    {"question":"How many days are enough for Delhi?","answer":"Three full days cover the main historic clusters without rushing; four or five allow museums, food walks and a slower pace."},
+    {"question":"Is the Delhi Metro useful for tourists?","answer":"Yes. It connects most major districts cheaply and often beats road traffic, though a short auto or walk is still needed for some sights."},
+    {"question":"Can Delhi and Agra be combined?","answer":"Yes. Fast trains make Agra possible as a long day trip, but an overnight stay gives the Taj Mahal and Agra Fort more breathing room."},
+    {"question":"What should visitors know about Delhi winters?","answer":"Mornings can be cold and foggy, and air quality may be poor. Check live conditions and build flexibility into flight and train connections."}
+  ]
+}

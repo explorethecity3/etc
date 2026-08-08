@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'About Explore The City | Locally-Written India Travel Guides',
-  description: 'How ExploreTheCity.in is written and edited — first-hand visits, no AI listicles, no scraped reviews. The people behind our Bangalore, Mumbai and Goa guides.',
+  description: 'How ExploreTheCity.in researches, checks and edits its independent guides to Indian destinations.',
   alternates: {
     canonical: 'https://www.explorethecity.in/about',
   },
@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Explore The City</h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            A small, independent travel publication. We'd rather cover a few cities properly than dozens badly — right now that means Bangalore, Mumbai and Goa.
+            A small, independent travel publication. We cover eight Indian destinations with practical, carefully reviewed guides rather than chasing a huge directory.
           </p>
         </div>
       </div>
@@ -30,7 +30,7 @@ export default function AboutPage() {
               Search for anything about an Indian city and you'll find dozens of "Top 10 things to do" articles that read like they were rewritten from each other — because they were. Most are produced by content farms, recycled by AI, or written by people who've never actually visited the places they describe.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              ExploreTheCity.in is a deliberate response to that. Every page in our <Link href="/cities/bangalore" className="text-primary font-semibold hover:underline">Bangalore</Link>, <Link href="/cities/mumbai" className="text-primary font-semibold hover:underline">Mumbai</Link> and <Link href="/cities/goa" className="text-primary font-semibold hover:underline">Goa</Link> guides is written by someone who has been to that place, eaten at that restaurant, taken that auto-rickshaw, watched that sunrise. Where things change — a place shuts down, a neighbourhood loses its character — we update the page.
+              ExploreTheCity.in is a deliberate response to that. Our guides combine direct experience where available with official tourism and monument sources, current transport information and careful editorial review. We separate durable planning advice from details that visitors should reconfirm, such as fees, opening hours and seasonal access.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               We're not trying to be everything to everyone. We're trying to be the most useful resource on the internet for the cities we do cover — for first-time visitors and curious locals alike.
@@ -119,7 +119,7 @@ export default function AboutPage() {
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Why so few cities?</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Most travel sites scale by adding cities they don't actually know. We're going the other way. We started with Bangalore, added Mumbai and Goa, and we'll only add the next destination when we have someone who can apply the same standard of first-hand research to it. That means slow growth, but content you can trust.
+              We started with Bangalore, then expanded selectively to Mumbai, Goa, Delhi, Jaipur, Agra, Varanasi and Hyderabad. A destination is added only when we can provide substantial, city-specific planning help and a repeatable fact-checking process.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               If you live in another Indian city and want to write the same kind of guide — please <Link href="/contact" className="text-primary font-semibold hover:underline">reach out</Link>.

@@ -12,7 +12,7 @@ export default function Footer() {
               About Us
             </h3>
             <p className="text-white text-sm max-w-md">
-              An independent, locally-written travel publication covering Indian cities — currently Bangalore, Mumbai and Goa — with everything written from first-hand visits.
+              An independent travel publication covering eight Indian destinations with researched, practical planning guides.
             </p>
             <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
               <Link href="/about" className="text-white hover:text-gray-200 underline">

@@ -7,7 +7,7 @@ import { FaMapMarkedAlt, FaUtensils, FaMoneyBillWave, FaClock, FaCompass, FaRout
 const citiesFaqs = [
   {
     question: 'Which cities does Explore The City cover?',
-    answer: "We currently have full, locally-researched guides to Bangalore, Mumbai and Goa, with more Indian cities being added one at a time. Each guide covers attractions, food, hidden gems, neighbourhoods, day trips, best time to visit and a realistic budget breakdown.",
+    answer: "We currently have full guides to Bangalore, Mumbai, Goa, Delhi, Jaipur, Agra, Varanasi and Hyderabad. Each guide covers attractions, food, hidden gems, neighbourhoods, best time to visit and a realistic budget breakdown.",
   },
   {
     question: 'How detailed is each city guide?',
@@ -25,7 +25,7 @@ const citiesFaqs = [
 
 export const metadata = {
   title: 'Indian City Travel Guides | Explore The City',
-  description: 'Locally-written travel guides to Indian cities — Bangalore, Mumbai and Goa so far, with more to come. Attractions, food, hidden gems, neighbourhoods, day trips and budget tips for each.',
+  description: 'Independent travel guides to eight Indian destinations, with attractions, food, hidden gems, neighbourhoods, seasonal advice and budget tips for each.',
   alternates: {
     canonical: 'https://www.explorethecity.in/cities',
   },

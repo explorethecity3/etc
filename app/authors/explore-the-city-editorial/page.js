@@ -14,7 +14,7 @@ export default function EditorialProfilePage() {
     name: 'Explore The City Editorial',
     url: 'https://www.explorethecity.in/authors/explore-the-city-editorial',
     parentOrganization: { '@type': 'Organization', name: 'Explore The City', url: 'https://www.explorethecity.in' },
-    knowsAbout: ['India travel', 'Bangalore travel', 'Mumbai travel', 'Goa travel', 'Indian food and culture'],
+    knowsAbout: ['India travel', 'Indian city travel', 'Indian food and culture', 'Travel planning'],
   }
 
   return (
@@ -24,7 +24,7 @@ export default function EditorialProfilePage() {
         <div className="container-custom max-w-4xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-white/80">Author and reviewer profile</p>
           <h1 className="text-4xl md:text-5xl font-bold">Explore The City Editorial</h1>
-          <p className="mt-5 max-w-3xl text-xl text-white/90">The team responsible for researching, checking and maintaining our guides to Bangalore, Mumbai and Goa.</p>
+          <p className="mt-5 max-w-3xl text-xl text-white/90">The team responsible for researching, checking and maintaining our guides to eight Indian destinations.</p>
         </div>
       </header>
 
@@ -32,7 +32,7 @@ export default function EditorialProfilePage() {
         <div className="mx-auto max-w-4xl space-y-12">
           <section>
             <h2 className="mb-4 text-3xl font-bold text-gray-900">What we cover</h2>
-            <p className="text-lg leading-relaxed text-gray-700">Our scope is intentionally narrow: practical city travel in Bangalore, Mumbai and Goa, plus wider articles about travelling in India. We focus on attractions, neighbourhoods, food, transport, seasonal conditions, realistic budgets and the planning details that change a trip.</p>
+            <p className="text-lg leading-relaxed text-gray-700">Our scope is practical travel in Bangalore, Mumbai, Goa, Delhi, Jaipur, Agra, Varanasi and Hyderabad, plus wider articles about travelling in India. We focus on attractions, neighbourhoods, food, transport, seasonal conditions, realistic budgets and the planning details that change a trip.</p>
           </section>
 
           <section>

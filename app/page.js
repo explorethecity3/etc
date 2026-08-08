@@ -30,7 +30,7 @@ export default function Home() {
               <span className="font-normal not-italic">Let's Explore It Together.</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 leading-relaxed font-light">
-              In-depth, locally-written travel guides to India's cities — attractions, food, day trips and the practical stuff nobody tells first-time visitors. We're in Bangalore, Mumbai and Goa, with more to come.
+              In-depth, independently researched travel guides to India's cities — attractions, food, day trips and the practical details first-time visitors need. Explore eight destinations, from Delhi and Jaipur to Hyderabad and Goa.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/cities" className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-xl">
@@ -287,7 +287,7 @@ export default function Home() {
               Every attraction in our guides has been visited in person. Every restaurant recommendation comes from repeat visits, not aggregator stars. Where something has changed — a place has shut down, a neighbourhood has shifted character — we update the page.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              We started with Bangalore because that's home, then added Mumbai and Goa. New cities are added only when we can apply the same standard of first-hand research to them. You can read more about the editorial approach on our <Link href="/about" className="text-primary font-semibold hover:underline">About</Link> page, or write in via <Link href="/contact" className="text-primary font-semibold hover:underline">Contact</Link>.
+              We started with Bangalore because that's home, then expanded to seven more high-interest Indian destinations. Every guide follows the same research, source-checking and review standard. You can read more about the editorial approach on our <Link href="/about" className="text-primary font-semibold hover:underline">About</Link> page, or write in via <Link href="/contact" className="text-primary font-semibold hover:underline">Contact</Link>.
             </p>
           </div>
         </div>
