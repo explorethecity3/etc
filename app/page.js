@@ -5,6 +5,12 @@ import { getCityCards } from '@/lib/cityData'
 import blogs from '@/data/blogs.json'
 import { FaMapMarkedAlt, FaLandmark, FaUtensils, FaPalette } from 'react-icons/fa'
 
+export const metadata = {
+  alternates: {
+    canonical: 'https://www.explorethecity.in/',
+  },
+}
+
 export default function Home() {
   const cities = getCityCards()
   const featuredArticles = [...blogs]
