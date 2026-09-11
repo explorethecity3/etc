@@ -80,6 +80,7 @@ export default function CitiesPage() {
             <p className="text-gray-600 text-lg">
               Tap a card to open the full guide.
             </p>
+            <p className="mt-4 text-gray-600">Looking beyond these 15? <Link href="/city-directory" className="font-semibold text-orange-700 hover:underline">Search our Tier 1, Tier 2 and Tier 3 city directory →</Link></p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">

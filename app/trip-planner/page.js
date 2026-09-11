@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import TripPlanner from '@/components/TripPlanner'
-import { getAllCitiesWithData } from '@/lib/cityData'
+import { getPlannerCityOptions } from '@/lib/indianCityDirectory'
 
 export const metadata = {
   title: 'Free India Trip Planner — Personalised City Itineraries',
@@ -14,7 +14,7 @@ export const metadata = {
 }
 
 export default function TripPlannerPage() {
-  const cities = getAllCitiesWithData().map(({ slug, name, state }) => ({ slug, name, state }))
+  const cities = getPlannerCityOptions()
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 via-white to-white">

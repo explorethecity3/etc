@@ -23,6 +23,8 @@ export default function TripPlanner({ cities }) {
   const [copied, setCopied] = useState(false)
 
   const selectedCity = useMemo(() => cities.find((city) => city.slug === form.city), [cities, form.city])
+  const guidedCities = cities.filter((city) => city.hasGuide !== false)
+  const waitingCities = cities.filter((city) => city.hasGuide === false)
 
   function updateField(event) {
     setForm((current) => ({ ...current, [event.target.name]: event.target.value }))
@@ -86,8 +88,14 @@ export default function TripPlanner({ cities }) {
 
         <label className="block font-semibold text-gray-800 mb-2" htmlFor="city">Destination</label>
         <select id="city" name="city" value={form.city} onChange={updateField} className="w-full rounded-lg border border-gray-300 bg-white p-3 mb-5">
-          {cities.map((city) => <option key={city.slug} value={city.slug}>{city.name}, {city.state}</option>)}
+          <optgroup label="Ready to plan">
+            {guidedCities.map((city) => <option key={city.slug} value={city.slug}>{city.name}, {city.state}</option>)}
+          </optgroup>
+          {waitingCities.length > 0 && <optgroup label="Guide in progress">
+            {waitingCities.map((city) => <option key={`${city.slug}-${city.state}`} value={city.slug} disabled>{city.name}, {city.state} — coming later</option>)}
+          </optgroup>}
         </select>
+        {waitingCities.length > 0 && <p className="-mt-3 mb-5 text-sm text-gray-500">See your city but can’t select it yet? We’re still researching it, so we won’t invent a plan. <Link href="/city-directory" className="font-semibold text-orange-700 hover:underline">Browse the directory</Link>.</p>}
 
         <div className="grid grid-cols-2 gap-4 mb-5">
           <div>

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import CityCard from '@/components/CityCard'
 import TripPlanner from '@/components/TripPlanner'
 import { getCityCards } from '@/lib/cityData'
+import { getPlannerCityOptions } from '@/lib/indianCityDirectory'
 import blogs from '@/data/blogs.json'
 import { FaMapMarkedAlt, FaLandmark, FaUtensils, FaPalette } from 'react-icons/fa'
 
@@ -14,6 +15,7 @@ export const metadata = {
 
 export default function Home() {
   const cities = getCityCards()
+  const plannerCities = getPlannerCityOptions()
   const featuredArticles = [...blogs]
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 3)
@@ -55,7 +57,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Build your India city itinerary</h2>
             <p className="text-gray-600 text-lg">Choose your destination, budget, interests and travel pace. Get a private 1–5 day plan built from our reviewed attractions, food recommendations and practical advice.</p>
           </div>
-          <TripPlanner cities={cities} />
+          <TripPlanner cities={plannerCities} />
           <p className="text-center mt-10 text-gray-600">
             Want a distraction-free view? <Link href="/trip-planner" className="font-semibold text-primary hover:underline">Open the dedicated trip planner →</Link>
           </p>
