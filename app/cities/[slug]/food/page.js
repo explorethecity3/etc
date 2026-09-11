@@ -17,7 +17,7 @@ function FoodStructuredData({ city }) {
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        '@type': 'Recipe',
+        '@type': 'Thing',
         name: food.name,
         description: food.description,
         ...(food.image && { image: food.image }),
