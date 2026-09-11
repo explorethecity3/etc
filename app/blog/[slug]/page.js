@@ -182,7 +182,7 @@ export default function BlogPost({ params }) {
               <h3 className="text-xl font-bold text-gray-800 mb-2">About this article</h3>
               <p className="text-gray-700">
                 Written and maintained by the <Link href="/authors/explore-the-city-editorial" className="font-semibold text-primary hover:underline">Explore The City Editorial</Link> team — a
-                small group of writers who research every guide from first-hand visits and update
+                small editorial team that researches each guide, checks practical details and updates
                 articles as places and prices change. Read more on the{' '}
                 <Link href="/about" className="text-primary hover:underline">About</Link> page.
               </p>

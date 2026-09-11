@@ -96,7 +96,7 @@ export default function AttractionsPage({ params }) {
                 {editorial.attractionsIntro}
               </p>
               <p className="text-gray-600 text-sm mb-8">
-                Timings and entry fees were verified on our last visit. They change occasionally — if you spot an outdated detail, please <Link href="/contact" className="text-primary hover:underline">let us know</Link>.
+                Timings, tickets and access rules move around more often than most guidebooks admit. We note the most useful planning information here, but check the official venue before a special journey—and <Link href="/contact" className="text-primary hover:underline">tell us</Link> if something has changed.
               </p>
               <div className="space-y-6">
                 {city.topAttractions.map((attraction, index) => (

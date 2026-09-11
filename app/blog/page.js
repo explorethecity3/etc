@@ -8,7 +8,7 @@ export async function generateMetadata({ searchParams }) {
   if (category) {
     return {
       title: `${category} - Travel Articles | Explore The City`,
-      description: `${category} articles, stories and practical India travel guides written from first-hand experience.`,
+      description: `${category} articles, stories and practical India travel guides researched and edited for real trip planning.`,
       alternates: {
         canonical: `https://www.explorethecity.in/blog?category=${encodeURIComponent(category)}`,
       },
@@ -17,7 +17,7 @@ export async function generateMetadata({ searchParams }) {
 
   return {
     title: 'India Travel Articles | Explore The City',
-    description: 'Long-form India travel articles — street food, monsoon travel, train journeys, festivals, photography spots, solo travel safety and budget itineraries — written from first-hand trips.',
+    description: 'Long-form India travel articles about street food, monsoon travel, trains, festivals, photography, solo travel safety and realistic budgets.',
     alternates: {
       canonical: 'https://www.explorethecity.in/blog',
     },

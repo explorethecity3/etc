@@ -4,7 +4,7 @@ import { getPlannerCityOptions } from '@/lib/indianCityDirectory'
 
 export const metadata = {
   title: 'Free India Trip Planner — Personalised City Itineraries',
-  description: 'Create a private 1–5 day itinerary for 15 Indian destinations using reviewed attractions, local food, practical travel advice and your budget.',
+  description: 'Create a private 1–5 day itinerary for 20 Indian destinations using reviewed attractions, local food, practical travel advice and your budget.',
   alternates: { canonical: 'https://www.explorethecity.in/trip-planner' },
   openGraph: {
     title: 'Free India Trip Planner | Explore The City',
@@ -30,7 +30,7 @@ export default function TripPlannerPage() {
         <TripPlanner cities={cities} />
 
         <section className="mt-20 grid gap-8 md:grid-cols-3">
-          <div className="rounded-xl bg-white p-6 shadow-sm border"><h2 className="font-bold text-xl mb-2">Grounded in our guides</h2><p className="text-gray-600">The planner selects from the attractions, food and practical notes maintained in our 15 destination guides instead of searching an unverified global database.</p></div>
+          <div className="rounded-xl bg-white p-6 shadow-sm border"><h2 className="font-bold text-xl mb-2">Grounded in our guides</h2><p className="text-gray-600">The planner works with the attractions, food and practical notes maintained in our 20 finished guides. If a city is still being researched, we say so instead of inventing a route.</p></div>
           <div className="rounded-xl bg-white p-6 shadow-sm border"><h2 className="font-bold text-xl mb-2">Private by design</h2><p className="text-gray-600">Plans are generated only for the current request. We do not create a public itinerary URL or ask for your name, email address or account.</p></div>
           <div className="rounded-xl bg-white p-6 shadow-sm border"><h2 className="font-bold text-xl mb-2">A starting point, not a booking</h2><p className="text-gray-600">Opening hours, fares, weather and access can change. Follow the links into each complete city guide and reconfirm time-sensitive details.</p></div>
         </section>

@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Explore The City</h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            A small, independent travel publication. We cover 15 Indian destinations with practical, carefully reviewed guides rather than chasing a huge directory.
+            A small, independent travel publication. We cover 20 Indian destinations with practical, carefully reviewed guides rather than turning every directory entry into a thin page.
           </p>
         </div>
       </div>
@@ -27,7 +27,7 @@ export default function AboutPage() {
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Why this site exists</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Search for anything about an Indian city and you'll find dozens of "Top 10 things to do" articles that read like they were rewritten from each other — because they were. Most are produced by content farms, recycled by AI, or written by people who've never actually visited the places they describe.
+              Search for almost any Indian city and you will meet the same short list repeated across dozens of pages. We want to do something more useful: explain how places fit together, what can derail a day, and which details you should verify before leaving.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               ExploreTheCity.in is a deliberate response to that. Our guides combine direct experience where available with official tourism and monument sources, current transport information and careful editorial review. We separate durable planning advice from details that visitors should reconfirm, such as fees, opening hours and seasonal access.
@@ -44,7 +44,7 @@ export default function AboutPage() {
               <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-primary">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">First-hand visits</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Every attraction, restaurant, market and viewpoint we recommend has been visited in person. We note timings, fees and quirks based on what we observed — not on what other sites repeat.
+                  We research each guide from reliable public sources, compare details across references and edit for real trip-planning decisions. When we have firsthand notes, we identify them; we never invent a visit.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-primary">
@@ -62,7 +62,7 @@ export default function AboutPage() {
               <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-primary">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Honest about limits</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  We tell readers when we don't know something, when a recommendation is dated, or when something has changed since we last visited. We'd rather be useful and limited than comprehensive and wrong.
+                  We tell readers when access is uncertain, when a price needs checking or when a recommendation may be seasonal. We would rather be useful and limited than comprehensive and wrong.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-primary">

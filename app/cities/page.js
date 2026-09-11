@@ -7,7 +7,7 @@ import { FaMapMarkedAlt, FaUtensils, FaMoneyBillWave, FaClock, FaCompass, FaRout
 const citiesFaqs = [
   {
     question: 'Which cities does Explore The City cover?',
-    answer: "We currently have full guides to Bangalore, Mumbai, Goa, Delhi, Jaipur, Agra, Varanasi, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Kochi, Chandigarh and Mysuru. Each guide covers attractions, food, hidden gems, neighbourhoods, best time to visit and a realistic budget breakdown.",
+    answer: "We currently have 20 full guides, including Bangalore, Mumbai, Delhi, Chennai, Lucknow, Amritsar, Udaipur, Bhubaneswar and Coimbatore. Each one covers the places, food, timing, neighbourhood choices and costs that shape an actual visit. The separate directory lists more cities without pretending they all have finished guides.",
   },
   {
     question: 'How detailed is each city guide?',
@@ -25,7 +25,7 @@ const citiesFaqs = [
 
 export const metadata = {
   title: 'Indian City Travel Guides | Explore The City',
-  description: 'Independent travel guides to 15 Indian destinations, with attractions, food, hidden gems, neighbourhoods, seasonal advice and budget tips for each.',
+  description: 'Independent travel guides to 20 Indian destinations, with attractions, food, hidden gems, neighbourhoods, seasonal advice and budget tips for each.',
   alternates: {
     canonical: 'https://www.explorethecity.in/cities',
   },
@@ -80,7 +80,7 @@ export default function CitiesPage() {
             <p className="text-gray-600 text-lg">
               Tap a card to open the full guide.
             </p>
-            <p className="mt-4 text-gray-600">Looking beyond these 15? <Link href="/city-directory" className="font-semibold text-orange-700 hover:underline">Search our Tier 1, Tier 2 and Tier 3 city directory →</Link></p>
+            <p className="mt-4 text-gray-600">Looking beyond these 20? <Link href="/city-directory" className="font-semibold text-orange-700 hover:underline">Search our Tier 1, Tier 2 and Tier 3 city directory →</Link></p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">

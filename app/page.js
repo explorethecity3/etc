@@ -33,7 +33,7 @@ export default function Home() {
               <span className="font-normal not-italic">Let's Explore It Together.</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 leading-relaxed font-light">
-              In-depth, independently researched travel guides to India's cities — attractions, food, day trips and the practical details first-time visitors need. Explore 15 destinations, from Delhi and Jaipur to Chennai, Kochi and Goa.
+              Practical city guides for travellers who want more than a checklist. Explore 20 Indian destinations, from Delhi and Jaipur to Chennai, Lucknow, Kochi and Goa.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/cities" className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-xl">
@@ -307,7 +307,7 @@ export default function Home() {
               Recommendations are checked against reliable sources and edited for practical usefulness rather than ranked by aggregator stars. Where something changes — a place shuts down, access rules move or a neighbourhood shifts character — we update the page.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              We started with Bangalore because that's home, then expanded to 14 more high-interest Indian destinations. Every guide follows the same research, source-checking and review standard. You can read more about the editorial approach on our <Link href="/about" className="text-primary font-semibold hover:underline">About</Link> page, or write in via <Link href="/contact" className="text-primary font-semibold hover:underline">Contact</Link>.
+              We started with Bangalore because that's home, then expanded to 19 more Indian destinations. We do not turn every directory listing into a guide; a city is published only when there is enough useful material to help plan a real visit. Read about the approach on our <Link href="/about" className="text-primary font-semibold hover:underline">About</Link> page, or send a correction through <Link href="/contact" className="text-primary font-semibold hover:underline">Contact</Link>.
             </p>
           </div>
         </div>

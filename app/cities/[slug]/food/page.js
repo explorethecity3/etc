@@ -105,10 +105,7 @@ export default function FoodPage({ params }) {
                 <FaUtensils className="text-secondary text-3xl mr-4" />
                 <h2 className="text-3xl font-bold text-gray-800">Must-Try Local Food in {city.name}</h2>
               </div>
-              <p className="text-gray-600 mb-6 text-lg">
-                Here are the absolute must-try dishes that define {city.name}'s food scene.
-                These aren't just popular—they're part of the city's culinary DNA.
-              </p>
+              <p className="text-gray-600 mb-6 text-lg">You do not need to eat everything on this list. Start with the dishes that suit your appetite, share when portions are generous, and leave space for something you notice along the way.</p>
               <div className="space-y-6">
                 {city.localFood.map((food, index) => (
                   <div key={index} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
@@ -157,9 +154,9 @@ export default function FoodPage({ params }) {
             {/* Related Links */}
             <section className="mb-12">
               <div className="bg-gradient-to-r from-orange-100 to-red-100 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Plan Your Complete {city.name} Food Journey</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Fit the food stops into your day</h3>
                 <p className="text-gray-800 mb-4">
-                  Combine your food adventure with sightseeing for the ultimate {city.name} experience:
+                  A good meal is more enjoyable when it is near the places you already plan to see. These chapters will help you keep the day sensible:
                 </p>
                 <div className="grid md:grid-cols-2 gap-3">
                   <Link href={`/cities/${city.slug}/places-to-explore`} className="text-orange-700 hover:text-orange-900 font-semibold">

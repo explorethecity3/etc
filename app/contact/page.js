@@ -194,7 +194,7 @@ export default function ContactPage() {
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <span><strong>Writing for us.</strong> If you live in another Indian city and want to research and write a guide with the same first-hand standard, tell us about your city.</span>
+                      <span><strong>Writing for us.</strong> If you know an Indian city well and can contribute specific, verifiable local detail, tell us about your city.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>

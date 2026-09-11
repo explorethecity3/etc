@@ -24,7 +24,7 @@ export default function EditorialProfilePage() {
         <div className="container-custom max-w-4xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-white/80">Author and reviewer profile</p>
           <h1 className="text-4xl md:text-5xl font-bold">Explore The City Editorial</h1>
-          <p className="mt-5 max-w-3xl text-xl text-white/90">The team responsible for researching, checking and maintaining our guides to 15 Indian destinations.</p>
+          <p className="mt-5 max-w-3xl text-xl text-white/90">The team responsible for researching, checking and maintaining our guides to 20 Indian destinations.</p>
         </div>
       </header>
 

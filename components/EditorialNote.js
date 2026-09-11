@@ -7,7 +7,7 @@ export default function EditorialNote({ city, scope = 'guide' }) {
         Reviewed by <Link href="/authors/explore-the-city-editorial" className="text-primary hover:underline">Explore The City Editorial</Link>
       </p>
       <p className="mt-1 text-sm leading-relaxed text-gray-700">
-        This {scope} is maintained from local knowledge, editorial research and periodic fact checks.
+        We maintain this {scope} through editorial research and periodic fact checks.
         Details were last reviewed on <time dateTime={city.lastUpdated}>{city.lastUpdated}</time>.
         Prices, schedules and access rules can change, so confirm time-sensitive details before travelling.
       </p>
