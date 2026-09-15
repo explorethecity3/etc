@@ -7,6 +7,7 @@ import FAQSchema from '@/components/FAQSchema'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import RelatedCities from '@/components/RelatedCities'
 import EditorialNote from '@/components/EditorialNote'
+import ComprehensiveCityGuide from '@/components/ComprehensiveCityGuide'
 import { getCityData, getAllCitySlugs } from '@/lib/cityData'
 import { getCityEditorial } from '@/lib/cityEditorial'
 
@@ -134,36 +135,24 @@ export default function CityPage({ params }) {
               </div>
             </section>
 
-            {/* The six chapters of the guide */}
+            {/* Guide navigation */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">Chapters of this guide</h2>
-              <div className="grid gap-4">
-                <Link href={`/cities/${city.slug}/places-to-explore`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
-                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Places to Explore</h3>
-                  <p className="text-gray-600">{editorial.chapters.places}</p>
-                </Link>
-                <Link href={`/cities/${city.slug}/food`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
-                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Food & Cafes</h3>
-                  <p className="text-gray-600">{editorial.chapters.food}</p>
-                </Link>
-                <Link href={`/cities/${city.slug}/best-time`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
-                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Best Time to Visit</h3>
-                  <p className="text-gray-600">{editorial.chapters.bestTime}</p>
-                </Link>
-                <Link href={`/cities/${city.slug}/budget`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
-                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Budget</h3>
-                  <p className="text-gray-600">{editorial.chapters.budget}</p>
-                </Link>
-                <Link href={`/cities/${city.slug}/travel-tips`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
-                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Travel Tips</h3>
-                  <p className="text-gray-600">{editorial.chapters.travelTips}</p>
-                </Link>
-                <Link href={`/cities/${city.slug}/hidden-gems`} className="block bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition group">
-                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition">Hidden Gems</h3>
-                  <p className="text-gray-600">{editorial.chapters.hiddenGems}</p>
-                </Link>
+              <h2 className="text-3xl font-bold mb-3 text-gray-800">What do you need for your trip?</h2>
+              <p className="text-gray-700 mb-6">Jump to the part that helps now, or read straight through for a practical first-trip plan.</p>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  ['Plan the days', 'plan'], ['Places', 'places'], ['Food', 'food'],
+                  ['Best time', 'best-time'], ['Travel tips', 'travel-tips'],
+                  ['Hidden gems', 'hidden-gems'], ['Budget', 'budget'],
+                ].map(([label, anchor]) => (
+                  <Link key={anchor} href={`#${anchor}`} className="rounded-full bg-white px-4 py-2 font-semibold text-primary shadow-sm border border-orange-100 hover:bg-orange-50">
+                    {label}
+                  </Link>
+                ))}
               </div>
             </section>
+
+            <ComprehensiveCityGuide city={city} editorial={editorial} />
 
             {/* FAQ Section */}
             {faqs && faqs.length > 0 && (
