@@ -12,6 +12,13 @@ function durationLabel(minutes) {
   return `${h ? `${h}h ` : ''}${m ? `${m}m` : ''}`.trim()
 }
 
+function shortDescription(value) {
+  if (!value) return ''
+  const firstParagraph = value.split('\n\n')[0].trim()
+  if (firstParagraph.length <= 220) return firstParagraph
+  return `${firstParagraph.slice(0, 217).trimEnd()}…`
+}
+
 function trackEvent(name, parameters = {}) {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     window.gtag('event', name, parameters)
@@ -124,7 +131,26 @@ export default function TripRealityChecker({ cities }) {
 
           <div className="space-y-3">{report.issues.length === 0 ? <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-5 flex gap-3"><FaCheckCircle className="text-emerald-700 mt-1" /><div><h3 className="font-bold">No major pacing conflicts found</h3><p className="text-sm text-gray-700 mt-1">The plan fits the selected pace using conservative transfer estimates.</p></div></div> : report.issues.map((issue) => <article key={issue.title} className="rounded-xl bg-white border p-5"><div className="flex gap-3"><FaExclamationTriangle className={issue.severity === 'critical' ? 'text-red-600 mt-1' : 'text-amber-600 mt-1'} /><div><p className="text-xs uppercase font-bold tracking-wide text-gray-500">{issue.severity}</p><h3 className="text-lg font-bold">{issue.title}</h3><p className="text-gray-600 mt-2">{issue.detail}</p><p className="mt-2 text-sm"><strong>Try this:</strong> {issue.fix}</p></div></div></article>)}</div>
 
-          <div className="rounded-2xl bg-gray-900 text-white p-6"><h3 className="text-xl font-bold">{report.changed ? 'A more compact order' : 'Your route order is already compact'}</h3><ol className="mt-4 space-y-3">{report.improved.map((place, index) => <li key={place.id} className="flex gap-3"><span className="flex w-7 h-7 shrink-0 rounded-full bg-orange-600 items-center justify-center text-sm font-bold">{index + 1}</span><div><strong>{place.name}</strong><span className="block text-sm text-gray-300 capitalize">{place.zone.replace('-', ' ')} · about {durationLabel(place.durationMinutes)}</span></div></li>)}</ol></div>
+          <div className="rounded-2xl bg-gray-900 text-white p-6">
+            <h3 className="text-xl font-bold">{report.changed ? 'A more compact order' : 'Your route order is already compact'}</h3>
+            <p className="mt-2 text-sm text-gray-300">Use these details as a planning starting point. Reconfirm hours, closures and ticket prices before you leave.</p>
+            <ol className="mt-5 space-y-5">
+              {report.improved.map((place, index) => (
+                <li key={place.id} className="flex gap-3 border-b border-gray-700 pb-5 last:border-0 last:pb-0">
+                  <span className="flex w-7 h-7 shrink-0 rounded-full bg-orange-600 items-center justify-center text-sm font-bold">{index + 1}</span>
+                  <div className="min-w-0">
+                    <strong>{place.name}</strong>
+                    <span className="block text-sm text-gray-300 capitalize">{place.zone.replace('-', ' ')} · allow about {durationLabel(place.durationMinutes)}</span>
+                    {shortDescription(place.description) && <p className="mt-2 text-sm leading-6 text-gray-200">{shortDescription(place.description)}</p>}
+                    <dl className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+                      <div className="rounded-lg bg-white/10 p-3"><dt className="font-semibold text-orange-200">Usual visiting hours</dt><dd className="mt-1 text-gray-200">{place.timings}</dd></div>
+                      <div className="rounded-lg bg-white/10 p-3"><dt className="font-semibold text-orange-200">Admission guide</dt><dd className="mt-1 text-gray-200">{place.entryFee}</dd></div>
+                    </dl>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
           <p className="rounded-lg bg-yellow-50 border border-yellow-200 p-4 text-sm text-yellow-900">{report.disclaimer}</p>
           <button type="button" onClick={printReport} className="btn-secondary flex items-center gap-2"><FaPrint /> Print report</button>
         </div>}
