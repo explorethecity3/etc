@@ -19,6 +19,12 @@ function shortDescription(value) {
   return `${firstParagraph.slice(0, 217).trimEnd()}…`
 }
 
+function clockLabel(totalMinutes) {
+  const hours = Math.floor((totalMinutes % 1440) / 60)
+  const minutes = totalMinutes % 60
+  return new Date(2000, 0, 1, hours, minutes).toLocaleTimeString('en-IN', { hour: 'numeric', minute: '2-digit' })
+}
+
 function trackEvent(name, parameters = {}) {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     window.gtag('event', name, parameters)
@@ -37,6 +43,7 @@ export default function TripRealityChecker({ cities }) {
   const [pace, setPace] = useState('balanced')
   const [group, setGroup] = useState('Couple')
   const [startTime, setStartTime] = useState('09:00')
+  const [dayType, setDayType] = useState('weekday')
   const [selected, setSelected] = useState([])
   const [report, setReport] = useState(null)
   const city = useMemo(() => cities.find((item) => item.slug === citySlug), [cities, citySlug])
@@ -56,12 +63,13 @@ export default function TripRealityChecker({ cities }) {
 
   function checkTrip(event) {
     event.preventDefault()
-    const nextReport = analyseTrip({ city, selectedPlaceIds: selected, pace, group, startTime })
+    const nextReport = analyseTrip({ city, selectedPlaceIds: selected, pace, group, startTime, dayType })
     setReport(nextReport)
     trackEvent('checker_completed', {
       destination: city.slug,
       pace,
       traveller_type: group.toLowerCase(),
+      day_type: dayType,
       stop_count: selected.length,
       score_band: scoreBand(nextReport.score),
       route_changed: nextReport.changed,
@@ -95,8 +103,10 @@ export default function TripRealityChecker({ cities }) {
           <div><label className="block font-semibold mb-2" htmlFor="checker-group">Travellers</label><select id="checker-group" value={group} onChange={(e) => { setGroup(e.target.value); setReport(null) }} className="w-full rounded-lg border p-3">{['Solo', 'Couple', 'Friends', 'Family', 'Seniors'].map((value) => <option key={value}>{value}</option>)}</select></div>
         </div>
 
-        <label className="block font-semibold mb-2" htmlFor="checker-start">Day starts</label>
-        <input id="checker-start" type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} className="w-full rounded-lg border p-3 mb-5" />
+        <div className="grid grid-cols-2 gap-4 mb-5">
+          <div><label className="block font-semibold mb-2" htmlFor="checker-start">Day starts</label><input id="checker-start" type="time" value={startTime} onChange={(e) => { setStartTime(e.target.value); setReport(null) }} className="w-full rounded-lg border p-3" /></div>
+          <div><label className="block font-semibold mb-2" htmlFor="checker-day">Visiting on</label><select id="checker-day" value={dayType} onChange={(e) => { setDayType(e.target.value); setReport(null) }} className="w-full rounded-lg border p-3"><option value="weekday">Weekday</option><option value="weekend">Weekend / holiday</option></select></div>
+        </div>
 
         <fieldset>
           <legend className="font-semibold mb-2">Stops in planned order <span className="font-normal text-gray-500">({selected.length}/6)</span></legend>
@@ -140,7 +150,9 @@ export default function TripRealityChecker({ cities }) {
                   <span className="flex w-7 h-7 shrink-0 rounded-full bg-orange-600 items-center justify-center text-sm font-bold">{index + 1}</span>
                   <div className="min-w-0">
                     <strong>{place.name}</strong>
-                    <span className="block text-sm text-gray-300 capitalize">{place.zone.replace('-', ' ')} · allow about {durationLabel(place.durationMinutes)}</span>
+                    <span className="block text-sm text-gray-300 capitalize">Arrive about {clockLabel(place.arrivalMinutes)} · {place.zone.replace('-', ' ')} · allow {durationLabel(place.durationMinutes)}</span>
+                    <div className={`mt-2 inline-flex rounded-full px-3 py-1 text-xs font-bold ${place.crowd.level === 3 ? 'bg-red-200 text-red-950' : place.crowd.level === 2 ? 'bg-amber-200 text-amber-950' : 'bg-emerald-200 text-emerald-950'}`}>{place.crowd.label}</div>
+                    <p className="mt-2 text-sm text-gray-300">{place.crowd.tip}</p>
                     {shortDescription(place.description) && <p className="mt-2 text-sm leading-6 text-gray-200">{shortDescription(place.description)}</p>}
                     <dl className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
                       <div className="rounded-lg bg-white/10 p-3"><dt className="font-semibold text-orange-200">Usual visiting hours</dt><dd className="mt-1 text-gray-200">{place.timings}</dd></div>
