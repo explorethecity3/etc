@@ -102,7 +102,19 @@ export default function TripRealityChecker({ cities }) {
           </div>
         </fieldset>
 
-        <button type="submit" disabled={selected.length === 0} className="btn-primary w-full mt-6 disabled:opacity-50 flex items-center justify-center gap-2"><FaRoute /> Check my day</button>
+        <button
+          type="submit"
+          disabled={selected.length === 0}
+          aria-describedby={selected.length === 0 ? 'checker-submit-help' : undefined}
+          className="btn-primary w-full mt-6 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        >
+          <FaRoute /> Check my day
+        </button>
+        {selected.length === 0 && (
+          <p id="checker-submit-help" className="mt-2 text-center text-sm font-medium text-amber-800">
+            Select at least one stop above to check your day.
+          </p>
+        )}
         <p className="text-xs text-gray-500 mt-3">Planning data reviewed {city.lastReviewed}. Always verify time-sensitive information.</p>
       </form>
 
