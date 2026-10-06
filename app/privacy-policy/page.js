@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
       <div className="container-custom py-16">
         <div className="max-w-4xl mx-auto prose prose-lg">
           <p className="text-gray-600 mb-8">
-            <strong>Last Updated:</strong> August 2026
+            <strong>Last Updated:</strong> October 6, 2026
           </p>
 
           <section className="mb-12">
@@ -39,10 +39,10 @@ export default function PrivacyPolicyPage() {
               <li>Subscribe to our newsletter or updates</li>
               <li>Participate in surveys or promotions</li>
               <li>Provide feedback or suggestions</li>
-              <li>Enter trip preferences into our itinerary planner</li>
+              <li>Use the Trip Reality Checker</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mt-4">
-              The trip planner accepts destination, trip length, budget style, travel pace, group type, interests and an optional starting neighbourhood. Do not enter names, contact details, booking references or other sensitive information. Generated plans are not published as public pages.
+              The Trip Reality Checker accepts a supported destination, pace, traveller type, start time and selected attractions. It runs in your browser and does not publish or save your itinerary as a public page. Do not enter names, contact details, booking references or other sensitive information.
             </p>
             <p className="text-gray-700 leading-relaxed">
               This information may include your name, email address, and any other information you choose to provide in your messages to us.
@@ -59,6 +59,9 @@ export default function PrivacyPolicyPage() {
               <li>Referring website addresses</li>
               <li>Clickstream data and website navigation patterns</li>
             </ul>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              For the Reality Checker, Google Analytics may receive anonymous product events such as the selected destination, pace, traveller category, number of stops, score band, whether a route was reordered and whether a report was printed. We do not send the selected attraction names, visit start time or a complete itinerary to analytics.
+            </p>
           </section>
 
           <section className="mb-12">
@@ -108,12 +111,11 @@ export default function PrivacyPolicyPage() {
               <li>Google AdSense for advertising</li>
               <li>Web3Forms for processing contact form submissions</li>
               <li>Hosting and content delivery services</li>
-              <li>AI model-routing providers, only when AI itinerary enhancement is enabled</li>
             </ul>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">5.1 Itinerary Planner</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">5.1 Trip Reality Checker</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Our planner first assembles an itinerary from our own reviewed destination data. If AI enhancement is enabled, the selected trip preferences and verified draft may be sent securely to a configured model provider to improve wording. We do not ask for an account, retain a public conversation history or use planner input to create indexable pages. Basic technical information such as an IP address may be processed temporarily to enforce usage limits and prevent abuse.
+              The checker evaluates selections using deterministic rules and destination data delivered with the website. It does not send itinerary text to an AI provider, require an account, retain a public conversation history or use checker input to create indexable pages.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">5.2 Google AdSense &amp; Advertising</h3>

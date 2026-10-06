@@ -12,6 +12,19 @@ function durationLabel(minutes) {
   return `${h ? `${h}h ` : ''}${m ? `${m}m` : ''}`.trim()
 }
 
+function trackEvent(name, parameters = {}) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', name, parameters)
+  }
+}
+
+function scoreBand(score) {
+  if (score >= 85) return 'comfortable'
+  if (score >= 70) return 'workable'
+  if (score >= 50) return 'rushed'
+  return 'unrealistic'
+}
+
 export default function TripRealityChecker({ cities }) {
   const [citySlug, setCitySlug] = useState(cities[0].slug)
   const [pace, setPace] = useState('balanced')
@@ -22,9 +35,11 @@ export default function TripRealityChecker({ cities }) {
   const city = useMemo(() => cities.find((item) => item.slug === citySlug), [cities, citySlug])
 
   function changeCity(event) {
-    setCitySlug(event.target.value)
+    const nextCity = event.target.value
+    setCitySlug(nextCity)
     setSelected([])
     setReport(null)
+    trackEvent('checker_destination_selected', { destination: nextCity })
   }
 
   function toggle(id) {
@@ -34,8 +49,25 @@ export default function TripRealityChecker({ cities }) {
 
   function checkTrip(event) {
     event.preventDefault()
-    setReport(analyseTrip({ city, selectedPlaceIds: selected, pace, group, startTime }))
+    const nextReport = analyseTrip({ city, selectedPlaceIds: selected, pace, group, startTime })
+    setReport(nextReport)
+    trackEvent('checker_completed', {
+      destination: city.slug,
+      pace,
+      traveller_type: group.toLowerCase(),
+      stop_count: selected.length,
+      score_band: scoreBand(nextReport.score),
+      route_changed: nextReport.changed,
+    })
     window.setTimeout(() => document.getElementById('reality-report')?.scrollIntoView({ behavior: 'smooth' }), 30)
+  }
+
+  function printReport() {
+    trackEvent('checker_report_printed', {
+      destination: city.slug,
+      score_band: scoreBand(report.score),
+    })
+    window.print()
   }
 
   const scoreColour = report?.score >= 85 ? 'text-emerald-700' : report?.score >= 70 ? 'text-blue-700' : report?.score >= 50 ? 'text-amber-700' : 'text-red-700'
@@ -82,10 +114,9 @@ export default function TripRealityChecker({ cities }) {
 
           <div className="rounded-2xl bg-gray-900 text-white p-6"><h3 className="text-xl font-bold">{report.changed ? 'A more compact order' : 'Your route order is already compact'}</h3><ol className="mt-4 space-y-3">{report.improved.map((place, index) => <li key={place.id} className="flex gap-3"><span className="flex w-7 h-7 shrink-0 rounded-full bg-orange-600 items-center justify-center text-sm font-bold">{index + 1}</span><div><strong>{place.name}</strong><span className="block text-sm text-gray-300 capitalize">{place.zone.replace('-', ' ')} · about {durationLabel(place.durationMinutes)}</span></div></li>)}</ol></div>
           <p className="rounded-lg bg-yellow-50 border border-yellow-200 p-4 text-sm text-yellow-900">{report.disclaimer}</p>
-          <button type="button" onClick={() => window.print()} className="btn-secondary flex items-center gap-2"><FaPrint /> Print report</button>
+          <button type="button" onClick={printReport} className="btn-secondary flex items-center gap-2"><FaPrint /> Print report</button>
         </div>}
       </section>
     </div>
   )
 }
-
