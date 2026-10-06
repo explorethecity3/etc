@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { FaCheckCircle, FaExclamationTriangle, FaPrint, FaRoute } from 'react-icons/fa'
+import { FaCheckCircle, FaExclamationTriangle, FaExternalLinkAlt, FaPrint, FaRoute } from 'react-icons/fa'
 import { analyseTrip } from '@/lib/tripChecker'
 
 const paceOptions = [['relaxed', 'Relaxed'], ['balanced', 'Balanced'], ['packed', 'Packed']]
@@ -158,6 +158,16 @@ export default function TripRealityChecker({ cities }) {
                       <div className="rounded-lg bg-white/10 p-3"><dt className="font-semibold text-orange-200">Usual visiting hours</dt><dd className="mt-1 text-gray-200">{place.timings}</dd></div>
                       <div className="rounded-lg bg-white/10 p-3"><dt className="font-semibold text-orange-200">Admission guide</dt><dd className="mt-1 text-gray-200">{place.entryFee}</dd></div>
                     </dl>
+                    <a
+                      href={place.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackEvent('checker_maps_opened', { destination: city.slug })}
+                      className="mt-3 inline-flex items-center gap-2 rounded-lg border border-orange-300 px-3 py-2 text-sm font-semibold text-orange-100 transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300"
+                      aria-label={`Check current conditions for ${place.name} on Google Maps (opens in a new tab)`}
+                    >
+                      Check live conditions on Google Maps <FaExternalLinkAlt aria-hidden="true" />
+                    </a>
                   </div>
                 </li>
               ))}

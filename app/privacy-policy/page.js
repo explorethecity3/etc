@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
               <li>Clickstream data and website navigation patterns</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mt-4">
-              For the Reality Checker, Google Analytics may receive anonymous product events such as the selected destination, pace, traveller category, weekday or weekend selection, number of stops, score band, whether a route was reordered and whether a report was printed. We do not send the selected attraction names, visit start time or a complete itinerary to analytics.
+              For the Reality Checker, Google Analytics may receive anonymous product events such as the selected destination, pace, traveller category, weekday or weekend selection, number of stops, score band, whether a route was reordered, whether a report was printed and whether a Google Maps link was opened. We do not send the selected attraction names, visit start time or a complete itinerary to analytics.
             </p>
           </section>
 
