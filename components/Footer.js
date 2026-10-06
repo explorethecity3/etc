@@ -27,8 +27,8 @@ export default function Footer() {
               <Link href="/city-directory" className="text-white hover:text-gray-200 underline">
                 All City Directory
               </Link>
-              <Link href="/trip-planner" className="text-white hover:text-gray-200 underline">
-                Free Trip Planner
+              <Link href="/trip-checker" className="text-white hover:text-gray-200 underline">
+                Trip Reality Checker
               </Link>
               <Link href="/cities/bangalore" className="text-white hover:text-gray-200 underline">
                 Bangalore

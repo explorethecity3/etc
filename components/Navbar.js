@@ -33,7 +33,7 @@ export default function Navbar() {
               alt="Explore The City Logo"
               width={100}
               height={100}
-              className="object-contain"
+              className="h-16 w-auto object-contain"
             />
             {/* <span className="text-2xl font-bold text-white lowercase">explorethecity.in</span> */}
           </Link>
@@ -46,8 +46,8 @@ export default function Navbar() {
             <Link href="/cities" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Cities
             </Link>
-            <Link href="/trip-planner" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
-              Trip Planner
+            <Link href="/trip-checker" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
+              Reality Checker
             </Link>
             <Link href="/blog" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Articles
@@ -89,11 +89,11 @@ export default function Navbar() {
               Cities
             </Link>
             <Link
-              href="/trip-planner"
+              href="/trip-checker"
               className="block py-3 text-white hover:text-gray-200 transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
-              Trip Planner
+              Reality Checker
             </Link>
             <Link
               href="/blog"
