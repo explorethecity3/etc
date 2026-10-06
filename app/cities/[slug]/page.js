@@ -10,6 +10,7 @@ import EditorialNote from '@/components/EditorialNote'
 import ComprehensiveCityGuide from '@/components/ComprehensiveCityGuide'
 import { getCityData, getAllCitySlugs } from '@/lib/cityData'
 import { getCityEditorial } from '@/lib/cityEditorial'
+import { isPrimaryCity } from '@/lib/indexingPolicy'
 
 export async function generateStaticParams() {
   const slugs = getAllCitySlugs()
@@ -34,6 +35,9 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: `https://www.explorethecity.in/cities/${city.slug}`,
     },
+    robots: isPrimaryCity(city.slug)
+      ? { index: true, follow: true }
+      : { index: false, follow: true, googleBot: { index: false, follow: true } },
     openGraph: {
       title: `${city.name} Travel Guide | Explore The City`,
       description: city.shortDescription || `Discover ${city.name}'s top attractions, local food, and travel tips`,

@@ -1,12 +1,12 @@
-import { getAllCitySlugs } from '@/lib/cityData'
 import blogs from '@/data/blogs.json'
+import { PRIMARY_CITY_SLUGS } from '@/lib/indexingPolicy'
 
 const SITE_UPDATED = new Date('2026-10-06')
 const LEGAL_UPDATED = new Date('2025-01-01')
 
 export default function sitemap() {
   const baseUrl = 'https://www.explorethecity.in'
-  const citySlugs = getAllCitySlugs()
+  const citySlugs = PRIMARY_CITY_SLUGS
 
   // Static pages
   const staticPages = [
@@ -50,12 +50,6 @@ export default function sitemap() {
       url: `${baseUrl}/cities`,
       lastModified: SITE_UPDATED,
       changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/trip-planner`,
-      lastModified: SITE_UPDATED,
-      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {

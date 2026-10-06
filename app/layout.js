@@ -7,8 +7,8 @@ import AdSenseLoader from '@/components/AdSenseLoader'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Explore The City — Locally-Written India Travel Guides',
-  description: 'Independently researched travel guides to 20 Indian destinations. Attractions, food, hidden gems, day trips, neighbourhoods and practical planning advice.',
+  title: 'Explore The City — India Trip Reality Checker',
+  description: 'A private India itinerary feasibility tool with maintained planning references for Bangalore, Mumbai, Goa, Delhi and Jaipur.',
   authors: [{ name: 'Explore The City Editorial' }],
   creator: 'Explore The City',
   publisher: 'Explore The City',
@@ -20,8 +20,8 @@ export const metadata = {
     'google-adsense-account': 'ca-pub-6525177681486877',
   },
   openGraph: {
-    title: 'Explore The City — Locally-Written India Travel Guides',
-    description: 'Independent guides to 20 Indian destinations — attractions, food, hidden gems, day trips, budgets and practical travel advice.',
+    title: 'Explore The City — India Trip Reality Checker',
+    description: 'Check itinerary pacing, estimated transfers and route feasibility for five maintained Indian destinations.',
     url: 'https://www.explorethecity.in',
     siteName: 'Explore The City',
     locale: 'en_IN',
@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
               name: 'Explore The City',
               url: 'https://www.explorethecity.in',
               logo: 'https://www.explorethecity.in/logo.png',
-              description: 'Independently researched guides to 20 Indian destinations, covering attractions, food, hidden gems, day trips, budgets and practical tips.',
+              description: 'A private itinerary feasibility tool with maintained planning references for five Indian destinations.',
               email: 'contact@explorethecity.in',
               areaServed: {
                 '@type': 'Country',

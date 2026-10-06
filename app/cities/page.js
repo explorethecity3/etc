@@ -2,16 +2,17 @@ import Link from 'next/link'
 import CityCard from '@/components/CityCard'
 import FAQSchema from '@/components/FAQSchema'
 import { getCityCards } from '@/lib/cityData'
+import { PRIMARY_CITY_SLUGS } from '@/lib/indexingPolicy'
 import { FaMapMarkedAlt, FaUtensils, FaMoneyBillWave, FaClock, FaCompass, FaRoute, FaQuestionCircle } from 'react-icons/fa'
 
 const citiesFaqs = [
   {
     question: 'Which cities does Explore The City cover?',
-    answer: "We currently have 20 full guides, including Bangalore, Mumbai, Delhi, Chennai, Lucknow, Amritsar, Udaipur, Bhubaneswar and Coimbatore. Each one covers the places, food, timing, neighbourhood choices and costs that shape an actual visit. The separate directory lists more cities without pretending they all have finished guides.",
+    answer: "Our actively maintained planning collection currently covers Bangalore, Mumbai, Goa, Delhi and Jaipur. We keep the supported set deliberately small while destination details are checked for the Trip Reality Checker.",
   },
   {
     question: 'How detailed is each city guide?',
-    answer: "Every city guide is built from six dedicated chapters: places to explore, food and cafes, hidden gems, best time to visit, budget estimates, and travel tips. Each one profiles at least eight attractions and six local dishes, with practical details for planning a visit.",
+    answer: "Each supported guide combines attractions, food, seasonal context, neighbourhood choices, costs and practical planning notes on one page.",
   },
   {
     question: 'How are the guides researched?',
@@ -25,14 +26,14 @@ const citiesFaqs = [
 
 export const metadata = {
   title: 'Indian City Travel Guides | Explore The City',
-  description: 'Independent travel guides to 20 Indian destinations, with attractions, food, hidden gems, neighbourhoods, seasonal advice and budget tips for each.',
+  description: 'Maintained planning guides for Bangalore, Mumbai, Goa, Delhi and Jaipur, supporting the India Trip Reality Checker.',
   alternates: {
     canonical: 'https://www.explorethecity.in/cities',
   },
 }
 
 export default function CitiesPage() {
-  const cities = getCityCards()
+  const cities = getCityCards().filter((city) => PRIMARY_CITY_SLUGS.includes(city.slug))
   const totalAttractions = cities.reduce((sum, c) => sum + (c.attractions || 0), 0)
 
   return (
@@ -48,7 +49,7 @@ export default function CitiesPage() {
             City Travel Guides
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 leading-relaxed">
-            In-depth, locally-researched guides to India's cities — attractions, food, neighbourhoods, day trips and the practical things visitors actually need.
+            Maintained planning references for the five destinations currently supported by our Trip Reality Checker.
           </p>
           <div className="grid grid-cols-3 gap-6 max-w-3xl mx-auto mt-12">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
@@ -60,12 +61,12 @@ export default function CitiesPage() {
               <div className="text-blue-100">Attractions profiled</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-              <div className="text-4xl font-extrabold mb-2">6</div>
-              <div className="text-blue-100">Chapters per city</div>
+              <div className="text-4xl font-extrabold mb-2">1</div>
+              <div className="text-blue-100">Complete guide per city</div>
             </div>
           </div>
           <p className="text-sm text-blue-100/80 mt-8 max-w-2xl mx-auto">
-            Every guide is independently researched, checked against reliable sources and structured to help you plan a realistic trip.
+            We keep the active collection small so its planning details can be reviewed and maintained.
           </p>
         </div>
       </section>
@@ -80,7 +81,7 @@ export default function CitiesPage() {
             <p className="text-gray-600 text-lg">
               Tap a card to open the full guide.
             </p>
-            <p className="mt-4 text-gray-600">Looking beyond these 20? <Link href="/city-directory" className="font-semibold text-orange-700 hover:underline">Search our Tier 1, Tier 2 and Tier 3 city directory →</Link></p>
+            <p className="mt-4 text-gray-600">Need another destination? <Link href="/contact" className="font-semibold text-orange-700 hover:underline">Tell us which city the checker should support next →</Link></p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -99,7 +100,7 @@ export default function CitiesPage() {
               What's Inside Every Guide
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Six dedicated chapters per city, independently researched and updated as each place changes.
+              The planning information used by the checker, presented with context and limitations.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

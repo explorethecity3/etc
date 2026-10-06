@@ -5,6 +5,11 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: '/trip-planner',
+        destination: '/trip-checker',
+        permanent: true,
+      },
       ...['best-time', 'places-to-explore', 'food', 'hidden-gems', 'travel-tips', 'budget'].map((chapter) => ({
         source: `/cities/:slug/${chapter}`,
         destination: `/cities/:slug#${chapter}`,

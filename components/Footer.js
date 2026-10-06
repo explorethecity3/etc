@@ -12,7 +12,7 @@ export default function Footer() {
               About Us
             </h3>
             <p className="text-white text-sm max-w-md">
-              An independent travel publication covering 20 Indian destinations with researched, practical planning guides.
+              A private India itinerary feasibility tool with maintained planning references for five supported destinations.
             </p>
             <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
               <Link href="/about" className="text-white hover:text-gray-200 underline">
