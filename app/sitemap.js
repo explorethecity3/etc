@@ -1,5 +1,6 @@
 import blogs from '@/data/blogs.json'
 import { PRIMARY_CITY_SLUGS } from '@/lib/indexingPolicy'
+import { ITINERARY_LANDINGS } from '@/lib/itineraryLandingData'
 
 const SITE_UPDATED = new Date('2026-10-06')
 const LEGAL_UPDATED = new Date('2025-01-01')
@@ -88,6 +89,13 @@ export default function sitemap() {
     }
   })
 
+  const itineraryPages = ITINERARY_LANDINGS.map((plan) => ({
+    url: `${baseUrl}/itineraries/${plan.slug}`,
+    lastModified: SITE_UPDATED,
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  }))
+
   // Blog posts
   const blogPages = blogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}`,
@@ -96,5 +104,5 @@ export default function sitemap() {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...cityPages, ...blogPages]
+  return [...staticPages, ...cityPages, ...itineraryPages, ...blogPages]
 }

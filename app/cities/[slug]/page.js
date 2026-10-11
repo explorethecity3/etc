@@ -11,6 +11,7 @@ import ComprehensiveCityGuide from '@/components/ComprehensiveCityGuide'
 import { getCityData, getAllCitySlugs } from '@/lib/cityData'
 import { getCityEditorial } from '@/lib/cityEditorial'
 import { isPrimaryCity } from '@/lib/indexingPolicy'
+import { getItineraryLandingByCity } from '@/lib/itineraryLandingData'
 
 export async function generateStaticParams() {
   const slugs = getAllCitySlugs()
@@ -73,6 +74,7 @@ export default function CityPage({ params }) {
   // FAQ data from city JSON file
   const faqs = city.faq || []
   const editorial = getCityEditorial(city.slug)
+  const itinerary = getItineraryLandingByCity(city.slug)
 
   // Breadcrumb data for schema markup
   const breadcrumbs = [
@@ -126,6 +128,14 @@ export default function CityPage({ params }) {
           {/* Main Content */}
           <div className="lg:col-span-2">
             <EditorialNote city={city} scope="city guide" />
+            {itinerary && (
+              <section className="mb-10 rounded-2xl border border-orange-200 bg-orange-50 p-6">
+                <p className="text-sm font-bold uppercase tracking-widest text-orange-700">Plan one realistic day</p>
+                <h2 className="mt-2 text-2xl font-bold text-gray-900">{itinerary.title}</h2>
+                <p className="mt-3 leading-7 text-gray-700">{itinerary.verdict}</p>
+                <Link href={`/itineraries/${itinerary.slug}`} className="mt-5 inline-block font-bold text-orange-700 hover:underline">Open the editable route →</Link>
+              </section>
+            )}
             {/* Overview */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-gray-800">Discover {city.name}: Your Complete Travel Guide</h2>

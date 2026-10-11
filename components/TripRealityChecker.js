@@ -38,13 +38,14 @@ function scoreBand(score) {
   return 'unrealistic'
 }
 
-export default function TripRealityChecker({ cities }) {
-  const [citySlug, setCitySlug] = useState(cities[0].slug)
+export default function TripRealityChecker({ cities, initialCitySlug, initialPlaceNames = [] }) {
+  const startingCity = cities.find((item) => item.slug === initialCitySlug) || cities[0]
+  const [citySlug, setCitySlug] = useState(startingCity.slug)
   const [pace, setPace] = useState('balanced')
   const [group, setGroup] = useState('Couple')
   const [startTime, setStartTime] = useState('09:00')
   const [dayType, setDayType] = useState('weekday')
-  const [selected, setSelected] = useState([])
+  const [selected, setSelected] = useState(() => initialPlaceNames.map((name) => startingCity.places.find((place) => place.name === name)?.id).filter(Boolean))
   const [report, setReport] = useState(null)
   const city = useMemo(() => cities.find((item) => item.slug === citySlug), [cities, citySlug])
 
