@@ -60,6 +60,12 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/itineraries`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/methodology`,
       lastModified: SITE_UPDATED,
       changeFrequency: 'monthly',

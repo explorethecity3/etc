@@ -49,6 +49,9 @@ export default function Navbar() {
             <Link href="/trip-checker" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Reality Checker
             </Link>
+            <Link href="/itineraries" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
+              Itineraries
+            </Link>
             <Link href="/blog" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Articles
             </Link>
@@ -94,6 +97,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Reality Checker
+            </Link>
+            <Link
+              href="/itineraries"
+              className="block py-3 text-white hover:text-gray-200 transition-colors font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Itineraries
             </Link>
             <Link
               href="/blog"
