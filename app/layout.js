@@ -41,7 +41,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(s){s.dataset.zone='12005272',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`,
+          }}
+        />
         <link rel="icon" href="/favicon.ico" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTCV09D973"></script>
         <script
