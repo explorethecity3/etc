@@ -22,12 +22,12 @@ const nextConfig = {
       },
       {
         source: '/blog/10-hidden-gems-in-mumbai',
-        destination: '/cities/mumbai/hidden-gems',
+        destination: '/cities/mumbai#hidden-gems',
         permanent: true,
       },
       {
         source: '/blog/budget-travel-guide-rajasthan',
-        destination: '/cities/jaipur/budget',
+        destination: '/cities/jaipur#budget',
         permanent: true,
       },
       {

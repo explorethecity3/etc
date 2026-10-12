@@ -157,6 +157,16 @@ export default function BlogPost({ params }) {
               })}
             </article>
 
+            <aside className="mt-10 rounded-2xl border border-orange-200 bg-orange-50 p-6">
+              <h2 className="text-2xl font-bold text-gray-900">Turn the reading into a workable day</h2>
+              <p className="mt-3 leading-7 text-gray-700">
+                Use this article for ideas, then check the practical side before you commit. Start with a{' '}
+                <Link href="/itineraries" className="font-semibold text-orange-700 hover:underline">reviewed one-day route</Link>,
+                compare it with the relevant <Link href="/cities" className="font-semibold text-orange-700 hover:underline">city guide</Link>,
+                and run your final stop order through the <Link href="/trip-checker" className="font-semibold text-orange-700 hover:underline">Trip Reality Checker</Link>.
+              </p>
+            </aside>
+
             {/* AdSense */}
             {/* <div className="my-8">
               <AdSense slot="5555555555" />

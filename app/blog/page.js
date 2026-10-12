@@ -10,8 +10,9 @@ export async function generateMetadata({ searchParams }) {
       title: `${category} - Travel Articles | Explore The City`,
       description: `${category} articles, stories and practical India travel guides researched and edited for real trip planning.`,
       alternates: {
-        canonical: `https://www.explorethecity.in/blog?category=${encodeURIComponent(category)}`,
+        canonical: 'https://www.explorethecity.in/blog',
       },
+      robots: { index: false, follow: true },
     }
   }
 

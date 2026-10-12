@@ -2,7 +2,7 @@ import blogs from '@/data/blogs.json'
 import { PRIMARY_CITY_SLUGS } from '@/lib/indexingPolicy'
 import { ITINERARY_LANDINGS } from '@/lib/itineraryLandingData'
 
-const SITE_UPDATED = new Date('2026-10-06')
+const SITE_UPDATED = new Date('2026-10-12')
 const LEGAL_UPDATED = new Date('2025-01-01')
 
 export default function sitemap() {
