@@ -1,6 +1,11 @@
-self.options = {
-    "domain": "5gvci.com",
-    "zoneId": 11977224
-}
-self.lary = ""
-importScripts('https://5gvci.com/act/files/service-worker.min.js?r=sw')
+// Retire the previous third-party advertising worker. Keeping this small local
+// worker at the same URL lets browsers update an older registration safely.
+self.addEventListener('install', () => self.skipWaiting())
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    Promise.all([
+      self.registration.unregister(),
+      caches.keys().then((keys) => Promise.all(keys.map((key) => caches.delete(key)))),
+    ])
+  )
+})
