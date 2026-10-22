@@ -1,11 +1,8 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import AdSenseLoader from '@/components/AdSenseLoader'
 import WebVitalsReporter from '@/components/WebVitalsReporter'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Explore The City — India Trip Reality Checker',
@@ -74,7 +71,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body>
         <WebVitalsReporter />
         <AdSenseLoader />
         <Navbar />
