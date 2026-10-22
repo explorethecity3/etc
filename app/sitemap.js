@@ -2,6 +2,7 @@ import blogs from '@/data/blogs.json'
 import { PRIMARY_CITY_SLUGS } from '@/lib/indexingPolicy'
 import { ITINERARY_LANDINGS } from '@/lib/itineraryLandingData'
 import { BANGALORE_SEO_LANDINGS } from '@/lib/bangaloreSeoLandings'
+import { MUMBAI_SEO_LANDINGS } from '@/lib/mumbaiSeoLandings'
 
 const SITE_UPDATED = new Date('2026-10-22')
 const LEGAL_UPDATED = new Date('2025-01-01')
@@ -90,6 +91,12 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/mumbai-guides`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
   ]
 
   // City pages
@@ -116,6 +123,13 @@ export default function sitemap() {
     priority: 0.9,
   }))
 
+  const mumbaiGuidePages = MUMBAI_SEO_LANDINGS.map((guide) => ({
+    url: `${baseUrl}/mumbai-guides/${guide.slug}`,
+    lastModified: SITE_UPDATED,
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  }))
+
   // Blog posts
   const blogPages = blogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}`,
@@ -124,5 +138,5 @@ export default function sitemap() {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...cityPages, ...itineraryPages, ...bangaloreGuidePages, ...blogPages]
+  return [...staticPages, ...cityPages, ...itineraryPages, ...bangaloreGuidePages, ...mumbaiGuidePages, ...blogPages]
 }

@@ -42,6 +42,9 @@ export default function Footer() {
               <Link href="/cities/mumbai" className="text-white hover:text-gray-200 underline">
                 Mumbai
               </Link>
+              <Link href="/mumbai-guides" className="text-white hover:text-gray-200 underline">
+                Mumbai Itineraries
+              </Link>
               <Link href="/cities/goa" className="text-white hover:text-gray-200 underline">
                 Goa
               </Link>

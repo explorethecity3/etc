@@ -13,6 +13,7 @@ import { getCityEditorial } from '@/lib/cityEditorial'
 import { isPrimaryCity } from '@/lib/indexingPolicy'
 import { getItineraryLandingByCity } from '@/lib/itineraryLandingData'
 import { BANGALORE_SEO_LANDINGS } from '@/lib/bangaloreSeoLandings'
+import { MUMBAI_SEO_LANDINGS } from '@/lib/mumbaiSeoLandings'
 
 export async function generateStaticParams() {
   const slugs = getAllCitySlugs()
@@ -149,6 +150,13 @@ export default function CityPage({ params }) {
                 <p className="text-sm font-bold uppercase tracking-widest text-orange-700">Answer a specific planning question</p>
                 <h2 className="mt-2 text-3xl font-bold text-gray-900">Practical Bangalore routes</h2>
                 <div className="mt-5 grid gap-4 md:grid-cols-3">{BANGALORE_SEO_LANDINGS.map((guide) => <Link key={guide.slug} href={`/bangalore-guides/${guide.slug}`} className="rounded-xl border border-orange-200 bg-white p-5 shadow-sm hover:shadow-md"><h3 className="font-bold text-gray-900">{guide.title}</h3><p className="mt-2 text-sm leading-6 text-gray-600">{guide.description}</p></Link>)}</div>
+              </section>
+            )}
+            {city.slug === 'mumbai' && (
+              <section className="mb-10">
+                <p className="text-sm font-bold uppercase tracking-widest text-orange-700">Answer a specific planning question</p>
+                <h2 className="mt-2 text-3xl font-bold text-gray-900">Practical Mumbai routes</h2>
+                <div className="mt-5 grid gap-4 md:grid-cols-3">{MUMBAI_SEO_LANDINGS.map((guide) => <Link key={guide.slug} href={`/mumbai-guides/${guide.slug}`} className="rounded-xl border border-orange-200 bg-white p-5 shadow-sm hover:shadow-md"><h3 className="font-bold text-gray-900">{guide.title}</h3><p className="mt-2 text-sm leading-6 text-gray-600">{guide.description}</p></Link>)}</div>
               </section>
             )}
             {/* Overview */}
