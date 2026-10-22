@@ -12,6 +12,7 @@ import { getCityData, getAllCitySlugs } from '@/lib/cityData'
 import { getCityEditorial } from '@/lib/cityEditorial'
 import { isPrimaryCity } from '@/lib/indexingPolicy'
 import { getItineraryLandingByCity } from '@/lib/itineraryLandingData'
+import { BANGALORE_SEO_LANDINGS } from '@/lib/bangaloreSeoLandings'
 
 export async function generateStaticParams() {
   const slugs = getAllCitySlugs()
@@ -30,9 +31,16 @@ export async function generateMetadata({ params }) {
     }
   }
 
+  const title = city.slug === 'bangalore'
+    ? 'Bangalore Travel Guide 2026: Places, Metro Routes, Costs & Itineraries'
+    : `${city.name} Travel Guide - Best Places to Visit in ${city.name}, ${city.state}`
+  const description = city.slug === 'bangalore'
+    ? 'Plan Bangalore with realistic routes, Metro-friendly attractions, local food, seasonal advice, daily costs and one-day itineraries that account for traffic.'
+    : city.shortDescription || `Discover the best places to visit in ${city.name}, ${city.state}. Complete travel guide with attractions, food, budget tips, and hidden gems.`
+
   return {
-    title: `${city.name} Travel Guide - Best Places to Visit in ${city.name}, ${city.state}`,
-    description: city.shortDescription || `Discover the best places to visit in ${city.name}, ${city.state}. Complete travel guide with attractions, food, budget tips, and hidden gems.`,
+    title,
+    description,
     alternates: {
       canonical: `https://www.explorethecity.in/cities/${city.slug}`,
     },
@@ -134,6 +142,13 @@ export default function CityPage({ params }) {
                 <h2 className="mt-2 text-2xl font-bold text-gray-900">{itinerary.title}</h2>
                 <p className="mt-3 leading-7 text-gray-700">{itinerary.verdict}</p>
                 <Link href={`/itineraries/${itinerary.slug}`} className="mt-5 inline-block font-bold text-orange-700 hover:underline">Open the editable route →</Link>
+              </section>
+            )}
+            {city.slug === 'bangalore' && (
+              <section className="mb-10">
+                <p className="text-sm font-bold uppercase tracking-widest text-orange-700">Answer a specific planning question</p>
+                <h2 className="mt-2 text-3xl font-bold text-gray-900">Practical Bangalore routes</h2>
+                <div className="mt-5 grid gap-4 md:grid-cols-3">{BANGALORE_SEO_LANDINGS.map((guide) => <Link key={guide.slug} href={`/bangalore-guides/${guide.slug}`} className="rounded-xl border border-orange-200 bg-white p-5 shadow-sm hover:shadow-md"><h3 className="font-bold text-gray-900">{guide.title}</h3><p className="mt-2 text-sm leading-6 text-gray-600">{guide.description}</p></Link>)}</div>
               </section>
             )}
             {/* Overview */}

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import AdSenseLoader from '@/components/AdSenseLoader'
+import WebVitalsReporter from '@/components/WebVitalsReporter'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -74,6 +75,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
+        <WebVitalsReporter />
         <AdSenseLoader />
         <Navbar />
         <main className="min-h-screen">

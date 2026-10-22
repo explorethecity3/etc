@@ -1,0 +1,21 @@
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { BANGALORE_SEO_LANDINGS, getBangaloreSeoLanding } from '@/lib/bangaloreSeoLandings'
+
+export const dynamicParams = false
+export function generateStaticParams() { return BANGALORE_SEO_LANDINGS.map(({ slug }) => ({ slug })) }
+export function generateMetadata({ params }) {
+  const guide = getBangaloreSeoLanding(params.slug)
+  if (!guide) return { title: 'Guide Not Found' }
+  const canonical = `https://www.explorethecity.in/bangalore-guides/${guide.slug}`
+  return { title: guide.title, description: guide.description, alternates: { canonical }, openGraph: { title: guide.title, description: guide.description, url: canonical, type: 'article' } }
+}
+
+export default function BangaloreGuidePage({ params }) {
+  const guide = getBangaloreSeoLanding(params.slug)
+  if (!guide) notFound()
+  const canonical = `https://www.explorethecity.in/bangalore-guides/${guide.slug}`
+  const schema = { '@context':'https://schema.org', '@type':'Article', headline:guide.title, description:guide.description, mainEntityOfPage:canonical, author:{'@type':'Organization',name:'Explore The City Editorial'}, publisher:{'@type':'Organization',name:'Explore The City'}, dateModified:'2026-10-22' }
+  const faq = { '@context':'https://schema.org', '@type':'FAQPage', mainEntity:guide.faq.map(([q,a])=>({'@type':'Question',name:q,acceptedAnswer:{'@type':'Answer',text:a}})) }
+  return <main className="min-h-screen bg-white pt-28 pb-20"><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faq)}}/><article className="container-custom max-w-4xl"><nav className="text-sm text-gray-500"><Link href="/">Home</Link> / <Link href="/bangalore-guides">Bangalore guides</Link> / <span>{guide.eyebrow}</span></nav><header className="mt-8 rounded-3xl bg-slate-950 p-8 text-white md:p-12"><p className="text-sm font-bold uppercase tracking-widest text-orange-300">{guide.eyebrow}</p><h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-6xl">{guide.title}</h1><p className="mt-6 text-lg leading-8 text-gray-300">{guide.intro}</p><p className="mt-5 text-sm text-gray-400">Reviewed 22 October 2026 · Verify live hours and transport before travelling.</p></header><section className="mt-10 grid gap-3 sm:grid-cols-2">{guide.summary.map(x=><div key={x} className="rounded-xl border border-orange-200 bg-orange-50 p-4 font-semibold text-gray-800">{x}</div>)}</section><section className="mt-14"><h2 className="text-3xl font-extrabold">The practical route</h2><div className="mt-7 space-y-6">{guide.stops.map(([title,text],i)=><section key={title} className="rounded-2xl border p-6"><div className="flex gap-4"><span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange-700 font-bold text-white">{i+1}</span><div><h3 className="text-xl font-bold">{title}</h3><p className="mt-3 leading-7 text-gray-700">{text}</p></div></div></section>)}</div></section><aside className="mt-12 rounded-2xl bg-amber-50 p-7"><h2 className="text-2xl font-bold">The trade-off that keeps this realistic</h2><p className="mt-3 leading-7 text-gray-700">{guide.tradeoffs}</p></aside><section className="mt-14"><h2 className="text-3xl font-extrabold">Common questions</h2><div className="mt-6 space-y-5">{guide.faq.map(([q,a])=><div key={q}><h3 className="text-xl font-bold">{q}</h3><p className="mt-2 leading-7 text-gray-700">{a}</p></div>)}</div></section><section className="mt-14 rounded-2xl border border-orange-200 p-7"><h2 className="text-2xl font-bold">Adjust this plan to your pace</h2><p className="mt-3 text-gray-700">Use the complete city guide for food, seasons and budgets, then test your chosen stops in the free checker.</p><div className="mt-5 flex flex-wrap gap-4"><Link href="/cities/bangalore" className="btn-secondary">Bangalore city guide</Link><Link href="/trip-checker" className="btn-primary">Check my day</Link></div></section></article></main>
+}
