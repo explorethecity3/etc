@@ -109,9 +109,9 @@ export default function CityPage({ params }) {
           priority
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">{city.name}</h1>
-            <p className="text-xl md:text-2xl">{city.state}</p>
+          <div className="text-center text-white px-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">{city.slug === 'bangalore' ? 'Bangalore Travel Guide' : city.name}</h1>
+            <p className="text-xl md:text-2xl">{city.slug === 'bangalore' ? 'Realistic routes, Metro stops, food and daily costs' : city.state}</p>
           </div>
         </div>
       </div>
@@ -149,7 +149,9 @@ export default function CityPage({ params }) {
               <section className="mb-10">
                 <p className="text-sm font-bold uppercase tracking-widest text-orange-700">Answer a specific planning question</p>
                 <h2 className="mt-2 text-3xl font-bold text-gray-900">Practical Bangalore routes</h2>
+                <p className="mt-3 leading-7 text-gray-700">Choose the guide that matches your day instead of stitching together distant attractions from a generic list.</p>
                 <div className="mt-5 grid gap-4 md:grid-cols-3">{BANGALORE_SEO_LANDINGS.map((guide) => <Link key={guide.slug} href={`/bangalore-guides/${guide.slug}`} className="rounded-xl border border-orange-200 bg-white p-5 shadow-sm hover:shadow-md"><h3 className="font-bold text-gray-900">{guide.title}</h3><p className="mt-2 text-sm leading-6 text-gray-600">{guide.description}</p></Link>)}</div>
+                <Link href="/bangalore-guides" className="mt-5 inline-block font-bold text-orange-700 hover:underline">Browse all Bangalore itineraries and Metro guides →</Link>
               </section>
             )}
             {city.slug === 'mumbai' && (
