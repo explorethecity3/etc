@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import GuideShareBar from './GuideShareBar'
 
 export default function CityGuideArticle({ cityName, citySlug, guide, allGuides = [], reviewedDate = '30 October 2026', dateModified = '2026-10-30' }) {
   const canonical = `https://www.explorethecity.in/${citySlug}-guides/${guide.slug}`
@@ -46,6 +47,7 @@ export default function CityGuideArticle({ cityName, citySlug, guide, allGuides 
           <p className="mt-6 text-lg leading-8 text-gray-300">{guide.intro}</p>
           <p className="mt-5 text-sm text-gray-400">Reviewed {reviewedDate} · Verify current hours, prices, weather and access before travelling.</p>
         </header>
+        <GuideShareBar title={guide.title} citySlug={citySlug} guideSlug={guide.slug} reviewedDate={reviewedDate} />
         <section className="mt-10 grid gap-3 sm:grid-cols-2">{guide.summary.map((item) => <div key={item} className="rounded-xl border border-orange-200 bg-orange-50 p-4 font-semibold text-gray-800">{item}</div>)}</section>
         <section className="mt-14">
           <h2 className="text-3xl font-extrabold">The practical plan</h2>
