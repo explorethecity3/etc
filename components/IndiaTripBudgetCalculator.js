@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 const CITY_RATES = {
   bangalore: { name: 'Bangalore', room: [1600, 3000, 6000], food: [700, 1400, 2600], transport: [350, 750, 1500], activities: [250, 700, 1600] },
@@ -23,6 +23,48 @@ export default function IndiaTripBudgetCalculator() {
   const [days, setDays] = useState(3)
   const [travellers, setTravellers] = useState(2)
   const [style, setStyle] = useState(1)
+  const [shareStatus, setShareStatus] = useState('')
+  const hasTrackedUse = useRef(false)
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const sharedCity = params.get('city')
+    const sharedDays = Number(params.get('days'))
+    const sharedTravellers = Number(params.get('travellers'))
+    const sharedStyle = Number(params.get('style'))
+    if (sharedCity && CITY_RATES[sharedCity]) setCity(sharedCity)
+    if (sharedDays >= 1 && sharedDays <= 14) setDays(sharedDays)
+    if (sharedTravellers >= 1 && sharedTravellers <= 10) setTravellers(sharedTravellers)
+    if (sharedStyle >= 0 && sharedStyle <= 2) setStyle(sharedStyle)
+  }, [])
+
+  function track(name, parameters = {}) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, parameters)
+  }
+
+  function trackUse(next = {}) {
+    if (hasTrackedUse.current) return
+    hasTrackedUse.current = true
+    track('budget_calculator_used', { city, travel_style: STYLES[style].name, days, travellers, ...next })
+  }
+
+  async function shareEstimate() {
+    const params = new URLSearchParams({ city, days: String(days), travellers: String(travellers), style: String(style) })
+    const url = `${window.location.origin}/india-trip-budget-calculator?${params.toString()}`
+    const shareData = { title: `${CITY_RATES[city].name} trip budget estimate`, text: `${days}-day ${CITY_RATES[city].name} planning range: ${format(result.low)}–${format(result.high)}`, url }
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData)
+        setShareStatus('Estimate shared.')
+      } else {
+        await navigator.clipboard.writeText(url)
+        setShareStatus('Shareable estimate link copied.')
+      }
+      track('budget_estimate_shared', { city, travel_style: STYLES[style].name, days, travellers })
+    } catch (error) {
+      if (error?.name !== 'AbortError') setShareStatus('Could not share automatically. Copy the page address instead.')
+    }
+  }
 
   const result = useMemo(() => {
     const rates = CITY_RATES[city]
@@ -40,14 +82,14 @@ export default function IndiaTripBudgetCalculator() {
     <form className="rounded-3xl border border-orange-200 bg-white p-6 shadow-sm md:p-8" onSubmit={(event) => event.preventDefault()}>
       <h2 className="text-2xl font-extrabold">Describe the trip</h2>
       <label className="mt-6 block font-bold" htmlFor="budget-city">Destination</label>
-      <select id="budget-city" value={city} onChange={(event) => setCity(event.target.value)} className="mt-2 w-full rounded-xl border border-gray-300 bg-white p-3">
+      <select id="budget-city" value={city} onChange={(event) => { setCity(event.target.value); trackUse({ city: event.target.value }) }} className="mt-2 w-full rounded-xl border border-gray-300 bg-white p-3">
         {Object.entries(CITY_RATES).map(([slug, item]) => <option key={slug} value={slug}>{item.name}</option>)}
       </select>
       <div className="mt-6 grid grid-cols-2 gap-4">
-        <label className="font-bold">Days<input aria-label="Number of days" type="number" min="1" max="14" value={days} onChange={(event) => setDays(Math.min(14, Math.max(1, Number(event.target.value) || 1)))} className="mt-2 w-full rounded-xl border border-gray-300 p-3" /></label>
-        <label className="font-bold">Travellers<input aria-label="Number of travellers" type="number" min="1" max="10" value={travellers} onChange={(event) => setTravellers(Math.min(10, Math.max(1, Number(event.target.value) || 1)))} className="mt-2 w-full rounded-xl border border-gray-300 p-3" /></label>
+        <label className="font-bold">Days<input aria-label="Number of days" type="number" min="1" max="14" value={days} onChange={(event) => { const value = Math.min(14, Math.max(1, Number(event.target.value) || 1)); setDays(value); trackUse({ days: value }) }} className="mt-2 w-full rounded-xl border border-gray-300 p-3" /></label>
+        <label className="font-bold">Travellers<input aria-label="Number of travellers" type="number" min="1" max="10" value={travellers} onChange={(event) => { const value = Math.min(10, Math.max(1, Number(event.target.value) || 1)); setTravellers(value); trackUse({ travellers: value }) }} className="mt-2 w-full rounded-xl border border-gray-300 p-3" /></label>
       </div>
-      <fieldset className="mt-7"><legend className="font-bold">Travel style</legend><div className="mt-3 space-y-3">{STYLES.map((item) => <label key={item.id} className={`block cursor-pointer rounded-xl border p-4 ${style === item.id ? 'border-orange-600 bg-orange-50' : 'border-gray-200'}`}><input type="radio" name="style" checked={style === item.id} onChange={() => setStyle(item.id)} className="mr-3" /><strong>{item.name}</strong><span className="mt-1 block pl-7 text-sm leading-5 text-gray-600">{item.detail}</span></label>)}</div></fieldset>
+      <fieldset className="mt-7"><legend className="font-bold">Travel style</legend><div className="mt-3 space-y-3">{STYLES.map((item) => <label key={item.id} className={`block cursor-pointer rounded-xl border p-4 ${style === item.id ? 'border-orange-600 bg-orange-50' : 'border-gray-200'}`}><input type="radio" name="style" checked={style === item.id} onChange={() => { setStyle(item.id); trackUse({ travel_style: item.name }) }} className="mr-3" /><strong>{item.name}</strong><span className="mt-1 block pl-7 text-sm leading-5 text-gray-600">{item.detail}</span></label>)}</div></fieldset>
     </form>
     <section aria-live="polite" className="rounded-3xl bg-slate-950 p-7 text-white md:p-10">
       <p className="text-sm font-bold uppercase tracking-widest text-orange-300">Planning range for {CITY_RATES[city].name}</p>
@@ -57,6 +99,8 @@ export default function IndiaTripBudgetCalculator() {
         ['Accommodation', result.accommodation], ['Food', result.food], ['Local transport', result.transport], ['Attractions and activities', result.activities],
       ].map(([label, value]) => <div key={label} className="flex items-center justify-between gap-4 border-b border-white/10 pb-3"><span className="text-gray-300">{label}</span><strong>{format(value)}</strong></div>)}</div>
       <div className="mt-7 rounded-2xl bg-white/10 p-5"><h3 className="font-bold">Why this is a range</h3><p className="mt-2 text-sm leading-6 text-gray-300">Rates move by neighbourhood, season, weekends and booking date. The upper end adds breathing room for price variation and small unplanned costs; it is not a live quotation.</p></div>
+      <button type="button" onClick={shareEstimate} className="mt-6 w-full rounded-xl bg-orange-600 px-5 py-3 font-bold text-white transition hover:bg-orange-500">Share this estimate</button>
+      {shareStatus && <p className="mt-3 text-center text-sm text-orange-200" role="status">{shareStatus}</p>}
     </section>
   </div>
 }

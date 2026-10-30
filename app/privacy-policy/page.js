@@ -62,6 +62,9 @@ export default function PrivacyPolicyPage() {
             <p className="text-gray-700 leading-relaxed mt-4">
               For the Reality Checker, Google Analytics may receive anonymous product events such as the selected destination, pace, traveller category, weekday or weekend selection, number of stops, score band, whether a route was reordered, whether a report was printed and whether a Google Maps link was opened. We do not send the selected attraction names, visit start time or a complete itinerary to analytics.
             </p>
+            <p className="text-gray-700 mb-4">
+              For the Trip Budget Calculator, Google Analytics may receive anonymous product events such as the selected destination, trip length, number of travellers, travel style and whether an estimate link was shared. The calculator does not request names, booking details or payment information.
+            </p>
           </section>
 
           <section className="mb-12">
