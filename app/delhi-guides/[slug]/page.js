@@ -23,5 +23,5 @@ export function generateMetadata({ params }) {
 export default function DelhiGuidePage({ params }) {
   const guide = getDelhiSeoLanding(params.slug)
   if (!guide) notFound()
-  return <CityGuideArticle cityName="Delhi" citySlug="delhi" guide={guide} />
+  return <CityGuideArticle cityName="Delhi" citySlug="delhi" guide={guide} allGuides={DELHI_SEO_LANDINGS} />
 }

@@ -23,5 +23,5 @@ export function generateMetadata({ params }) {
 export default function GoaGuidePage({ params }) {
   const guide = getGoaSeoLanding(params.slug)
   if (!guide) notFound()
-  return <CityGuideArticle cityName="Goa" citySlug="goa" guide={guide} />
+  return <CityGuideArticle cityName="Goa" citySlug="goa" guide={guide} allGuides={GOA_SEO_LANDINGS} />
 }
