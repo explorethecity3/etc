@@ -10,7 +10,7 @@ import EditorialNote from '@/components/EditorialNote'
 import ComprehensiveCityGuide from '@/components/ComprehensiveCityGuide'
 import { getCityData, getAllCitySlugs } from '@/lib/cityData'
 import { getCityEditorial } from '@/lib/cityEditorial'
-import { isPrimaryCity } from '@/lib/indexingPolicy'
+import { getCityRobots } from '@/lib/indexingPolicy'
 import { getItineraryLandingByCity } from '@/lib/itineraryLandingData'
 import { BANGALORE_SEO_LANDINGS } from '@/lib/bangaloreSeoLandings'
 import { MUMBAI_SEO_LANDINGS } from '@/lib/mumbaiSeoLandings'
@@ -46,9 +46,7 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: `https://www.explorethecity.in/cities/${city.slug}`,
     },
-    robots: isPrimaryCity(city.slug)
-      ? { index: true, follow: true }
-      : { index: false, follow: true, googleBot: { index: false, follow: true } },
+    robots: getCityRobots(city.slug),
     openGraph: {
       title: `${city.name} Travel Guide | Explore The City`,
       description: city.shortDescription || `Discover ${city.name}'s top attractions, local food, and travel tips`,

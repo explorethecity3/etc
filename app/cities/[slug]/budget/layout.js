@@ -1,4 +1,5 @@
 import { getCityData } from '@/lib/cityData'
+import { getCityRobots } from '@/lib/indexingPolicy'
 
 export async function generateMetadata({ params }) {
   const city = getCityData(params.slug)
@@ -45,10 +46,7 @@ export async function generateMetadata({ params }) {
       description: metaDescription,
       images: [ogImage],
     },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    robots: getCityRobots(params.slug),
   }
 }
 
