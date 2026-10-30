@@ -1,7 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['via.placeholder.com'],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 2592000,
+  },
+  async headers() {
+    const immutableCache = 'public, max-age=31536000, immutable'
+    return [
+      {
+        source: '/fonts/:path*',
+        headers: [{ key: 'Cache-Control', value: immutableCache }],
+      },
+      {
+        source: '/images/photos/:path*',
+        headers: [{ key: 'Cache-Control', value: immutableCache }],
+      },
+    ]
   },
   async redirects() {
     return [
