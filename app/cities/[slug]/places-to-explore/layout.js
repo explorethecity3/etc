@@ -11,8 +11,8 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `${city.name} Tourist Attractions: ${city.attractions} Must-Visit Places & Landmarks | Explore The City`
-  const metaDescription = `Explore the best attractions and places to visit in ${city.name}, ${city.state}. Discover top tourist spots, historical landmarks, cultural sites, and hidden gems with timings, entry fees, and detailed descriptions.`
+  const metaTitle = `Best Places to Visit in ${city.name}: Top Attractions`
+  const metaDescription = `Choose the best places to visit in ${city.name} with useful notes on timings, entry fees and what each stop adds to your day.`
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/places-to-explore`

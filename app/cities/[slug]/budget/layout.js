@@ -11,8 +11,8 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `${city.name} Trip Budget: Complete Cost Breakdown & Money-Saving Tips | Explore The City`
-  const metaDescription = `Plan your budget for ${city.name}, ${city.state}. Detailed breakdown of accommodation costs, food expenses, transport fares, and entry fees. ${city.budgetEstimate} for a comfortable trip to ${city.name}.`
+  const metaTitle = `${city.name} Trip Cost: Daily Budget & Prices`
+  const metaDescription = `What does a ${city.name} trip really cost? Compare realistic daily spending on stays, food, local transport and attraction tickets.`
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/budget`

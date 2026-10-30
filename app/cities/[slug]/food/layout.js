@@ -11,8 +11,8 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `${city.name} Food Scene: Local Cuisine, Best Restaurants & Street Food | Explore The City`
-  const metaDescription = `Discover the best food in ${city.name}, ${city.state}. Explore authentic local cuisine, must-try dishes, famous restaurants, street food, and culinary specialties that make ${city.name} a food lover's paradise.`
+  const metaTitle = `Best Food in ${city.name}: Dishes & Places to Eat`
+  const metaDescription = `Hungry in ${city.name}? Start with the local dishes worth ordering, the neighbourhoods known for food and practical tips for eating well.`
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/food`

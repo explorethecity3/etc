@@ -11,8 +11,8 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `${city.name} Hidden Gems: Secret Spots & Offbeat Experiences 2026 | Explore The City`
-  const metaDescription = `Discover hidden gems and lesser-known attractions in ${city.name}, ${city.state}. Explore off-the-beaten-path locations, secret spots, and authentic local experiences away from tourist crowds in ${city.name}.`
+  const metaTitle = `Hidden Gems in ${city.name}: Quiet & Unusual Places`
+  const metaDescription = `Seen the famous sights in ${city.name}? Try these lesser-known places and local experiences, with honest notes on access, timing and crowds.`
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/hidden-gems`

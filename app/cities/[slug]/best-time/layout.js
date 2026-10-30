@@ -11,8 +11,8 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `When to Visit ${city.name}: Best Months, Weather & Seasons 2026 | Explore The City`
-  const metaDescription = `Find the best time to visit ${city.name}, ${city.state}. Comprehensive guide on weather conditions, peak seasons, festivals, and ideal months for visiting ${city.name} to make the most of your trip.`
+  const metaTitle = `Best Time to Visit ${city.name}: Weather & Crowds`
+  const metaDescription = `Wondering when to visit ${city.name}? Compare the weather, crowds and festival seasons, then choose the months that suit the trip you want.`
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/best-time`

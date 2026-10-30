@@ -11,8 +11,8 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const metaTitle = `${city.name} Travel Essentials: Insider Tips & Practical Advice for Visitors | Explore The City`
-  const metaDescription = `Essential travel tips for visiting ${city.name}, ${city.state}. Get insider advice on local customs, transportation, safety, best practices, and everything you need to know for a smooth trip to ${city.name}.`
+  const metaTitle = `${city.name} Travel Tips: Transport, Safety & Costs`
+  const metaDescription = `Visiting ${city.name} for the first time? Get practical advice on local transport, common costs, safety, customs and mistakes worth avoiding.`
 
   const siteUrl = 'https://www.explorethecity.in'
   const pageUrl = `${siteUrl}/cities/${params.slug}/travel-tips`
