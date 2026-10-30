@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import AdSenseLoader from '@/components/AdSenseLoader'
 import WebVitalsReporter from '@/components/WebVitalsReporter'
+import AnalyticsReporter from '@/components/AnalyticsReporter'
 
 export const metadata = {
   title: 'Explore The City — India Trip Reality Checker',
@@ -48,7 +49,7 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-ZTCV09D973');
+              gtag('config', 'G-ZTCV09D973', { send_page_view: false });
             `,
           }}
         />
@@ -72,6 +73,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <AnalyticsReporter />
         <WebVitalsReporter />
         <AdSenseLoader />
         <Navbar />

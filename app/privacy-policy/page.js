@@ -65,6 +65,9 @@ export default function PrivacyPolicyPage() {
             <p className="text-gray-700 mb-4">
               For the Trip Budget Calculator, Google Analytics may receive anonymous product events such as the selected destination, trip length, number of travellers, travel style and whether an estimate link was shared. The calculator does not request names, booking details or payment information.
             </p>
+            <p className="mb-4">
+              Google Analytics also records page views when visitors move between pages without a full browser reload. On city guides, planning guides and itineraries, we may record an anonymous event when a visitor reaches approximately halfway through the page. This helps us distinguish useful reading from accidental page loads; the event contains the page path and content category, not form entries or personal information.
+            </p>
           </section>
 
           <section className="mb-12">
