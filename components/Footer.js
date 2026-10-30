@@ -30,6 +30,9 @@ export default function Footer() {
               <Link href="/trip-checker" className="text-white hover:text-gray-200 underline">
                 Trip Reality Checker
               </Link>
+              <Link href="/travel-tools" className="text-white hover:text-gray-200 underline">
+                All Travel Tools
+              </Link>
               <Link href="/india-trip-budget-calculator" className="text-white hover:text-gray-200 underline">
                 Trip Budget Calculator
               </Link>

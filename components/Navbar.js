@@ -40,8 +40,8 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-10">
-            <Link href="/" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
-              Home
+            <Link href="/travel-tools" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
+              Tools
             </Link>
             <Link href="/cities" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Cities
@@ -97,6 +97,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Reality Checker
+            </Link>
+            <Link
+              href="/travel-tools"
+              className="block py-3 text-white hover:text-gray-200 transition-colors font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Travel Tools
             </Link>
             <Link
               href="/itineraries"

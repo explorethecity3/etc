@@ -63,6 +63,18 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/travel-tools`,
+      lastModified: new Date('2026-10-30'),
+      changeFrequency: 'monthly',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/trip-planner`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/itineraries`,
       lastModified: SITE_UPDATED,
       changeFrequency: 'weekly',
