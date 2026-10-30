@@ -2,19 +2,26 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { isPrimaryCity } from '@/lib/indexingPolicy'
 
 export default function CitySubmenu({ citySlug }) {
   const pathname = usePathname()
+  const useGuidePages = isPrimaryCity(citySlug)
 
   const menuItems = [
     { name: 'About', path: `/cities/${citySlug}` },
-    { name: 'Best Time', path: `/cities/${citySlug}#best-time` },
-    { name: 'Places to Explore', path: `/cities/${citySlug}#places` },
-    { name: 'Food', path: `/cities/${citySlug}#food` },
-    { name: 'Hidden Gems', path: `/cities/${citySlug}#hidden-gems` },
-    { name: 'Travel Tips', path: `/cities/${citySlug}#travel-tips` },
-    { name: 'Budget', path: `/cities/${citySlug}#budget` }
-  ]
+    { name: 'Best Time', section: 'best-time' },
+    { name: 'Places to Explore', section: 'places-to-explore', anchor: 'places' },
+    { name: 'Food', section: 'food' },
+    { name: 'Hidden Gems', section: 'hidden-gems' },
+    { name: 'Travel Tips', section: 'travel-tips' },
+    { name: 'Budget', section: 'budget' },
+  ].map((item) => ({
+    ...item,
+    path: item.path || (useGuidePages
+      ? `/cities/${citySlug}/${item.section}`
+      : `/cities/${citySlug}#${item.anchor || item.section}`),
+  }))
 
   const isActive = (path) => !path.includes('#') && pathname === path
 

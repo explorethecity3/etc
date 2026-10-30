@@ -10,7 +10,7 @@ import EditorialNote from '@/components/EditorialNote'
 import ComprehensiveCityGuide from '@/components/ComprehensiveCityGuide'
 import { getCityData, getAllCitySlugs } from '@/lib/cityData'
 import { getCityEditorial } from '@/lib/cityEditorial'
-import { getCityRobots } from '@/lib/indexingPolicy'
+import { getCityRobots, isPrimaryCity } from '@/lib/indexingPolicy'
 import { getItineraryLandingByCity } from '@/lib/itineraryLandingData'
 import { BANGALORE_SEO_LANDINGS } from '@/lib/bangaloreSeoLandings'
 import { MUMBAI_SEO_LANDINGS } from '@/lib/mumbaiSeoLandings'
@@ -188,11 +188,17 @@ export default function CityPage({ params }) {
               <p className="text-gray-700 mb-6">Jump to the part that helps now, or read straight through for a practical first-trip plan.</p>
               <div className="flex flex-wrap gap-3">
                 {[
-                  ['Plan the days', 'plan'], ['Places', 'places'], ['Food', 'food'],
+                  ['Plan the days', 'plan'], ['Places', 'places-to-explore', 'places'], ['Food', 'food'],
                   ['Best time', 'best-time'], ['Travel tips', 'travel-tips'],
                   ['Hidden gems', 'hidden-gems'], ['Budget', 'budget'],
-                ].map(([label, anchor]) => (
-                  <Link key={anchor} href={`#${anchor}`} className="rounded-full bg-white px-4 py-2 font-semibold text-primary shadow-sm border border-orange-100 hover:bg-orange-50">
+                ].map(([label, section, anchor = section]) => (
+                  <Link
+                    key={section}
+                    href={section === 'plan' || !isPrimaryCity(city.slug)
+                      ? `#${anchor}`
+                      : `/cities/${city.slug}/${section}`}
+                    className="rounded-full bg-white px-4 py-2 font-semibold text-primary shadow-sm border border-orange-100 hover:bg-orange-50"
+                  >
                     {label}
                   </Link>
                 ))}
