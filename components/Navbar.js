@@ -49,8 +49,8 @@ export default function Navbar() {
             <Link href="/trip-checker" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Reality Checker
             </Link>
-            <Link href="/itineraries" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
-              Itineraries
+            <Link href="/guides" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
+              Guides
             </Link>
             <Link href="/blog" className="text-white hover:text-gray-200 transition-colors font-medium text-lg">
               Articles
@@ -106,11 +106,11 @@ export default function Navbar() {
               Travel Tools
             </Link>
             <Link
-              href="/itineraries"
+              href="/guides"
               className="block py-3 text-white hover:text-gray-200 transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
-              Itineraries
+              Planning Guides
             </Link>
             <Link
               href="/blog"

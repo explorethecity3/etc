@@ -91,6 +91,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/guides`,
+      lastModified: new Date('2026-10-30'),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+    {
       url: `${baseUrl}/methodology`,
       lastModified: SITE_UPDATED,
       changeFrequency: 'monthly',
