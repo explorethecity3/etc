@@ -30,6 +30,9 @@ export default function Footer() {
               <Link href="/trip-checker" className="text-white hover:text-gray-200 underline">
                 Trip Reality Checker
               </Link>
+              <Link href="/india-trip-budget-calculator" className="text-white hover:text-gray-200 underline">
+                Trip Budget Calculator
+              </Link>
               <Link href="/itineraries" className="text-white hover:text-gray-200 underline">
                 Itineraries
               </Link>
@@ -47,6 +50,9 @@ export default function Footer() {
               </Link>
               <Link href="/cities/goa" className="text-white hover:text-gray-200 underline">
                 Goa
+              </Link>
+              <Link href="/jaipur-guides" className="text-white hover:text-gray-200 underline">
+                Jaipur Itineraries
               </Link>
               <Link href="/blog" className="text-white hover:text-gray-200 underline">
                 Articles
