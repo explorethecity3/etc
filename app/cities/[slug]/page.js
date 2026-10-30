@@ -16,6 +16,7 @@ import { BANGALORE_SEO_LANDINGS } from '@/lib/bangaloreSeoLandings'
 import { MUMBAI_SEO_LANDINGS } from '@/lib/mumbaiSeoLandings'
 import { JAIPUR_SEO_LANDINGS } from '@/lib/jaipurSeoLandings'
 import { GOA_SEO_LANDINGS } from '@/lib/goaSeoLandings'
+import { DELHI_SEO_LANDINGS } from '@/lib/delhiSeoLandings'
 
 export async function generateStaticParams() {
   const slugs = getAllCitySlugs()
@@ -177,6 +178,15 @@ export default function CityPage({ params }) {
                 <p className="mt-3 leading-7 text-gray-700">Compare North and South, build three realistic days and see what a couple should allow before choosing the hotel.</p>
                 <div className="mt-5 grid gap-4 md:grid-cols-3">{GOA_SEO_LANDINGS.map((guide) => <Link key={guide.slug} href={`/goa-guides/${guide.slug}`} className="rounded-xl border border-orange-200 bg-white p-5 shadow-sm hover:shadow-md"><h3 className="font-bold text-gray-900">{guide.title}</h3><p className="mt-2 text-sm leading-6 text-gray-600">{guide.description}</p></Link>)}</div>
                 <Link href="/goa-guides" className="mt-5 inline-block font-bold text-orange-700 hover:underline">Browse all Goa planning guides →</Link>
+              </section>
+            )}
+            {city.slug === 'delhi' && (
+              <section className="mb-10">
+                <p className="text-sm font-bold uppercase tracking-widest text-orange-700">Plan Delhi by district</p>
+                <h2 className="mt-2 text-3xl font-bold text-gray-900">Metro routes, Old Delhi and two realistic days</h2>
+                <p className="mt-3 leading-7 text-gray-700">Use the Metro for long transfers, slow down inside Old Delhi and stop treating every monument as though it belongs in one loop.</p>
+                <div className="mt-5 grid gap-4 md:grid-cols-3">{DELHI_SEO_LANDINGS.map((guide) => <Link key={guide.slug} href={`/delhi-guides/${guide.slug}`} className="rounded-xl border border-orange-200 bg-white p-5 shadow-sm hover:shadow-md"><h3 className="font-bold text-gray-900">{guide.title}</h3><p className="mt-2 text-sm leading-6 text-gray-600">{guide.description}</p></Link>)}</div>
+                <Link href="/delhi-guides" className="mt-5 inline-block font-bold text-orange-700 hover:underline">Browse all Delhi planning guides →</Link>
               </section>
             )}
             {/* Overview */}
