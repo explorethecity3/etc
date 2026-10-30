@@ -4,6 +4,7 @@ import { ITINERARY_LANDINGS } from '@/lib/itineraryLandingData'
 import { BANGALORE_SEO_LANDINGS } from '@/lib/bangaloreSeoLandings'
 import { MUMBAI_SEO_LANDINGS } from '@/lib/mumbaiSeoLandings'
 import { JAIPUR_SEO_LANDINGS } from '@/lib/jaipurSeoLandings'
+import { GOA_SEO_LANDINGS } from '@/lib/goaSeoLandings'
 
 const SITE_UPDATED = new Date('2026-10-22')
 const LEGAL_UPDATED = new Date('2025-01-01')
@@ -125,6 +126,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/goa-guides`,
+      lastModified: new Date('2026-10-30'),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/india-trip-budget-calculator`,
       lastModified: new Date('2026-10-30'),
       changeFrequency: 'monthly',
@@ -179,6 +186,13 @@ export default function sitemap() {
     priority: 0.9,
   }))
 
+  const goaGuidePages = GOA_SEO_LANDINGS.map((guide) => ({
+    url: `${baseUrl}/goa-guides/${guide.slug}`,
+    lastModified: new Date('2026-10-30'),
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  }))
+
   // Blog posts
   const blogPages = blogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}`,
@@ -195,6 +209,7 @@ export default function sitemap() {
     ...bangaloreGuidePages,
     ...mumbaiGuidePages,
     ...jaipurGuidePages,
+    ...goaGuidePages,
     ...blogPages,
   ]
 }
