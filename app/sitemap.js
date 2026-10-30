@@ -7,6 +7,14 @@ import { JAIPUR_SEO_LANDINGS } from '@/lib/jaipurSeoLandings'
 
 const SITE_UPDATED = new Date('2026-10-22')
 const LEGAL_UPDATED = new Date('2025-01-01')
+const CITY_GUIDE_SECTIONS = [
+  'places-to-explore',
+  'food',
+  'best-time',
+  'travel-tips',
+  'hidden-gems',
+  'budget',
+]
 
 export default function sitemap() {
   const baseUrl = 'https://www.explorethecity.in'
@@ -134,6 +142,15 @@ export default function sitemap() {
     }
   })
 
+  const cityGuidePages = citySlugs.flatMap((slug) =>
+    CITY_GUIDE_SECTIONS.map((section) => ({
+      url: `${baseUrl}/cities/${slug}/${section}`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    }))
+  )
+
   const itineraryPages = ITINERARY_LANDINGS.map((plan) => ({
     url: `${baseUrl}/itineraries/${plan.slug}`,
     lastModified: SITE_UPDATED,
@@ -170,5 +187,14 @@ export default function sitemap() {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...cityPages, ...itineraryPages, ...bangaloreGuidePages, ...mumbaiGuidePages, ...jaipurGuidePages, ...blogPages]
+  return [
+    ...staticPages,
+    ...cityPages,
+    ...cityGuidePages,
+    ...itineraryPages,
+    ...bangaloreGuidePages,
+    ...mumbaiGuidePages,
+    ...jaipurGuidePages,
+    ...blogPages,
+  ]
 }
