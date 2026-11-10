@@ -36,10 +36,10 @@ export async function generateMetadata({ params }) {
   }
 
   const title = city.slug === 'bangalore'
-    ? 'Bangalore Travel Guide 2026: Places, Metro Routes, Costs & Itineraries'
+    ? 'Places to Visit in Bangalore: Metro Routes & 1-Day Plan'
     : `${city.name} Travel Guide - Best Places to Visit in ${city.name}, ${city.state}`
   const description = city.slug === 'bangalore'
-    ? 'Plan Bangalore with realistic routes, Metro-friendly attractions, local food, seasonal advice, daily costs and one-day itineraries that account for traffic.'
+    ? 'Plan Bangalore sightseeing with Metro-friendly places, realistic travel times, local food, daily costs and an editable one-day itinerary.'
     : city.shortDescription || `Discover the best places to visit in ${city.name}, ${city.state}. Complete travel guide with attractions, food, budget tips, and hidden gems.`
 
   return {
@@ -144,6 +144,19 @@ export default function CityPage({ params }) {
                 <h2 className="mt-2 text-2xl font-bold text-gray-900">{itinerary.title}</h2>
                 <p className="mt-3 leading-7 text-gray-700">{itinerary.verdict}</p>
                 <Link href={`/itineraries/${itinerary.slug}`} className="mt-5 inline-block font-bold text-orange-700 hover:underline">Open the editable route →</Link>
+              </section>
+            )}
+            {city.slug === 'bangalore' && (
+              <section className="mb-10 rounded-2xl border border-orange-200 bg-orange-50 p-6 md:p-8">
+                <p className="text-sm font-bold uppercase tracking-widest text-orange-700">Start here</p>
+                <h2 className="mt-2 text-3xl font-bold text-gray-900">Which places should you visit in Bangalore?</h2>
+                <p className="mt-4 leading-7 text-gray-700">For a first day, keep Cubbon Park, the museum district, MG Road and Church Street together. Lalbagh and Basavanagudi form a second useful cluster. Bangalore Palace and ISKCON Temple sit in different directions, so adding both to an already full day usually means spending more time in traffic than sightseeing.</p>
+                <p className="mt-4 leading-7 text-gray-700">If you want interesting things to do beyond the headline attractions, make room for a proper dosa breakfast, an old neighbourhood walk or an evening around Church Street. The best plan is not the longest list; it is the one where the journeys between stops still leave time to enjoy them.</p>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Link href="/cities/bangalore/places-to-explore" className="rounded-full bg-white px-4 py-2 font-bold text-orange-800 shadow-sm">See Bangalore sightseeing places</Link>
+                  <Link href="/cities/bangalore/food" className="rounded-full bg-white px-4 py-2 font-bold text-orange-800 shadow-sm">Plan local food stops</Link>
+                  <Link href="/cities/bangalore/budget" className="rounded-full bg-white px-4 py-2 font-bold text-orange-800 shadow-sm">Check daily costs</Link>
+                </div>
               </section>
             )}
             {city.slug === 'bangalore' && (
