@@ -77,7 +77,7 @@ export default function Footer() {
             <a href="https://www.facebook.com/profile.php?id=100083632778123&sk=about" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors" aria-label="Facebook">
               <FaFacebook size={32} />
             </a>
-            <a href="https://www.youtube.com/@explorethecity03" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors" aria-label="Explore The City on YouTube">
+            <a href="https://www.youtube.com/@explorethecity7465" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors" aria-label="Explore The City on YouTube">
               <FaYoutube size={32} />
             </a>
             <a href="https://www.instagram.com/explorethecity03/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors" aria-label="Instagram">
