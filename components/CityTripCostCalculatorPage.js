@@ -14,6 +14,18 @@ export const CITY_CALCULATOR_CONTENT = {
     routeHref: '/bangalore-guides/bangalore-one-day-metro-itinerary',
     routeLabel: 'Use the one-day Metro itinerary',
   },
+  mumbai: {
+    name: 'Mumbai',
+    title: 'Mumbai Trip Cost Calculator: Budget by Days',
+    description: 'Estimate a Mumbai trip budget for accommodation, food, local trains or taxis, sightseeing and activities. Adjust days, travellers and travel style.',
+    intro: 'Mumbai budgets are shaped by where you stay. A room that looks cheaper can lose its advantage when every sightseeing day starts with a long cross-city journey.',
+    localCost: 'Local trains and the Metro can keep routine travel affordable, while a well-chosen base near your main sightseeing area reduces both fares and tiring transfers.',
+    watch: 'Accommodation, airport transfers and repeated north-to-south taxi journeys are the costs most likely to stretch an otherwise reasonable daily budget.',
+    guideHref: '/cities/mumbai/budget',
+    guideLabel: 'Read the Mumbai budget guide',
+    routeHref: '/mumbai-guides/south-mumbai-walking-itinerary',
+    routeLabel: 'Use the South Mumbai walking itinerary',
+  },
   goa: {
     name: 'Goa',
     title: 'Goa Trip Cost Calculator for Couples & Groups',
@@ -37,6 +49,18 @@ export const CITY_CALCULATOR_CONTENT = {
     guideLabel: 'Read the Jaipur budget guide',
     routeHref: '/jaipur-guides/jaipur-old-city-walking-route',
     routeLabel: 'Follow the Old City walking route',
+  },
+  delhi: {
+    name: 'Delhi',
+    title: 'Delhi Trip Cost Calculator: Daily Travel Budget',
+    description: 'Calculate a Delhi trip budget for stays, meals, Metro or local transport, monument tickets and activities. Adjust days, travellers and comfort level.',
+    intro: 'Delhi can suit several budgets, but distant sightseeing clusters make careless routes expensive. Start with a realistic daily range, then keep each day within one part of the city.',
+    localCost: 'Metro journeys and geographically grouped attractions usually cost less than a full day of cross-city cabs. Central accommodation can also save valuable morning travel time.',
+    watch: 'Airport transfers, private cars, monument tickets and switching repeatedly between Old Delhi and southern attractions can move the total faster than meals do.',
+    guideHref: '/cities/delhi/budget',
+    guideLabel: 'Read the Delhi budget guide',
+    routeHref: '/delhi-guides/delhi-tourist-places-by-metro',
+    routeLabel: 'Plan sightseeing by Metro',
   },
 }
 

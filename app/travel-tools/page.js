@@ -68,7 +68,7 @@ export default function TravelToolsPage() {
         <p className="text-xs font-bold uppercase tracking-widest text-orange-700">Destination cost calculators</p>
         <h2 className="mt-3 text-3xl font-extrabold">Start with the city you are actually visiting</h2>
         <p className="mt-3 max-w-3xl leading-7 text-gray-700">These focused calculators open with local assumptions already selected and explain which costs are most likely to move.</p>
-        <div className="mt-6 flex flex-wrap gap-3">{[['Bangalore','bangalore'],['Goa','goa'],['Jaipur','jaipur']].map(([name, slug]) => <Link key={slug} href={`/${slug}-trip-cost-calculator`} className="rounded-full bg-orange-100 px-5 py-3 font-bold text-orange-900 hover:bg-orange-200">{name} cost calculator</Link>)}</div>
+        <div className="mt-6 flex flex-wrap gap-3">{[['Bangalore','bangalore'],['Mumbai','mumbai'],['Goa','goa'],['Delhi','delhi'],['Jaipur','jaipur']].map(([name, slug]) => <Link key={slug} href={`/${slug}-trip-cost-calculator`} className="rounded-full bg-orange-100 px-5 py-3 font-bold text-orange-900 hover:bg-orange-200">{name} cost calculator</Link>)}</div>
       </section>
       <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-white md:flex md:items-center md:justify-between md:gap-8">
         <div><h2 className="text-3xl font-bold">Need destination context first?</h2><p className="mt-3 max-w-2xl text-gray-300">The tools estimate and organise. Our maintained guides explain neighbourhoods, seasons, food, transport and the trade-offs behind a practical route.</p></div>

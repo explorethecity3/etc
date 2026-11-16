@@ -150,7 +150,7 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 1.0,
     },
-    ...['bangalore', 'goa', 'jaipur'].map((slug) => ({
+    ...['bangalore', 'mumbai', 'goa', 'delhi', 'jaipur'].map((slug) => ({
       url: `${baseUrl}/${slug}-trip-cost-calculator`,
       lastModified: new Date('2026-11-16'),
       changeFrequency: 'monthly',
