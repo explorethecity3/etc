@@ -36,10 +36,10 @@ export async function generateMetadata({ params }) {
   }
 
   const title = city.slug === 'bangalore'
-    ? 'Places to Visit in Bangalore: Metro Routes & 1-Day Plan'
+    ? 'Bangalore in One Day: Places, Metro Route & Costs'
     : `${city.name} Travel Guide - Best Places to Visit in ${city.name}, ${city.state}`
   const description = city.slug === 'bangalore'
-    ? 'Plan Bangalore sightseeing with Metro-friendly places, realistic travel times, local food, daily costs and an editable one-day itinerary.'
+    ? 'Planning one day in Bangalore? See what fits, which stops connect by Metro, realistic travel times, local food options and expected daily costs.'
     : city.shortDescription || `Discover the best places to visit in ${city.name}, ${city.state}. Complete travel guide with attractions, food, budget tips, and hidden gems.`
 
   return {

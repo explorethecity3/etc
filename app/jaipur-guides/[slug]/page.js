@@ -8,7 +8,9 @@ export function generateMetadata({ params }) {
   const guide = getJaipurSeoLanding(params.slug)
   if (!guide) return { title: 'Guide Not Found' }
   const canonical = `https://www.explorethecity.in/jaipur-guides/${guide.slug}`
-  return { title: guide.title, description: guide.description, alternates: { canonical }, openGraph: { title: guide.title, description: guide.description, url: canonical, type: 'article' } }
+  const title = guide.seoTitle || guide.title
+  const description = guide.seoDescription || guide.description
+  return { title, description, alternates: { canonical }, openGraph: { title, description, url: canonical, type: 'article' } }
 }
 
 export default function JaipurGuidePage({ params }) {

@@ -12,11 +12,13 @@ export function generateMetadata({ params }) {
   const guide = getGoaSeoLanding(params.slug)
   if (!guide) return { title: 'Guide Not Found' }
   const canonical = `https://www.explorethecity.in/goa-guides/${guide.slug}`
+  const title = guide.seoTitle || guide.title
+  const description = guide.seoDescription || guide.description
   return {
-    title: guide.title,
-    description: guide.description,
+    title,
+    description,
     alternates: { canonical },
-    openGraph: { title: guide.title, description: guide.description, url: canonical, type: 'article' },
+    openGraph: { title, description, url: canonical, type: 'article' },
   }
 }
 

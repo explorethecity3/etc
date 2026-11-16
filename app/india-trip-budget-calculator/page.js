@@ -2,8 +2,8 @@ import Link from 'next/link'
 import IndiaTripBudgetCalculator from '@/components/IndiaTripBudgetCalculator'
 
 export const metadata = {
-  title: 'India Trip Budget Calculator: Estimate Costs by City',
-  description: 'Free India trip budget calculator for Bangalore, Mumbai, Goa, Delhi and Jaipur. Compare stays, food, transport and activities by travel style.',
+  title: 'India Trip Cost Calculator: Budget by City & Days',
+  description: 'How much will your India trip cost? Choose a city, travellers, days and travel style to estimate stays, food, local transport and activities.',
   alternates: { canonical: 'https://www.explorethecity.in/india-trip-budget-calculator' },
   openGraph: {
     title: 'Free India Trip Budget Calculator',
