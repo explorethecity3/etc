@@ -1,4 +1,8 @@
-# Explore The City - www.explorethecity.in
+# Explore The City
+
+**Live travel tools and city guides:** [ExploreTheCity.in](https://www.explorethecity.in/)
+
+Explore The City helps travellers test realistic India itineraries, estimate trip costs and plan practical routes across popular destinations.
 
 A modern, SEO-optimized Next.js website for exploring cities across India. Built with dynamic JSON-based content management and designed for Google AdSense monetization.
 
