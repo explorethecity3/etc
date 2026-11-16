@@ -18,8 +18,9 @@ const STYLES = [
 
 const format = (value) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(value)
 
-export default function IndiaTripBudgetCalculator() {
-  const [city, setCity] = useState('jaipur')
+export default function IndiaTripBudgetCalculator({ initialCity = 'jaipur', fixedCity = false }) {
+  const safeInitialCity = CITY_RATES[initialCity] ? initialCity : 'jaipur'
+  const [city, setCity] = useState(safeInitialCity)
   const [days, setDays] = useState(3)
   const [travellers, setTravellers] = useState(2)
   const [style, setStyle] = useState(1)
@@ -32,11 +33,11 @@ export default function IndiaTripBudgetCalculator() {
     const sharedDays = Number(params.get('days'))
     const sharedTravellers = Number(params.get('travellers'))
     const sharedStyle = Number(params.get('style'))
-    if (sharedCity && CITY_RATES[sharedCity]) setCity(sharedCity)
+    if (!fixedCity && sharedCity && CITY_RATES[sharedCity]) setCity(sharedCity)
     if (sharedDays >= 1 && sharedDays <= 14) setDays(sharedDays)
     if (sharedTravellers >= 1 && sharedTravellers <= 10) setTravellers(sharedTravellers)
     if (sharedStyle >= 0 && sharedStyle <= 2) setStyle(sharedStyle)
-  }, [])
+  }, [fixedCity])
 
   function track(name, parameters = {}) {
     if (typeof window.gtag === 'function') window.gtag('event', name, parameters)
@@ -50,7 +51,7 @@ export default function IndiaTripBudgetCalculator() {
 
   async function shareEstimate() {
     const params = new URLSearchParams({ city, days: String(days), travellers: String(travellers), style: String(style) })
-    const url = `${window.location.origin}/india-trip-budget-calculator?${params.toString()}`
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`
     const shareData = { title: `${CITY_RATES[city].name} trip budget estimate`, text: `${days}-day ${CITY_RATES[city].name} planning range: ${format(result.low)}–${format(result.high)}`, url }
     try {
       if (navigator.share) {
@@ -81,10 +82,11 @@ export default function IndiaTripBudgetCalculator() {
   return <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr]">
     <form className="rounded-3xl border border-orange-200 bg-white p-6 shadow-sm md:p-8" onSubmit={(event) => event.preventDefault()}>
       <h2 className="text-2xl font-extrabold">Describe the trip</h2>
-      <label className="mt-6 block font-bold" htmlFor="budget-city">Destination</label>
-      <select id="budget-city" value={city} onChange={(event) => { setCity(event.target.value); trackUse({ city: event.target.value }) }} className="mt-2 w-full rounded-xl border border-gray-300 bg-white p-3">
-        {Object.entries(CITY_RATES).map(([slug, item]) => <option key={slug} value={slug}>{item.name}</option>)}
-      </select>
+      {fixedCity
+        ? <><p className="mt-6 font-bold">Destination</p><div className="mt-2 w-full rounded-xl border border-orange-200 bg-orange-50 p-3 font-bold text-gray-900">{CITY_RATES[city].name}</div></>
+        : <><label className="mt-6 block font-bold" htmlFor="budget-city">Destination</label><select id="budget-city" value={city} onChange={(event) => { setCity(event.target.value); trackUse({ city: event.target.value }) }} className="mt-2 w-full rounded-xl border border-gray-300 bg-white p-3">
+            {Object.entries(CITY_RATES).map(([slug, item]) => <option key={slug} value={slug}>{item.name}</option>)}
+          </select></>}
       <div className="mt-6 grid grid-cols-2 gap-4">
         <label className="font-bold">Days<input aria-label="Number of days" type="number" min="1" max="14" value={days} onChange={(event) => { const value = Math.min(14, Math.max(1, Number(event.target.value) || 1)); setDays(value); trackUse({ days: value }) }} className="mt-2 w-full rounded-xl border border-gray-300 p-3" /></label>
         <label className="font-bold">Travellers<input aria-label="Number of travellers" type="number" min="1" max="10" value={travellers} onChange={(event) => { const value = Math.min(10, Math.max(1, Number(event.target.value) || 1)); setTravellers(value); trackUse({ travellers: value }) }} className="mt-2 w-full rounded-xl border border-gray-300 p-3" /></label>

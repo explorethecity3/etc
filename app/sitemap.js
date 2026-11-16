@@ -146,10 +146,16 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/india-trip-budget-calculator`,
-      lastModified: new Date('2026-10-30'),
+      lastModified: new Date('2026-11-16'),
       changeFrequency: 'monthly',
       priority: 1.0,
     },
+    ...['bangalore', 'goa', 'jaipur'].map((slug) => ({
+      url: `${baseUrl}/${slug}-trip-cost-calculator`,
+      lastModified: new Date('2026-11-16'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    })),
   ]
 
   // City pages
