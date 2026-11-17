@@ -16,6 +16,13 @@ const TOOLS = [
     action: 'Estimate my budget',
   },
   {
+    href: '/compare-city-trip-costs',
+    eyebrow: 'Destination comparison',
+    title: 'Compare City Trip Costs',
+    description: 'Compare two destinations using the same days, travellers and travel style, then see which cost category creates the biggest difference.',
+    action: 'Compare two cities',
+  },
+  {
     href: '/trip-planner',
     eyebrow: 'Multi-day starting point',
     title: 'Free India Trip Planner',
@@ -26,7 +33,7 @@ const TOOLS = [
 
 export const metadata = {
   title: 'Free India Travel Planning Tools | Explore The City',
-  description: 'Use free India travel tools to test itinerary timing, estimate a city-trip budget and build a private multi-day starting plan.',
+  description: 'Use free India travel tools to test itinerary timing, estimate and compare city-trip budgets, and build a private multi-day starting plan.',
   alternates: { canonical: 'https://www.explorethecity.in/travel-tools' },
   openGraph: {
     title: 'Free India Travel Planning Tools',
@@ -56,7 +63,7 @@ export default function TravelToolsPage() {
         <h1 className="mt-3 text-4xl font-extrabold md:text-6xl">India travel planning tools that explain their answers</h1>
         <p className="mt-5 text-lg leading-8 text-gray-700">Start with the question you need answered now: will the day fit, how much should you allow, or what could a multi-day route look like? Each tool shows its assumptions and reminds you where live checks still matter.</p>
       </header>
-      <section className="mt-12 grid gap-6 lg:grid-cols-3">
+      <section className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {TOOLS.map((tool) => <article key={tool.href} className="flex flex-col rounded-3xl border border-orange-200 bg-white p-7 shadow-sm">
           <p className="text-xs font-bold uppercase tracking-widest text-orange-700">{tool.eyebrow}</p>
           <h2 className="mt-3 text-2xl font-extrabold">{tool.title}</h2>

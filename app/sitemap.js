@@ -150,6 +150,12 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 1.0,
     },
+    {
+      url: `${baseUrl}/compare-city-trip-costs`,
+      lastModified: new Date('2026-11-17'),
+      changeFrequency: 'monthly',
+      priority: 1.0,
+    },
     ...['bangalore', 'mumbai', 'goa', 'delhi', 'jaipur'].map((slug) => ({
       url: `${baseUrl}/${slug}-trip-cost-calculator`,
       lastModified: new Date('2026-11-16'),
