@@ -64,6 +64,14 @@ export const CITY_CALCULATOR_CONTENT = {
   },
 }
 
+const COMPARISON_PARTNERS = {
+  bangalore: 'goa',
+  mumbai: 'delhi',
+  goa: 'jaipur',
+  delhi: 'mumbai',
+  jaipur: 'goa',
+}
+
 export function getCityCalculatorMetadata(slug) {
   const city = CITY_CALCULATOR_CONTENT[slug]
   const url = `https://www.explorethecity.in/${slug}-trip-cost-calculator`
@@ -77,6 +85,8 @@ export function getCityCalculatorMetadata(slug) {
 
 export default function CityTripCostCalculatorPage({ citySlug }) {
   const city = CITY_CALCULATOR_CONTENT[citySlug]
+  const comparisonSlug = COMPARISON_PARTNERS[citySlug]
+  const comparisonCity = CITY_CALCULATOR_CONTENT[comparisonSlug]
   const url = `https://www.explorethecity.in/${citySlug}-trip-cost-calculator`
   const questions = [
     [`Are these live ${city.name} prices?`, `No. These are transparent planning assumptions for ${city.name}, not live hotel, restaurant or transport quotations. Check prices for your exact dates before paying.`],
@@ -105,7 +115,7 @@ export default function CityTripCostCalculatorPage({ citySlug }) {
       <section className="mt-14 rounded-2xl bg-slate-950 p-7 text-white md:p-9">
         <h2 className="text-3xl font-extrabold">Put the number into a workable plan</h2>
         <p className="mt-3 max-w-3xl leading-7 text-gray-300">A sensible total still needs a sensible route. Use the maintained city notes for local context, then check whether your stops fit the hours available.</p>
-        <div className="mt-6 flex flex-wrap gap-3"><Link href={city.guideHref} className="rounded-full bg-white px-5 py-3 font-bold text-slate-900">{city.guideLabel}</Link><Link href={city.routeHref} className="rounded-full border border-white/30 px-5 py-3 font-bold">{city.routeLabel}</Link><Link href="/trip-checker" className="rounded-full border border-white/30 px-5 py-3 font-bold">Check itinerary timing</Link></div>
+        <div className="mt-6 flex flex-wrap gap-3"><Link href={city.guideHref} className="rounded-full bg-white px-5 py-3 font-bold text-slate-900">{city.guideLabel}</Link><Link href={city.routeHref} className="rounded-full border border-white/30 px-5 py-3 font-bold">{city.routeLabel}</Link><Link href={`/compare-city-trip-costs?first=${citySlug}&second=${comparisonSlug}`} className="rounded-full border border-orange-300 bg-orange-400/10 px-5 py-3 font-bold text-orange-100">Compare with {comparisonCity.name}</Link><Link href="/trip-checker" className="rounded-full border border-white/30 px-5 py-3 font-bold">Check itinerary timing</Link></div>
       </section>
       <section className="mt-14"><h2 className="text-3xl font-extrabold">Questions about the {city.name} estimate</h2><div className="mt-6 grid gap-5 md:grid-cols-2">{questions.map(([question, answer]) => <article key={question} className="rounded-2xl bg-white p-6 shadow-sm"><h3 className="text-lg font-bold">{question}</h3><p className="mt-3 leading-7 text-gray-700">{answer}</p></article>)}</div></section>
       <p className="mt-12 text-center text-sm text-gray-600">Want to compare destinations? <Link href="/india-trip-budget-calculator" className="font-bold text-orange-700 hover:underline">Open the India trip budget calculator</Link>.</p>
