@@ -16,6 +16,29 @@ const STYLES = [
   { id: 2, name: 'Premium', detail: 'Upscale stay, private transfers and more paid experiences' },
 ]
 
+const CITY_PRESETS = {
+  bangalore: [
+    { label: 'Weekend for two', days: 3, travellers: 2, style: 1 },
+    { label: '4 friends, budget', days: 2, travellers: 4, style: 0 },
+  ],
+  mumbai: [
+    { label: '2-day budget break', days: 2, travellers: 2, style: 0 },
+    { label: 'Family city break', days: 3, travellers: 4, style: 1 },
+  ],
+  goa: [
+    { label: 'Couple, 5 days', days: 5, travellers: 2, style: 1 },
+    { label: '4 friends, 4 days', days: 4, travellers: 4, style: 0 },
+  ],
+  delhi: [
+    { label: '3 days, 4 travellers', days: 3, travellers: 4, style: 0 },
+    { label: 'Comfortable couple trip', days: 3, travellers: 2, style: 1 },
+  ],
+  jaipur: [
+    { label: 'Couple, 2 days', days: 2, travellers: 2, style: 1 },
+    { label: 'Family fort weekend', days: 3, travellers: 4, style: 1 },
+  ],
+}
+
 const format = (value) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(value)
 
 export default function IndiaTripBudgetCalculator({ initialCity = 'jaipur', fixedCity = false }) {
@@ -47,6 +70,21 @@ export default function IndiaTripBudgetCalculator({ initialCity = 'jaipur', fixe
     if (hasTrackedUse.current) return
     hasTrackedUse.current = true
     track('budget_calculator_used', { city, travel_style: STYLES[style].name, days, travellers, ...next })
+  }
+
+  function applyPreset(preset) {
+    setDays(preset.days)
+    setTravellers(preset.travellers)
+    setStyle(preset.style)
+    hasTrackedUse.current = true
+    setShareStatus('')
+    track('budget_preset_selected', {
+      city,
+      preset: preset.label,
+      travel_style: STYLES[preset.style].name,
+      days: preset.days,
+      travellers: preset.travellers,
+    })
   }
 
   function getShareUrl() {
@@ -189,6 +227,16 @@ export default function IndiaTripBudgetCalculator({ initialCity = 'jaipur', fixe
         : <><label className="mt-6 block font-bold" htmlFor="budget-city">Destination</label><select id="budget-city" value={city} onChange={(event) => { setCity(event.target.value); trackUse({ city: event.target.value }) }} className="mt-2 w-full rounded-xl border border-gray-300 bg-white p-3">
             {Object.entries(CITY_RATES).map(([slug, item]) => <option key={slug} value={slug}>{item.name}</option>)}
           </select></>}
+      <fieldset className="mt-6">
+        <legend className="font-bold">Try a popular starting point</legend>
+        <p className="mt-1 text-sm text-gray-600">Choose one, then adjust any detail below.</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {CITY_PRESETS[city].map((preset) => {
+            const isActive = days === preset.days && travellers === preset.travellers && style === preset.style
+            return <button key={preset.label} type="button" aria-pressed={isActive} onClick={() => applyPreset(preset)} className={`rounded-full border px-4 py-2 text-sm font-bold transition ${isActive ? 'border-orange-600 bg-orange-600 text-white' : 'border-orange-200 bg-orange-50 text-orange-900 hover:bg-orange-100'}`}>{preset.label}</button>
+          })}
+        </div>
+      </fieldset>
       <div className="mt-6 grid grid-cols-2 gap-4">
         <label className="font-bold">Days<input aria-label="Number of days" type="number" min="1" max="14" value={days} onChange={(event) => { const value = Math.min(14, Math.max(1, Number(event.target.value) || 1)); setDays(value); trackUse({ days: value }) }} className="mt-2 w-full rounded-xl border border-gray-300 p-3" /></label>
         <label className="font-bold">Travellers<input aria-label="Number of travellers" type="number" min="1" max="10" value={travellers} onChange={(event) => { const value = Math.min(10, Math.max(1, Number(event.target.value) || 1)); setTravellers(value); trackUse({ travellers: value }) }} className="mt-2 w-full rounded-xl border border-gray-300 p-3" /></label>
