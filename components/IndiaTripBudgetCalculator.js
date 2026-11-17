@@ -49,14 +49,116 @@ export default function IndiaTripBudgetCalculator({ initialCity = 'jaipur', fixe
     track('budget_calculator_used', { city, travel_style: STYLES[style].name, days, travellers, ...next })
   }
 
-  async function shareEstimate() {
+  function getShareUrl() {
     const params = new URLSearchParams({ city, days: String(days), travellers: String(travellers), style: String(style) })
-    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`
+    return `${window.location.origin}${window.location.pathname}?${params.toString()}`
+  }
+
+  function createBudgetCard() {
+    const canvas = document.createElement('canvas')
+    canvas.width = 1200
+    canvas.height = 630
+    const context = canvas.getContext('2d')
+    const cityName = CITY_RATES[city].name
+    const breakdown = [
+      ['Accommodation', result.accommodation],
+      ['Food', result.food],
+      ['Local transport', result.transport],
+      ['Activities', result.activities],
+    ]
+
+    context.fillStyle = '#fff7ed'
+    context.fillRect(0, 0, canvas.width, canvas.height)
+    context.fillStyle = '#0f172a'
+    context.fillRect(0, 0, 1200, 630)
+    context.fillStyle = '#f97316'
+    context.fillRect(0, 0, 22, 630)
+    context.fillStyle = '#fdba74'
+    context.font = '700 24px Arial, sans-serif'
+    context.fillText('EXPLORE THE CITY · TRIP BUDGET', 72, 78)
+    context.fillStyle = '#ffffff'
+    context.font = '700 54px Arial, sans-serif'
+    context.fillText(`${cityName} · ${days} ${days === 1 ? 'day' : 'days'}`, 72, 150)
+    context.fillStyle = '#cbd5e1'
+    context.font = '400 27px Arial, sans-serif'
+    context.fillText(`${travellers} ${travellers === 1 ? 'traveller' : 'travellers'} · ${STYLES[style].name} style · ${result.rooms} ${result.rooms === 1 ? 'room' : 'rooms'}`, 72, 198)
+    context.fillStyle = '#f97316'
+    context.fillRect(72, 240, 600, 142)
+    context.fillStyle = '#ffffff'
+    context.font = '700 25px Arial, sans-serif'
+    context.fillText('ESTIMATED PLANNING RANGE', 104, 286)
+    context.font = '700 49px Arial, sans-serif'
+    context.fillText(`${format(result.low)} – ${format(result.high)}`, 104, 350)
+    context.fillStyle = '#1e293b'
+    context.fillRect(710, 72, 418, 420)
+    context.font = '700 24px Arial, sans-serif'
+    context.fillStyle = '#ffffff'
+    context.fillText('Estimated breakdown', 748, 122)
+    breakdown.forEach(([label, value], index) => {
+      const y = 184 + (index * 70)
+      context.fillStyle = '#cbd5e1'
+      context.font = '400 22px Arial, sans-serif'
+      context.fillText(label, 748, y)
+      context.fillStyle = '#ffffff'
+      context.font = '700 22px Arial, sans-serif'
+      context.textAlign = 'right'
+      context.fillText(format(value), 1090, y)
+      context.textAlign = 'left'
+      context.strokeStyle = '#334155'
+      context.beginPath()
+      context.moveTo(748, y + 22)
+      context.lineTo(1090, y + 22)
+      context.stroke()
+    })
+    context.fillStyle = '#cbd5e1'
+    context.font = '400 20px Arial, sans-serif'
+    context.fillText('Planning estimate, not a live quotation. Intercity travel is excluded.', 72, 470)
+    context.fillStyle = '#ffffff'
+    context.font = '700 28px Arial, sans-serif'
+    context.fillText('ExploreTheCity.in', 72, 554)
+    context.fillStyle = '#94a3b8'
+    context.font = '400 20px Arial, sans-serif'
+    context.fillText('Adjust the estimate and check the local guide before booking.', 72, 590)
+
+    return new Promise((resolve, reject) => canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error('Could not create budget card')), 'image/png'))
+  }
+
+  async function copyEstimateLink() {
+    try {
+      await navigator.clipboard.writeText(getShareUrl())
+      setShareStatus('Shareable estimate link copied.')
+      track('budget_estimate_link_copied', { city, travel_style: STYLES[style].name, days, travellers })
+    } catch {
+      setShareStatus('Could not copy automatically. Copy the page address instead.')
+    }
+  }
+
+  async function downloadBudgetCard() {
+    try {
+      const blob = await createBudgetCard()
+      const downloadUrl = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = downloadUrl
+      link.download = `${city}-${days}-day-trip-budget.png`
+      link.click()
+      URL.revokeObjectURL(downloadUrl)
+      setShareStatus('Budget card downloaded as a PNG image.')
+      track('budget_card_downloaded', { city, travel_style: STYLES[style].name, days, travellers })
+    } catch {
+      setShareStatus('Could not create the image. Please try again.')
+    }
+  }
+
+  async function shareEstimate() {
+    const url = getShareUrl()
     const shareData = { title: `${CITY_RATES[city].name} trip budget estimate`, text: `${days}-day ${CITY_RATES[city].name} planning range: ${format(result.low)}–${format(result.high)}`, url }
     try {
       if (navigator.share) {
-        await navigator.share(shareData)
-        setShareStatus('Estimate shared.')
+        const blob = await createBudgetCard()
+        const file = new File([blob], `${city}-${days}-day-trip-budget.png`, { type: 'image/png' })
+        const shareWithCard = { ...shareData, files: [file] }
+        await navigator.share(navigator.canShare?.(shareWithCard) ? shareWithCard : shareData)
+        setShareStatus('Estimate shared with your selected app.')
       } else {
         await navigator.clipboard.writeText(url)
         setShareStatus('Shareable estimate link copied.')
@@ -101,7 +203,11 @@ export default function IndiaTripBudgetCalculator({ initialCity = 'jaipur', fixe
         ['Accommodation', result.accommodation], ['Food', result.food], ['Local transport', result.transport], ['Attractions and activities', result.activities],
       ].map(([label, value]) => <div key={label} className="flex items-center justify-between gap-4 border-b border-white/10 pb-3"><span className="text-gray-300">{label}</span><strong>{format(value)}</strong></div>)}</div>
       <div className="mt-7 rounded-2xl bg-white/10 p-5"><h3 className="font-bold">Why this is a range</h3><p className="mt-2 text-sm leading-6 text-gray-300">Rates move by neighbourhood, season, weekends and booking date. The upper end adds breathing room for price variation and small unplanned costs; it is not a live quotation.</p></div>
-      <button type="button" onClick={shareEstimate} className="mt-6 w-full rounded-xl bg-orange-600 px-5 py-3 font-bold text-white transition hover:bg-orange-500">Share this estimate</button>
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        <button type="button" onClick={shareEstimate} className="rounded-xl bg-orange-600 px-5 py-3 font-bold text-white transition hover:bg-orange-500 sm:col-span-2">Share result</button>
+        <button type="button" onClick={copyEstimateLink} className="rounded-xl border border-white/25 px-5 py-3 font-bold text-white transition hover:bg-white/10">Copy result link</button>
+        <button type="button" onClick={downloadBudgetCard} className="rounded-xl border border-white/25 px-5 py-3 font-bold text-white transition hover:bg-white/10">Download budget card</button>
+      </div>
       {shareStatus && <p className="mt-3 text-center text-sm text-orange-200" role="status">{shareStatus}</p>}
     </section>
   </div>
