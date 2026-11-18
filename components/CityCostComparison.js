@@ -54,11 +54,109 @@ export default function CityCostComparison() {
     track('city_cost_comparison_swapped', { first_city: cityB, second_city: cityA })
   }
 
-  async function copyComparison() {
+  function getComparisonUrl() {
     const params = new URLSearchParams({ first: cityA, second: cityB, days: String(days), travellers: String(travellers), style: String(style) })
-    const url = `${window.location.origin}/compare-city-trip-costs?${params.toString()}`
+    return `${window.location.origin}/compare-city-trip-costs?${params.toString()}`
+  }
+
+  function createComparisonCard() {
+    const canvas = document.createElement('canvas')
+    canvas.width = 1200
+    canvas.height = 630
+    const context = canvas.getContext('2d')
+    const firstName = CITY_RATES[cityA].name
+    const secondName = CITY_RATES[cityB].name
+
+    context.fillStyle = '#0f172a'
+    context.fillRect(0, 0, 1200, 630)
+    context.fillStyle = '#f97316'
+    context.fillRect(0, 0, 22, 630)
+    context.fillStyle = '#fdba74'
+    context.font = '700 23px Arial, sans-serif'
+    context.fillText('EXPLORE THE CITY · COST COMPARISON', 72, 68)
+    context.fillStyle = '#ffffff'
+    context.font = '700 47px Arial, sans-serif'
+    context.fillText(`${firstName} vs ${secondName}`, 72, 132)
+    context.fillStyle = '#cbd5e1'
+    context.font = '400 25px Arial, sans-serif'
+    context.fillText(`${days} ${days === 1 ? 'day' : 'days'} · ${travellers} ${travellers === 1 ? 'traveller' : 'travellers'} · ${TRAVEL_STYLES[style].name} style`, 72, 178)
+
+    const cards = [[cityA, firstResult, 72], [cityB, secondResult, 620]]
+    cards.forEach(([slug, result, x]) => {
+      const isLower = slug === cheaperCity
+      context.fillStyle = isLower ? '#f97316' : '#1e293b'
+      context.fillRect(x, 222, 508, 212)
+      context.fillStyle = '#ffffff'
+      context.font = '700 22px Arial, sans-serif'
+      context.fillText(isLower ? 'LOWER ESTIMATE' : 'COMPARISON ESTIMATE', x + 30, 265)
+      context.font = '700 35px Arial, sans-serif'
+      context.fillText(CITY_RATES[slug].name, x + 30, 314)
+      context.font = '700 32px Arial, sans-serif'
+      context.fillText(`${formatTripCurrency(result.low)} – ${formatTripCurrency(result.high)}`, x + 30, 373)
+      context.font = '400 19px Arial, sans-serif'
+      context.fillStyle = isLower ? '#ffedd5' : '#cbd5e1'
+      context.fillText(`Model total: ${formatTripCurrency(result.subtotal)}`, x + 30, 409)
+    })
+
+    context.fillStyle = '#ffffff'
+    context.font = '700 28px Arial, sans-serif'
+    context.fillText(`${CITY_RATES[cheaperCity].name} is about ${formatTripCurrency(difference)} lower`, 72, 497)
+    context.fillStyle = '#cbd5e1'
+    context.font = '400 20px Arial, sans-serif'
+    context.fillText(`Largest category difference: ${biggestDifference.label} (${formatTripCurrency(biggestDifference.difference)})`, 72, 536)
+    context.fillText('Planning assumptions, not live quotations. Intercity travel is excluded.', 72, 574)
+    context.fillStyle = '#ffffff'
+    context.font = '700 21px Arial, sans-serif'
+    context.textAlign = 'right'
+    context.fillText('ExploreTheCity.in', 1128, 592)
+    context.textAlign = 'left'
+
+    return new Promise((resolve, reject) => canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error('Could not create comparison card')), 'image/png'))
+  }
+
+  async function downloadComparisonCard() {
     try {
-      await navigator.clipboard.writeText(url)
+      const blob = await createComparisonCard()
+      const downloadUrl = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = downloadUrl
+      link.download = `${cityA}-vs-${cityB}-trip-cost.png`
+      link.click()
+      URL.revokeObjectURL(downloadUrl)
+      setStatus('Comparison card downloaded as a PNG image.')
+      track('city_cost_comparison_card_downloaded', { first_city: cityA, second_city: cityB, days, travellers, travel_style: TRAVEL_STYLES[style].name })
+    } catch {
+      setStatus('Could not create the comparison image. Please try again.')
+    }
+  }
+
+  async function shareComparison() {
+    const url = getComparisonUrl()
+    const shareData = {
+      title: `${CITY_RATES[cityA].name} vs ${CITY_RATES[cityB].name} trip cost`,
+      text: `${CITY_RATES[cheaperCity].name} is about ${formatTripCurrency(difference)} lower for this ${days}-day comparison.`,
+      url,
+    }
+    try {
+      if (navigator.share) {
+        const blob = await createComparisonCard()
+        const file = new File([blob], `${cityA}-vs-${cityB}-trip-cost.png`, { type: 'image/png' })
+        const shareWithCard = { ...shareData, files: [file] }
+        await navigator.share(navigator.canShare?.(shareWithCard) ? shareWithCard : shareData)
+        setStatus('Comparison shared with your selected app.')
+      } else {
+        await navigator.clipboard.writeText(url)
+        setStatus('Shareable comparison link copied.')
+      }
+      track('city_cost_comparison_shared', { first_city: cityA, second_city: cityB, days, travellers, travel_style: TRAVEL_STYLES[style].name })
+    } catch (error) {
+      if (error?.name !== 'AbortError') setStatus('Could not share automatically. Copy the comparison link instead.')
+    }
+  }
+
+  async function copyComparison() {
+    try {
+      await navigator.clipboard.writeText(getComparisonUrl())
       setStatus('Shareable comparison link copied.')
       track('city_cost_comparison_shared', { first_city: cityA, second_city: cityB, days, travellers, travel_style: TRAVEL_STYLES[style].name })
     } catch {
@@ -95,7 +193,11 @@ export default function CityCostComparison() {
       <h2 className="mt-2 text-3xl font-extrabold">{CITY_RATES[cheaperCity].name} is about {formatTripCurrency(difference)} lower in this model</h2>
       <p className="mt-4 leading-7 text-gray-700">That is roughly {percentage}% below the higher estimate. The largest category gap is <strong>{biggestDifference.label.toLowerCase()}</strong> at {formatTripCurrency(biggestDifference.difference)}. This comparison uses identical days, travellers and travel style for both cities.</p>
       <p className="mt-3 leading-7 text-gray-700">It is a planning comparison, not a live quote. Dates, neighbourhood, transport choices and seasonal room rates can reverse the result.</p>
-      <button type="button" onClick={copyComparison} className="btn-primary mt-6">Copy comparison link</button>
+      <div className="mt-6 flex flex-wrap gap-3">
+        <button type="button" onClick={shareComparison} className="btn-primary">Share comparison</button>
+        <button type="button" onClick={copyComparison} className="rounded-lg border border-orange-300 px-5 py-3 font-bold text-orange-900 hover:bg-orange-50">Copy comparison link</button>
+        <button type="button" onClick={downloadComparisonCard} className="rounded-lg border border-orange-300 px-5 py-3 font-bold text-orange-900 hover:bg-orange-50">Download comparison card</button>
+      </div>
       {status && <p role="status" className="mt-3 text-sm font-medium text-orange-800">{status}</p>}
     </section>
   </div>
